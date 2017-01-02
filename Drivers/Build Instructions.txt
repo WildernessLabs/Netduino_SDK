@@ -1,0 +1,10 @@
+Netduino drivers are the standard .NET Micro Framework drivers.  They use a custom .INF file specifying the VID/PID of the Netduino and adding compatibility for driver signing.
+
+To build the Netduino drivers:
+1. Follow the build instructions in \MicroFrameworkPK_v#_#\USB_Drivers
+2. Rename the MFUSB_PortingKitSample drivers to MFUSB_Netduino
+3. Add the enclosed .INF file.
+
+Please note: the Netduino VID/PID are specific to Secret Labs LLC's Netduino hardware.  If you would like to adapt our source files for another board, please use your VID (vendor ID).
+
+WinUSB note: the WinUSB drivers are copied from the Windows SDK/DDK.

@@ -1,0 +1,25 @@
+<VSTemplate Version="3.0.0" Type="Project" xmlns="http://schemas.microsoft.com/developer/vstemplate/2005" xmlns:xsi="http://www.w3c.org/2001/XMLSchema-instance" schemaLocation="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>Netduino Application</Name>
+    <Description>A project for creating a .NET Micro Framework application targeting the Netduino.</Description>
+    <Icon>Project.ico</Icon>
+    <TemplateID>SecretLabs.VisualBasic.MicroFramework.NetduinoApplication</TemplateID>
+    <ProjectType>VisualBasic</ProjectType>
+    <SortOrder>1000</SortOrder>
+    <CreateNewFolder>true</CreateNewFolder>
+    <DefaultName>NetduinoApplication</DefaultName>
+    <ProvideDefaultName>true</ProvideDefaultName>
+    <LocationField>Enabled</LocationField>
+    <EnableLocationBrowseButton>true</EnableLocationBrowseButton>
+  </TemplateData>
+
+  <TemplateContent>
+    <Project File="NetduinoApplication.vbproj" ReplaceParameters="true">
+      <ProjectItem ReplaceParameters="true" TargetFileName="Module1.vb">Module1.vb</ProjectItem>
+      <ProjectItem TargetFileName="Project.ico">Project.ico</ProjectItem>
+      <Folder Name="My Project" TargetFolderName="My Project">
+        <ProjectItem ReplaceParameters="true" TargetFileName="AssemblyInfo.vb">AssemblyInfo.vb</ProjectItem>
+      </Folder>
+    </Project>
+  </TemplateContent>
+</VSTemplate>

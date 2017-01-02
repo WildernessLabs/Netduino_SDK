@@ -1,0 +1,161 @@
+;
+; Copyright (c) Microsoft Corporation.  All rights reserved.
+; Copyright (c) Secret Labs LLC.  All rights reserved.
+;
+
+[Version] 
+Signature = "$Windows NT$" 
+Class=USB
+ClassGUID={36fc9e60-c465-11cf-8056-444553540000} 
+Provider=%SECRETLABS% 
+CatalogFile=MFUSB_Netduino.cat
+DriverVer=07/16/2010,1.0.0.0
+
+[DestinationDirs] 
+OEM.Files = 12 
+
+[SourceDisksNames]
+0=%SourceDesc%
+
+[SourceDisksFiles.x86]
+MFUSB_Netduino.sys=0,x86
+
+[SourceDisksFiles.amd64]
+MFUSB_Netduino.sys=0,amd64
+
+; ======================
+;  Manufacturer section
+; ======================
+[Manufacturer] 
+%SecretLabs% = SecretLabs,NTAMD64,NT.6.1,NT.6.0,NTx86.5.2.0x03.0x0001,NTx86.5.2.0x03.0x0010,NTx86.5.2.0x03.0x0020,NTx86.5.2.0x03.0x0100,NTx86.5.2.0x03.0x0200,NTx86.5.2.0x03,NTx64.5.2.0x03,NTx64.5.2,NT
+
+; ===============================
+; installation on all Win7 skus
+; ===============================
+[SecretLabs.NT.6.1]
+%USB\Vid_22B1&Pid_1000.DeviceDesc%=OEM_Inst,USB\Vid_22B1&Pid_1000  
+
+; ===============================
+; installation on all vista skus
+; ===============================
+[SecretLabs.NT.6.0]
+%USB\Vid_22B1&Pid_1000.DeviceDesc%=OEM_Inst,USB\Vid_22B1&Pid_1000  
+
+; =========================== 
+; install on AMD64, all skus
+; ===========================
+[SecretLabs.NTAMD64]
+%USB\Vid_22B1&Pid_1000.DeviceDesc%=OEM_Inst,USB\Vid_22B1&Pid_1000  
+
+; ==========================================================================================
+; install on server single user ts, terminal, personal, and small business server; x86 only
+; ==========================================================================================
+[SecretLabs.NTx86.5.2.0x03.0x0001]
+%USB\Vid_22B1&Pid_1000.DeviceDesc%=OEM_Inst,USB\Vid_22B1&Pid_1000  
+[SecretLabs.NTx86.5.2.0x03.0x0010]
+%USB\Vid_22B1&Pid_1000.DeviceDesc%=OEM_Inst,USB\Vid_22B1&Pid_1000 
+[SecretLabs.NTx86.5.2.0x03.0x0020]
+%USB\Vid_22B1&Pid_1000.DeviceDesc%=OEM_Inst,USB\Vid_22B1&Pid_1000 
+[SecretLabs.NTx86.5.2.0x03.0x0100]
+%USB\Vid_22B1&Pid_1000.DeviceDesc%=OEM_Inst,USB\Vid_22B1&Pid_1000 
+[SecretLabs.NTx86.5.2.0x03.0x0200]
+%USB\Vid_22B1&Pid_1000.DeviceDesc%=OEM_Inst,USB\Vid_22B1&Pid_1000 
+
+;
+; installation BLOCKED on other server skus
+;
+[SecretLabs.NTx86.5.2.0x03]
+[SecretLabs.NTx64.5.2.0x03]
+
+; ==============
+; install on XP
+; ==============
+[SecretLabs.NT]
+%USB\Vid_22B1&Pid_1000.DeviceDesc%=OEM_Inst,USB\Vid_22B1&Pid_1000 
+
+; ===============================================================
+; for Win2K and previous OS we need a different install section
+; =============================================================== 
+[SecretLabs]
+%USB\Vid_22B1&Pid_1000.DeviceDesc%=OEM_InstWin2K,USB\Vid_22B1&Pid_1000 
+
+
+
+
+; ================================
+;  Installation Section for Win2K
+; ================================
+
+;
+; Install on Win2K
+;
+[OEM_InstWin2K.ntx86]
+CopyFiles = OEM.Files
+
+[OEM_InstWin2K.ntx86.Services] 
+AddService = SpotUsb,0x00000002,OEM.Services,
+
+; ===================================
+;  Installation Section for Win9x/Me
+; ===================================
+
+;
+; no installation on Win9x/Me
+;
+[OEM_InstWin2K]
+
+
+; =============================
+;  Installation Section for XP 
+; =============================
+
+
+[OEM_Inst] 
+CopyFiles = OEM.Files
+
+[OEM_Inst.Services] 
+AddService = SpotUsb,0x00000002,OEM.Services,
+
+; ========
+;  Common
+; ========
+
+[OEM.Services] 
+ServiceType   = %SERVICE_KERNEL_DRIVER% 
+StartType     = %SERVICE_DEMAND_START% 
+ErrorControl  = %SERVICE_ERROR_IGNORE% 
+ServiceBinary = %12%\MFUSB_Netduino.sys 
+AddReg        = OEM.Services.AddReg
+
+[OEM.Services.AddReg]
+HKR,Parameters,DriverVersion     ,0x00000000,%VERSION%
+HKR,Parameters,InquiriesInterface,0x00000000,%INQUIRIES_INTERFACE%
+
+
+[OEM.Files] 
+MFUSB_Netduino.sys
+
+; =========
+;  Strings
+; =========
+
+[Strings] 
+SourceDesc          ="driver installation media" 
+VERSION             = "1.0"
+INQUIRIES_INTERFACE = "{265820CE-19E5-4530-8861-262E97E78575}"
+
+SECRETLABS                        = "Secret Labs LLC"
+USB\Vid_22B1&Pid_1000.DeviceDesc = "Netduino"
+
+SERVICE_BOOT_START     = 0x0 
+SERVICE_SYSTEM_START   = 0x1 
+SERVICE_AUTO_START     = 0x2 
+SERVICE_DEMAND_START   = 0x3 
+SERVICE_DISABLED       = 0x4 
+SERVICE_KERNEL_DRIVER  = 0x1 
+SERVICE_ERROR_IGNORE   = 0x0 
+SERVICE_ERROR_NORMAL   = 0x1 
+SERVICE_ERROR_SEVERE   = 0x2 
+SERVICE_ERROR_CRITICAL = 0x3 
+REG_EXPAND_SZ          = 0x00020000 
+REG_DWORD              = 0x00010001 
