@@ -1,0 +1,56 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "NetduinoSDKCore", "NetduinoSDKCore\NetduinoSDKCore.wixproj", "{31FFA974-2475-4754-AB54-BAB06521B704}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "NetduinoDrivers_amd64", "NetduinoDrivers\NetduinoDrivers_amd64.wixproj", "{CEBB4FD5-EEDC-4BB0-926F-4ACB656935C7}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "NetduinoDrivers_x86", "NetduinoDrivers\NetduinoDrivers_x86.wixproj", "{65A2DC79-8352-4447-9998-C86694541A28}"
+EndProject
+Project("{930C7802-8A8C-48F9-8165-68863BCCD9DD}") = "NetduinoSDKBootstrapper", "NetduinoSDKBootstrapper\NetduinoSDKBootstrapper.wixproj", "{7BE59575-8232-4F5F-8A47-A20FF5124142}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{31FFA974-2475-4754-AB54-BAB06521B704}.Debug|x64.ActiveCfg = Debug|x86
+		{31FFA974-2475-4754-AB54-BAB06521B704}.Debug|x64.Build.0 = Debug|x86
+		{31FFA974-2475-4754-AB54-BAB06521B704}.Debug|x86.ActiveCfg = Debug|x86
+		{31FFA974-2475-4754-AB54-BAB06521B704}.Debug|x86.Build.0 = Debug|x86
+		{31FFA974-2475-4754-AB54-BAB06521B704}.Release|x64.ActiveCfg = Release|x86
+		{31FFA974-2475-4754-AB54-BAB06521B704}.Release|x64.Build.0 = Release|x86
+		{31FFA974-2475-4754-AB54-BAB06521B704}.Release|x86.ActiveCfg = Release|x86
+		{31FFA974-2475-4754-AB54-BAB06521B704}.Release|x86.Build.0 = Release|x86
+		{CEBB4FD5-EEDC-4BB0-926F-4ACB656935C7}.Debug|x64.ActiveCfg = Debug|x64
+		{CEBB4FD5-EEDC-4BB0-926F-4ACB656935C7}.Debug|x64.Build.0 = Debug|x64
+		{CEBB4FD5-EEDC-4BB0-926F-4ACB656935C7}.Debug|x86.ActiveCfg = Debug|x86
+		{CEBB4FD5-EEDC-4BB0-926F-4ACB656935C7}.Debug|x86.Build.0 = Debug|x86
+		{CEBB4FD5-EEDC-4BB0-926F-4ACB656935C7}.Release|x64.ActiveCfg = Release|x64
+		{CEBB4FD5-EEDC-4BB0-926F-4ACB656935C7}.Release|x64.Build.0 = Release|x64
+		{CEBB4FD5-EEDC-4BB0-926F-4ACB656935C7}.Release|x86.ActiveCfg = Release|x64
+		{CEBB4FD5-EEDC-4BB0-926F-4ACB656935C7}.Release|x86.Build.0 = Release|x64
+		{65A2DC79-8352-4447-9998-C86694541A28}.Debug|x64.ActiveCfg = Debug|x86
+		{65A2DC79-8352-4447-9998-C86694541A28}.Debug|x64.Build.0 = Debug|x86
+		{65A2DC79-8352-4447-9998-C86694541A28}.Debug|x86.ActiveCfg = Debug|x86
+		{65A2DC79-8352-4447-9998-C86694541A28}.Debug|x86.Build.0 = Debug|x86
+		{65A2DC79-8352-4447-9998-C86694541A28}.Release|x64.ActiveCfg = Release|x86
+		{65A2DC79-8352-4447-9998-C86694541A28}.Release|x64.Build.0 = Release|x86
+		{65A2DC79-8352-4447-9998-C86694541A28}.Release|x86.ActiveCfg = Release|x86
+		{65A2DC79-8352-4447-9998-C86694541A28}.Release|x86.Build.0 = Release|x86
+		{7BE59575-8232-4F5F-8A47-A20FF5124142}.Debug|x64.ActiveCfg = Debug|x86
+		{7BE59575-8232-4F5F-8A47-A20FF5124142}.Debug|x64.Build.0 = Debug|x86
+		{7BE59575-8232-4F5F-8A47-A20FF5124142}.Debug|x86.ActiveCfg = Debug|x86
+		{7BE59575-8232-4F5F-8A47-A20FF5124142}.Debug|x86.Build.0 = Debug|x86
+		{7BE59575-8232-4F5F-8A47-A20FF5124142}.Release|x64.ActiveCfg = Release|x86
+		{7BE59575-8232-4F5F-8A47-A20FF5124142}.Release|x64.Build.0 = Release|x86
+		{7BE59575-8232-4F5F-8A47-A20FF5124142}.Release|x86.ActiveCfg = Release|x86
+		{7BE59575-8232-4F5F-8A47-A20FF5124142}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

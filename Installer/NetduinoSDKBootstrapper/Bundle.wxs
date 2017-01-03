@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
+	<Bundle Name="Netduino SDK v4.3.0 (February 2013)" Version="4.3.0.0" Manufacturer="Secret Labs LLC" AboutUrl="http://www.netduino.com" DisableModify="yes" UpgradeCode="cafaa3fc-bc4f-4d17-aa7f-21e7d1c4f9eb"
+          Copyright="Copyright (C) 2013 Secret Labs LLC, All Rights Reserved.">
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense">
+      <bal:WixStandardBootstrapperApplication LicenseFile="$(var.SourceDir)License Agreement.rtf"/>
+    </BootstrapperApplicationRef>
+
+		<Chain>
+			<MsiPackage SourceFile="$(var.NetduinoSDKCore.TargetDir)NetduinoSDKCore.msi" />
+      <MsiPackage SourceFile="$(var.NetduinoDrivers_amd64.TargetDir)NetduinoDrivers_amd64.msi" InstallCondition="VersionNT64" />
+      <MsiPackage SourceFile="$(var.NetduinoDrivers_x86.TargetDir)NetduinoDrivers_x86.msi" InstallCondition="NOT VersionNT64" />
+    </Chain>
+	</Bundle>
+</Wix>

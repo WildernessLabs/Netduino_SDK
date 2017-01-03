@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="*" Name="Netduino SDK Core" Language="1033" Version="4.3.0000" Manufacturer="Secret Labs LLC" UpgradeCode="807D55F0-E37A-4A04-A0DD-1F52AACE903E">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Manufacturer="Secret Labs LLC" Description="Netduino SDK Core" Keywords="Installer,MSI" Comments="Copyright (c) 2013 Secret Labs LLC, All Rights Reserved." />
+
+    <UIRef Id="WixUI_Minimal" />
+    
+		<MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes"/>
+
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.SourceDir)License Agreement.rtf" />
+    
+    <Feature Id="Assemblies" Title="Netduino SDK Core" Level="1">
+      <ComponentGroupRef Id="Assemblies_V41" />
+      <ComponentGroupRef Id="Assemblies_V42" />
+      <ComponentGroupRef Id="Assemblies_V43" />
+    </Feature>
+
+    <Feature Id="VS110" Title="Visual Studio 2012" Level="0">
+      <Condition Level="1">VS_DEVENV OR VS_DEVENV_64 OR REMOVE</Condition>
+      <ComponentGroupRef Id="VS_ProjectTemplates_CSharp" />
+      <ComponentGroupRef Id="VS_ProjectTemplates_VisualBasic" />
+    </Feature>
+
+    <Feature Id="WDE110" Title="Windows Desktop Express 2012" Level="0">
+      <Condition Level="1">WDEXPRESS_DEVENV OR WDEXPRESS_DEVENV_64 OR REMOVE</Condition>
+      <ComponentGroupRef Id="WDExpress_ProjectTemplates_CSharp" />
+      <ComponentGroupRef Id="WDExpress_ProjectTemplates_VisualBasic" />
+    </Feature>
+
+    <Property Id="VS_DEVENV">
+      <RegistrySearch Id="VS_DEVENV_Path" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0" Name="InstallDir" Type="directory" />
+    </Property>
+    <Property Id="VS_DEVENV_64">
+      <RegistrySearch Win64="yes" Id="VS_DEVENV_Path_64" Root="HKLM" Key="SOFTWARE\Wow6432Node\Microsoft\VisualStudio\11.0" Name="InstallDir" Type="directory" />
+    </Property>
+    <Property Id="VS_PROJECT_TEMPLATE">
+      <RegistrySearch Id="VS_ProjectTemplate" Root="HKLM" Key="SOFTWARE\Microsoft\VisualStudio\11.0\VSTemplate\Project" Name="UserFolder" Type="directory" />
+    </Property>
+
+    <Property Id="WDEXPRESS_DEVENV">
+      <RegistrySearch Id="WDEXPRESS_DEVENV_Path" Root="HKLM" Key="SOFTWARE\Microsoft\WDExpress\11.0" Name="InstallDir" Type="directory" />
+    </Property>
+    <Property Id="WDEXPRESS_DEVENV_64">
+      <RegistrySearch Id="WDEXPRESS_DEVENV_Path_64" Root="HKLM" Key="SOFTWARE\Wow6432Node\Microsoft\WDExpress\11.0" Name="InstallDir" Type="directory" />
+    </Property>
+    <Property Id="WDEXPRESS_INSTALL_PATH">
+      <RegistrySearch Id="WDEXPRESS_DEVENV_Path_2" Root="HKLM" Key="SOFTWARE\Microsoft\WDExpress\11.0" Name="InstallDir" Type="directory" />
+    </Property>
+
+    <CustomAction Id="PropertyAssign_VS_DEVENV"           Property="VS_DEVENV"           Value="[VS_DEVENV]DevEnv.exe"              />
+    <CustomAction Id="PropertyAssign_VS_DEVENV_64"        Property="VS_DEVENV_64"        Value="[VS_DEVENV_64]DevEnv.exe"           />
+    <CustomAction Id="PropertyAssign_WDEXPRESS_DEVENV"    Property="WDEXPRESS_DEVENV"    Value="[WDEXPRESS_DEVENV]WDExpress.exe"    />
+    <CustomAction Id="PropertyAssign_WDEXPRESS_DEVENV_64" Property="WDEXPRESS_DEVENV_64" Value="[WDEXPRESS_DEVENV_64]WDExpress.exe" />
+
+    <CustomAction Id="Launch_VS_DEVENV_64"        Property="VS_DEVENV_64"        ExeCommand="/installvstemplates" Execute="deferred" Return="asyncNoWait" Impersonate="no" />
+    <CustomAction Id="Launch_VS_DEVENV"           Property="VS_DEVENV"           ExeCommand="/installvstemplates" Execute="deferred" Return="asyncNoWait" Impersonate="no" />
+    <CustomAction Id="Launch_WDEXPRESS_DEVENV"    Property="WDEXPRESS_DEVENV"    ExeCommand="/installvstemplates" Execute="deferred" Return="asyncNoWait" Impersonate="no" />
+    <CustomAction Id="Launch_WDEXPRESS_DEVENV_64" Property="WDEXPRESS_DEVENV_64" ExeCommand="/installvstemplates" Execute="deferred" Return="asyncNoWait" Impersonate="no" />
+
+    <InstallExecuteSequence>
+      <Custom Action="PropertyAssign_VS_DEVENV"                   Before="InstallInitialize"                     >VS_DEVENV</Custom>
+      <Custom Action="PropertyAssign_VS_DEVENV_64"                After="PropertyAssign_VS_DEVENV"               >VS_DEVENV_64</Custom>
+      <Custom Action="PropertyAssign_WDEXPRESS_DEVENV"            After="PropertyAssign_VS_DEVENV_64"            >WDEXPRESS_DEVENV</Custom>
+      <Custom Action="PropertyAssign_WDEXPRESS_DEVENV_64"         After="PropertyAssign_WDEXPRESS_DEVENV"        >WDEXPRESS_DEVENV_64</Custom>
+
+      <Custom Action="Launch_WDEXPRESS_DEVENV"    After="PublishProduct"         >WDEXPRESS_DEVENV</Custom>
+      <Custom Action="Launch_WDEXPRESS_DEVENV_64" After="Launch_WDEXPRESS_DEVENV">WDEXPRESS_DEVENV_64</Custom>
+      <Custom Action="Launch_VS_DEVENV"           Before="InstallFinalize"       >VS_DEVENV</Custom>
+      <Custom Action="Launch_VS_DEVENV_64"        After="Launch_VS_DEVENV"       >VS_DEVENV_64</Custom>
+    </InstallExecuteSequence>
+
+  </Product>
+
+	<Fragment>
+		<Directory Id="TARGETDIR" Name="SourceDir">
+			<Directory Id="ProgramFilesFolder">
+        
+        <Directory Id="MyCompanyFolder" Name="Secret Labs">
+          <Directory Id="INSTALLFOLDER" Name="Netduino SDK">
+            <Directory Id="dir_Assemblies" Name="Assemblies">
+              <Directory Id="dir_Assemblies_v4.1" Name="v4.1">
+                <Directory Id="dir_Assemblies_v4.1_be" Name="be" />
+                <Directory Id="dir_Assemblies_v4.1_le" Name="le" />
+              </Directory>
+              <Directory Id="dir_Assemblies_v4.2" Name="v4.2">
+                <Directory Id="dir_Assemblies_v4.2_be" Name="be" />
+                <Directory Id="dir_Assemblies_v4.2_le" Name="le" />
+              </Directory>
+              <Directory Id="dir_Assemblies_v4.3" Name="v4.3">
+                <Directory Id="dir_Assemblies_v4.3_be" Name="be" />
+                <Directory Id="dir_Assemblies_v4.3_le" Name="le" />
+              </Directory>
+            </Directory>
+          </Directory>
+        </Directory>
+
+        <Directory Id="VS_PATH" Name="VS110">
+          <Directory Id="VS_PROJECT_TEMPLATE" Name="ProjectTemplates">
+            <Directory Id="VS_PROJECT_TEMPLATE_CSHARP" Name="CSharp">
+              <Directory Id="VS_PROJECT_TEMPLATE_CSHARP_NETMF" Name="Micro Framework" />
+            </Directory>
+            <Directory Id="VS_PROJECT_TEMPLATE_VISUALBASIC" Name="VisualBasic">
+              <Directory Id="VS_PROJECT_TEMPLATE_VISUALBASIC_NETMF" Name="Micro Framework" />
+            </Directory>
+          </Directory>
+        </Directory>
+
+        <Directory Id="WDE_PATH" Name="WDE110">
+          <Directory Id="WDEXPRESS_INSTALL_PATH" Name="ROOT">
+            <Directory Id="WDEXPRESS_WDEXPRESS" Name="WDExpress">
+              <Directory Id="WDEXPRESS_PROJECT_TEMPLATE" Name="ProjectTemplates">
+                <Directory Id="WDEXPRESS_PROJECT_TEMPLATE_CSHARP" Name="CSharp">
+                  <Directory Id="WDEXPRESS_PROJECT_TEMPLATE_CSHARP_NETMF" Name="Micro Framework" />
+                </Directory>
+                <Directory Id="WDEXPRESS_PROJECT_TEMPLATE_VISUALBASIC" Name="VisualBasic">
+                  <Directory Id="WDEXPRESS_PROJECT_TEMPLATE_VISUALBASIC_NETMF" Name="Micro Framework" />
+                </Directory>
+              </Directory>
+            </Directory>
+          </Directory>
+        </Directory>
+        
+      </Directory>
+		</Directory>
+	</Fragment>
+</Wix>

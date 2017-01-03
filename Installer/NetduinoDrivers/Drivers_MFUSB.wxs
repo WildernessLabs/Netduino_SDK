@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:difx='http://schemas.microsoft.com/wix/DifxAppExtension'>
+    <Fragment>
+        <DirectoryRef Id="dir_Drivers_mfusb">
+            <Component Id="cmp407DA1FC9CD53AACE53A4952024F7FCD" Guid="E01FF660-56C9-4E53-A142-FF7663E3C79C">
+                <File Id="filA272EA3C67B4B98C4814D068AE7B184C" KeyPath="yes" Source="$(var.SourceDir)Drivers\mfusb\mfusb_netduino.cat" />
+            </Component>
+          <Component Id="cmpA08C04FC04197CD0ED32420487F3D2C3" Guid="7B80F291-C93B-4630-857F-D10D81134774">
+            <File Id="fil060A6AF3700EDA4620583923D0185526" KeyPath="yes" Source="$(var.SourceDir)Drivers\mfusb\MFUSB_Netduino.inf" />
+            <difx:Driver AddRemovePrograms="no" ForceInstall="yes" PlugAndPlayPrompt="no" Sequence="1" />
+          </Component>
+        </DirectoryRef>
+      <DirectoryRef Id="dir_Drivers_mfusb_amd64">
+        <Component Id="cmpC2DC03E3E6845256EF73CD685F20FA61" Guid="DE40BAE8-0500-4BC8-BA6D-86A579DF7847">
+          <File Id="fil2AE4B5F2E80253E892D7DBB7F9379D78" KeyPath="yes" Source="$(var.SourceDir)Drivers\mfusb\amd64\MFUSB_Netduino.sys" />
+        </Component>
+      </DirectoryRef>
+      <DirectoryRef Id="dir_Drivers_mfusb_x86">
+        <Component Id="cmp57803AA96006B456BFE56A4BD809DEFD" Guid="86378A7C-E801-4D19-82AD-71CBDADEEC38">
+          <File Id="fil4A75A3B9DB1AE2A2D79E1B1706E94EB2" KeyPath="yes" Source="$(var.SourceDir)Drivers\mfusb\x86\MFUSB_Netduino.sys" />
+        </Component>
+      </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="Drivers_MFUSB">
+            <ComponentRef Id="cmp407DA1FC9CD53AACE53A4952024F7FCD" />
+            <ComponentRef Id="cmpA08C04FC04197CD0ED32420487F3D2C3" />
+            <ComponentRef Id="cmpC2DC03E3E6845256EF73CD685F20FA61" />
+            <ComponentRef Id="cmp57803AA96006B456BFE56A4BD809DEFD" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

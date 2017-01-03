@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+	<Product Id="9B9E5D02-9344-4370-A532-09D53D0A5294" Name="Netduino Drivers" Language="1033" Version="4.3.0000" Manufacturer="Secret Labs LLC" UpgradeCode="63170dbd-4127-43df-aadc-8990fe476302">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Manufacturer="Secret Labs LLC" Description="Netduino Drivers" Keywords="Installer,MSI" Comments="Copyright (c) 2013 Secret Labs LLC, All Rights Reserved." />
+
+    <UIRef Id="WixUI_Minimal" />
+
+    <MajorUpgrade DowngradeErrorMessage="A newer version of [ProductName] is already installed." />
+		<MediaTemplate EmbedCab="yes" />
+
+    <WixVariable Id="WixUILicenseRtf" Value="$(var.SourceDir)License Agreement.rtf" />
+
+    <?if $(var.Platform)="x64" ?>
+    <?define PlatformProgramFilesFolder = "ProgramFiles64Folder" ?>
+    <?else ?>
+    <?define PlatformProgramFilesFolder = "ProgramFilesFolder" ?>
+    <?endif ?>
+
+    <?if $(var.Platform)="x64" ?>
+    <Condition Message="This installer requires a 64-bit edition of Windows.">
+      <![CDATA[VersionNT64]]>
+    </Condition>
+    <?else ?>
+    <Condition Message="This installer requires a 32-bit edition of Windows.">
+      <![CDATA[NOT VersionNT64]]>
+    </Condition>
+    <?endif ?>
+
+    <Feature Id="Drivers" Title="Netduino Drivers" Level="1">
+			<ComponentGroupRef Id="Drivers_MFUSB" />
+      <ComponentGroupRef Id="Drivers_WinUSB" />
+    </Feature>
+	</Product>
+
+	<Fragment>
+    <Directory Id="TARGETDIR" Name="SourceDir">
+      <Directory Id="PlatformProgramFilesFolder">
+        <Directory Id="MyCompanyFolder" Name="Secret Labs">
+          <Directory Id="INSTALLFOLDER" Name="Netduino SDK">
+            <Directory Id="dir_Drivers" Name="Drivers">
+              <Directory Id="dir_Drivers_mfusb" Name="mfusb">
+                <Directory Id="dir_Drivers_mfusb_amd64" Name="amd64" />
+                <Directory Id="dir_Drivers_mfusb_x86" Name="x86" />
+              </Directory>
+              <Directory Id="dir_Drivers_winusb" Name="winusb">
+                <Directory Id="dir_Drivers_winusb_amd64" Name="amd64" />
+                <Directory Id="dir_Drivers_winusb_x86" Name="x86" />
+              </Directory>
+            </Directory>
+          </Directory>
+        </Directory>
+      </Directory>
+    </Directory>
+  </Fragment>
+</Wix>

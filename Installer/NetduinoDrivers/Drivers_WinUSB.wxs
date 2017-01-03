@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:difx='http://schemas.microsoft.com/wix/DifxAppExtension'>
+    <Fragment>
+      <DirectoryRef Id="dir_Drivers_winusb">
+        <Component Id="cmp5D58B916404E3BD6B42B69256AC7886B" Guid="D5500662-62EB-4C6B-932E-887A5CD8176C">
+          <File Id="fil98B89698C5B583E51B88A2AC34DA235C" KeyPath="yes" Source="$(var.SourceDir)Drivers\winusb\winusb_netduino.cat" />
+        </Component>
+        <Component Id="cmp742E64A930D0A30CA19D12F34CDBFE71" Guid="40BB8CA4-C72E-4563-B0BB-1C466DFE82BD">
+          <File Id="fil42E4D8078F2A2D536FCA8224B3CD1C1B" KeyPath="yes" Source="$(var.SourceDir)Drivers\winusb\winusb_netduino.inf" />
+          <difx:Driver AddRemovePrograms="no" ForceInstall="yes" PlugAndPlayPrompt="no" Sequence="2" />
+        </Component>
+      </DirectoryRef>
+      <DirectoryRef Id="dir_Drivers_winusb_amd64">
+        <Component Id="cmpD67E1B42CAD172B9067ADBBCABDBA367" Guid="E91653E9-EC93-4B37-A041-4E316EF6D04F">
+          <File Id="fil6202A0244D71CA9C38DF99D035EE3238" KeyPath="yes" Source="$(var.SourceDir)Drivers\winusb\amd64\WdfCoInstaller01009.dll" />
+        </Component>
+        <Component Id="cmpDECF83A9F3CCB900783D71813DF60903" Guid="C868A9EC-481E-4CEE-A06B-908DC8B0D408">
+          <File Id="fil8AC7F45619D4AED538069FB92CF04DF9" KeyPath="yes" Source="$(var.SourceDir)Drivers\winusb\amd64\winusbcoinstaller2.dll" />
+        </Component>
+      </DirectoryRef>
+      <DirectoryRef Id="dir_Drivers_winusb_x86">
+        <Component Id="cmp33B32CE6F607845143D27920ED2CFF7E" Guid="A75631D2-BEBB-42A4-9F29-B4EF0EB010A0">
+          <File Id="fil8D2148D8077A686987A35ABAC7169068" KeyPath="yes" Source="$(var.SourceDir)Drivers\winusb\x86\WdfCoInstaller01009.dll" />
+        </Component>
+        <Component Id="cmpB5BF5DF80E837CD36EA13B1559319557" Guid="E3B60247-A18D-47EB-82D5-D3596B1AB5BB">
+          <File Id="filEA480F37DCE1FC97D519B99826F90A32" KeyPath="yes" Source="$(var.SourceDir)Drivers\winusb\x86\winusbcoinstaller2.dll" />
+        </Component>
+      </DirectoryRef>
+    </Fragment>
+    <Fragment>
+        <ComponentGroup Id="Drivers_WinUSB">
+            <ComponentRef Id="cmp5D58B916404E3BD6B42B69256AC7886B" />
+            <ComponentRef Id="cmp742E64A930D0A30CA19D12F34CDBFE71" />
+            <ComponentRef Id="cmpD67E1B42CAD172B9067ADBBCABDBA367" />
+            <ComponentRef Id="cmpDECF83A9F3CCB900783D71813DF60903" />
+            <ComponentRef Id="cmp33B32CE6F607845143D27920ED2CFF7E" />
+            <ComponentRef Id="cmpB5BF5DF80E837CD36EA13B1559319557" />
+        </ComponentGroup>
+    </Fragment>
+</Wix>

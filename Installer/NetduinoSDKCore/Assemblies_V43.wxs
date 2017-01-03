@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
+  <Fragment>
+    <DirectoryRef Id="dir_Assemblies_v4.3">
+      <Component Id="cmp_Assemblies_V43_RegisterAssembliesWithVisualStudio" Guid="58BED9DD-6C3C-4BEB-991A-5ABEA51D9E80">
+        <RegistryValue Id="reg_Assemblies_V43_RegisterAssembliesWithVisualStudio" KeyPath="yes" Action="write" Root="HKLM" Key="SOFTWARE\Microsoft\.NETMicroFramework\v4.3\AssemblyFoldersEx\SecretLabs" Value="[dir_Assemblies_v4.3]" Type="string" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Diagnostics.dll" Guid="16F72C28-C4F9-4ABA-BD57-3C26BD79EC81">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.Diagnostics.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.Diagnostics.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Diagnostics.pdb" Guid="F30476A2-3C4D-4D70-8670-899E5FB64C17">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.Diagnostics.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.Diagnostics.pdb" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.AnalogInput.dll" Guid="7BC2A6F9-0206-4E6C-81F3-D00ED6020162">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.Hardware.AnalogInput.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.Hardware.AnalogInput.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.AnalogInput.pdb" Guid="9D5678ED-5995-41B2-8B85-729959264440">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.Hardware.AnalogInput.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.Hardware.AnalogInput.pdb" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.dll" Guid="76CAFFD6-6ABB-4233-A305-A9E33CC9AE1A">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.Hardware.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.Hardware.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.Netduino.dll" Guid="2217E8F8-3FCC-4D6F-A5FC-3FB87C8050DB">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.Hardware.Netduino.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.Hardware.Netduino.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.Netduino.pdb" Guid="6780A7A7-1EA8-4E21-9CC2-FAFF8D82FA4C">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.Hardware.Netduino.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.Hardware.Netduino.pdb" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.NetduinoMini.dll" Guid="C42B0D9D-F280-4D28-AB50-2E6BB10EFCBA">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.Hardware.NetduinoMini.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.Hardware.NetduinoMini.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.NetduinoMini.pdb" Guid="53858DD1-592D-413B-90D5-82E484FCC9C6">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.Hardware.NetduinoMini.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.Hardware.NetduinoMini.pdb" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.NetduinoPlus.dll" Guid="22F27E09-E526-44F6-9CDE-A32CC6FB3A20">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.Hardware.NetduinoPlus.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.Hardware.NetduinoPlus.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.NetduinoPlus.pdb" Guid="407F07A2-54D1-4BCD-B5FA-EA1F59DA258A">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.Hardware.NetduinoPlus.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.Hardware.NetduinoPlus.pdb" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.pdb" Guid="26D96105-0387-4F0C-9FB5-FE4D7179575D">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.Hardware.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.Hardware.pdb" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.PWM.dll" Guid="8BA54B8A-B179-48FB-99BA-B19BD7D7C38A">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.Hardware.PWM.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.Hardware.PWM.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.PWM.pdb" Guid="331427CA-60A7-4A2D-83DA-CC20EB7F863B">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.Hardware.PWM.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.Hardware.PWM.pdb" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.IO.dll" Guid="4F30B274-35B4-4C41-95A9-5F0C48794BC0">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.IO.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.IO.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.IO.pdb" Guid="4978FD49-7BC5-4C31-891A-8596DCEB8A86">
+        <File Id="fil_Assemblies_v4.3_SecretLabs.NETMF.IO.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\SecretLabs.NETMF.IO.pdb" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir_Assemblies_v4.3_be">
+      <Component Id="cmp2AE85E168904222B076A5A0D3C5F645C" Guid="38F78424-2565-4076-B3FC-6E5FBCE4DCA7">
+        <File Id="fil6DD25FA64F67B190F70F73773E6B6283" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Diagnostics.dll" />
+      </Component>
+      <Component Id="cmpE32E77325916667342A265DD6BF24CD2" Guid="55CE220A-0A9D-43C4-9568-6028A39F59B9">
+        <File Id="filD9C31DC3F55DC742F48AE2839AC61DA2" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Diagnostics.pdb" />
+      </Component>
+      <Component Id="cmpE89D8EBBCC8D8FCD746D8092BC570B99" Guid="4FCED11D-25B4-4A5D-A969-F1818071F6E3">
+        <File Id="fil8334D11D604C1B80E42CE90722B4B0BD" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Diagnostics.pdbx" />
+      </Component>
+      <Component Id="cmp32CBF39798311A3763294C8A81C3922A" Guid="77DD4E3F-7051-42A7-844D-B7245F2E62CF">
+        <File Id="filCD7AB0E6DDDC3B36FF11AE2A275793C3" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Diagnostics.pe" />
+      </Component>
+      <Component Id="cmpD5F55B5BD2BBFD07C41501C40EF25F15" Guid="3570231B-CF0F-4EBA-8F52-C11DFF3A083B">
+        <File Id="fil3D1035DE4E7AE7C9703CC142E536EBA6" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.AnalogInput.dll" />
+      </Component>
+      <Component Id="cmp97F61D2038DC09CD9024FEE2B91D3461" Guid="556B2D25-2831-45A6-82D6-A4A93B1576E8">
+        <File Id="fil603309D7B79BB80410E3FF0F5039FA07" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.AnalogInput.pdb" />
+      </Component>
+      <Component Id="cmp67AC4D3470C0769F272EC5CFE1295540" Guid="8005F049-C450-45EA-B899-7DDFE73105B6">
+        <File Id="fil807FD3A0D982B9C7C29BC0703B79CA65" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.AnalogInput.pdbx" />
+      </Component>
+      <Component Id="cmp2B2A463D677FB66BF9687AFD9ECEEBE1" Guid="3EC48621-7837-4615-8307-9D21D890CD87">
+        <File Id="filD47F43236AEBF67EDB641E8DF1A1920C" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.AnalogInput.pe" />
+      </Component>
+      <Component Id="cmpC0BA8C0F4EB9747ADBC4CBDC5AAA46B1" Guid="F8C84779-74E5-47C3-AF64-E5109E517EEB">
+        <File Id="fil17EC70C509C6516A17B8DAC5B9029853" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.dll" />
+      </Component>
+      <Component Id="cmpED2ADA4A07E2E3C2DAB951C13F986956" Guid="EF14E621-7542-402C-A56C-667B34E85DFF">
+        <File Id="filB8DD9AFA401BD245AE4B198274E6BB61" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.Netduino.dll" />
+      </Component>
+      <Component Id="cmp99E9C1EE775DF93004700E48B61C581A" Guid="9A12E2DC-3FA2-4CA3-9258-6CC4A6840AB5">
+        <File Id="fil71D9A50E9DCC101DD4E904938AC40A07" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.Netduino.pdb" />
+      </Component>
+      <Component Id="cmp3006356BE5B77C871AE4BB3323E0F9B6" Guid="1BE9EAB5-2E4B-431B-A447-5383CBB224EB">
+        <File Id="filCE0925D632F7812127A3803681BB4ABA" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.Netduino.pdbx" />
+      </Component>
+      <Component Id="cmp7EAF43E5CBA05009879E7677BEB6298C" Guid="BC10BA6F-274F-4EF7-B78B-84235CADC6FA">
+        <File Id="fil815AFB80AE9B04AD58A6B9CDD454C49A" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.Netduino.pe" />
+      </Component>
+      <Component Id="cmp958BCDC713F0B4C14C0A36C0444AD484" Guid="B9709564-8A52-4D34-841C-6992308246BA">
+        <File Id="filFBE463601B76A00DCE916143376C2BD7" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.NetduinoMini.dll" />
+      </Component>
+      <Component Id="cmpAF917B3792F054DD2120E737B39E6CEA" Guid="B1B0056E-D618-40CD-BD27-3CB1C9D9CC5E">
+        <File Id="fil40E69352BE72E41DEBCD99B3AD583653" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.NetduinoMini.pdb" />
+      </Component>
+      <Component Id="cmpA91877BA5CF4BD6B4329D44BD8C9E820" Guid="1E91E14D-0BD6-44AD-8909-DECCC3333466">
+        <File Id="filFC7E6E2B650B97F4387C7DDBB416900E" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.NetduinoMini.pdbx" />
+      </Component>
+      <Component Id="cmp88FB32C03D0C595C3EFFC97FCB609A46" Guid="02FD1658-F1EE-4E01-9C53-DEC79CA59308">
+        <File Id="fil1318A40846B27F8D138AE4CE3B259730" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.NetduinoMini.pe" />
+      </Component>
+      <Component Id="cmp71BA0646E208A647E255EAD2AF6E93C6" Guid="9A3BB125-57DE-4A48-B46F-5A188AFF606D">
+        <File Id="fil6B6A4443A2B8595EE49703BA2216A949" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.NetduinoPlus.dll" />
+      </Component>
+      <Component Id="cmpA499F2426CC42A2758FCE9B8F2D87698" Guid="185FC2FE-3936-4531-844D-2B52E419153B">
+        <File Id="fil9D44549B11E58730761647227A490B19" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.NetduinoPlus.pdb" />
+      </Component>
+      <Component Id="cmp42E34E6EFE1394BDD22A2ABB4A8BCB99" Guid="F9109A87-34C7-465C-9D5C-685769FAFC6C">
+        <File Id="fil65288FAC738E1CBB3DDECA31132239EA" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.NetduinoPlus.pdbx" />
+      </Component>
+      <Component Id="cmp9BA621812CEE395AB85EE515751F6C7B" Guid="EAAB35F3-A560-401C-B8F3-E68CFF73D6F4">
+        <File Id="filB32501D08958D606A458E328831CA213" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.NetduinoPlus.pe" />
+      </Component>
+      <Component Id="cmp8919EBEB8D2CB2DC0AF521F65C6FBB01" Guid="DB56961E-2113-45E2-AB9D-2DB246983632">
+        <File Id="fil599C98CB2822057C60003BAB4D679BE7" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.pdb" />
+      </Component>
+      <Component Id="cmp316E0242953F9130E438917922FB97BB" Guid="624D5B74-0EBC-4712-965A-B431CB6061FB">
+        <File Id="fil878CD3E6AF81A727B82271FC55135D6A" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.pdbx" />
+      </Component>
+      <Component Id="cmpA58C1463000555077FF6FAF9804EAFC5" Guid="9CFBD135-9E96-47D7-88A5-0DEB83F45C6B">
+        <File Id="fil508A232F61229935E51B9AA1286118E5" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.pe" />
+      </Component>
+      <Component Id="cmpE84716F0D0409A714B6708FA40396249" Guid="5E170330-38E3-4CF6-9FE2-03E99C4A1922">
+        <File Id="fil5A3966E5BF66073B3FCBAB3B8EC8BF8E" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.PWM.dll" />
+      </Component>
+      <Component Id="cmp5C7428EE074726124F32D35DBFA83C06" Guid="A3ABBDFD-DC04-4B5D-B088-8BA0299E72D4">
+        <File Id="fil669BFA77989AB4983E8DB917DE13DFB2" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.PWM.pdb" />
+      </Component>
+      <Component Id="cmp7399983B298E635BA12DA5010EC7BA9A" Guid="BC956B9D-E7A8-4B02-80B0-1838A9985127">
+        <File Id="fil7B706859B956023BE7BE48AE227A8CC3" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.PWM.pdbx" />
+      </Component>
+      <Component Id="cmp5F96F779B721D6A1A0BC82152703067F" Guid="1DEC5901-B0B7-4F22-AD7F-FCDA2B891552">
+        <File Id="filBB32F399E54611DB471E007BF0593C9B" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.Hardware.PWM.pe" />
+      </Component>
+      <Component Id="cmpCA8C900A6AB406BCA217EEA4AFF7C099" Guid="11A4BE9A-444C-486F-A3DA-5E78BA3C1B8A">
+        <File Id="fil0345D301E24F4D8C03A98A246B7F4B12" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.IO.dll" />
+      </Component>
+      <Component Id="cmpDC68B74F431F7E044ECA4D9D8F7BAA03" Guid="1C3B5A49-5AE7-4702-804C-96EC8456435D">
+        <File Id="fil7E7FD16ADE2A22B6574EF1B898EF7A7C" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.IO.pdb" />
+      </Component>
+      <Component Id="cmpA6AD41CFC14BA64AC2E1C03A28E214B6" Guid="24FA88DE-491F-4A40-8A90-ABE8C6AB8C98">
+        <File Id="fil57AFA09F1E75027541097736699C61F6" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.IO.pdbx" />
+      </Component>
+      <Component Id="cmpA6213FBE27973E8BD1153690835BDFAC" Guid="4F09BCF3-4602-4FA8-9E13-F6824DBA2AD5">
+        <File Id="filA58BD1684A8B01537B1BDA9EB12C366D" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\be\SecretLabs.NETMF.IO.pe" />
+      </Component>
+    </DirectoryRef>
+    <DirectoryRef Id="dir_Assemblies_v4.3_le">
+      <Component Id="cmpF4DCE38828794B6CFE39D3AB884A9E9A" Guid="BA58767E-AE54-4CA9-9F4E-BF4E64E6C75C">
+        <File Id="fil7FA3961257DFF242836850ADF5DB05BC" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Diagnostics.dll" />
+      </Component>
+      <Component Id="cmpCB19F5426BCBE06CEA3AAC7311981B42" Guid="C0F08CD8-5C2E-4A3C-AA6A-72BDE66EE490">
+        <File Id="filCDDD869700E2EDC1D4CF004BA2109B7B" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Diagnostics.pdb" />
+      </Component>
+      <Component Id="cmp364ED71EC4592A7A90D2E69DE0CBE84E" Guid="A1AC73A5-A335-452E-B24C-8AAA158F9D75">
+        <File Id="fil21EF6F2758F56376899FB143E3D18317" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Diagnostics.pdbx" />
+      </Component>
+      <Component Id="cmp1A83B1FA8FE84786172E8BC922A969CE" Guid="3176AFCF-63FB-4CAF-868A-3BDC1E4E0F33">
+        <File Id="fil24FDE5DFEDE9D641EFD7B4161D14CED2" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Diagnostics.pe" />
+      </Component>
+      <Component Id="cmp3D78EB9829C1A6C5C05C97803AA4F28E" Guid="B98DF608-2908-490B-AB41-3C02CA431AA5">
+        <File Id="fil754D963B3DF4CE81C1B5523F1EDD1893" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.AnalogInput.dll" />
+      </Component>
+      <Component Id="cmp83EC02ED6694CCD6C4B9EA055C04547C" Guid="AD984D4F-F947-473E-9441-351F55198E56">
+        <File Id="filB1542B50FA42A37F22669EAAD21310E9" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.AnalogInput.pdb" />
+      </Component>
+      <Component Id="cmpF2F38EB131CF06989582691F7BBFBE1E" Guid="1782ECC3-66BD-483F-8052-C0EEBD2C986D">
+        <File Id="filA49687C5577F2B407DCD4DC4269450EF" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.AnalogInput.pdbx" />
+      </Component>
+      <Component Id="cmp8A387E2819C29B9B1C9E626E9E78DE26" Guid="12C99DE3-7E5D-4C2F-A905-8F6AB95C2E6E">
+        <File Id="fil7F236C3B8C93C0D21F18B34B32137139" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.AnalogInput.pe" />
+      </Component>
+      <Component Id="cmp8A893C66B67F3126FC4E7CCB4EBB05CD" Guid="326CF301-23D1-42DC-B12F-7C3219AC5A23">
+        <File Id="fil92F716A9D640E97C9ACD290B31E83978" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.dll" />
+      </Component>
+      <Component Id="cmp14B075A4ABC42A566501727CB33858E4" Guid="295EB4DB-473A-414C-BA0A-D0F6AB419559">
+        <File Id="fil7E0E997736C35A74975EDD3DB2977433" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.Netduino.dll" />
+      </Component>
+      <Component Id="cmp293A6675770B0BB566BB631C6D01221E" Guid="0C662D14-B7C3-467D-BF03-78F3F6649A4B">
+        <File Id="filF953B655870BCEB495F57BE8CA6B3B6B" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.Netduino.pdb" />
+      </Component>
+      <Component Id="cmp55CBCDBC30AC3BBAE2CF19D8BB82F295" Guid="1ECD24DF-8CEC-4B27-B327-25D91191FCAB">
+        <File Id="fil8A95198F3E7A38A8FCE47400B8D340FC" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.Netduino.pdbx" />
+      </Component>
+      <Component Id="cmpD320A384CB7F737DEC2E13811C4F085B" Guid="5333F988-DEE2-44F9-AEC4-EF6260D5B8C7">
+        <File Id="filA54EF3891BC3358325479D5F6AB71927" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.Netduino.pe" />
+      </Component>
+      <Component Id="cmp1DCDE06DDA8988411F3CBBAA6037C0AF" Guid="AB643C19-2982-40C4-BAEE-7BDCD863C80B">
+        <File Id="fil2A777A0018CD3C5D95E3561A7EF60CDB" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.NetduinoMini.dll" />
+      </Component>
+      <Component Id="cmp5C6434C149641FE5FBE8DE8E58FF5A07" Guid="5DF729E0-0D65-4BA8-B5C2-C40BDD9A4164">
+        <File Id="fil1861F67120EDEC2175977449A1CF19FD" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.NetduinoMini.pdb" />
+      </Component>
+      <Component Id="cmp7BDB6064D440D99B1CAF45C2E281E520" Guid="0AFF7EAA-92A9-4C9B-9975-25554C3B76D4">
+        <File Id="fil1F505E9E0BE0E8CE1622BA1F34B2FD03" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.NetduinoMini.pdbx" />
+      </Component>
+      <Component Id="cmp5B94F0B129C2A1A102F8B6742A9D4631" Guid="B8C4AF42-1463-4438-9AA2-CCF56A99E817">
+        <File Id="filB2EA71676B0131C976AC0687853E336C" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.NetduinoMini.pe" />
+      </Component>
+      <Component Id="cmp0B84E480203C35B9D787E565BA62531F" Guid="409BB885-5924-4FFA-AB04-7D76AED075A2">
+        <File Id="fil1AE005B5187EB298CC58455EBEED7F04" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.NetduinoPlus.dll" />
+      </Component>
+      <Component Id="cmpEA2BBA42144E7FB8C70666971041E266" Guid="E4483234-B773-48CD-A1E8-52DC0691C9E4">
+        <File Id="filD7767DDDF1F6E08E93D510123A254CCA" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.NetduinoPlus.pdb" />
+      </Component>
+      <Component Id="cmpCD5EA1556D5EA6BE149FA6379C8546ED" Guid="077DF820-7DB0-413E-912F-C5503372C16F">
+        <File Id="fil7D3630DAF7B9CC9ABD83BF9320C8CFDD" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.NetduinoPlus.pdbx" />
+      </Component>
+      <Component Id="cmp6C2EECA665AF785B3F533A33A226A18E" Guid="9A137EA0-59FB-4A27-931E-58EDD54EA83D">
+        <File Id="fil9F25F4E62ADF6008401B64AD95DE0FFF" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.NetduinoPlus.pe" />
+      </Component>
+      <Component Id="cmp60AFD8BD57FAB6ABA0D7B75901F2B001" Guid="F6646521-651C-4ABB-A1C1-1B47D38CDFDD">
+        <File Id="filF673FF87709E0F2C686B9102FA87329E" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.pdb" />
+      </Component>
+      <Component Id="cmp8F7D6452E602478593B243C0AD344CD8" Guid="D54C95AB-0A6A-4F9B-836B-AF9406F51C14">
+        <File Id="fil7490C3385894927FE70FCA2DC5886F58" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.pdbx" />
+      </Component>
+      <Component Id="cmp92AA37BD76E78D36B3EDE533FF8DD19B" Guid="A4E71336-548D-4E62-8F29-8A43B40EB4BF">
+        <File Id="filB9138114A64A941E1F70238F4A13FDD2" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.pe" />
+      </Component>
+      <Component Id="cmp2D5B5EC9CC3F79892FBC2D66E0227178" Guid="A5D62416-C995-4380-BE9E-7CDBA25C29C3">
+        <File Id="fil216481760BAAF791282EE593F4A6A024" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.PWM.dll" />
+      </Component>
+      <Component Id="cmp8C75C3F8F506BC0F316BEF99EE3A569E" Guid="78D324E9-4BC7-44FA-A761-77912DA67B9F">
+        <File Id="fil71E34540B54E58EB8EA8F199D996830E" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.PWM.pdb" />
+      </Component>
+      <Component Id="cmp3B285955BB64A38C63EFD580EAF9B931" Guid="484A81E2-749A-4ABD-9401-7A8A3E93E4BD">
+        <File Id="fil8A250E892F758EAE921B840A52C1E82C" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.PWM.pdbx" />
+      </Component>
+      <Component Id="cmpCAB53E7C9D6AB77557941B1C0110C1C4" Guid="9D71C2B5-85A0-47CB-9A04-4F0DF1F9D250">
+        <File Id="filE17C989C6BEF1D2A533AB6B13B710110" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.PWM.pe" />
+      </Component>
+      <Component Id="cmpD9AD3DD59CA883CA12B0734D6D9B5994" Guid="A25220C3-BDE6-4DF5-94C7-B822DBC15949">
+        <File Id="fil9C18B38D76C3E4B416B3EFB2C541E8BE" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.IO.dll" />
+      </Component>
+      <Component Id="cmpEB5349D51AA679010F94D08EC3C50CE6" Guid="23D6062F-0049-4BA0-B8EE-27E3B5347F80">
+        <File Id="filA664F3E95A064AB1BC0330ACF3304D71" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.IO.pdb" />
+      </Component>
+      <Component Id="cmp0D547231BAE375360F3D21BEDB144AC1" Guid="8C310D40-6AAF-4C6B-A429-D6D0567DB03B">
+        <File Id="fil4DF7A55F75596297E60A0282B121C14E" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.IO.pdbx" />
+      </Component>
+      <Component Id="cmp5AA0B306C5C25916CE0C87CC1FFF8650" Guid="1421A271-E271-4FF7-903C-4827E32E865E">
+        <File Id="fil5F49B4FF2B9E8EC74ADBFBF329BA4027" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.IO.pe" />
+      </Component>
+    </DirectoryRef>
+  </Fragment>
+  <Fragment>
+    <ComponentGroup Id="Assemblies_V43">
+      <ComponentRef Id="cmp_Assemblies_V43_RegisterAssembliesWithVisualStudio" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Diagnostics.dll" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Diagnostics.pdb" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.AnalogInput.dll" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.AnalogInput.pdb" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.dll" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.Netduino.dll" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.Netduino.pdb" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.NetduinoMini.dll" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.NetduinoMini.pdb" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.NetduinoPlus.dll" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.NetduinoPlus.pdb" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.pdb" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.PWM.dll" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.Hardware.PWM.pdb" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.IO.dll" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_SecretLabs.NETMF.IO.pdb" />
+      <ComponentRef Id="cmp2AE85E168904222B076A5A0D3C5F645C" />
+      <ComponentRef Id="cmpE32E77325916667342A265DD6BF24CD2" />
+      <ComponentRef Id="cmpE89D8EBBCC8D8FCD746D8092BC570B99" />
+      <ComponentRef Id="cmp32CBF39798311A3763294C8A81C3922A" />
+      <ComponentRef Id="cmpD5F55B5BD2BBFD07C41501C40EF25F15" />
+      <ComponentRef Id="cmp97F61D2038DC09CD9024FEE2B91D3461" />
+      <ComponentRef Id="cmp67AC4D3470C0769F272EC5CFE1295540" />
+      <ComponentRef Id="cmp2B2A463D677FB66BF9687AFD9ECEEBE1" />
+      <ComponentRef Id="cmpC0BA8C0F4EB9747ADBC4CBDC5AAA46B1" />
+      <ComponentRef Id="cmpED2ADA4A07E2E3C2DAB951C13F986956" />
+      <ComponentRef Id="cmp99E9C1EE775DF93004700E48B61C581A" />
+      <ComponentRef Id="cmp3006356BE5B77C871AE4BB3323E0F9B6" />
+      <ComponentRef Id="cmp7EAF43E5CBA05009879E7677BEB6298C" />
+      <ComponentRef Id="cmp958BCDC713F0B4C14C0A36C0444AD484" />
+      <ComponentRef Id="cmpAF917B3792F054DD2120E737B39E6CEA" />
+      <ComponentRef Id="cmpA91877BA5CF4BD6B4329D44BD8C9E820" />
+      <ComponentRef Id="cmp88FB32C03D0C595C3EFFC97FCB609A46" />
+      <ComponentRef Id="cmp71BA0646E208A647E255EAD2AF6E93C6" />
+      <ComponentRef Id="cmpA499F2426CC42A2758FCE9B8F2D87698" />
+      <ComponentRef Id="cmp42E34E6EFE1394BDD22A2ABB4A8BCB99" />
+      <ComponentRef Id="cmp9BA621812CEE395AB85EE515751F6C7B" />
+      <ComponentRef Id="cmp8919EBEB8D2CB2DC0AF521F65C6FBB01" />
+      <ComponentRef Id="cmp316E0242953F9130E438917922FB97BB" />
+      <ComponentRef Id="cmpA58C1463000555077FF6FAF9804EAFC5" />
+      <ComponentRef Id="cmpE84716F0D0409A714B6708FA40396249" />
+      <ComponentRef Id="cmp5C7428EE074726124F32D35DBFA83C06" />
+      <ComponentRef Id="cmp7399983B298E635BA12DA5010EC7BA9A" />
+      <ComponentRef Id="cmp5F96F779B721D6A1A0BC82152703067F" />
+      <ComponentRef Id="cmpCA8C900A6AB406BCA217EEA4AFF7C099" />
+      <ComponentRef Id="cmpDC68B74F431F7E044ECA4D9D8F7BAA03" />
+      <ComponentRef Id="cmpA6AD41CFC14BA64AC2E1C03A28E214B6" />
+      <ComponentRef Id="cmpA6213FBE27973E8BD1153690835BDFAC" />
+      <ComponentRef Id="cmpF4DCE38828794B6CFE39D3AB884A9E9A" />
+      <ComponentRef Id="cmpCB19F5426BCBE06CEA3AAC7311981B42" />
+      <ComponentRef Id="cmp364ED71EC4592A7A90D2E69DE0CBE84E" />
+      <ComponentRef Id="cmp1A83B1FA8FE84786172E8BC922A969CE" />
+      <ComponentRef Id="cmp3D78EB9829C1A6C5C05C97803AA4F28E" />
+      <ComponentRef Id="cmp83EC02ED6694CCD6C4B9EA055C04547C" />
+      <ComponentRef Id="cmpF2F38EB131CF06989582691F7BBFBE1E" />
+      <ComponentRef Id="cmp8A387E2819C29B9B1C9E626E9E78DE26" />
+      <ComponentRef Id="cmp8A893C66B67F3126FC4E7CCB4EBB05CD" />
+      <ComponentRef Id="cmp14B075A4ABC42A566501727CB33858E4" />
+      <ComponentRef Id="cmp293A6675770B0BB566BB631C6D01221E" />
+      <ComponentRef Id="cmp55CBCDBC30AC3BBAE2CF19D8BB82F295" />
+      <ComponentRef Id="cmpD320A384CB7F737DEC2E13811C4F085B" />
+      <ComponentRef Id="cmp1DCDE06DDA8988411F3CBBAA6037C0AF" />
+      <ComponentRef Id="cmp5C6434C149641FE5FBE8DE8E58FF5A07" />
+      <ComponentRef Id="cmp7BDB6064D440D99B1CAF45C2E281E520" />
+      <ComponentRef Id="cmp5B94F0B129C2A1A102F8B6742A9D4631" />
+      <ComponentRef Id="cmp0B84E480203C35B9D787E565BA62531F" />
+      <ComponentRef Id="cmpEA2BBA42144E7FB8C70666971041E266" />
+      <ComponentRef Id="cmpCD5EA1556D5EA6BE149FA6379C8546ED" />
+      <ComponentRef Id="cmp6C2EECA665AF785B3F533A33A226A18E" />
+      <ComponentRef Id="cmp60AFD8BD57FAB6ABA0D7B75901F2B001" />
+      <ComponentRef Id="cmp8F7D6452E602478593B243C0AD344CD8" />
+      <ComponentRef Id="cmp92AA37BD76E78D36B3EDE533FF8DD19B" />
+      <ComponentRef Id="cmp2D5B5EC9CC3F79892FBC2D66E0227178" />
+      <ComponentRef Id="cmp8C75C3F8F506BC0F316BEF99EE3A569E" />
+      <ComponentRef Id="cmp3B285955BB64A38C63EFD580EAF9B931" />
+      <ComponentRef Id="cmpCAB53E7C9D6AB77557941B1C0110C1C4" />
+      <ComponentRef Id="cmpD9AD3DD59CA883CA12B0734D6D9B5994" />
+      <ComponentRef Id="cmpEB5349D51AA679010F94D08EC3C50CE6" />
+      <ComponentRef Id="cmp0D547231BAE375360F3D21BEDB144AC1" />
+      <ComponentRef Id="cmp5AA0B306C5C25916CE0C87CC1FFF8650" />
+    </ComponentGroup>
+  </Fragment>
+  </Wix>
