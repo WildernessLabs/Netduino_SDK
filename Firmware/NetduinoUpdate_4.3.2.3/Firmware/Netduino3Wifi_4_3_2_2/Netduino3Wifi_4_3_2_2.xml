@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Firmware xmlns="http://schemas.netduino.com/netduino/firmware" ProductID="9" ProductName="Netduino 3 Wi-Fi" HasMacAddress="True" Version="4.3.2.2">
+   <FirmwareRegion Name="Bootloader" Filename="Tinybooter.s19">
+      <FlashSector BaseAddress="08000000"/>
+      <FlashSector BaseAddress="08004000"/>
+      <FlashSector BaseAddress="08008000"/>
+   </FirmwareRegion>
+   <FirmwareRegion Name="Config" Filename="ER_CONFIG.s19">
+      <FlashSector BaseAddress="0800C000"/>
+   </FirmwareRegion>
+   <FirmwareRegion Name="Runtime" Filename="ER_FLASH.s19" BaseAddress="08020000">
+      <FlashSector BaseAddress="08010000"/>
+      <FlashSector BaseAddress="08020000"/>
+      <FlashSector BaseAddress="08040000"/>
+      <FlashSector BaseAddress="08060000"/>
+      <FlashSector BaseAddress="08080000"/>
+   </FirmwareRegion>
+   <FirmwareRegion Name="Deployment">
+      <FlashSector BaseAddress="080A0000"/>
+      <FlashSector BaseAddress="080C0000"/>
+      <FlashSector BaseAddress="080E0000"/>
+   </FirmwareRegion>
+</Firmware>
