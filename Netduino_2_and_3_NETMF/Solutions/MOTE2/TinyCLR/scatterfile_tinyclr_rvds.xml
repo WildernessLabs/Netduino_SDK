@@ -1,0 +1,169 @@
+<?xml version="1.0"?>
+<ScatterFile xmlns="http://schemas.microsoft.com/netmf/ScatterfileSchema.xsd">
+
+    <!-- PXA271 has 256KB of RAM at 0x5c000000, 32MB SDRAM at 0xA0000000  -->
+    <!-- FLASH starts at 0x0 without double map -->
+
+    <Set Name="Valid" Value="false"/>
+
+    <!-- ################################################################################ -->
+    <Set Name="Heap_Begin"      Value="0xA0000000"/>
+    <Set Name="Heap_End"        Value="0xA1FFFFF8"/>
+    <Set Name="Stack_Bottom"    Value="0x5C03A000"/>
+    <Set Name="Stack_Top"       Value="0x5C03C000"/>
+
+    <IfDefined Name="PROFILE_BUILD">
+        <Set Name="ProfileBuffer_Begin"  Value="0xA0000000"/>
+        <Set Name="ProfileBuffer_End"    Value="0xA000FFF8"/>
+        <Set Name="Heap_Begin"           Value="0xA0010000"/>
+    </IfDefined>
+
+    <If Name="TARGETLOCATION" In="FLASH">
+
+        <!-- MOTE2 has 32MB of 16-bit FLASH at 0x00000000 -->
+        <Set Name="Config_BaseAddress"  Value="0x01FE0000"/>    
+        <Set Name="Config_Size"         Value="0x00020000"/>
+        <Set Name="Code_BaseAddress"    Value="0x00160000"/>
+        <Set Name="Data_BaseAddress"    Value="0x001E0000"/>        
+        <Set Name="Deploy_BaseAddress"  Value="0x00240000"/>
+        <Set Name="Code_Size"           Value="%Data_BaseAddress - Code_BaseAddress%"/>
+        <Set Name="Data_Size"           Value="%Deploy_BaseAddress - Data_BaseAddress%"/>
+        <Set Name="Valid"               Value="true"/>
+    </If>
+
+    <If Name="TARGETLOCATION" In="RAM">
+
+        <Set Name="Heap_Begin"       Value="0xA1000000"/>
+        <Set Name="Code_BaseAddress" Value="0xA0000000"/>
+        <Set Name="Code_Size"        Value="0x01000000"/>
+
+        <!-- RAM with FLASH config is not needed -->
+        <Set Name="Valid"            Value="true"/>
+        <IfDefined Name="PROFILE_BUILD">
+            <Set Name="ProfileBuffer_Begin" Value="0xA1000000"/>
+            <Set Name="ProfileBuffer_End"   Value="0xA100FFF8"/>
+            <Set Name="Heap_Begin"          Value="0xA0010000"/>
+        </IfDefined>
+
+    </If>
+
+    <!-- ################################################################################ -->
+
+    <If Name="Valid" Value="false">
+        <Error Message="Configuration not recognized"/>
+    </If>
+
+    <LoadRegion Name="LR_%TARGETLOCATION%" Base="%Code_BaseAddress%" Options="ABSOLUTE" Size="%Code_Size%">
+
+        <ExecRegion Name="ER_%TARGETLOCATION%" Base="%Code_BaseAddress%" Options="FIXED" Size="">
+
+            <FileMapping Name="FirstEntry.obj"    Options="(+RO, +FIRST)" /> <!-- the entry pointer section goes into this region -->
+
+            <FileMapping Name="*" Options="(SectionForBootstrapOperations)" />
+
+            <FileMapping Name="*" Options="(+RO-CODE)" />
+
+            <FileMapping Name="*" Options="(+RO-DATA)" />
+
+            <IfNotDefined Name="Data_BaseAddress">
+
+                <FileMapping Name="tinyclr_dat.obj" Options="(+RO, +LAST)" />
+
+            </IfNotDefined>
+
+        </ExecRegion>
+
+        <!-- skip vector area -->
+
+        <ExecRegion Name="ER_RAM_RO" Base="0x00000000" Options="ABSOLUTE" Size="0x1A000">
+
+            <!-- the following are dotNetMF's HAL library -->
+
+            <FileMapping Name="VectorsTrampolines.obj" Options="(+RO, +FIRST)" /> <!-- for vector handlers to be far from the vectors -->
+            <IfDefined Name="FIQ_SAMPLING_PROFILER">
+                <FileMapping Name="sampling_profiler_RAM.obj" Options="(+RO)" /> <!-- for flashing without running from flash -->
+            </IfDefined>
+            
+            <Include File="%SPOCLIENT%\Solutions\MOTE2\TinyCLR\scatterfile_ram_functions.xml"/>
+            <Include File="%SPOCLIENT%\Solutions\MOTE2\TinyCLR\scatterfile_tinyclr_ram_functions.xml"/>
+
+            <FileMapping Name="*" Options="(SectionForFlashOperations)" />
+            <FileMapping Name="*" Options="(SectionForBootstrapInRam)" />
+
+        </ExecRegion>
+
+        <ExecRegion Name="ER_RAM_RW" Base="+0" Options="ABSOLUTE" Size="0x20000">
+
+            <FileMapping Name="*" Options="(+RW-DATA, +ZI)" />
+
+        </ExecRegion>
+        
+        <IfDefined Name="PROFILE_BUILD">
+            <ExecRegion Name="ER_PROFILERBUFFER_BEGIN" Base="%ProfileBuffer_Begin%" Options="ABSOLUTE" Size="UNINIT">
+                <FileMapping Name="*" Options="(SectionForProfilerBufferBegin)" />
+            </ExecRegion>
+
+            <!-- everything between profilebufferbegin and profilebufferend will be allocated for a buffer -->
+
+            <ExecRegion Name="ER_PROFILERBUFFER_END" Base="%ProfileBuffer_End%" Options="ABSOLUTE" Size="UNINIT">
+                <FileMapping Name="*" Options="(SectionForProfilerBufferEnd)" />
+            </ExecRegion>
+        </IfDefined>
+
+
+
+        <ExecRegion Name="ER_HEAP_BEGIN" Base="%Heap_Begin%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForHeapBegin)" />
+        </ExecRegion>
+
+        <!-- everything between heapbegin and heapend will be allocated for a heap -->
+
+        <ExecRegion Name="ER_HEAP_END" Base="%Heap_End%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForHeapEnd)" />
+        </ExecRegion>
+
+
+        <!-- this must go last here to provide a low water mark on the stack -->
+
+        <ExecRegion Name="ER_STACK_BOTTOM" Base="%Stack_Bottom%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForStackBottom)" />
+        </ExecRegion>
+        
+        <ExecRegion Name="ER_STACK_TOP" Base="%Stack_Top%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForStackTop)" />
+        </ExecRegion>
+
+    </LoadRegion>
+
+    <!-- If this variable is defined, create a separate section for the tinyclr.dat file -->
+
+    <IfDefined Name="Data_BaseAddress">
+
+        <LoadRegion Name="LR_DAT" Base="%Data_BaseAddress%" Options="ABSOLUTE" Size="%Data_Size%">
+
+            <ExecRegion Name="ER_DAT" Base="%Data_BaseAddress%" Options="FIXED" Size="%Data_Size%">
+
+                <FileMapping Name="tinyclr_dat.obj" Options="(+RO)" />
+
+            </ExecRegion>
+
+        </LoadRegion>
+
+    </IfDefined>
+
+    <IfDefined Name="Config_BaseAddress">
+
+        <LoadRegion Name="LR_CONFIG" Base="%Config_BaseAddress%" Options="ABSOLUTE" Size="%Config_Size%">
+
+            <ExecRegion Name="ER_CONFIG" Base="%Config_BaseAddress%" Options="FIXED" Size="%Config_Size%">
+
+                <FileMapping Name="*" Options="(SectionForConfig)" />
+
+            </ExecRegion>
+
+        </LoadRegion>
+
+    </IfDefined>
+
+</ScatterFile>
+

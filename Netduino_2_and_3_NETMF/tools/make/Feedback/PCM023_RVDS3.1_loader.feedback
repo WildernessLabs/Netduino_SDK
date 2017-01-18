@@ -1,0 +1,566 @@
+;#<FEEDBACK># ARM Linker, RVCT3.1 [Build 739]: Last Updated: Wed Sep 09 23:52:16 2009
+;VERSION 0.2
+;FILE AM29DL_32_driver.obj
+;_ZN19AM29DL_32_BS_Driver16Action_UnprotectEPvPVj <= USED 0
+;FILE Aborts.obj
+StackOverflow <= USED 0
+HARD_Breakpoint_Handler <= USED 0
+_Z10HAL_AssertPKciS0_ <= USED 0
+;FILE Allocator.obj
+_ZdaPv <= USED 0
+_ZdlPv <= USED 0
+_Znaj <= USED 0
+_Znwj <= USED 0
+;FILE Bl_AddDevices.obj
+_Z23BlockStorage_AddDevicesv <= USED 0
+;FILE CRC.obj
+SUPPORT_StubForARMEmulatorInterface <= USED 0
+;FILE ComDirector.obj
+_Z23DebuggerPort_Initializei <= USED 0
+_Z27CPU_InitializeCommunicationv <= USED 0
+_Z29CPU_ProtectCommunicationGPIOsj <= USED 0
+_Z29CPU_UninitializeCommunicationv <= USED 0
+;FILE Commands.obj
+_ZN13Loader_Engine10InitializeEi <= USED 0
+_ZN13Loader_Engine15ProcessCommandsEv <= USED 0
+_ZN13Loader_Engine15SendTextMessageEPci <= USED 0
+;FILE Compression.obj
+;FILE ConfigHelper.obj
+_ZN16HAL_CONFIG_BLOCK11ApplyConfigEPKcPvj <= USED 0
+_ZN16HAL_CONFIG_BLOCK11ApplyConfigEPKcPvjPS2_ <= USED 0
+_Z16GetHalSystemInfoR13HalSystemInfo <= USED 0
+_ZN16HAL_CONFIG_BLOCK11UpdateBlockERK29HAL_CONFIG_BLOCK_STORAGE_DATAPKvPKS_PvjS4_j <= USED 0
+_ZN16HAL_CONFIG_BLOCK12CompactBlockER29HAL_CONFIG_BLOCK_STORAGE_DATAPK19ConfigurationSectorPKS_ <= USED 0
+_ZN16HAL_CONFIG_BLOCK19UpdateBlockWithNameEPKcPvjj <= USED 0
+_ZN16HAL_CONFIG_BLOCK22GetConfigSectorAddressER29HAL_CONFIG_BLOCK_STORAGE_DATA <= USED 0
+_ZN16HAL_CONFIG_BLOCK7PrepareEPKcPvj <= USED 0
+_ZNK16HAL_CONFIG_BLOCK10IsGoodDataEv <= USED 0
+_ZNK16HAL_CONFIG_BLOCK11IsGoodBlockEv <= USED 0
+_ZNK16HAL_CONFIG_BLOCK4DataEv <= USED 0
+_ZNK16HAL_CONFIG_BLOCK4FindEPKcjj <= USED 0
+_ZNK16HAL_CONFIG_BLOCK4NextEv <= USED 0
+_ZNK16HAL_CONFIG_BLOCK6IsGoodEv <= USED 0
+;FILE ConfigurationManager.obj
+_ZN26ConfigurationSectorManager20IsBootLoaderRequiredERi <= USED 0
+_ZN26ConfigurationSectorManager25LocateConfigurationSectorEj <= USED 0
+_ZN26ConfigurationSectorManager10GetVersionEv <= USED 0
+;FILE CryptoInterface.obj
+;FILE FS_config_stubs.obj
+_Z13FS_AddVolumesv <= USED 0
+_Z24FS_MountRemovableVolumesv <= USED 0
+;FILE GPIO_Buttons_fastcompile.obj
+_Z18Buttons_Initializev <= USED 0
+_ZN18GPIO_BUTTON_Driver10InitializeEv <= USED 0
+_Z20Buttons_CurrentStatev <= USED 0
+_Z20Buttons_Uninitializev <= USED 0
+_Z22Buttons_CurrentHWStatev <= USED 0
+_ZN18GPIO_BUTTON_Driver12CurrentStateEv <= USED 0
+_ZN18GPIO_BUTTON_Driver12UninitializeEv <= USED 0
+_ZN18GPIO_BUTTON_Driver14CurrentHWStateEv <= USED 0
+;FILE LPC22XX_Power.obj
+_Z14CPU_Initializev <= USED 0
+_ZN14LPC22XX_Driver10InitializeEv <= USED 0
+_Z12HAL_AssertExv <= USED 0
+_Z20CPU_ChangePowerLevel11POWER_LEVEL <= USED 0
+_Z25CPU_IsSoftRebootSupportedv <= USED 0
+_Z8CPU_Haltv <= USED 0
+_ZN14LPC22XX_Driver4HaltEv <= USED 0
+;FILE LPC22XX__GPIO.obj
+_Z19CPU_GPIO_Initializev <= USED 0
+_Z20CPU_GPIO_GetPinStatej <= USED 0
+_Z23CPU_GPIO_EnableInputPinjjPFvjjPvE13GPIO_INT_EDGE13GPIO_RESISTOR <= USED 0
+_ZN19LPC22XX_GPIO_Driver10InitializeEv <= USED 0
+_ZN19LPC22XX_GPIO_Driver11GetPinStateEj <= USED 0
+_ZN19LPC22XX_GPIO_Driver14EnableInputPinEjjPFvjjPvES0_13GPIO_INT_EDGE13GPIO_RESISTOR <= USED 0
+_Z18CPU_GPIO_PinIsBusyj <= USED 0
+_Z19CPU_GPIO_Attributesj <= USED 0
+_Z19CPU_GPIO_GetPinsMapPhj <= USED 0
+_Z19CPU_GPIO_ReservePinjj <= USED 0
+_Z20CPU_GPIO_GetDebouncev <= USED 0
+_Z20CPU_GPIO_GetPinCountv <= USED 0
+_Z20CPU_GPIO_SetDebouncex <= USED 0
+_Z21CPU_GPIO_Uninitializev <= USED 0
+_Z24CPU_GPIO_EnableInputPin2jjPFvjjPvES_13GPIO_INT_EDGE13GPIO_RESISTOR <= USED 0
+_Z34CPU_GPIO_GetSupportedResistorModesj <= USED 0
+_Z35CPU_GPIO_GetSupportedInterruptModesj <= USED 0
+_ZN19LPC22XX_GPIO_Driver10AttributesEj <= USED 0
+_ZN19LPC22XX_GPIO_Driver10GetPinsMapEPhj <= USED 0
+_ZN19LPC22XX_GPIO_Driver10ReservePinEjj <= USED 0
+_ZN19LPC22XX_GPIO_Driver10SetnIRQISREjPFvPvE13GPIO_INT_EDGE13GPIO_RESISTOR <= USED 0
+_ZN19LPC22XX_GPIO_Driver11GetDebounceEv <= USED 0
+_ZN19LPC22XX_GPIO_Driver11GetPinCountEv <= USED 0
+_ZN19LPC22XX_GPIO_Driver11SetDebounceEx <= USED 0
+_ZN19LPC22XX_GPIO_Driver12GetPinBynIRQEj <= USED 0
+_ZN19LPC22XX_GPIO_Driver12GetnIRQByPinEj <= USED 0
+_ZN19LPC22XX_GPIO_Driver12UninitializeEv <= USED 0
+_ZN19LPC22XX_GPIO_Driver13PortDirectionEjj <= USED 0
+_ZN19LPC22XX_GPIO_Driver17PortConfigurationEjj <= USED 0
+_ZN19LPC22XX_GPIO_Driver25GetSupportedResistorModesEj <= USED 0
+_ZN19LPC22XX_GPIO_Driver26GetSupportedInterruptModesEj <= USED 0
+_ZN19LPC22XX_GPIO_Driver8nIRQ_ISREPv <= USED 0
+_ZN19LPC22XX_GPIO_Driver9PinIsBusyEj <= USED 0
+;FILE LPC22XX__I2C.obj
+_Z23I2C_Internal_Initializev <= USED 0
+_ZN18LPC22XX_I2C_Driver10InitializeEv <= USED 0
+_Z20I2C_Internal_GetPinsRjS_ <= USED 0
+_Z25I2C_Internal_GetClockRatej <= USED 0
+_Z25I2C_Internal_Uninitializev <= USED 0
+_Z25I2C_Internal_XActionStartP15I2C_HAL_XACTIONb <= USED 0
+_ZN18LPC22XX_I2C_Driver12GetClockRateEj <= USED 0
+_ZN18LPC22XX_I2C_Driver12UninitializeEv <= USED 0
+_ZN18LPC22XX_I2C_Driver7GetPinsERjS0_ <= USED 0
+;FILE LPC22XX__SPI.obj
+_Z18CPU_SPI_Initializev <= USED 0
+_ZN18LPC22XX_SPI_Driver10InitializeEv <= USED 0
+_Z15CPU_SPI_GetPinsjRjS_S_ <= USED 0
+_Z18CPU_SPI_PortsCountv <= USED 0
+_Z20CPU_SPI_Uninitializev <= USED 0
+_Z20CPU_SPI_Xaction_StopRK17SPI_CONFIGURATION <= USED 0
+_Z21CPU_SPI_Xaction_StartRK17SPI_CONFIGURATION <= USED 0
+_Z22CPU_SPI_nWrite8_nRead8RK17SPI_CONFIGURATIONPhiS2_ii <= USED 0
+_Z24CPU_SPI_nWrite16_nRead16RK17SPI_CONFIGURATIONPtiS2_ii <= USED 0
+_Z30CPU_SPI_Xaction_nWrite8_nRead8R13SPI_XACTION_8 <= USED 0
+_Z32CPU_SPI_Xaction_nWrite16_nRead16R14SPI_XACTION_16 <= USED 0
+_ZN18LPC22XX_SPI_Driver12UninitializeEv <= USED 0
+_ZN18LPC22XX_SPI_Driver12Xaction_StopERK17SPI_CONFIGURATION <= USED 0
+_ZN18LPC22XX_SPI_Driver13Xaction_StartERK17SPI_CONFIGURATION <= USED 0
+_ZN18LPC22XX_SPI_Driver14nWrite8_nRead8ERK17SPI_CONFIGURATIONPhiS3_ii <= USED 0
+_ZN18LPC22XX_SPI_Driver16nWrite16_nRead16ERK17SPI_CONFIGURATIONPtiS3_ii <= USED 0
+_ZN18LPC22XX_SPI_Driver22Xaction_nWrite8_nRead8ER13SPI_XACTION_8 <= USED 0
+_ZN18LPC22XX_SPI_Driver24Xaction_nWrite16_nRead16ER14SPI_XACTION_16 <= USED 0
+_ZN18LPC22XX_SPI_Driver3ISREPv <= USED 0
+_ZN18LPC22XX_SPI_Driver7GetPinsEjRjS0_S0_ <= USED 0
+;FILE LPC22XX__TIME.obj
+_Z23CPU_MicrosecondsToTicksy <= USED 0
+_Z15CPU_TicksToTimey <= USED 0
+_Z19HAL_Time_Initializev <= USED 0
+_Z20HAL_Time_TicksToTimey <= USED 0
+_Z27HAL_Time_GetDriftParametersPiS_Px <= USED 0
+_ZN19LPC22XX_TIME_Driver10InitializeEv <= USED 0
+_ZN19LPC22XX_TIME_Driver11TicksToTimeEy <= USED 0
+Time_CurrentTicks <= USED 0
+_Z15CPU_SystemClockv <= USED 0
+_Z15CPU_TicksToTimej <= USED 0
+_Z20HAL_Time_CurrentTimev <= USED 0
+_Z21HAL_Time_Uninitializev <= USED 0
+_Z23CPU_MicrosecondsToTicksj <= USED 0
+_Z23CPU_MillisecondsToTicksy <= USED 0
+_Z27HAL_Time_Sleep_MicroSecondsj <= USED 0
+_Z30CPU_MicrosecondsToSystemClocksi <= USED 0
+_Z30CPU_MicrosecondsToSystemClocksj <= USED 0
+_Z30CPU_SystemClocksToMicrosecondsi <= USED 0
+;_ZN19LPC22XX_TIME_Driver10Sleep_uSecEj <= USED 0
+_ZN19LPC22XX_TIME_Driver11CurrentTimeEv <= USED 0
+_ZN19LPC22XX_TIME_Driver12UninitializeEv <= USED 0
+;FILE LPC22XX__TIMER.obj
+_ZN20LPC22XX_TIMER_Driver10InitializeEjPFvPvES0_ <= USED 0
+_ZN20LPC22XX_TIMER_Driver12UninitializeEj <= USED 0
+;FILE LPC22XX__USART.obj
+_Z20CPU_USART_Initializeiiiiii <= USED 0
+_ZN20LPC22XX_USART_Driver10InitializeEiiiiii <= USED 0
+_Z17CPU_USART_GetPinsiRjS_S_S_ <= USED 0
+_Z20CPU_USART_PortsCountv <= USED 0
+_Z21CPU_USART_ProtectPinsij <= USED 0
+_Z29CPU_USART_GetBaudrateBoundaryiRjS_ <= USED 0
+_Z29CPU_USART_IsBaudrateSupportediRj <= USED 0
+_Z36CPU_USART_RxBufferFullInterruptStatei <= USED 0
+_Z36CPU_USART_SupportNonStandardBaudRatei <= USED 0
+_ZN20LPC22XX_USART_Driver14IsValidPortNumEi <= USED 0
+_ZN20LPC22XX_USART_Driver16BaudrateBoundaryEiRjS0_ <= USED 0
+_ZN20LPC22XX_USART_Driver19IsBaudrateSupportedEiRj <= USED 0
+_ZN20LPC22XX_USART_Driver26RxBufferFullInterruptStateEi <= USED 0
+_ZN20LPC22XX_USART_Driver7GetPinsEiRjS0_S0_S0_ <= USED 0
+;FILE LPC22XX__VIC.obj
+_Z19CPU_INTC_Initializev <= USED 0
+_Z26CPU_INTC_ActivateInterruptjPFvPvES_ <= USED 0
+_ZN18LPC22XX_VIC_Driver10InitializeEv <= USED 0
+_ZN18LPC22XX_VIC_Driver14IRQToIRQVectorEj <= USED 0
+_ZN18LPC22XX_VIC_Driver17ActivateInterruptEjjPFvPvES0_ <= USED 0
+_Z23CPU_INTC_InterruptStatej <= USED 0
+_Z24CPU_INTC_InterruptEnablej <= USED 0
+_Z25CPU_INTC_InterruptDisablej <= USED 0
+_Z28CPU_INTC_DeactivateInterruptj <= USED 0
+_ZN18LPC22XX_VIC_Driver14InterruptStateEj <= USED 0
+_ZN18LPC22XX_VIC_Driver15InterruptEnableEj <= USED 0
+_ZN18LPC22XX_VIC_Driver16InterruptDisableEj <= USED 0
+_ZN18LPC22XX_VIC_Driver19DeactivateInterruptEj <= USED 0
+;FILE LPC22XX__WATCHDOG.obj
+_Z15Watchdog_EnablejPFvPvES_ <= USED 0
+_Z16Watchdog_Disablev <= USED 0
+_Z17Watchdog_ResetCpuv <= USED 0
+_Z21Watchdog_ResetCounterv <= USED 0
+_ZN23LPC22XX_WATCHDOG_Driver12ResetCounterEv <= USED 0
+_ZN23LPC22XX_WATCHDOG_Driver3ISREPv <= USED 0
+_ZN23LPC22XX_WATCHDOG_Driver6EnableEjPFvPvES0_ <= USED 0
+_ZN23LPC22XX_WATCHDOG_Driver7DisableEv <= USED 0
+;FILE PCM023_bootstrap.obj
+;BootstrapCode_Clocks <= USED 0
+_Z17Initialize_SyncOnv <= USED 0
+;BootstrapCode_Ext_Flash <= USED 0
+;BootstrapCode_Ext_SRAM <= USED 0
+;BootstrapCode_Pins <= USED 0
+;FILE SimpleHeap.obj
+_Z21SimpleHeap_InitializePvj <= USED 0
+_Z22SimpleHeap_IsAllocatedPv <= USED 0
+;FILE SimpleHeap_config_stubs.obj
+_Z18CustomHeapLocationRPhRj <= USED 0
+;FILE SmartPtr_arm.obj
+_ZN12SmartPtr_IRQ12ForceEnabledEPv <= USED 0
+;FILE TimeService_stubs.obj
+_Z22TimeService_Initializev <= USED 0
+_Z16TimeService_Stopv <= USED 0
+_Z17TimeService_Startv <= USED 0
+_Z18TimeService_UpdatejjP18TimeService_Status <= USED 0
+_Z24TimeService_LoadSettingsP20TimeService_Settings <= USED 0
+_Z24TimeService_SaveSettingsP20TimeService_Settings <= USED 0
+_Z24TimeService_UnInitializev <= USED 0
+_Z29TimeService_GetLastSyncStatusP18TimeService_Status <= USED 0
+;FILE Time_driver.obj
+_ZN10TimeDriver10InitializeEv <= USED 0
+_ZN10TimeDriver10GetUtcTimeEv <= USED 0
+_ZN10TimeDriver10SetUtcTimeExb <= USED 0
+_ZN10TimeDriver11DaysInMonthEiiPi <= USED 0
+_ZN10TimeDriver11SafeSprintfERPcRjPKcz <= USED 0
+_ZN10TimeDriver12GetLocalTimeEv <= USED 0
+_ZN10TimeDriver12GetTickCountEv <= USED 0
+_ZN10TimeDriver12SafeSprintfVERPcRjPKcSt9__va_list <= USED 0
+_ZN10TimeDriver12ToSystemTimeExP10SYSTEMTIME <= USED 0
+_ZN10TimeDriver12UninitializeEv <= USED 0
+_ZN10TimeDriver14AccDaysInMonthEiiPi <= USED 0
+_ZN10TimeDriver14FromSystemTimeEPK10SYSTEMTIME <= USED 0
+_ZN10TimeDriver14GetMachineTimeEv <= USED 0
+_ZN10TimeDriver16DateTimeToStringERKx <= USED 0
+_ZN10TimeDriver16DateTimeToStringERKxRPcRj <= USED 0
+_ZN10TimeDriver16TimeSpanToStringERKx <= USED 0
+_ZN10TimeDriver16TimeSpanToStringERKxRPcRj <= USED 0
+_ZN10TimeDriver17GetTimeZoneOffsetEv <= USED 0
+_ZN10TimeDriver17SetTimeZoneOffsetEi <= USED 0
+;FILE Time_functions.obj
+_Z15Time_Initializev <= USED 0
+_Z15Time_GetUtcTimev <= USED 0
+_Z15Time_SetUtcTimexb <= USED 0
+_Z16Time_DaysInMonthiiPi <= USED 0
+_Z17Time_GetLocalTimev <= USED 0
+_Z17Time_GetTickCountv <= USED 0
+_Z17Time_ToSystemTimexP10SYSTEMTIME <= USED 0
+_Z17Time_Uninitializev <= USED 0
+_Z19Time_AccDaysInMonthiiPi <= USED 0
+_Z19Time_FromSystemTimePK10SYSTEMTIME <= USED 0
+_Z19Time_GetMachineTimev <= USED 0
+_Z19Utility_SafeSprintfRPcRjPKcz <= USED 0
+_Z20Utility_SafeSprintfVRPcRjPKcSt9__va_list <= USED 0
+_Z21Time_DateTimeToStringRKx <= USED 0
+_Z21Time_TimeSpanToStringRKx <= USED 0
+_Z22Time_GetTimeZoneOffsetv <= USED 0
+_Z22Time_SetTimeZoneOffseti <= USED 0
+_Z23Time_DateTimeToStringExRKxRPcRj <= USED 0
+_Z23Time_TimeSpanToStringExRKxRPcRj <= USED 0
+_Z28Time_CurrentDateTimeToStringv <= USED 0
+;FILE TinyBooterEntry.obj
+_Z23WaitForTinyBooterUploadRi <= USED 0
+_Z26CheckFlashSectorPermissionP18BlockStorageDevicej <= USED 0
+;FILE Tinybooter.obj
+_Z21ApplicationEntryPointv <= USED 0
+;FILE Watchdog_stubs.obj
+_Z22Watchdog_GetSetEnabledjj <= USED 0
+_Z22Watchdog_GetSetTimeoutij <= USED 0
+_Z23Watchdog_GetSetBehavior17Watchdog_Behaviorj <= USED 0
+_Z22Watchdog_LastOccurenceRxS_RjS0_j <= USED 0
+_Z31EmulatorHook__Watchdog_Callbackv <= USED 0
+;FILE WireProtocol.obj
+_ZN10WP_Message12VerifyHeaderEv <= USED 0
+_ZN10WP_Message13VerifyPayloadEv <= USED 0
+_ZN10WP_Message14PrepareRequestEjjjPh <= USED 0
+_ZN10WP_Message14ReplyBadPacketEj <= USED 0
+_ZN10WP_Message16PrepareReceptionEv <= USED 0
+_ZN10WP_Message7ProcessEv <= USED 0
+_ZN10WP_Message7ReleaseEv <= USED 0
+_ZN13WP_Controller10InitializeEPKcPK16WP_PhysicalLayerPK19WP_ApplicationLayerPv <= USED 0
+_ZN13WP_Controller12AdvanceStateEv <= USED 0
+_ZN13WP_Controller19SendProtocolMessageEjjjPh <= USED 0
+_ZN10WP_Message10SetPayloadEPh <= USED 0
+;FILE asyncproccall_fastcompile.obj
+_ZN14HAL_COMPLETION14InitializeListEv <= USED 0
+_ZN16HAL_CONTINUATION14InitializeListEv <= USED 0
+_ZN14HAL_COMPLETION12EnqueueDeltaEj <= USED 0
+_ZN14HAL_COMPLETION12EnqueueTicksEy <= USED 0
+_ZN14HAL_COMPLETION12UninitializeEv <= USED 0
+_ZN14HAL_COMPLETION14EnqueueDelta64Ey <= USED 0
+_ZN14HAL_COMPLETION5AbortEv <= USED 0
+_ZN16HAL_CONTINUATION12UninitializeEv <= USED 0
+_ZN16HAL_CONTINUATION18InitializeCallbackEPFvPvES0_ <= USED 0
+_ZN16HAL_CONTINUATION5AbortEv <= USED 0
+;FILE bigerrno.obj
+;FILE bignum.obj
+DBLINT_EQ <= USED 0
+DBLINT_GE <= USED 0
+DBLINT_NE <= USED 0
+DBLINT_SHIFT_LEFT <= USED 0
+DBLINT_XOR <= USED 0
+SDBLINT <= USED 0
+compare_immediate <= USED 0
+digits_to_dwords <= USED 0
+dwords_to_digits <= USED 0
+mp_setbit <= USED 0
+set_immediate <= USED 0
+set_immediate_signed <= USED 0
+sub_immediate <= USED 0
+;FILE blockstoragelist.obj
+_ZN16BlockStorageList10InitializeEv <= USED 0
+_ZN16BlockStorageList17InitializeDevicesEv <= USED 0
+_ZN16BlockStorageList9AddDeviceEP18BlockStorageDeviceP19IBlockStorageDevicePvj <= USED 0
+_ZNK15BlockDeviceInfo17FindForBlockUsageEjRjS0_S0_ <= USED 0
+_ZN16BlockStorageList12RemoveDeviceEP18BlockStorageDevicej <= USED 0
+_ZN16BlockStorageList13GetNumDevicesEv <= USED 0
+_ZN16BlockStorageList19UnInitializeDevicesEv <= USED 0
+_ZN18BlockStorageStream14ReadIntoBufferEPhj <= USED 0
+_ZN18BlockStorageStream5EraseEj <= USED 0
+_ZN18BlockStorageStream5WriteEPhj <= USED 0
+_ZNK15BlockDeviceInfo23PhysicalToSectorAddressEPK15BlockRegionInfoj <= USED 0
+;FILE crypto.obj
+Crypto_Decrypt <= USED 0
+Crypto_DecryptWithTable <= USED 0
+Crypto_GeneratePrivateKey <= USED 0
+Crypto_GetActivationStringFromBuffer <= USED 0
+Crypto_GetActivationStringFromSeed <= USED 0
+Crypto_GetFingerprint <= USED 0
+Crypto_GetKeystreams <= USED 0
+Crypto_KeySeedFromLaser <= USED 0
+GetC1Value <= USED 0
+;FILE divide.obj
+;FILE events.obj
+_Z12Events_Clearj <= USED 0
+_Z17Events_Initializev <= USED 0
+_Z10Events_Getj <= USED 0
+_Z16FreeManagedEventhhtj <= USED 0
+_Z18Events_SetCallbackPFvPvES_ <= USED 0
+_Z19Events_SetBoolTimerPjj <= USED 0
+_Z19Events_Uninitializev <= USED 0
+_Z28Events_WaitForEventsInternaljjj <= USED 0
+;FILE fastcompile_BatteryMeasurement_stubs.obj
+_Z18Battery_Initializev <= USED 0
+_Z15Battery_VoltageRi <= USED 0
+_Z19Battery_TemperatureRi <= USED 0
+_Z20Battery_Uninitializev <= USED 0
+_Z21Battery_Configurationv <= USED 0
+_Z21Battery_StateOfChargeRh <= USED 0
+_Z21Battery_StateOfChargeiiRh <= USED 0
+_Z27Battery_VoltageFilter_Resetv <= USED 0
+_Z29Battery_MostRecent_Millivoltsv <= USED 0
+_Z37Battery_MostRecent_DegreesCelcius_x10v <= USED 0
+;FILE fastcompile_backlight_stubs.obj
+_Z20BackLight_Initializev <= USED 0
+_Z13BackLight_Setj <= USED 0
+_Z15BackLight_Forcej <= USED 0
+_Z18BackLight_RefCountj <= USED 0
+_Z22BackLight_Uninitializev <= USED 0
+;FILE fastcompile_batterycharger_stubs.obj
+_Z18Charger_Initializev <= USED 0
+_Z14Charger_StatusRj <= USED 0
+_Z15Charger_Restartj <= USED 0
+_Z16Charger_Shutdownj <= USED 0
+_Z20Charger_Uninitializev <= USED 0
+_Z22Charger_SetTemperatures <= USED 0
+;FILE fastcompile_display_stubs.obj
+_Z14LCD_Initializev <= USED 0
+_Z10LCD_BitBltiiiPjj <= USED 0
+_Z12LCD_BitBltExiiiiPj <= USED 0
+_Z12LCD_GetWidthv <= USED 0
+_Z13LCD_GetHeightv <= USED 0
+_Z13LCD_PowerSavej <= USED 0
+_Z13LCD_WriteCharhii <= USED 0
+_Z16LCD_ConvertColorj <= USED 0
+_Z18LCD_GetFrameBufferv <= USED 0
+_Z18LCD_GetOrientationv <= USED 0
+_Z19LCD_GetBitsPerPixelv <= USED 0
+_Z24LCD_GetPixelClockDividerv <= USED 0
+;FILE fs_stubs.obj
+_Z13FS_Initializev <= USED 0
+_ZN20FileSystemVolumeList10InitializeEv <= USED 0
+_ZN20FileSystemVolumeList17InitializeVolumesEv <= USED 0
+_Z14FS_MountVolumePKcjjP18BlockStorageDevice <= USED 0
+_Z16FS_UnmountVolumeP18BlockStorageDevice <= USED 0
+_ZN20FileSystemVolumeList10FindVolumeEPKcj <= USED 0
+_ZN20FileSystemVolumeList12RemoveVolumeEP16FileSystemVolumej <= USED 0
+_ZN20FileSystemVolumeList13GetNextVolumeER16FileSystemVolume <= USED 0
+_ZN20FileSystemVolumeList13GetNumVolumesEv <= USED 0
+_ZN20FileSystemVolumeList14GetFirstVolumeEv <= USED 0
+_ZN20FileSystemVolumeList19UninitializeVolumesEv <= USED 0
+_ZN20FileSystemVolumeList8ContainsEP16FileSystemVolume <= USED 0
+_ZN20FileSystemVolumeList9AddVolumeEP16FileSystemVolumePKcjjP23STREAM_DRIVER_INTERFACEP27FILESYSTEM_DRIVER_INTERFACEP18BlockStorageDevicejj <= USED 0
+;FILE gesture_stubs.obj
+_Z18Gesture_Initializev <= USED 0
+_Z20Gesture_ProcessPointjtttx <= USED 0
+_Z20Gesture_Uninitializev <= USED 0
+;FILE heap.obj
+_Z12HeapLocationRPhRj <= USED 0
+;FILE i2c.obj
+_Z14I2C_Initializev <= USED 0
+_ZN10I2C_Driver10InitializeEv <= USED 0
+_Z10I2C_CancelP15I2C_HAL_XACTIONb <= USED 0
+_Z11I2C_EnqueueP15I2C_HAL_XACTION <= USED 0
+_Z16I2C_Uninitializev <= USED 0
+_Z20I2C_XAction_GetStateP15I2C_HAL_XACTION <= USED 0
+_Z20I2C_XAction_SetStateP15I2C_HAL_XACTIONh <= USED 0
+_Z22I2C_XActionUnit_IsReadP20I2C_HAL_XACTION_UNIT <= USED 0
+_Z22I2C_XAction_CheckStateP15I2C_HAL_XACTIONh <= USED 0
+_Z25I2C_InitializeTransactionP15I2C_HAL_XACTIONR22I2C_USER_CONFIGURATIONPP20I2C_HAL_XACTION_UNITj <= USED 0
+_Z26I2C_XActionUnit_CopyBufferP20I2C_HAL_XACTION_UNITPhj <= USED 0
+_Z27I2C_XAction_TransactedBytesP15I2C_HAL_XACTION <= USED 0
+_Z29I2C_InitializeTransactionUnitP20I2C_HAL_XACTION_UNITPhS1_jj <= USED 0
+_ZN10I2C_Driver12UninitializeEv <= USED 0
+_ZN10I2C_Driver17CompletedCallbackEPv <= USED 0
+_ZN10I2C_Driver6CancelEP15I2C_HAL_XACTIONb <= USED 0
+_ZN10I2C_Driver7EnqueueEP15I2C_HAL_XACTION <= USED 0
+_ZN10I2C_Driver9StartNextEv <= USED 0
+_ZN15I2C_HAL_XACTION10InitializeER22I2C_USER_CONFIGURATIONPP20I2C_HAL_XACTION_UNITj <= USED 0
+_ZN20I2C_HAL_XACTION_UNIT10InitializeEPhS0_jj <= USED 0
+;FILE ink_stubs.obj
+_Z14Ink_Initializev <= USED 0
+_Z13Ink_SetRegionP13InkRegionInfo <= USED 0
+_Z15Ink_ResetRegionv <= USED 0
+_Z16Ink_Uninitializev <= USED 0
+;FILE kara.obj
+;FILE lowlev.obj
+accumulate <= USED 0
+multiply_immediate <= USED 0
+;FILE memory.obj
+;FILE modes.obj
+;FILE modexp.obj
+;FILE modular.obj
+;FILE mpgcdex.obj
+mp_gcdex <= USED 0
+;FILE mpglobal.obj
+digit_allocate_named <= USED 0
+;FILE mpmisc.obj
+add_full <= USED 0
+compare_sum_diff <= USED 0
+mp_longshift <= USED 0
+multiply <= USED 0
+;FILE mpmul22.obj
+mp_mul22s <= USED 0
+mp_mul22u <= USED 0
+;FILE palevent_stubs.obj
+_Z19PalEvent_Initializev <= USED 0
+_Z13PalEvent_Postjj <= USED 0
+_Z15PalEvent_EnlistP16PalEventListener <= USED 0
+_Z21PalEvent_Uninitializev <= USED 0
+;FILE piezo_stubs.obj
+_Z16Piezo_Initializev <= USED 0
+_Z10Piezo_Tonejj <= USED 0
+_Z15Piezo_IsEnabledv <= USED 0
+_Z18Piezo_Uninitializev <= USED 0
+;FILE rsa_zenith.obj
+Crypto_PublicKeyFromModulus <= USED 0
+Crypto_PublicKeyFromPrivate <= USED 0
+Crypto_RSACompute <= USED 0
+digit_out <= USED 0
+;FILE sockets_Stubs.obj
+_Z18SOCKETS_Initializei <= USED 0
+_Z10SOCK_closei <= USED 0
+_Z10SOCK_ioctliiPi <= USED 0
+_Z11SOCK_acceptiP13SOCK_sockaddrPi <= USED 0
+_Z11SOCK_listenii <= USED 0
+_Z11SOCK_selectiP11SOCK_fd_setS0_S0_PK12SOCK_timeval <= USED 0
+_Z11SOCK_sendtoiPKciiPK13SOCK_sockaddri <= USED 0
+_Z11SOCK_socketiii <= USED 0
+_Z12SOCK_connectiPK13SOCK_sockaddri <= USED 0
+_Z13SOCK_recvfromiPciiP13SOCK_sockaddrPi <= USED 0
+_Z13SOCK_shutdownii <= USED 0
+_Z15SOCK_getsockoptiiiPcPi <= USED 0
+_Z15SOCK_setsockoptiiiPKci <= USED 0
+_Z16SOCK_getaddrinfoPKcPcPK13SOCK_addrinfoPPS2_ <= USED 0
+_Z16SOCK_getpeernameiP13SOCK_sockaddrPi <= USED 0
+_Z16SOCK_getsocknameiP13SOCK_sockaddrPi <= USED 0
+_Z17SOCK_freeaddrinfoP13SOCK_addrinfo <= USED 0
+_Z17SOCK_getlasterrorv <= USED 0
+_Z18Network_Initializev <= USED 0
+_Z20Network_Uninitializev <= USED 0
+_Z24SOCKETS_CloseConnectionsv <= USED 0
+_Z29SOCKETS_ProcessSocketActivityi <= USED 0
+_Z34SOCK_CONFIGURATION_GetAdapterCountv <= USED 0
+_Z36SOCK_CONFIGURATION_LoadConfigurationjP25SOCK_NetworkConfiguration <= USED 0
+_Z43SOCK_CONFIGURATION_LoadAdapterConfigurationjP25SOCK_NetworkConfiguration <= USED 0
+_Z44SOCK_CONFIGURATION_LoadWirelessConfigurationjP26SOCK_WirelessConfiguration <= USED 0
+_Z45SOCK_CONFIGURATION_UpdateAdapterConfigurationjjP25SOCK_NetworkConfiguration <= USED 0
+_Z46SOCK_CONFIGURATION_UpdateWirelessConfigurationjP26SOCK_WirelessConfiguration <= USED 0
+_Z48HAL_SOCK_CONFIGURATION_LoadWirelessConfigurationjP26SOCK_WirelessConfiguration <= USED 0
+_Z48SOCK_CONFIGURATION_SaveAllWirelessConfigurationsv <= USED 0
+_Z9SOCK_bindiPK13SOCK_sockaddri <= USED 0
+_Z9SOCK_recviPcii <= USED 0
+_Z9SOCK_sendiPKcii <= USED 0
+;FILE stubs_functions_EBIU.obj
+;FILE stubs_functions_USB.obj
+_Z16CPU_USB_GetStatei <= USED 0
+_Z16CPU_USB_RxEnableP20USB_CONTROLLER_STATEi <= USED 0
+_Z18CPU_USB_Initializei <= USED 0
+_Z19CPU_USB_ProtectPinsij <= USED 0
+_Z19CPU_USB_StartOutputP20USB_CONTROLLER_STATEi <= USED 0
+_Z20CPU_USB_Uninitializei <= USED 0
+_Z25CPU_USB_GetInterruptStatev <= USED 0
+;FILE stubs_functions_cache.obj
+_Z15CPU_FlushCachesv <= USED 0
+_Z16CPU_EnableCachesv <= USED 0
+_Z20CPU_InvalidateCachesv <= USED 0
+_Z21CPU_DrainWriteBuffersv <= USED 0
+_Z22CPU_GetCachableAddressj <= USED 0
+;FILE tea.obj
+;FILE tinycrt.obj
+__rt_div0 <= USED 0
+_Z11hal_stricmpPKcS0_ <= USED 0
+_Z12hal_snprintfPcjPKcz <= USED 0
+_Z12hal_strcpy_sPcjPKc <= USED 0
+_Z13hal_strncmp_sPKcS0_j <= USED 0
+_Z18hal_snprintf_floatPcjPKcf <= USED 0
+_Z19hal_snprintf_doublePcjPKcd <= USED 0
+__rt_exit <= USED 0
+__rt_raise <= USED 0
+;FILE tinyhal.obj
+BootEntry <= USED 0
+_Z14HAL_Initializev <= USED 0
+;PrepareImageRegions <= USED 0
+_Z15SystemState_Set12SYSTEM_STATE <= USED 0
+_Z16HAL_Uninitializev <= USED 0
+_Z17SystemState_Clear12SYSTEM_STATE <= USED 0
+_Z17SystemState_Query12SYSTEM_STATE <= USED 0
+_Z19HAL_EnterBooterModev <= USED 0
+_Z21HAL_UnReserveAllGpiosv <= USED 0
+_Z47KEEP_THE_LINKER_HAPPY_SINCE_KEEP_IS_NOT_WORKINGv <= USED 0
+_ZN12VALUE_FILTER10AdjustBiasEi <= USED 0
+_ZN12VALUE_FILTER10InitializeEi <= USED 0
+_ZN12VALUE_FILTER3AddEi <= USED 0
+;FILE usart.obj
+_Z16USART_Initializeiiiiii <= USED 0
+_ZN12USART_Driver10InitializeEiiiiii <= USED 0
+_Z10COM1_writePcj <= USED 0
+_Z10COM2_writePcj <= USED 0
+_Z14USART_ForceXONi <= USED 0
+_Z14USART_SetEventij <= USED 0
+_Z15USART_PowerSaveia <= USED 0
+_Z19COM1_driver_detailsj <= USED 0
+_Z19COM2_driver_detailsj <= USED 0
+_Z19USART_BytesInBufferij <= USED 0
+_Z19USART_CloseAllPortsv <= USED 0
+_Z19USART_DiscardBufferij <= USED 0
+_Z22USART_ConnectEventSinkiiPvPFvS_jEPS_ <= USED 0
+_Z23USART_ClockStopFinishedv <= USED 0
+_Z25USART_PrepareForClockStopv <= USED 0
+_Z9COM1_readPcj <= USED 0
+_Z9COM2_readPcj <= USED 0
+_ZN12USART_Driver13BytesInBufferEij <= USED 0
+_ZN12USART_Driver13CloseAllPortsEv <= USED 0
+_ZN12USART_Driver13DiscardBufferEij <= USED 0
+_ZN12USART_Driver16ConnectEventSinkEiiPvPFvS0_jEPS0_ <= USED 0
+_ZN12USART_Driver17ClockStopFinishedEv <= USED 0
+_ZN12USART_Driver19PrepareForClockStopEv <= USED 0
+_ZN12USART_Driver9PowerSaveEia <= USED 0
+;FILE usb_stubs.obj
+_Z13USB_ConfigureiPK25USB_DYNAMIC_CONFIGURATION <= USED 0
+_Z14USB_Initializei <= USED 0
+_Z14USB_OpenStreamiii <= USED 0
+_Z12USB_GetEventij <= USED 0
+_Z12USB_SetEventij <= USED 0
+_Z13USB_GetStatusi <= USED 0
+_Z14USB_ClearEventij <= USED 0
+_Z20USB_GetConfigurationi <= USED 0
+_Z22USB_GetControllerCountv <= USED 0

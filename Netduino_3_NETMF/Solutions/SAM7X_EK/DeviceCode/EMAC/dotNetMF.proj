@@ -1,0 +1,69 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <HasLibraryCategory>True</HasLibraryCategory>
+    <AssemblyName>SAM7X_EMAC_Config</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{E64EC666-4C21-4534-9D01-FA6101AE93F6}</ProjectGuid>
+    <Description>Ethernet configuration driver for SAM7X_EK solution</Description>
+    <Level>HAL</Level>
+    <LibraryFile>SAM7X_EMAC_Config.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\Solutions\SAM7X_EK\DeviceCode\EMAC\dotnetmf.proj</ProjectPath>
+    <ManifestFile>SAM7X_EMAC_Config.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Solutions\SAM7X_EK</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="AT91_EMAC_Config_HAL" Guid="{D910A534-76A1-4ee3-81F9-2E8ACC0EF2E9}" ProjectPath="" Conditional="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+          <Author>Microsoft</Author>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <ProcessorSpecific>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SAM7X_EK" Guid="{5a9f48c9-f9f3-4473-8b76-b4fca51eb0e8}" ProjectPath="" Conditional="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+          <Author>Microsoft</Author>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">Processor</ComponentType>
+      </MFComponent>
+    </ProcessorSpecific>
+    <CustomSpecific>
+    </CustomSpecific>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>Solutions\SAM7X_EK\DeviceCode\EMAC</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="SAM7X_EMAC_Config.cpp" />
+    <IncludePaths Include="DeviceCode\pal\rtip" />
+    <IncludePaths Include="DeviceCode\pal\rtip\drivers" />
+    <IncludePaths Include="DeviceCode\pal\rtip\protocol" />
+    <IncludePaths Include="DeviceCode\pal\rtip\rtpcore" />
+    <IncludePaths Include="DeviceCode\pal\rtip\tinyclr" />
+    <IncludePaths Include="DeviceCode\pal\rtip\vfile" />
+    <IncludePaths Include="Solutions\DeviceCode\AT91_EMAC" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

@@ -1,0 +1,28 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>Jennifer Cheng</Author>
+    <Description>SH7264_M3A_HS64  solution</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{66A25B91-F733-4cc5-A552-3BD2F726AD51}</PlatformGuid>
+    <TARGETPLATFORM>SH7264_M3A_HS64</TARGETPLATFORM>
+    <PLATFORM>SH7264_M3A_HS64</PLATFORM>
+    <DEVICE_TYPE Condition=" '$(DEVICE_TYPE)' == ''">sh2afpu</DEVICE_TYPE>    
+    <SERIALFLASH Condition=" '$(SERIALFLASH)' ==''     ">false</SERIALFLASH>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>Be</ENDIANNESS>
+    <DEVICE_TYPE Condition=" '$(DEVICE_TYPE)' == ''">SH2A</DEVICE_TYPE>    
+    <EnableTCPIP Condition=" '$(EnableTCPIP)' =='' ">false</EnableTCPIP>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <IncludePaths Include="Solutions\SH7264_M3A_HS64" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <CC_CPP_MARCO_FLAGS Include="COPY_SECTION_P" Condition="'$(SERIALFLASH)'=='false'"/>
+    <CC_CPP_MARCO_FLAGS Include="SH7264_SERIAL_FLASH" Condition="'$(SERIALFLASH)'=='true'" />
+  </ItemGroup>
+  
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\SH7264\SH7264.settings" />
+</Project>

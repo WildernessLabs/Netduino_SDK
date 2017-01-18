@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FeatureName>Netduino.IP.LinkLayers.CC3100</FeatureName>
+    <Guid>{B1C827E1-CF7B-48F6-B786-5ACC336F6AF4}</Guid>
+    <Description />
+    <Groups />
+  </PropertyGroup>
+  <ItemGroup>
+    <MMP_DAT_CreateDatabase Include="$(SPOCLIENT)\Solutions\Netduino3Wifi\ManagedCode\Netduino_IP_LinkLayers_CC3100\bin\Release\le\Netduino.IP.LinkLayers.CC3100.pe" />
+  </ItemGroup>
+</Project>

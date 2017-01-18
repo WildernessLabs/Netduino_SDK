@@ -1,0 +1,34 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Name>AT91SAM7S</Name>
+    <CpuName>ARM7TDMI</CpuName>
+    <DefaultISA>THUMB</DefaultISA>
+    <Guid>{7488AF71-6C4D-4497-A2CA-0B5540DA0061}</Guid>
+    <Description>
+    </Description>
+    <Documentation>
+    </Documentation>
+    <ProjectPath>$(SPOCLIENT)\devicecode\Targets\Native\AT91\AT91SAM7S.settings</ProjectPath>
+    <PLATFORM_FAMILY>ARM</PLATFORM_FAMILY>
+    <CustomFilter>ARM7;AT91SAM7S;AT91</CustomFilter>
+    <INSTRUCTION_SET Condition="'$(INSTRUCTION_SET)'==''">THUMB</INSTRUCTION_SET>
+    <TARGETPROCESSOR>AT91SAM7S</TARGETPROCESSOR>
+    <TARGETCODEBASE>AT91</TARGETCODEBASE>
+    <TARGETCODEBASETYPE>Native</TARGETCODEBASETYPE>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(COMPILER_TOOL)'=='RVDS'">
+    <DEVICE_TYPE Condition="'$(DEVICE_TYPE)' == ''">ARM7TDMI</DEVICE_TYPE>
+    <BUILD_TOOL_GUID>{1942C531-3AAC-4abb-8B4F-C3111012F9D9}</BUILD_TOOL_GUID>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(COMPILER_TOOL)'=='MDK'">
+    <DEVICE_TYPE Condition="'$(DEVICE_TYPE)' == ''">DARMAT</DEVICE_TYPE>
+    <BUILD_TOOL_GUID>{CD24C1A5-2641-4460-AC5A-093B1C6D3D8B}</BUILD_TOOL_GUID>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(COMPILER_TOOL)'=='GCC'">
+    <DEVICE_TYPE Condition="'$(DEVICE_TYPE)' == ''">ARM7TDMI</DEVICE_TYPE>
+    <BUILD_TOOL_GUID>{722B0D5D-1243-4557-913F-61FAB04E9209}</BUILD_TOOL_GUID>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="devicecode\Targets\Native\AT91" />
+  </ItemGroup>
+</Project>

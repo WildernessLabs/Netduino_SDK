@@ -1,0 +1,52 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>Network_config_SH7619_EVB</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{f1d1a9a1-0c21-41bb-8285-642ea10c6931}</ProjectGuid>
+    <Description>Network configuration library for SH7619_EVB solution</Description>
+    <Level>HAL</Level>
+    <LibraryFile>Network_config_SH7619_EVB.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\Solutions\SH7619_EVB\DeviceCode\Network\dotNetMF.proj</ProjectPath>
+    <ManifestFile>Network_config_SH7619_EVB.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Solutions\SH7619_EVB</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Network_Config_HAL" Guid="{14DA2330-C44D-4F5B-AE85-534E24AEC5B2}" ProjectPath="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-06-23</Date>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomSpecific>SH7619_EVB</CustomSpecific>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>Solutions\SH7619_EVB\DeviceCode\Network</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>1.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="Network_config_SH7619_EVB.cpp" />
+    <IncludePaths Include="DeviceCode\include" />
+    <IncludePaths Include="DeviceCode\pal\rtip" />
+    <IncludePaths Include="DeviceCode\pal\rtip\drivers" />
+    <IncludePaths Include="DeviceCode\pal\rtip\protocol" />
+    <IncludePaths Include="DeviceCode\pal\rtip\rtpcore" />
+    <IncludePaths Include="DeviceCode\pal\rtip\tinyclr" />
+    <IncludePaths Include="DeviceCode\pal\rtip\vfile" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

@@ -1,0 +1,410 @@
+The .NET Micro Framework Solution Wizard will create the 'iMXS_net_open' solution in the directory:
+
+	c:\sporoot\current\client_v4_1_dev\Solutions\iMXS_net_open
+
+The following is a description of the components of this solution.  Each solution consists of a set of projects which in turn have a set of features and libraries.
+
+    Solution:                          	 iMXS_net_open
+    Author:                            	 Microsoft
+    Description:                       	 Freescale iMXS platform with an open source network stack and OpenSSL.
+    Processor:                         	 MC9328
+    Debugger Port:                     	 USB1
+
+
+Project NativeSample
+    Description:                       	 
+    Path:                              	 Solutions\iMXS_net_open\NativeSample
+
+Libraries:
+    Crypto:                            	 Cryptography library
+    GlobalLock_hal:                    	 Global lock (native threading control)
+    TinyHal:                           	 Core HAL library
+    MC9328MXL_PreStackInit:            	 Freescale MC9328MXL processor pre-stack initialization
+    ARM9_bootstrap:                    	 ARM9 core bootstrap
+    ARM9_cache:                        	 ARM9 core cache driver
+    ARM9_mmu:                          	 ARM9 MMU core driver
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    I28F_16BL:                         	 I28F 16-bit flash block storage driver
+    A025DL02:                          	 A025DL02 display driver
+    Display_Font8x8:                   	 Text Font (8x8 pixels)
+    system_initialization_hal:         	 System initialization library
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    blockstorage_pal:                  	 Block storage library
+    Buttons_pal:                       	 Buttons library
+    COM_pal:                           	 Communication port director
+    Watchdog_pal_stubs:                	 Watchdog stub
+    i2c_pal_stubs:                     	 I2C stub library
+    sockets_pal_stubs:                 	 Network socket stub driver
+    usart_pal_stubs:                   	 USART stub driver
+    usb_pal:                           	 USB driver
+    config_pal:                        	 System configuration
+    diagnostics_pal:                   	 Diagnostics library
+    events_pal:                        	 System event library
+    heap_pal:                          	 Managed heap size and location configuration
+    piezo_pal_stubs:                   	 Piezo stub driver
+    SimpleHeap:                        	 SimpleHeap unmanaged heap
+    SimpleHeap_config:                 	 Simple unmanaged heap
+    tinycrt_pal:                       	 CRT functionality
+    MC9328MXL_bootstrap:               	 Freescale MC9328MXL processor bootstrap driver
+    MC9328MXL_cache:                   	 Freescale MC9328MXL processor cache driver
+    MC9328MXL_DMA:                     	 Freescale MC9328MXL DMA driver
+    MC9328MXL_EBIU:                    	 Freescale MC9328MXL EBIU driver
+    MC9328MXL_GPIO:                    	 Freescale MC9328MXL GPIO driver
+    MC9328MXL_INTC:                    	 Freescale MC9328MXL interrupt controller driver
+    MC9328MXL_LCD:                     	 Freescale MC9328MXL LCD controller driver
+    MC9328MXL_Power:                   	 Freescale MC9328MXL power driver
+    MC9328MXL_SPI:                     	 Freescale MC9328MXL SPI driver
+    MC9328MXL_timer:                   	 Freescale MC9328MXL timer driver
+    MC9328MXL_time:                    	 Freescale MC9328MXL time driver
+    MC9328MXL_USART:                   	 Freescale MC9328MXL USART driver
+    MC9328MXL_USB:                     	 Freescale MC9328MXL USB driver
+    MC9328MXL_Watchdog:                	 Freescale MC9328MXL watchdog driver
+    CRC:                               	 CRC library
+    WireProtocol:                      	 Device communication protocol
+    fs_pal_stubs:                      	 File System stub library
+    FS_Config_stubs:                   	 File system config stub
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    palevent_pal_stubs:                	 palevent set of methods used by Gesture, Ink
+    Time_pal:                          	 Time set of methods used by Time, Time
+    Native:                            	 
+    crypto_openssl:                    	 Crypto Library from OpenSSL
+    libssl_openssl:                    	 SSL Library from OpenSSL
+    aes_openssl:                       	 Crypto AES library from OpenSSL
+    asn1_openssl:                      	 Crypto ASN1 Library from OpenSSL
+    asn1pt2_openssl:                   	 Crypto ASN1 Library from OpenSSL
+    bf_openssl:                        	 Crypto BF library from OpenSSL
+    bio_openssl:                       	 BIO library from OpenSSL
+    buffer_openssl:                    	 Crypto Buffer library from OpenSSL
+    bn_openssl:                        	 Crypto BN Library from OpenSSL
+    cast_openssl:                      	 Crypto Cast library from OpenSSL
+    comp_openssl:                      	 Crypto COMP library from OpenSSL
+    conf_openssl:                      	 Crypto CONF library from OpenSSL
+    des_openssl:                       	 Crypto DES library from OpenSSL
+    dh_openssl:                        	 Crypto DH library from OpenSSL
+    dsa_openssl:                       	 Crypto DSA library from OpenSSL
+    dso_openssl:                       	 Crypto DSO library from OpenSSL
+    ecdh_openssl:                      	 Crypto ECDH library from OpenSSL
+    ec_openssl:                        	 Crypto EC library from OpenSSL
+    ecdsa_openssl:                     	 Crypto ECDSA library from OpenSSL
+    engine_openssl:                    	 Crypto ENGINE Library from OpenSSL
+    err_openssl:                       	 Crypto ERR library from OpenSSL
+    evp_openssl:                       	 Crypto EVP Library from OpenSSL
+    hmac_openssl:                      	 Crypto HMAC library from OpenSSL
+    lhash_openssl:                     	 Crypto LHASH library from OpenSSL
+    md2_openssl:                       	 Crypto MD2 library from OpenSSL
+    md4_openssl:                       	 Crypto MD4 library from OpenSSL
+    md5_openssl:                       	 Crypto MD5 library from OpenSSL
+    modes_openssl:                     	 Crypto modes library from OpenSSL
+    ocsp_openssl:                      	 Crypto OCSP library from OpenSSL
+    objects_openssl:                   	 Crypto OBJECTS library from OpenSSL
+    pem_openssl:                       	 Crypto PEM library from OpenSSL
+    pkcs7_openssl:                     	 Crypto PKCS7 library from OpenSSL
+    pkcs12_openssl:                    	 Crypto PKCS12 library from OpenSSL
+    pqueue_openssl:                    	 Crypto PQUEUE library from OpenSSL
+    rand_openssl:                      	 Crypto RAND library from OpenSSL
+    rc2_openssl:                       	 Crypto RC2 library from OpenSSL
+    rc4_openssl:                       	 Crypto RC4 library from OpenSSL
+    ripemd_openssl:                    	 Crypto RIPEMD library from OpenSSL
+    rsa_openssl:                       	 Crypto RSA library from OpenSSL
+    seed_openssl:                      	 Crypto SEED library from OpenSSL
+    sha_openssl:                       	 Crypto SHA library from OpenSSL
+    stack_openssl:                     	 Crypto STACK library from OpenSSL
+    ts_openssl:                        	 Crypto ts library from OpenSSL
+    txt_db_openssl:                    	 Crypto TXT_DB library from OpenSSL
+    ui_openssl:                        	 Crypto UI library from OpenSSL
+    whrlpool_openssl:                  	 Crypto whrlpool library from OpenSSL
+    x509_openssl:                      	 Crypto X509 Library from OpenSSL
+    x509v3_openssl:                    	 Crypto X509v3 Library from OpenSSL
+    ssl_types:                         	 Crypto Library from OpenSSL
+    ssl_tests:                         	 Crypto Library from OpenSSL
+    engines_openssl:                   	 SSL Library from OpenSSL
+    ccgost_openssl:                    	 SSL Library from OpenSSL
+    I28F640J3_blconfig_iMXS_net_open:  	 I28F 16-bit flash block storage configuration library
+    A025DL02_Config_iMXS_net_open:     	 A025DL02 LCD controller configuration for iMXS net
+    BlockStorage_AddDevices_iMXS_net_open:	 Block storage library
+    usb_pal_config_iMXS_net_open:      	 USB PAL configuration for iMXS_net_open
+    LCDController_Config_iMXS_net_open:	 LCD controller configuration driver for iMXS_net_open solution
+
+
+Project TinyBooter
+    Description:                       	 
+    Path:                              	 Solutions\iMXS_net_open\TinyBooter
+
+Libraries:
+    TinybooterLib:                     	 TinyBooter core library
+    Crypto:                            	 Cryptography library
+    GlobalLock_hal:                    	 Global lock (native threading control)
+    TinyHal_loader:                    	 Core HAL library (for boot loaders)
+    ARM9_bootstrap:                    	 ARM9 core bootstrap
+    ARM9_cache:                        	 ARM9 core cache driver
+    ARM9_mmu:                          	 ARM9 MMU core driver
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    I28F_16BL:                         	 I28F 16-bit flash block storage driver
+    A025DL02:                          	 A025DL02 display driver
+    Display_Font8x8:                   	 Text Font (8x8 pixels)
+    system_initialization_hal_loader:  	 System initialization (for boot loaders)
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    blockstorage_pal:                  	 Block storage library
+    Buttons_pal:                       	 Buttons library
+    COM_pal:                           	 Communication port director
+    Watchdog_pal_stubs:                	 Watchdog stub
+    i2c_pal_stubs:                     	 I2C stub library
+    sockets_pal_stubs:                 	 Network socket stub driver
+    usart_pal_stubs:                   	 USART stub driver
+    usb_pal:                           	 USB driver
+    config_pal_loader:                 	 System configuration boot loader library
+    diagnostics_pal:                   	 Diagnostics library
+    events_pal:                        	 System event library
+    heap_pal:                          	 Managed heap size and location configuration
+    piezo_pal_stubs:                   	 Piezo stub driver
+    SimpleHeap:                        	 SimpleHeap unmanaged heap
+    SimpleHeap_config_stubs:           	 SimpleHeap configuration stub library
+    tinycrt_pal_loader:                	 CRT functionality (for boot loaders)
+    MC9328MXL_bootstrap:               	 Freescale MC9328MXL processor bootstrap driver
+    MC9328MXL_cache:                   	 Freescale MC9328MXL processor cache driver
+    MC9328MXL_DMA:                     	 Freescale MC9328MXL DMA driver
+    MC9328MXL_EBIU:                    	 Freescale MC9328MXL EBIU driver
+    MC9328MXL_GPIO:                    	 Freescale MC9328MXL GPIO driver
+    MC9328MXL_INTC:                    	 Freescale MC9328MXL interrupt controller driver
+    MC9328MXL_LCD:                     	 Freescale MC9328MXL LCD controller driver
+    MC9328MXL_Power:                   	 Freescale MC9328MXL power driver
+    MC9328MXL_PreStackInit:            	 Freescale MC9328MXL processor pre-stack initialization
+    MC9328MXL_SPI:                     	 Freescale MC9328MXL SPI driver
+    MC9328MXL_timer:                   	 Freescale MC9328MXL timer driver
+    MC9328MXL_time:                    	 Freescale MC9328MXL time driver
+    MC9328MXL_USART:                   	 Freescale MC9328MXL USART driver
+    MC9328MXL_USB:                     	 Freescale MC9328MXL USB driver
+    MC9328MXL_Watchdog:                	 Freescale MC9328MXL watchdog driver
+    CRC:                               	 CRC library
+    WireProtocol:                      	 Device communication protocol
+    fs_pal_stubs:                      	 File System stub library
+    FS_Config_stubs:                   	 File system config stub
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    palevent_pal_stubs:                	 palevent set of methods used by Gesture, Ink
+    Time_pal:                          	 Time set of methods used by Time, Time
+    I28F640J3_blconfig_iMXS_net_open:  	 I28F 16-bit flash block storage configuration library
+    A025DL02_Config_iMXS_net_open:     	 A025DL02 LCD controller configuration for iMXS net
+    BlockStorage_AddDevices_iMXS_net_open:	 Block storage library
+    usb_pal_config_iMXS_net_open:      	 USB PAL configuration for iMXS_net_open
+    LCDController_Config_iMXS_net_open:	 LCD controller configuration driver for iMXS_net_open solution
+
+
+Project TinyBooterDecompressor
+    Description:                       	 
+    Path:                              	 Solutions\iMXS_net_open\TinyBooter
+
+Libraries:
+    TinyBooterDecompressorLib:         	 TinyBooter decompressor library
+    TinybooterLib:                     	 TinyBooter core library
+    Crypto:                            	 Cryptography library
+    GlobalLock_hal:                    	 Global lock (native threading control)
+    TinyHal_loader:                    	 Core HAL library (for boot loaders)
+    ARM9_bootstrap:                    	 ARM9 core bootstrap
+    ARM9_cache:                        	 ARM9 core cache driver
+    ARM9_mmu:                          	 ARM9 MMU core driver
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    I28F_16BL:                         	 I28F 16-bit flash block storage driver
+    A025DL02:                          	 A025DL02 display driver
+    Display_Font8x8:                   	 Text Font (8x8 pixels)
+    system_initialization_hal_loader:  	 System initialization (for boot loaders)
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    blockstorage_pal:                  	 Block storage library
+    Buttons_pal:                       	 Buttons library
+    Watchdog_pal_stubs:                	 Watchdog stub
+    COM_pal:                           	 Communication port director
+    i2c_pal_stubs:                     	 I2C stub library
+    sockets_pal_stubs:                 	 Network socket stub driver
+    usart_pal_stubs:                   	 USART stub driver
+    usb_pal:                           	 USB driver
+    config_pal_loader:                 	 System configuration boot loader library
+    diagnostics_pal:                   	 Diagnostics library
+    events_pal:                        	 System event library
+    heap_pal:                          	 Managed heap size and location configuration
+    piezo_pal_stubs:                   	 Piezo stub driver
+    SimpleHeap_stubs:                  	 SimpleHeap unmanaged heap stub library
+    SimpleHeap_config_stubs:           	 SimpleHeap configuration stub library
+    tinycrt_pal_loader:                	 CRT functionality (for boot loaders)
+    MC9328MXL_bootstrap:               	 Freescale MC9328MXL processor bootstrap driver
+    MC9328MXL_cache:                   	 Freescale MC9328MXL processor cache driver
+    MC9328MXL_DMA:                     	 Freescale MC9328MXL DMA driver
+    MC9328MXL_EBIU:                    	 Freescale MC9328MXL EBIU driver
+    MC9328MXL_GPIO:                    	 Freescale MC9328MXL GPIO driver
+    MC9328MXL_INTC:                    	 Freescale MC9328MXL interrupt controller driver
+    MC9328MXL_LCD:                     	 Freescale MC9328MXL LCD controller driver
+    MC9328MXL_Power:                   	 Freescale MC9328MXL power driver
+    MC9328MXL_PreStackInit:            	 Freescale MC9328MXL processor pre-stack initialization
+    MC9328MXL_SPI:                     	 Freescale MC9328MXL SPI driver
+    MC9328MXL_timer:                   	 Freescale MC9328MXL timer driver
+    MC9328MXL_time:                    	 Freescale MC9328MXL time driver
+    MC9328MXL_USART:                   	 Freescale MC9328MXL USART driver
+    MC9328MXL_USB:                     	 Freescale MC9328MXL USB driver
+    MC9328MXL_Watchdog:                	 Freescale MC9328MXL watchdog driver
+    CRC:                               	 CRC library
+    WireProtocol:                      	 Device communication protocol
+    fs_pal_stubs:                      	 File System stub library
+    FS_Config_stubs:                   	 File system config stub
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    palevent_pal_stubs:                	 palevent set of methods used by Gesture, Ink
+    Time_pal:                          	 Time set of methods used by Time, Time
+    I28F640J3_blconfig_iMXS_net_open:  	 I28F 16-bit flash block storage configuration library
+    A025DL02_Config_iMXS_net_open:     	 A025DL02 LCD controller configuration for iMXS net
+    BlockStorage_AddDevices_iMXS_net_open:	 Block storage library
+    usb_pal_config_iMXS_net_open:      	 USB PAL configuration for iMXS_net_open
+    LCDController_Config_iMXS_net_open:	 LCD controller configuration driver for iMXS_net_open solution
+
+
+Project tinyclr
+    Description:                       	 
+    Path:                              	 Solutions\iMXS_net_open\TinyCLR
+
+Features:
+    Core:                              	 Core functionality (required)
+    Hardware:                          	 Core hardware component
+    NativeEventDispatcher:             	 Native event dispatching for interop
+    Stream:                            	 Stream component
+    FileSystem:                        	 File system
+    DataStorage:                       	 Data storage (extended weak reference storage)
+    BlockStorage:                      	 Block storage support
+    Debugger:                          	 Visual Studio debugger support
+    SOCKET:                            	 Socket transport
+    USB:                               	 Usb Transport
+    UsbClient:                         	 Usb client component
+    InterruptHandler:                  	 Support for interrupt handling
+    Serial:                            	 Serial transport
+    XML:                               	 Xml utilities component
+    Backlight:                         	 Touch screen support
+    SerialPort:                        	 Serial port component
+    Diagnostics:                       	 Diagnostic utilities
+    Graphics:                          	 Core graphics functionality
+    TinyCore:                          	 TinyCore graphics subsystem
+    Crypto:                            	 Cryptographic functionality
+    I2C:                               	 I2C Support
+    SPI:                               	 SPI support
+    Serialization:                     	 Data serialization support
+    Network (LWIP):                    	 Network core functionality for lwIP stack
+
+Libraries:
+    LargeBuffer_hal_stubs:             	 LargeBuffer stub library
+    Core:                              	 CLR core library
+    Hardware:                          	 Core hardware functionality
+    InterruptHandler:                  	 Interrupt handler library
+    HeapPersistence:                   	 Extended weak references data storage 
+    I2C:                               	 I2C support
+    IOPort:                            	 Native event dispatcher (formerly IOPort)
+    RPC_stub:                          	 Remote procedure call stub library
+    Serialization:                     	 Binary serialization (proprietary format)
+    Stream:                            	 Generic stream functionality
+    Xml:                               	 Native Xml functionality
+    Debugger:                          	 Visual Studio debugging support
+    Debugger_full:                     	 Full Visual Studio debugging support
+    Debugger_minimal:                  	 Minimal debug API methods
+    Diagnostics:                       	 Diagnostic functionality
+    Diagnostics_stub:                  	 Diagnostics stub library
+    Graphics_Bmp:                      	 Bitmap support for graphics subsystem
+    Graphics:                          	 Graphics subsystem library
+    Graphics_Gif:                      	 GIF library for graphics subsystem
+    Graphics_Jpeg:                     	 JPEG library for graphics subsystem
+    CorLib:                            	 Subset of mscorlib
+    SPOT:                              	 Common interop library
+    SPOT_Crypto:                       	 Crypto interop library
+    SPOT_Serialization:                	 Serialization interop library
+    SPOT_Graphics:                     	 Graphics interop library
+    SPOT_Hardware:                     	 Hardware interop library
+    SPOT_Hardware_SerialPort:          	 SerialPort interop library
+    SPOT_Hardware_Usb:                 	 
+    SPOT_IO:                           	 Stream interop library
+    SPOT_Net:                          	 Network interop library
+    System_Xml:                        	 Xml interop library
+    Messaging:                         	 Core communication component
+    CLRStartup:                        	 Common CLR initialization library
+    Crypto:                            	 Cryptography library
+    GlobalLock_hal:                    	 Global lock (native threading control)
+    TinyHal:                           	 Core HAL library
+    MC9328MXL_PreStackInit:            	 Freescale MC9328MXL processor pre-stack initialization
+    ARM9_bootstrap:                    	 ARM9 core bootstrap
+    ARM9_cache:                        	 ARM9 core cache driver
+    ARM9_mmu:                          	 ARM9 MMU core driver
+    spi_backlight:                     	 SPI backlight
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    I28F_16BL:                         	 I28F 16-bit flash block storage driver
+    A025DL02:                          	 A025DL02 display driver
+    Display_Font8x8:                   	 Text Font (8x8 pixels)
+    FS_FAT:                            	 FAT file system 
+    system_initialization_hal:         	 System initialization library
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    blockstorage_pal:                  	 Block storage library
+    Buttons_pal:                       	 Buttons library
+    COM_pal:                           	 Communication port director
+    i2c_pal:                           	 I2C drivers
+    Watchdog_pal:                      	 Watchdog set of methods used by Watchdog feature
+    MC9328MXL_I2C:                     	 Freescale MC9328MXL I2C driver
+    sockets_pal_lwip:                  	 Network sockets driver for lwIP stack
+    ssl_pal_stubs:                     	 SSL PAL layer stub library
+    usart_pal:                         	 USART driver
+    usb_pal:                           	 USB driver
+    config_pal:                        	 System configuration
+    diagnostics_pal:                   	 Diagnostics library
+    events_pal:                        	 System event library
+    fs_pal:                            	 File system PAL Driver
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    Time_pal:                          	 Time set of methods used by Time, Time
+    palevent_pal:                      	 palevent set of methods used by Gesture, Ink
+    graphics_pal:                      	 Graphics library
+    heap_pal:                          	 Managed heap size and location configuration
+    piezo_pal_stubs:                   	 Piezo stub driver
+    SimpleHeap:                        	 SimpleHeap unmanaged heap
+    SimpleHeap_config:                 	 Simple unmanaged heap
+    tinycrt_pal:                       	 CRT functionality
+    MC9328MXL_bootstrap:               	 Freescale MC9328MXL processor bootstrap driver
+    MC9328MXL_cache:                   	 Freescale MC9328MXL processor cache driver
+    MC9328MXL_CMU:                     	 Freescale MC9328MXL CMU driver
+    MC9328MXL_DMA:                     	 Freescale MC9328MXL DMA driver
+    MC9328MXL_EBIU:                    	 Freescale MC9328MXL EBIU driver
+    MC9328MXL_GPIO:                    	 Freescale MC9328MXL GPIO driver
+    MC9328MXL_INTC:                    	 Freescale MC9328MXL interrupt controller driver
+    MC9328MXL_LCD:                     	 Freescale MC9328MXL LCD controller driver
+    MC9328MXL_Power:                   	 Freescale MC9328MXL power driver
+    MC9328MXL_Security:                	 Freescale MC9328MXL security driver
+    MC9328MXL_SPI:                     	 Freescale MC9328MXL SPI driver
+    MC9328MXL_timer:                   	 Freescale MC9328MXL timer driver
+    MC9328MXL_time:                    	 Freescale MC9328MXL time driver
+    MC9328MXL_USART:                   	 Freescale MC9328MXL USART driver
+    MC9328MXL_USB:                     	 Freescale MC9328MXL USB driver
+    MC9328MXL_Watchdog:                	 Freescale MC9328MXL watchdog driver
+    CRC:                               	 CRC library
+    WireProtocol:                      	 Device communication protocol
+    SPOT_Messaging_stub:               	 Messaging interop stub library
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    MC9328MXL_PerformanceCounter:      	 Freescale MC9328MXL performance counter driver
+    sockets_hal_sockets_lwIP:          	 Network async abstraction layer
+    sockets_hal_dhcp_lwIP:             	 LWIP DHCP Driver
+    sockets_hal_TCP_LWIP:              	 LWIP TCP layer
+    sockets_hal_udp_lwIP:              	 LWIP UDP netowrk layer
+    Ethernet_enc28j60_lwip:            	 ENC28J60 Ethernet Driver
+    Ethernet_loopback_lwip:            	 Loopback Ethernet Driver
+    sockets_hal_async_LWIP:            	 Network async abstraction layer
+    sockets_lwIP_pal:                  	 lwIP network driver
+    VirtualKey_iMXS_net_open:          	 Virtual key driver for iMXS_net_open
+    SPI_Backlight_Config_iMXS_net_open:	 SPI backlight configuration for iMXS_net_open
+    I28F640J3_blconfig_iMXS_net_open:  	 I28F 16-bit flash block storage configuration library
+    A025DL02_Config_iMXS_net_open:     	 A025DL02 LCD controller configuration for iMXS net
+    BlockStorage_AddDevices_iMXS_net_open:	 Block storage library
+    Network_config_iMXS_net_open:      	 Network configuration for iMXS_net_open
+    ENC28J60_LWIP_config_iMXS_net_open:	 ENC28J60_LWIP Ethernet driver configuration for iMXS_net_open
+    usb_pal_config_iMXS_net_open:      	 USB PAL configuration for iMXS_net_open
+    LCDController_Config_iMXS_net_open:	 LCD controller configuration driver for iMXS_net_open solution
+    FS_Config_iMXS_net_open:           	 FS config driver for iMXS solution

@@ -1,0 +1,19 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>
+    </Author>
+    <Description>Freescale iMXS full functionality (thumb)</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{e9ae2cfe-cc4e-49df-97e9-4bf2ea16b858}</PlatformGuid>
+    <INSTRUCTION_SET>THUMB</INSTRUCTION_SET>
+    <TARGETPLATFORM>iMXS_THUMB</TARGETPLATFORM>
+    <PLATFORM>iMXS_THUMB</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\iMXS_thumb" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\MC9328\MC9328.settings" />
+</Project>

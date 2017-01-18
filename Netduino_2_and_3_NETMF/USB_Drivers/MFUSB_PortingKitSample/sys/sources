@@ -1,0 +1,20 @@
+TARGETNAME=MFUSB_PortingKitSample
+TARGETPATH=obj
+TARGETTYPE=DRIVER
+DRIVERTYPE=WDM
+USE_PDB=1
+
+
+TARGETLIBS= 	$(DDK_LIB_PATH)\usbd.lib
+
+
+SOURCES= 	mfusb.rc \
+                Control.cpp \
+		DevQueue.cpp \
+		DriverEntry.cpp \
+		generic.cpp \
+		PlugPlay.cpp \
+		Power.cpp \
+		readwrite.cpp \
+		RemoveLock.cpp \
+		stddcls.cpp

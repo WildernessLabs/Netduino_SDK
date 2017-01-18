@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectPath>$(SPOCLIENT)\Solutions\SAM9RL64_EK\DeviceCode\config\dotNetMF.proj</ProjectPath>
+    <AssemblyName>FileSystem_Config_PAL_SAM9RL64_EK</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{c0dc29bf-307b-4d15-862f-0598af9da32d}</ProjectGuid>
+    <Description>File system config stub</Description>
+    <Level>PAL</Level>
+    <LibraryFile>FileSystem_Config_PAL_SAM9RL64_EK.$(LIB_EXT)</LibraryFile>
+    <ManifestFile>FileSystem_Config_PAL_SAM9RL64_EK.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>FileSystem</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="FileSystem_Config_PAL" Guid="{581729D7-D732-4fe3-961D-3898022F12FA}" ProjectPath="" Conditional="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+          <Author>Microsoft</Author>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomFilter>
+    </CustomFilter>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>True</IsStub>
+    <HasLibraryCategory>True</HasLibraryCategory>
+    <Directory>Solutions\SAM9RL64_EK\DeviceCode\config</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="FS_config_SAM9RL64_EK.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <HFiles Include="$(SPOCLIENT)\devicecode\drivers\fs\fat\fat_fs.h" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

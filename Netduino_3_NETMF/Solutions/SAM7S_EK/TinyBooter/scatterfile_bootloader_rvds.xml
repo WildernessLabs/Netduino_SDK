@@ -1,0 +1,110 @@
+<?xml version="1.0"?>
+<ScatterFile xmlns="http://schemas.microsoft.com/netmf/ScatterfileSchema.xsd">
+
+
+    <!-- ################################################################################ -->
+    <Set Name="Heap_Begin"        Value="0x0020D000"/>
+    <Set Name="Heap_End"          Value="0x0020DFF0"/>
+    <Set Name="Custom_Heap_Begin" Value="0x0020E000"/>
+    <Set Name="Custom_Heap_End"   Value="0x0020EFF0"/>
+
+    <Set Name="Stack_Bottom"    Value="0x0020F000"/>
+    <Set Name="Stack_Top"       Value="0x0020FFF8"/>
+    
+
+    <If Name="TARGETLOCATION" In="FLASH">
+        <Set Name="Code_BaseAddress" Value="0x00100000"/>
+        <Set Name="Code_Size"        Value="0x0000E000"/>
+        <Set Name="Valid"            Value="true"/>
+
+    </If>
+
+    <If Name="TARGETLOCATION" In="RAM">
+        <Set Name="Code_BaseAddress" Value="0x00202800"/> 
+        <Set Name="Code_Size"        Value="0x0000A000"/>  
+        <Set Name="Valid"            Value="true"/>
+    </If>
+
+
+    <LoadRegion Name="LR_%TARGETLOCATION%" Base="%Code_BaseAddress%" Options="ABSOLUTE" Size="%Code_Size%">
+
+      <If Name="TARGETLOCATION" In="FLASH">     
+
+         <ExecRegion Name="ER_%TARGETLOCATION%" Base="%Code_BaseAddress%" Options="FIXED" Size="">
+            <FileMapping Name="FirstEntry.obj"      Options="(+RO, +FIRST)" /> <!-- the entry pointer section goes into this region -->
+            <FileMapping Name="*"                   Options="(SectionForBootstrapOperations)" />
+            <FileMapping Name="*"                   Options="(+RO-CODE)" />
+            <FileMapping Name="*"                   Options="(+RO-DATA)" />      
+        </ExecRegion>
+
+        <ExecRegion Name="ER_RAM_RO" Base="0" Options="ABSOLUTE" Size="">
+
+            <!-- all code and constants are in RAM, 0-WS, 32-bit wide -->
+            <FileMapping Name="VectorsTrampolines.obj" Options="(+RO, +FIRST)" /> <!-- for vector handlers to be far from the vectors -->        
+            <FileMapping Name="AT91_AIC.obj" Options="(+RO)" /> 
+     
+            <FileMapping Name="*" 	                Options="(SectionForFlashOperations)" />                        
+      
+        </ExecRegion>
+
+        <ExecRegion Name="ER_RAM_RW" Base="+0" Options="ABSOLUTE" Size="">
+            <FileMapping Name="*"                Options="(+RW-DATA, +ZI)" />
+
+        </ExecRegion>
+
+      </If>
+      
+	  <!-- when build in RAM, the address "0" should be set for the ARM vectors"-->
+      <If Name="TARGETLOCATION" In="RAM">     
+
+        <ExecRegion Name="ER_%TARGETLOCATION%" Base="%Code_BaseAddress%" Options="FIXED" Size="">
+            <FileMapping Name="FirstEntry.obj"   Options="(+RO, +FIRST)" /> <!-- the entry pointer section goes into this region -->
+            <FileMapping Name="*" 	                Options="(SectionForFlashOperations)" />
+            <FileMapping Name="*" Options="(+RO)" /> 
+        </ExecRegion>
+
+
+        <ExecRegion Name="ER_RAM_RO" Base="0" Options="ABSOLUTE" Size="">
+          <FileMapping Name="VectorsTrampolines.obj" Options="(+RO, +FIRST)" /> <!-- for vector handlers to be far from the vectors -->        
+        </ExecRegion>
+
+        <ExecRegion Name="ER_RAM_RW" Base="+0" Options="ABSOLUTE" Size="">
+            <FileMapping Name="*"                Options="(+RW-DATA, +ZI)" />
+        </ExecRegion>
+
+ 
+      </If>
+
+
+        <ExecRegion Name="ER_HEAP_BEGIN" Base="%Heap_Begin%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForHeapBegin)" />
+        </ExecRegion>
+
+        <!-- everything between heapbegin and heapend will be allocated for a heap -->
+
+        <ExecRegion Name="ER_HEAP_END" Base="%Heap_End%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForHeapEnd)" />
+        </ExecRegion>
+
+        <ExecRegion Name="ER_CUSTOM_HEAP_BEGIN" Base="%Custom_Heap_Begin%" Options="ABSOLUTE" Size="UNINIT">
+          <FileMapping Name="*" Options="(SectionForCustomHeapBegin)" />
+        </ExecRegion>
+
+        <!-- everything between heapbegin and heapend will be allocated for the unmanaged SimpleHeap -->
+
+        <ExecRegion Name="ER_CUSTOM_HEAP_END" Base="%Custom_Heap_End%" Options="ABSOLUTE" Size="UNINIT">
+          <FileMapping Name="*" Options="(SectionForCustomHeapEnd)" />
+        </ExecRegion>
+
+        <!-- this must go last here to provide a low water mark on the stack -->
+
+        <ExecRegion Name="ER_STACK_BOTTOM" Base="%Stack_Bottom%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForStackBottom)" />
+        </ExecRegion>
+	    
+        <ExecRegion Name="ER_STACK_TOP" Base="%Stack_Top%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForStackTop)" />
+        </ExecRegion>
+
+    </LoadRegion>
+</ScatterFile>

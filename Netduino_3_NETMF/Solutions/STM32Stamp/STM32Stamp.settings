@@ -1,0 +1,26 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>Oberon microsystems, Inc.</Author>
+    <Description>STM32Stamp board solution</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{00AA0095-00F2-00CB-8BA4-DF924A1DCB47}</PlatformGuid>
+    <INSTRUCTION_SET>THUMB2</INSTRUCTION_SET>
+    <TARGETPLATFORM>STM32Stamp</TARGETPLATFORM>
+    <PLATFORM>STM32Stamp</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+    <NO_BOOTLOADER_COMPRESSION>true</NO_BOOTLOADER_COMPRESSION>
+    <PLATFORM_EMULATED_FLOATINGPOINT>true</PLATFORM_EMULATED_FLOATINGPOINT>
+  </PropertyGroup>
+  <ItemGroup>
+    <TinyCLR_Defines Include="PLATFORM_EMULATED_FLOATINGPOINT=1" />
+    <TinyCLR_Defines Include="PLATFORM_NO_CLR_TRACE=1" />
+    <TinyCLR_Defines Include="TINYCLR_NO_APPDOMAINS=1" />
+    <TinyCLR_Defines Include="TINYCLR_NO_IL_INLINE=1" />
+  </ItemGroup>   
+  <ItemGroup>
+    <IncludePaths Include="Solutions\STM32Stamp" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\STM32\STM32.settings" />
+</Project>

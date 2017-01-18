@@ -1,0 +1,128 @@
+<?xml version="1.0"?>
+<ScatterFile xmlns="http://schemas.microsoft.com/netmf/ScatterfileSchema.xsd">
+
+    <!-- ATMEL AT91SAM, NO SRAM, SDRAM 64M -->
+  <!-- 32MB FLASH Emulation (0x20000000), 31MB SDRAM (0x22000000) -->
+  <!-- Last MB (0x23F0 0000) reserved for framebuffer -->
+
+
+  <Set Name="Valid" Value="false"/>
+
+
+    <!-- ATMEL SAM9261EK - 64M SDRAM - 160K SRAM - No FLASH -->
+    <Set Name="Heap_Begin"        Value="0x23000000"/>
+    <Set Name="Heap_End"          Value="0x237FFFF8"/>
+    <Set Name="Custom_Heap_Begin" Value="0x23800000"/>
+    <Set Name="Custom_Heap_End"   Value="0x23EFFFF8"/>
+    <Set Name="Stack_Bottom"      Value="0x00026000"/>
+    <Set Name="Stack_Top"         Value="0x00027FF8"/>
+
+  <IfDefined Name="PROFILE_BUILD">
+    <Set Name="ProfileBuffer_Begin" Value="0x23000000"/>
+    <Set Name="ProfileBuffer_End"   Value="0x2300FFF8"/>
+    <Set Name="Heap_Begin"          Value="0x23010000"/>
+  </IfDefined>
+
+  <If Name="TARGETLOCATION" In="FLASH">
+    <Set Name="Code_BaseAddress"    Value="0x20040000"/>
+    <Set Name="Code_Size"           Value="0x00100000"/>
+
+    <Set Name="Config_BaseAddress"  Value="0x00040000"/>
+    <!-- ERConfig_BaseAddress is in RW -->
+    <Set Name="ERConfig_BaseAddress" Value="0x00020000"/>    
+    <Set Name="Config_Size"          Value="0x00020000"/>
+    <Set Name="Valid"               Value="true"/>
+  </If>
+
+  <If Name="TARGETLOCATION" In="RAM">
+    <Set Name="ProfileBuffer_Begin" Value="0x22000000"/>
+    <Set Name="ProfileBuffer_End"   Value="0x2200FFF8"/>
+    <Set Name="Code_BaseAddress" Value="0x22010000"/>
+    <Set Name="Code_Size"        Value="0x00FF0000"/>
+    <!-- RAM with FLASH config is not needed -->
+    <Set Name="Valid"            Value="true"/>
+  </If>
+
+  <!-- ################################################################################ -->
+
+
+    <NamedGroup Name="MEMORY">
+      <LoadRegion Name="LR_%TARGETLOCATION%" Base="%Code_BaseAddress%" Size="%Code_Size%"/>
+      <LoadRegion Name="HEAP" Base="%Heap_Begin%" Size="%Heap_End - Heap_Begin% + 1"/>
+      <LoadRegion Name="STACK" Base="%Stack_Bottom%" Size="%Stack_Top - Stack_Bottom% + 1"/>
+      <LoadRegion Name="RELOC_RAM" Base="0x00000000" Size="1M"/>
+      <LoadRegion Name="ERConfig_BaseAddress" Base="0x00020000" Size="0xA00"/> 
+    </NamedGroup>
+
+    <EntryPoint Name="EntryPoint"/>
+
+    <NamedGroup Name="SECTIONS">
+      <ExecRegion Name="ER_%TARGETLOCATION%" Options="&gt;LR_%TARGETLOCATION%">
+        <FileMapping Name="*" Options="(i.EntryPoint)" />
+        <FileMapping Name="*" Options="(SectionForBootstrapOperations)" />
+        <FileMapping Name="*" Options="(.text*)" />
+        <FileMapping Name="*" Options="(i.*)" />
+        <FileMapping Name="*" Options="(rodata)" />
+        <FileMapping Name="*" Options="(.rodata*)" />
+        <FileMapping Name="*" Options="(.constdata*)" />
+        <FileMapping Name="*" Options="(.conststring*)" />
+        <FileMapping Name="*" Options="(SectionForConfig)" />
+        <FileMapping Name="*" Options="(.glue*)" />
+
+        <Include File="%SPOCLIENT%\Solutions\SAM9261_EK\scatterfile_gcc_missing_symbols.xml"/>
+      </ExecRegion>
+      <ExecRegion Name="ER_RAM_RO" Align="0x10" Options="&gt;RELOC_RAM AT&gt;LR_%TARGETLOCATION%">
+        <FileMapping Name="*" Options="(VectorsTrampolines)" />
+        <FileMapping Name="*" Options="(SectionForFlashOperations)" />
+      </ExecRegion>
+      <ExecRegion Name="ER_RAM_RW" Align="0x10" Options="&gt;RELOC_RAM AT&gt;LR_%TARGETLOCATION%">
+        <FileMapping Name="*" Options="(rwdata)" />
+        <FileMapping Name="*" Options="(.data*)" /> 
+      </ExecRegion>
+      <ExecRegion Name=".bss" Align="0x10" Options="&gt;RELOC_RAM">
+        <FileMapping Name="*" Options="(.zidata*)" />
+        <FileMapping Name="*" Options="(.bss*)" />
+        <FileMapping Name="PROVIDE(__exidx_start = .);" />
+        <FileMapping Name="PROVIDE(__exidx_end = .);" />
+      </ExecRegion>
+      <ExecRegion Name="/DISCARD/">
+        <FileMapping Name="*" Options="(.ARM.exidx*)" />
+        <FileMapping Name="*" Options="(.ARM.extab*)" />
+      </ExecRegion>
+      <ExecRegion Name="ER_HEAP_BEGIN" Base="%Heap_Begin%">
+        <FileMapping Name="*" Options="(SectionForHeapBegin)" />
+      </ExecRegion>
+      <ExecRegion Name="ER_HEAP_END" Base="%Heap_End%">
+        <FileMapping Name="*" Options="(SectionForHeapEnd)" />
+      </ExecRegion>
+      <ExecRegion Name="ER_CUSTOM_HEAP_BEGIN" Base="%Custom_Heap_Begin%">
+        <FileMapping Name="*" Options="(SectionForCustomHeapBegin)" />
+      </ExecRegion>
+      <ExecRegion Name="ER_CUSTOM_HEAP_END" Base="%Custom_Heap_End%">
+        <FileMapping Name="*" Options="(SectionForCustomHeapEnd)" />
+      </ExecRegion>
+      <ExecRegion Name="ER_STACK_BOTTOM" Base="%Stack_Bottom%">
+        <FileMapping Name="*" Options="(SectionForStackBottom)" />
+      </ExecRegion>
+      <ExecRegion Name="ER_STACK_TOP" Base="%Stack_Top%">
+        <FileMapping Name="*" Options="(SectionForStackTop)" />
+      </ExecRegion>
+    </NamedGroup>
+
+    <!-- The following variables are used to simulate the ones autogenerated by RVDS -->
+    <GlobalVariable Name="Load$$ER_%TARGETLOCATION%$$Base"          Value="ADDR(ER_%TARGETLOCATION%)"/>
+    <GlobalVariable Name="Image$$ER_%TARGETLOCATION%$$Length"       Value="SIZEOF(ER_%TARGETLOCATION%)"/>
+
+    <GlobalVariable Name="Image$$ER_RAM_RO$$Base"                   Value="ADDR(ER_RAM_RO)"/>
+    <GlobalVariable Name="Image$$ER_RAM_RO$$Length"                 Value="SIZEOF(ER_RAM_RO)"/>
+    <GlobalVariable Name="Load$$ER_RAM_RO$$Base"                    Value="LOADADDR(ER_RAM_RO)"/>
+
+    <GlobalVariable Name="Image$$ER_RAM_RW$$Base"                   Value="ADDR(ER_RAM_RW)"/>
+    <GlobalVariable Name="Image$$ER_RAM_RW$$Length"                 Value="SIZEOF(ER_RAM_RW)"/>
+    <GlobalVariable Name="Load$$ER_RAM_RW$$Base"                    Value="LOADADDR(ER_RAM_RW)"/>
+
+    <GlobalVariable Name="Image$$ER_RAM_RW$$ZI$$Base"               Value="ADDR(.bss)"/>
+    <GlobalVariable Name="Image$$ER_RAM_RW$$ZI$$Length"             Value="SIZEOF(.bss)"/>
+    <GlobalVariable Name="__use_no_semihosting_swi"                 Value="0"/>
+
+</ScatterFile>

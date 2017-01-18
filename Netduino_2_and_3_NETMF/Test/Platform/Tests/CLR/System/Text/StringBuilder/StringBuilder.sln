@@ -1,0 +1,18 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StringBuilder", "StringBuilder.csproj", "{F0FE4ED4-CE34-4132-99EA-A09B06454714}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F0FE4ED4-CE34-4132-99EA-A09B06454714}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F0FE4ED4-CE34-4132-99EA-A09B06454714}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F0FE4ED4-CE34-4132-99EA-A09B06454714}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

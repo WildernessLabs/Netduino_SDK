@@ -1,0 +1,35 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectPath>$(SPOCLIENT)\Solutions\Netduino3\DeviceCode\Init\dotnetmf.proj</ProjectPath>
+    <AssemblyName>IO_Init_Netduino3</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{8c0e1903-89c7-4ac8-bec6-7e53e586657e}</ProjectGuid>
+    <Description>IO port initialization for Netduino3 solution</Description>
+    <Level>HAL</Level>
+    <LibraryFile>IO_Init_Netduino3.$(LIB_EXT)</LibraryFile>
+    <ManifestFile>IO_Init_Netduino3.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Solutions\Netduino3</Groups>
+    <LibraryCategory>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomSpecific>
+    </CustomSpecific>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>Solutions\Netduino3\DeviceCode\Init</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="IO_Init.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

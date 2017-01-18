@@ -1,0 +1,219 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="cert_device_microsoft_com" xml:space="preserve">
+    <value>Bag Attributes
+    localKeyID: 01 00 00 00 
+subject=/CN=ZACHL-SBA1.redmond.corp.microsoft.com
+issuer=/CN=ZACHL-SBA1.redmond.corp.microsoft.com
+-----BEGIN CERTIFICATE-----
+MIIDRzCCAjOgAwIBAgIQSWR87GBg4IZDycI5/XzhGzAJBgUrDgMCHQUAMDAxLjAs
+BgNVBAMTJVpBQ0hMLVNCQTEucmVkbW9uZC5jb3JwLm1pY3Jvc29mdC5jb20wHhcN
+MTIwNzI0MjM0ODU0WhcNMzkxMjMxMjM1OTU5WjAwMS4wLAYDVQQDEyVaQUNITC1T
+QkExLnJlZG1vbmQuY29ycC5taWNyb3NvZnQuY29tMIIBIjANBgkqhkiG9w0BAQEF
+AAOCAQ8AMIIBCgKCAQEAnwsjI63dIkE0Pr4kZjeBRIEm0i5a+jnMQYm0lh1PW2c6
+N0DP/6a7hYBuGd1TLfa0H+edcuDw6jrV9teF5AsUAZm7S0g3/Y2bBYZaWDO7YShf
+UbAVhMfwHXRu+8hCLM6BJEYTManSuBWy57umd01p7D4DJ2HcfZOKLKb6yehEx0Ar
+WZzzBMMyg+gnhBDvk094ftETHf9KNwXy30kY0uhXvz3JFqzkIVDs4NitRZnl+ZA3
+GlhBkD2AgEm1/OuuS+1DvI7SYz3IKCYld5UJ9dGwinMWVs/zVi0jcmVqG6ZiFz7W
+RNlLLPBhCzYDtLde413PSqh5YSWFk59bnUIJ3g5NCQIDAQABo2UwYzBhBgNVHQEE
+WjBYgBCWZh5kttkW+biGytMvzQKWoTIwMDEuMCwGA1UEAxMlWkFDSEwtU0JBMS5y
+ZWRtb25kLmNvcnAubWljcm9zb2Z0LmNvbYIQSWR87GBg4IZDycI5/XzhGzAJBgUr
+DgMCHQUAA4IBAQBjInvF3F/79WJrf+hDd/oSSZT94X+mXgrnMYqYePULLnHt9lrb
+Zs5lM4yMreC/1cohUHB0VCw3zAKvKr7IMubW7mKuiRcg+UgLJVtXE/1tznkVuqvz
+ONSLF2RxqMxdLNgQ6OFrdXaCu43CK+fQoKVM/amZMye3kenVPN6pDfXznHW6Un1w
+tUuDIR4wDaYmAwyiPoAn+1D1g3RrBFLqc4scdltwfCf2FR31ze44sDsMEj8DKJE5
+YFA8UhWZiEZBXpIkq531UlXLeb69Pi7nUw5wfbVzzWOUzobhx9t55eWAmWnL3IuR
+RnQUqxNLNVZH9o+6m4PyRyWxD48J3o29ZvjP
+-----END CERTIFICATE-----
+Bag Attributes
+    localKeyID: 01 00 00 00 
+    friendlyName: 354955e4-03ee-4d94-bb10-bb4613b823ba
+    Microsoft CSP Name: Microsoft Strong Cryptographic Provider
+Key Attributes
+    X509v3 Key Usage: 10 
+-----BEGIN RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: DES-EDE3-CBC,1F57F64B73C799E2
+
+ezuXF8GJcI/Mr/RgEVzMgzn45xOdLb7qM2fPmfvtAJfREZqUKKT0NhE1Pt+vVpUn
+qCPGNzNsw4saM1Ti2uRe1z9mStfavGMUV0BEnJRs7sMj/DHVvgFp6qwJCHQO8zUA
+B9BDFXT3a2ggoCsmp/o0G6qXXZrzVtmg8u5S/RgG28Mm61Uq3OACdXsX0jI5Av+4
+EzvyZ3Ple/mto9HY1kyHhMUQDHO+5+UdzxWpBr6sz5p5Wdi3TaEHaYkF9qeG21j8
+8zT3EYFfVPBsRpXnnhzsElyXtrStuotfWG7UCiJenrjCqDmhghkXWeeAC0vWQ66r
+9CiA5fcmQJMAfGBoDpxh8HNf2JYIuQb0/6uLF6yrsI2jC/Cx77BD94Jkp1j9uz2A
+zBTeGiwth5X6dlzEDUrTxsrF63sYX64GAWMZxxXoaOKnlqUU50HaMaxLDwIMGvnw
+qP3Dy9rU990t5wCVtHHAHQogCUqbxffACyQFyF8nbmakiiY8aFbE+XHbNP7NHuPG
+PYET1ZnHWBvazz98dKR4PIoW5Bc4fCIecYNv8qyv8PlfwZcT5rbbf4NTDzbNmUyI
+qEyePJ3LauXP8nwAh4EUQY4GIK+r45UJvBBSQLVK60jHO2WELOicvBvj6fTuW2LO
+NqVoM95yXseDNvcTiKcIv29pQOVTRjZhMqoqUkeGBhBgP9FPjXkgEBSUHLSDRGUw
+xphuaoYMpR3ELbJIT7Y2F4CM56sr97Q4DByPNZ2GlXfNHubT3sQku3ghxuio0nFj
+GcXTkjiWuIowB7ZCT1dVXj8AbI+oBH/jAb6W3C/QoN7szNGJXFkWtjvUB8HjC8tg
+rAQOGPwPumGfiShZ3CtDXgAEOSNsZKFyJF8Bzx/NkRR+vuFnUEt7h6sYaWpHfbzD
+NP6L17mnqettt7qQO2IbJZI0ukHhEIWIodHXkjmmxBJKKbI5sXub8nZmgubPQZTl
+0fK0All5WyTXjyK4wYtBAAc8RsHTVOPrDJCB8VbTSIkYVFPXB+UkF7Eeyky/mSia
+6h91ILx610cO7yD1jQlRarLTmYz8KlzwjDUs3CdiSNCBkRNUNGmK71lbrQJySeym
+TWwctrVujGFr4AIaWfh7YREQcPl8YYP1/Npg/algo6stSpxKCi7ycSAaID2kcn5y
+4vIe/+ZhyMA87Gpd7vt2rpmsloYNnFQGg6uYr2yu1/2+3ieA3K9Tcrtshc2zidZt
+wD3qeT3BAbkUCUrEpOgW/YMCSLo1ecfCUMXwSOMqmlAMyXtePj6kO3rQ2XMaaf5b
+3IYcZ0Gbm0n8E8JH1M2o975wRiwGIzF2qjHjOwGdT3Cx5PuTA2IK29uxMypIN7UB
+y8E9nadevLny9J/EqcNNabEzqtdQ+vXcR5NEK8HXxbARkpp+Tv8O/+gjbf8+ABnh
+XJC12njfusz7kFzNZzxpA8oNfZE66PqJPnwfDEJnwY7ZZEmAcBl56cFMrwmJCAuY
+QqZV+D/fPLpp1zIpzf1dgzTpQHFvdPPFbmfo0mdSl8RZbE7VU7/M9jHd/OstsZqw
+VLm9Ai8ulAjAXHK/npR5KzK0KUAzaxdkYGc23Yif4W7xc5SzheyxAJBqerxZNnNW
+-----END RSA PRIVATE KEY-----</value>
+  </data>
+  <data name="PostForm" xml:space="preserve">
+    <value>&lt;form action="post.aspx" method="post" enctype="multipart/form-data" target="upload_target" &gt;
+            File: &lt;input name="myfile" type="file" /&gt;
+                  &lt;input type="submit" name="submitBtn" value="Send File To Server" /&gt;
+        &lt;/form&gt;</value>
+  </data>
+  <data name="Soap" xml:space="preserve">
+    <value>&lt;s:Envelope xmlns:s="http://www.w3.org/2003/05/soap-envelope" xmlns:a="http://schemas.xmlsoap.org/ws/2004/08/addressing"&gt;
+  &lt;s:Header&gt;
+    &lt;a:Action s:mustUnderstand="1"&gt;http://schemas.example.org/SimpleService/TwoWayRequest&lt;/a:Action&gt;
+    &lt;a:From&gt;
+      &lt;a:Address&gt;http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous&lt;/a:Address&gt;
+    &lt;/a:From&gt;
+    &lt;a:ReplyTo&gt;
+      &lt;a:Address&gt;http://schemas.xmlsoap.org/ws/2004/08/addressing/role/anonymous&lt;/a:Address&gt;
+    &lt;/a:ReplyTo&gt;
+    &lt;a:MessageID&gt;urn:uuid:85167211-529a-4eb1-89b0-5b7759df9cc3&lt;/a:MessageID&gt;
+    &lt;a:To s:mustUnderstand="1"&gt;http://localhost:8084/34c6b7e3-9494-4eb3-90bb-c946c2bcd775&lt;/a:To&gt;
+  &lt;/s:Header&gt;
+  &lt;s:Body xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema"&gt;
+    &lt;TwoWayRequest xmlns="http://schemas.example.org/SimpleService"&gt;
+      &lt;X&gt;1&lt;/X&gt;
+      &lt;Y&gt;2&lt;/Y&gt;
+    &lt;/TwoWayRequest&gt;
+  &lt;/s:Body&gt;
+&lt;/s:Envelope&gt;</value>
+  </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="NetMFDeviceCert" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>Certificates\NetMFDeviceCert.pfx;System.Byte[], mscorlib, Version=4.1.0.0, Culture=neutral, PublicKeyToken=null</value>
+  </data>
+  <data name="MFUpdateForm" xml:space="preserve">
+    <value>&lt;form action="post.aspx" method="post" enctype="multipart/form-data" target="update_target" &gt;
+            Firmware Update File (*.nmf): &lt;input name="mfUpdateFile" type="file" /&gt;
+                  &lt;input type="submit" name="submitBtn" value="Install Firmware Update" /&gt;
+        &lt;/form&gt;</value>
+  </data>
+</root>

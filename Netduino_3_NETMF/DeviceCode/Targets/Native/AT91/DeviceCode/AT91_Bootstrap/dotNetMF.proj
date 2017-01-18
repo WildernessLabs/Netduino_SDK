@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Directory>DeviceCode\Targets\Native\AT91\DeviceCode\AT91_Bootstrap</Directory>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <ItemGroup Condition="'$(TARGETPROCESSOR)'=='AT91SAM7S'">
+    <RequiredProjects Include="dotNetMF_SAM7s.proj" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TARGETPROCESSOR)'=='AT91SAM7X'">
+    <RequiredProjects Include="dotNetMF_SAM7X.proj" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TARGETPROCESSOR)'=='AT91SAM9261' or '$(TARGETPROCESSOR)'=='AT91SAM9RL64'">
+    <RequiredProjects Include="dotNetMF_SAM9.proj" />
+  </ItemGroup>
+  <ItemGroup>
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\arm_util.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\cpu.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\cpu_definitions.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\smartptr_fiq_arm.h" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

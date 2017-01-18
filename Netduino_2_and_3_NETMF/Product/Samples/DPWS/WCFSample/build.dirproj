@@ -1,0 +1,17 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.Targets" />
+
+  <ItemGroup>
+    <Project Include="HelloWorldClient_MF\HelloWorldClient_MF.csproj" />
+    <Project Include="HelloWorldClient_mF\HelloWorldClient_MF.slnproj" />
+
+    <Project Include="HelloWorldClient_WCF\HelloWorldClient_WCF.csproj" />
+    <Project Include="HelloWorldClient_WCF\HelloWorldClient_WCF.slnproj" />
+
+    <Project Include="HelloWorldServer_MF\HelloWorldServer_MF.csproj" />
+    <Project Include="HelloWorldServer_mF\HelloWorldServer_MF.slnproj" />
+
+    <Project Include="HelloWorldServer_WCF\WcfServer.csproj" />
+    <Project Include="HelloWorldServer_WCF\HelloWorldServer_WCF.slnproj" />
+   </ItemGroup>
+</Project>

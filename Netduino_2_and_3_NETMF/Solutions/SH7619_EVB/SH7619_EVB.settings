@@ -1,0 +1,24 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>Jennifer Cheng</Author>
+    <Description>sh7619 evaluation board</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{27c66b62-869e-417c-b5ec-015f950f0f32}</PlatformGuid>
+    <TARGETPLATFORM>SH7619_EVB</TARGETPLATFORM>
+    <PLATFORM>SH7619_EVB</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>be</ENDIANNESS>
+    <NO_BOOTLOADER_COMPRESSION>true</NO_BOOTLOADER_COMPRESSION>
+    <DEVICE_TYPE Condition=" '$(DEVICE_TYPE)' == ''">SH2</DEVICE_TYPE>
+    <EnableTCPIP Condition=" '$(EnableTCPIP)' =='' ">false</EnableTCPIP>
+    <FLASH4M Condition=" '$(FLASH4M)' ==''     ">false</FLASH4M>
+    <TCP_IP_STACK Condition="'$(TCP_IP_STACK)'==''">LWIP</TCP_IP_STACK>
+  </PropertyGroup>
+  <ItemGroup>
+    <CC_CPP_MARCO_FLAGS Include="SH7619_ENABLE_TCPIP" Condition="'$(EnableTCPIP)'=='true'" />
+    <CC_CPP_MARCO_FLAGS Include="SH7619_EVB_8M_FLASH" Condition="'$(FLASH4M)'!='true'" />
+    <IncludePaths Include="Solutions\SH7619_EVB" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\SH2\SH2.settings" />
+</Project>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>SD_Config_HAL_NetduinoPlus2</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{2d2ce642-d539-4206-a6fa-d11ce988d03c}</ProjectGuid>
+    <Description>SD card NetduinoPlus2 config</Description>
+    <Level>HAL</Level>
+    <LibraryFile>SD_Config_HAL_NetduinoPlus2.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\Solutions\NetduinoPlus2\DeviceCode\SD_Config_HAL\dotNetMF.proj</ProjectPath>
+    <Groups>BlockStorage</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SDConfig_HAL" Guid="{55D65695-3439-42fc-A727-15802883E1CC}" ProjectPath="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>false</IsStub>
+    <ManifestFile>SD_Config_HAL_NetduinoPlus2.$(LIB_EXT).manifest</ManifestFile>
+    <CustomFilter>
+    </CustomFilter>
+    <Directory>Solutions\NetduinoPlus2\DeviceCode\SD_Config_HAL</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="sdconfig_NetduinoPlus2.cpp" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

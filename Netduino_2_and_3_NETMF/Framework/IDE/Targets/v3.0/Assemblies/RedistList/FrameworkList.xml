@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<FileList Name=".NET Micro Framework 3.0.7186.0" Redist="Microsoft-Windows-CLRCoreComp-MicroFramework-3.0.7186.0"  ToolsVersion="4.0">
+  <File AssemblyName="MFDpwsClient" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="MFDpwsDevice" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="MFDpwsExtensions" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="MFWsStack" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="Microsoft.SPOT.Graphics" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="Microsoft.SPOT.Hardware" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="Microsoft.SPOT.Hardware.SerialPort" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="Microsoft.SPOT.Hardware.Usb" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="Microsoft.SPOT.Ink" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="Microsoft.SPOT.IO" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="Microsoft.SPOT.Native" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="Microsoft.SPOT.Net" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="Microsoft.SPOT.Net.Security" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="Microsoft.SPOT.TinyCore" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="Microsoft.SPOT.Touch" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="mscorlib" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="System" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="System.IO" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="System.Net.Security" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+  <File AssemblyName="System.Xml" Version="3.0.7186.0" PublicKeyToken="2670f5f21e7f4192" Culture="neutral" ProcessorArchitecture="MSIL" InGac="false" />
+</FileList>

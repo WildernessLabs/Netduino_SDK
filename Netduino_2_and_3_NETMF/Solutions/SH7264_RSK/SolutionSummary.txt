@@ -1,0 +1,314 @@
+The .NET Micro Framework Solution Wizard will create the 'SH7264_RSK_P' solution in the directory:
+
+	C:\spot2\client_V4_1_Dev\Solutions\SH7264_RSK_P
+
+The following is a description of the components of this solution.  Each solution consists of a set of projects which in turn have a set of features and libraries.
+
+    Solution:                          	 SH7264_RSK_P
+    Author:                            	 Jennifer Cheng
+    Description:                       	 SH7264_RSK+  solution
+    Processor:                         	 SH2A
+    Debugger Port:                     	 COM1
+
+
+Project NativeSample
+    Description:                       	 
+    Path:                              	 Solutions\SH7264_RSK_P\NativeSample
+
+Libraries:
+    Native:                            	 
+    usart_pal:                         	 USART driver
+    usb_pal_stubs:                     	 USB stub driver
+    CRC:                               	 CRC library
+    diagnostics_pal:                   	 Diagnostics library
+    SH2A_INTC:                         	 SH2A INTC driver
+    SH2A_power:                        	 SH2A power library
+    TinyHal:                           	 Core HAL library
+    WireProtocol:                      	 Device communication protocol
+    SH2A_USART:                        	 SH2A USART driver
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    SH2A_bootstrap:                    	 SH2A  backbone layer
+    Cache_HAL_SH7264_RSK_P:            	 Generates template code in your solution's DeviceCode directory for the given Library Category.The project will be generated in Solutions\SH7264_RSK_P\DeviceCode\Cache_HAL
+    config_pal:                        	 System configuration
+    Crypto_stub:                       	 Crypto stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    events_pal:                        	 System event library
+    GlobalLock_SH2A:                   	 Global lock (native threading control)
+    SH2A_GPIO:                         	 SH2A GPIO driver
+    SH2A_Hal_System_init:              	 SH2A abstraction layer System Init
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    SimpleHeap_config:                 	 Simple unmanaged heap
+    SimpleHeap:                        	 SimpleHeap unmanaged heap
+    cpu_time_stubs:                    	 Time stub library
+    Time_pal:                          	 Time set of methods used by Time, Time
+    tinycrt_pal:                       	 CRT functionality
+    cpu_watchdog_stubs:                	 Watchdog driver
+    Watchdog_pal_stubs:                	 Watchdog stub
+
+
+Project PortBooter
+    Description:                       	 
+    Path:                              	 Solutions\SH7264_RSK_P\PortBooter
+
+Libraries:
+    usart_pal:                         	 USART driver
+    asyncproccall_pal_stubs:           	 Asynchronous procedure call library
+    cpu_bootstrap_stubs:               	 Processor bootstrap stub library
+    cpu_cache_stubs:                   	 Cache stub library
+    usb_pal_stubs:                     	 USB stub driver
+    config_pal_loader:                 	 System configuration boot loader library
+    CRC:                               	 CRC library
+    Crypto_stub:                       	 Crypto stub library
+    diagnostics_pal_stubs:             	 Diagnostics stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    events_pal_stubs:                  	 System event stub library
+    GlobalLock_hal_stubs:              	 Global lock stub library
+    SH2A_GPIO:                         	 SH2A GPIO driver
+    system_initialization_hal_loader:  	 System initialization (for boot loaders)
+    Time_pal_stubs:                    	 Time set of methods used by Time, Time
+    InterruptController_HAL_ARMulator: 	 Interrupt controller ARMulator library
+    cpu_power_stubs:                   	 CPU power stub library
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    SimpleHeap_config_stubs:           	 SimpleHeap configuration stub library
+    SimpleHeap_stubs:                  	 SimpleHeap unmanaged heap stub library
+    ARMulator_Time:                    	 Time library
+    tinycrt_pal_loader:                	 CRT functionality (for boot loaders)
+    TinyHal_loader:                    	 Core HAL library (for boot loaders)
+    cpu_watchdog_stubs:                	 Watchdog driver
+    Watchdog_pal_stubs:                	 Watchdog stub
+    WireProtocol:                      	 Device communication protocol
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    FS_Config_stubs:                   	 File system config stub
+    sockets_pal_stubs:                 	 Network socket stub driver
+    fs_pal_stubs:                      	 File System stub library
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    cpu_spi_stubs:                     	 SPI stub library
+    i2c_pal_stubs:                     	 I2C stub library
+    piezo_pal_stubs:                   	 Piezo stub driver
+    palevent_pal_stubs:                	 palevent set of methods used by Gesture, Ink
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    heap_pal_stubs:                    	 Simple heap stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    COM_pal_stubs:                     	 Communication port directory stub
+    BlockStorage_AddDevices_stubs:     	 Block storage add device stub driver
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    lcd_hal_stubs:                     	 Stub display driver
+    cpu_LCD_stubs:                     	 Display controller stub library
+    Buttons_pal_stubs:                 	 Buttons stub library
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    blockstorage_pal_stubs:            	 Block storage stub library
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    ARMulator_USART:                   	 USART library
+
+
+Project Tinybooter
+    Description:                       	 
+    Path:                              	 Solutions\SH7264_RSK_P\TinyBooter
+
+Libraries:
+    TinybooterLib:                     	 TinyBooter core library
+    usart_pal:                         	 USART driver
+    asyncproccall_pal_stubs:           	 Asynchronous procedure call library
+    cpu_bootstrap_stubs:               	 Processor bootstrap stub library
+    cpu_cache_stubs:                   	 Cache stub library
+    usb_pal_stubs:                     	 USB stub driver
+    config_pal_loader:                 	 System configuration boot loader library
+    CRC:                               	 CRC library
+    Crypto_stub:                       	 Crypto stub library
+    diagnostics_pal_stubs:             	 Diagnostics stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    events_pal_stubs:                  	 System event stub library
+    GlobalLock_hal_stubs:              	 Global lock stub library
+    SH2A_GPIO:                         	 SH2A GPIO driver
+    system_initialization_hal_loader:  	 System initialization (for boot loaders)
+    Time_pal_stubs:                    	 Time set of methods used by Time, Time
+    InterruptController_HAL_ARMulator: 	 Interrupt controller ARMulator library
+    cpu_power_stubs:                   	 CPU power stub library
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    SimpleHeap_config_stubs:           	 SimpleHeap configuration stub library
+    SimpleHeap_stubs:                  	 SimpleHeap unmanaged heap stub library
+    ARMulator_Time:                    	 Time library
+    tinycrt_pal_loader:                	 CRT functionality (for boot loaders)
+    TinyHal_loader:                    	 Core HAL library (for boot loaders)
+    cpu_watchdog_stubs:                	 Watchdog driver
+    Watchdog_pal_stubs:                	 Watchdog stub
+    WireProtocol:                      	 Device communication protocol
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    FS_Config_stubs:                   	 File system config stub
+    sockets_pal_stubs:                 	 Network socket stub driver
+    fs_pal_stubs:                      	 File System stub library
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    cpu_spi_stubs:                     	 SPI stub library
+    i2c_pal_stubs:                     	 I2C stub library
+    piezo_pal_stubs:                   	 Piezo stub driver
+    palevent_pal_stubs:                	 palevent set of methods used by Gesture, Ink
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    heap_pal_stubs:                    	 Simple heap stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    COM_pal_stubs:                     	 Communication port directory stub
+    BlockStorage_AddDevices_stubs:     	 Block storage add device stub driver
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    lcd_hal_stubs:                     	 Stub display driver
+    cpu_LCD_stubs:                     	 Display controller stub library
+    Buttons_pal_stubs:                 	 Buttons stub library
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    blockstorage_pal_stubs:            	 Block storage stub library
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    ARMulator_USART:                   	 USART library
+
+
+Project TinyBooterDecompressor
+    Description:                       	 
+    Path:                              	 Solutions\SH7264_RSK_P\TinyBooter
+
+Libraries:
+    TinyBooterDecompressorLib:         	 TinyBooter decompressor library
+    usart_pal:                         	 USART driver
+    asyncproccall_pal_stubs:           	 Asynchronous procedure call library
+    cpu_bootstrap_stubs:               	 Processor bootstrap stub library
+    cpu_cache_stubs:                   	 Cache stub library
+    usb_pal_stubs:                     	 USB stub driver
+    config_pal_loader:                 	 System configuration boot loader library
+    CRC:                               	 CRC library
+    Crypto_stub:                       	 Crypto stub library
+    diagnostics_pal_stubs:             	 Diagnostics stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    events_pal_stubs:                  	 System event stub library
+    GlobalLock_hal_stubs:              	 Global lock stub library
+    SH2A_GPIO:                         	 SH2A GPIO driver
+    system_initialization_hal_loader:  	 System initialization (for boot loaders)
+    Time_pal_stubs:                    	 Time set of methods used by Time, Time
+    InterruptController_HAL_ARMulator: 	 Interrupt controller ARMulator library
+    cpu_power_stubs:                   	 CPU power stub library
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    SimpleHeap_config_stubs:           	 SimpleHeap configuration stub library
+    SimpleHeap_stubs:                  	 SimpleHeap unmanaged heap stub library
+    ARMulator_Time:                    	 Time library
+    tinycrt_pal_loader:                	 CRT functionality (for boot loaders)
+    TinyHal_loader:                    	 Core HAL library (for boot loaders)
+    cpu_watchdog_stubs:                	 Watchdog driver
+    Watchdog_pal_stubs:                	 Watchdog stub
+    WireProtocol:                      	 Device communication protocol
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    FS_Config_stubs:                   	 File system config stub
+    sockets_pal_stubs:                 	 Network socket stub driver
+    fs_pal_stubs:                      	 File System stub library
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    cpu_spi_stubs:                     	 SPI stub library
+    i2c_pal_stubs:                     	 I2C stub library
+    piezo_pal_stubs:                   	 Piezo stub driver
+    palevent_pal_stubs:                	 palevent set of methods used by Gesture, Ink
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    heap_pal_stubs:                    	 Simple heap stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    COM_pal_stubs:                     	 Communication port directory stub
+    BlockStorage_AddDevices_stubs:     	 Block storage add device stub driver
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    lcd_hal_stubs:                     	 Stub display driver
+    cpu_LCD_stubs:                     	 Display controller stub library
+    Buttons_pal_stubs:                 	 Buttons stub library
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    blockstorage_pal_stubs:            	 Block storage stub library
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    ARMulator_USART:                   	 USART library
+
+
+Project tinyclr
+    Description:                       	 
+    Path:                              	 Solutions\SH7264_RSK_P\TinyCLR
+
+Features:
+    Core:                              	 Core functionality (required)
+    Hardware:                          	 Core hardware component
+    NativeEventDispatcher:             	 Native event dispatching for interop
+    BlockStorage:                      	 Block storage support
+    Crypto:                            	 Cryptographic functionality
+    DataStorage:                       	 Data storage (extended weak reference storage)
+    Debugger:                          	 Visual Studio debugger support
+    Diagnostics:                       	 Diagnostic utilities
+    Stream:                            	 Stream component
+    FileSystem:                        	 File system
+    I2C:                               	 I2C Support
+    Serialization:                     	 Data serialization support
+    Serial:                            	 Serial transport
+    SerialPort:                        	 Serial port component
+    Graphics:                          	 Core graphics functionality
+    TinyCore:                          	 TinyCore graphics subsystem
+
+Libraries:
+    Core:                              	 CLR core library
+    CLRStartup:                        	 Common CLR initialization library
+    CorLib:                            	 Subset of mscorlib
+    SPOT:                              	 Common interop library
+    Serialization:                     	 Binary serialization (proprietary format)
+    Debugger:                          	 Visual Studio debugging support
+    Graphics:                          	 Graphics subsystem library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    SPOT_Hardware:                     	 Hardware interop library
+    Hardware:                          	 Core hardware functionality
+    IOPort:                            	 Native event dispatcher (formerly IOPort)
+    blockstorage_pal:                  	 Block storage library
+    SPOT_Crypto:                       	 Crypto interop library
+    HeapPersistence:                   	 Extended weak references data storage 
+    Messaging:                         	 Core communication component
+    SPOT_Messaging_stub:               	 Messaging interop stub library
+    Diagnostics:                       	 Diagnostic functionality
+    Stream:                            	 Generic stream functionality
+    SPOT_IO:                           	 Stream interop library
+    fs_pal:                            	 File system PAL Driver
+    I2C:                               	 I2C support
+    i2c_pal:                           	 I2C drivers
+    SPOT_Serialization:                	 Serialization interop library
+    usart_pal:                         	 USART driver
+    SPOT_Hardware_SerialPort:          	 SerialPort interop library
+    SPOT_Graphics:                     	 Graphics interop library
+    usb_pal_stubs:                     	 USB stub driver
+    CRC:                               	 CRC library
+    diagnostics_pal:                   	 Diagnostics library
+    SH2A_INTC:                         	 SH2A INTC driver
+    InterruptHandler_stub:             	 Interrupt handler stub library
+    SH2A_power:                        	 SH2A power library
+    RPC_stub:                          	 Remote procedure call stub library
+    TinyHal:                           	 Core HAL library
+    WireProtocol:                      	 Device communication protocol
+    FS_FAT:                            	 FAT file system 
+    BlockStorage_AddDevices_ARMulator: 	 Block storage add device driver for ARMulator
+    cpu_spi_stubs:                     	 SPI stub library
+    SH2A_USART:                        	 SH2A USART driver
+    Graphics_Jpeg:                     	 JPEG library for graphics subsystem
+    Graphics_Bmp:                      	 Bitmap support for graphics subsystem
+    Graphics_Gif:                      	 GIF library for graphics subsystem
+    graphics_pal:                      	 Graphics library
+    COM_pal:                           	 Communication port director
+    sockets_pal_stubs:                 	 Network socket stub driver
+    cpu_usb_stubs:                     	 USB stub library
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    AM29DL_16_BL:                      	 Block storage library for AM29DL 16-bit flash chip
+    BlockStorageConfig_HAL_SH7264_RSK_P:	 Generates template code in your solution's DeviceCode directory for the given Library Category.The project will be generated in Solutions\SH7264_RSK_P\DeviceCode\BlockStorageConfig_HAL
+    SH2A_bootstrap:                    	 SH2A  backbone layer
+    Cache_HAL_SH7264_RSK_P:            	 Generates template code in your solution's DeviceCode directory for the given Library Category.The project will be generated in Solutions\SH7264_RSK_P\DeviceCode\Cache_HAL
+    config_pal:                        	 System configuration
+    Crypto_stub:                       	 Crypto stub library
+    Debugger_full:                     	 Full Visual Studio debugging support
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    events_pal:                        	 System event library
+    FileSystem_Config_PAL_SH7264_RSK_P:	 Generates template code in your solution's DeviceCode directory for the given Library Category.The project will be generated in Solutions\SH7264_RSK_P\DeviceCode\FileSystem_Config_PAL
+    GlobalLock_SH2A:                   	 Global lock (native threading control)
+    SH2A_GPIO:                         	 SH2A GPIO driver
+    SH2A_Hal_System_init:              	 SH2A abstraction layer System Init
+    LargeBuffer_hal_stubs:             	 LargeBuffer stub library
+    HD66773R:                          	 HD66773R display driver
+    cpu_LCD_stubs:                     	 Display controller stub library
+    cpu_performancecounter_stubs:      	 Performance counter stub library
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    cpu_security_stubs:                	 Security stub library
+    SimpleHeap_config:                 	 Simple unmanaged heap
+    SimpleHeap:                        	 SimpleHeap unmanaged heap
+    cpu_time_stubs:                    	 Time stub library
+    Time_pal:                          	 Time set of methods used by Time, Time
+    tinycrt_pal:                       	 CRT functionality
+    VirtualKey_HAL_SH7264_RSK_P:       	 Generates template code in your solution's DeviceCode directory for the given Library Category.The project will be generated in Solutions\SH7264_RSK_P\DeviceCode\VirtualKey_HAL
+    cpu_watchdog_stubs:                	 Watchdog driver
+    Watchdog_pal_stubs:                	 Watchdog stub
+    cpu_i2c_stubs:                     	 I2C stub library

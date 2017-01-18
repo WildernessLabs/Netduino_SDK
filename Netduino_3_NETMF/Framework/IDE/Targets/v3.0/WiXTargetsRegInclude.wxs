@@ -1,0 +1,73 @@
+<?xml version='1.0'?>
+<Include>
+  <?include defines.wxs?>
+  <RegistryValue
+    Root="HKLM"
+    Key="$(var.FxKey)\v3.0"
+    Name="BuildNumber"
+    Type ="string"
+    Value ="11052"
+    Id="Registry_V3_0_BuildVersionValue"
+    />
+
+  <RegistryValue
+    Root="HKLM"
+    Key="$(var.FxKey)\v3.0"
+    Name="RevisionNumber"
+    Type ="string"
+    Value ="0"
+    Id="Registry_V3_0_RevisionVersionValue"
+    />
+
+  <RegistryValue
+    Root="HKLM"
+    Key="$(var.FxKey)\v3.0"
+    Name="InstallRoot"
+    Type ="string"
+    Value ="[VERSIONDIR_v3_0]"
+    Id="Registry_V3_0_InstallRoot"
+    />
+
+    <RegistryKey
+        Root="HKLM"
+        Id="Registry_AssemblyFolder_v3_0"
+        Key="$(var.FxKey)\v3.0\AssemblyFolder"
+        Action="createAndRemoveOnUninstall"
+        >
+        <RegistryValue
+            Type="string"
+            Value="[AssembliesDir_V3_0]"
+            Id="Registry_AsemblyFolderDefault_v3_0"
+            />
+    </RegistryKey>
+
+    <RegistryKey
+        Root="HKLM"
+        Id="Registry_MicrosoftEmulatorKey_v3_0"
+        Key="$(var.FxKey)\v3.0\Emulators\Microsoft"
+        Action="createAndRemoveOnUninstall"
+        >
+        <RegistryValue
+            Name="Name"
+            Type="string"
+            Value="Microsoft Emulator (v3.0)"
+            Id="Registry_MicrosoftEmulatorNameValue_v3_0"
+            />
+        <RegistryValue
+            Name="Path"
+            Type="string"
+            Value="[ToolsDir_v3_0]Microsoft.SPOT.Emulator.Sample.SampleEmulator.exe"
+            Id="Registry_MicrosoftSampleEmulatorPathValue_v3_0"
+            />
+    </RegistryKey>
+
+
+  <?include defines.wxs?>
+  <!-- Windows Desktop Express 2012 -->
+  <?include vs_skus\WDExpress11.wxs?>
+  <?include $(env.SPOCLIENT)\Framework\IDE\Targets\v3.0\WixTargetsRegIncludeInner.wxs?>
+  <!-- VisualStudio 2012 -->
+  <?include vs_skus\VisualStudio11.wxs?>
+  <?include $(env.SPOCLIENT)\Framework\IDE\Targets\v3.0\WixTargetsRegIncludeInner.wxs?>
+
+</Include>

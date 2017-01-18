@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>EthernetDriver_HAL_EA_LPC2478</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{033C95B6-E99D-432C-90B3-83700A63C43F}</ProjectGuid>
+    <Description>Ethernet stub driver</Description>
+    <Level>HAL</Level>
+    <LibraryFile>EthernetDriver_HAL_EA_LPC2478.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\Solutions\EA_LPC2478\DeviceCode\network\ethernet\dotNetMF.proj</ProjectPath>
+    <ManifestFile>EthernetDriver_HAL_EA_LPC2478.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Network</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="EthernetDriver_HAL" Guid="{7FD79853-56A2-4CB8-843B-57939B7468F4}" ProjectPath="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2008-08-06</Date>
+          <Author>Microsoft</Author>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomFilter>
+    </CustomFilter>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>Solutions\EA_LPC2478\DeviceCode\network\ethernet</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>3.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="EthernetDriver_EA_LPC2478.cpp" />
+    <IncludePaths Include="DeviceCode\pal\rtip" />
+    <IncludePaths Include="DeviceCode\pal\rtip\drivers" />
+    <IncludePaths Include="DeviceCode\pal\rtip\protocol" />
+    <IncludePaths Include="DeviceCode\pal\rtip\rtpcore" />
+    <IncludePaths Include="DeviceCode\pal\rtip\tinyclr" />
+    <IncludePaths Include="DeviceCode\pal\rtip\vfile" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

@@ -1,0 +1,61 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Builds the DP83848_EA_LPC2478.$(LIB_EXT), for SPOT projects -->
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Directory>Solutions\EA_LPC2478\DeviceCode\EPHY</Directory>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup>
+    <AssemblyName>DP83848_EA_LPC2478</AssemblyName>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="DP83848.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <IncludePaths Include="DeviceCode\pal\rtip" />
+    <IncludePaths Include="DeviceCode\pal\rtip\rtpcore" />
+    <IncludePaths Include="DeviceCode\pal\rtip\tinyclr" />
+    <IncludePaths Include="DeviceCode\Targets\Native\LPC24XX\DeviceCode\EMAC" />
+  </ItemGroup>
+  <ItemGroup>
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\arm_util.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\cpu.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\cpu_definitions.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\smartptr_fiq_arm.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\bget.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\dhcpcapi.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\dhcpconf.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtipapi.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtipconf.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtp.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpchar.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpdate.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpdb.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpdbapi.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpenv.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpirq.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpkern.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpmem.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpmemdb.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpmtxdb.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpscnv.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpsemdb.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpsignl.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpstr.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpterm.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtpthrd.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtptime.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtptypes.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\rtpcore\rtputil.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\sock.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\socket.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\tinyclr\rtpport.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\rtip\xnconf.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\targets\native\lpc24xx\devicecode\emac\lpc24xx_emac.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\targets\native\lpc24xx\devicecode\emac\lpc24xx_emac_driver.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\targets\native\lpc24xx\devicecode\lpc24xx.h" />
+    <HFiles Include="dp83848.h" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

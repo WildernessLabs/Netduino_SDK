@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FeatureName>Netduino.IP.Interop</FeatureName>
+    <Guid>{C2BD23D6-336C-440E-AACA-D04235972318}</Guid>
+    <Description />
+    <Groups />
+    <NETDUINO_IP_INTEROP_FEATUREPROJ>True</NETDUINO_IP_INTEROP_FEATUREPROJ>
+  </PropertyGroup>
+  <ItemGroup>
+    <DriverLibs Include="Netduino_IP_Interop.$(LIB_EXT)" />
+    <InteropFeature Include="Netduino_IP_Interop" />
+    <MMP_DAT_CreateDatabase Include="$(SPOCLIENT)\Solutions\NetduinoPlus2\ManagedCode\Netduino_IP_Interop\bin\Release\le\Netduino.IP.Interop.pe" />
+    <RequiredProjects Include="$(SPOCLIENT)\Solutions\NetduinoPlus2\DeviceCode\Netduino_IP_Interop\dotnetmf.proj" />
+  </ItemGroup>
+</Project>

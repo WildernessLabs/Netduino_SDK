@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Directory>Solutions\EA_LPC2478\DeviceCode\Interop\LPC24XX_DAC\NativeCode\DAC</Directory>
+    <AssemblyName>DAC</AssemblyName>
+    <Version>4.0.0.0</Version>
+    <ProjectGuid>{227C9E85-D333-4A3E-901B-8EDE0520066B}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <HFile Include="DAC.h" />
+    <Compile Include="DAC.cpp" />
+    <Compile Include="DAC_NXP_Interop_DAC_mshl.cpp" />
+    <HFile Include="DAC_NXP_Interop_DAC.h" />
+    <Compile Include="DAC_NXP_Interop_DAC.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <HFiles Include="$(PLATFORM_INDEPENDENT_LIB_DIR)\CLR_defines.h" />
+    <HFiles Include="$(SPOCLIENT)\clr\include\tinyclr_errorcodes.h" />
+    <HFiles Include="$(SPOCLIENT)\clr\include\tinyclr_interop.h" />
+    <HFiles Include="$(SPOCLIENT)\clr\include\tinyclr_platformdef.h" />
+    <HFiles Include="dac.h" />
+    <HFiles Include="dac_nxp_interop_dac.h" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

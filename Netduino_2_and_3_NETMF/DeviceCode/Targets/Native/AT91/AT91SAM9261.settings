@@ -1,0 +1,34 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Name>AT91SAM9261</Name>
+    <CpuName>arm926EJ-S</CpuName>
+    <DefaultISA>ARM</DefaultISA>
+    <Guid>{7C5BC70D-8D6A-4B97-A35F-4C90A872B3D5}</Guid>
+    <Description>
+    </Description>
+    <Documentation>
+    </Documentation>
+    <ProjectPath>$(SPOCLIENT)\devicecode\Targets\Native\AT91\AT91SAM9261.settings</ProjectPath>
+    <PLATFORM_FAMILY>ARM</PLATFORM_FAMILY>
+    <CustomFilter>ARM9;AT91SAM9261;AT91</CustomFilter>
+    <INSTRUCTION_SET Condition="'$(INSTRUCTION_SET)'==''">ARM</INSTRUCTION_SET>
+    <TARGETPROCESSOR>AT91SAM9261</TARGETPROCESSOR>
+    <TARGETCODEBASE>AT91</TARGETCODEBASE>
+    <TARGETCODEBASETYPE>Native</TARGETCODEBASETYPE>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(COMPILER_TOOL)'=='RVDS'">
+    <DEVICE_TYPE Condition="'$(DEVICE_TYPE)' == ''">arm926EJ-S</DEVICE_TYPE>
+    <BUILD_TOOL_GUID>{1942C531-3AAC-4abb-8B4F-C3111012F9D9}</BUILD_TOOL_GUID>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(COMPILER_TOOL)'=='MDK'">
+    <DEVICE_TYPE Condition="'$(DEVICE_TYPE)' == ''">DARMATS9</DEVICE_TYPE>
+    <BUILD_TOOL_GUID>{CD24C1A5-2641-4460-AC5A-093B1C6D3D8B}</BUILD_TOOL_GUID>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(COMPILER_TOOL)'=='GCC'">
+    <DEVICE_TYPE Condition="'$(DEVICE_TYPE)' == ''">arm926EJ-S</DEVICE_TYPE>
+    <BUILD_TOOL_GUID>{722B0D5D-1243-4557-913F-61FAB04E9209}</BUILD_TOOL_GUID>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="devicecode\Targets\Native\AT91" />
+  </ItemGroup>
+</Project>

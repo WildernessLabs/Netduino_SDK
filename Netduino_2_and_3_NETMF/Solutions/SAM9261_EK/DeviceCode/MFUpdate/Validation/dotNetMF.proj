@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>MFUpdate_validation_SAM9261_EK</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{DD053128-2C4C-4B68-8F6F-262BBA5ED875}</ProjectGuid>
+    <Description>MFUpdate validation mechanism for SAM9261_EK</Description>
+    <Level>HAL</Level>
+    <LibraryFile>MFUpdate_validation_SAM9261_EK.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\Solutions\SAM9261_EK\DeviceCode\MFUpdate\Validation\dotnetmf.proj</ProjectPath>
+    <ManifestFile>MFUpdate_validation_SAM9261_EK.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Solutions\SAM9261_EK</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomSpecific>
+    </CustomSpecific>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>Solutions\SAM9261_EK\DeviceCode\MFUpdate\Validation</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="MFUpdate_validation_SAM9261_EK.cpp" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

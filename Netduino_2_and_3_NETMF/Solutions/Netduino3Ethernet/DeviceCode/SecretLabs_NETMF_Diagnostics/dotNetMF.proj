@@ -1,0 +1,18 @@
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Directory>DeviceCode\Targets\Native\Interop\SecretLabs_NETMF_Diagnostics</Directory>
+    <AssemblyName>SecretLabs_NETMF_Diagnostics</AssemblyName>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+<ItemGroup>
+<HFile Include="SecretLabs_NETMF_Diagnostics.h" />
+<Compile Include="SecretLabs_NETMF_Diagnostics.cpp" />
+<Compile Include="SecretLabs_NETMF_Diagnostics_SecretLabs_NETMF_Diagnostics_Transport_mshl.cpp" />
+<HFile Include="SecretLabs_NETMF_Diagnostics_SecretLabs_NETMF_Diagnostics_Transport.h" />
+<Compile Include="SecretLabs_NETMF_Diagnostics_SecretLabs_NETMF_Diagnostics_Transport.cpp" />
+</ItemGroup>
+<Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

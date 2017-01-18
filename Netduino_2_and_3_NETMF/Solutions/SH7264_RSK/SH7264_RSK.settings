@@ -1,0 +1,32 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>Jennifer Cheng</Author>
+    <Description>SH7264_RSK  solution</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{e76ba7b4-d7c0-4c68-b027-6c88ca5aabaf}</PlatformGuid>
+    <TARGETPLATFORM>SH7264_RSK</TARGETPLATFORM>
+    <PLATFORM>SH7264_RSK</PLATFORM>
+    <DEVICE_TYPE Condition=" '$(DEVICE_TYPE)' == ''">sh2afpu</DEVICE_TYPE>    
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>Be</ENDIANNESS>
+    <DEVICE_TYPE Condition=" '$(DEVICE_TYPE)' == ''">SH2A</DEVICE_TYPE>    
+    <EnableTCPIP Condition=" '$(EnableTCPIP)' =='' ">false</EnableTCPIP>
+    <FLASH4M     Condition=" '$(FLASH4M)' ==''     ">true</FLASH4M>  
+    <QVGALCD     Condition=" '$(QVGALCD)' ==''     ">true</QVGALCD>  
+    <SERIALFLASH Condition=" '$(SERIALFLASH)' ==''     ">false</SERIALFLASH>
+    <TCP_IP_STACK Condition="'$(TCP_IP_STACK)'==''">LWIP</TCP_IP_STACK>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\SH7264_RSK" />
+  </ItemGroup>
+  <ItemGroup>
+    <CC_CPP_MARCO_FLAGS Include="COPY_SECTION_P" Condition="'$(SERIALFLASH)'=='false'"/>
+    <CC_CPP_MARCO_FLAGS Condition="'$(QVGALCD)'=='true'" Include="SH7264_RSK_QVGA_LCD" />
+    <CC_CPP_MARCO_FLAGS Include="SH7264_SERIAL_FLASH" Condition="'$(SERIALFLASH)'=='true'" />
+    <CC_CPP_MARCO_FLAGS Include="SH7264_RSK_ETHERNET" Condition="'$(EnableTCPIP)'=='true'" />
+  </ItemGroup>
+  
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\SH7264\SH7264.settings" />
+</Project>
+

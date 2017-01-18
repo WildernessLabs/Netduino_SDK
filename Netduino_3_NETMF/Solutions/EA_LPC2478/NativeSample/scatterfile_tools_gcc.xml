@@ -1,0 +1,218 @@
+<?xml version="1.0"?>
+<ScatterFile xmlns="http://schemas.microsoft.com/netmf/ScatterfileSchema.xsd">
+
+
+    <Set Name="Valid" Value="false"/>
+
+    <!-- ################################################################################ -->
+
+    <Set Name="Heap_Begin"      Value="0xA0100000"/>
+    <Set Name="Heap_End"        Value="0xA01FFFF8"/>
+    <Set Name="Stack_Bottom"    Value="0xA0200000"/>
+    <Set Name="Stack_Top"       Value="0xA0300000"/>
+
+
+
+    <IfDefined Name="PROFILE_BUILD">
+        <Set Name="ProfileBuffer_Begin" Value="0xA0100000"/>
+        <Set Name="ProfileBuffer_End"    Value="0xA017FFF8"/>
+        <Set Name="Heap_Begin"            Value="0xA0180000"/>
+    </IfDefined>
+    <IfDefined Name="FIQ_SAMPLING_PROFILER">
+        <Set Name="ProfileBuffer_Begin" Value="0xA0100000"/>
+        <Set Name="ProfileBuffer_End"    Value="0xA017FFF8"/>
+        <Set Name="Heap_Begin"            Value="0xA0180000"/>
+    </IfDefined>
+
+
+<!-- use internal SRAM for fast execution of application-critical tasks-->
+    <Set Name="IRAM_BaseAddress"   Value="0x40000000"/>  
+    <Set Name="IRAM_Size"          Value="0x40"/>    
+
+    <Set Name="IRAM_TC_BaseAddress"   Value="0x40000040"/>  <!-- skip SRAM vector table -->
+    <Set Name="IRAM_TC_Size"          Value="0x4000FFFF-%IRAM_TC_BaseAddress%"/>    <!-- Fill up SRAM -->
+
+
+    <If Name="TARGETLOCATION" Value="FLASH">
+    
+        <Set Name="Config_BaseAddress"          Value="0x803DF000"/>    
+        <Set Name="Config_Size"                 Value="0x00001000"/>
+        <Set Name="Code_BaseAddress"            Value="0x80000000"/>
+        <Set Name="Code_Size"                   Value="0x00080000"/>
+        <Set Name="Valid"                       Value="true"/>
+
+        <Set Name="ER_RAM_RO_BaseAddress"       Value="0xA0000000"/>    
+        <Set Name="ER_RAM_RO_Size"              Value="%Heap_Begin%-%ER_RAM_RO_BaseAddress%"/>    
+
+
+        <!-- use internal FLASH for fast execution of application-critical tasks. Just RO code and data! -->
+        <Set Name="IFLASH_TC_BaseAddress"       Value="0x00020000"/>-->   <!-- skip TinyBooterDecompressor (0x185b0 bytes) -->
+        <Set Name="IFLASH_TC_Size"              Value="0x5D000"/>-->  
+
+        <!-- -->
+        
+        <If Name="ALTERNATEFLASHLOCATION" Value="True">
+            <Set Name="Code_BaseAddress" Value="%Code_BaseAddress + Code_Size%"/>
+        </If>
+
+    </If>
+
+
+    <If Name="TARGETLOCATION" Value="RAM">
+
+        <Set Name="Code_BaseAddress"           Value="0xA0050000"/>
+        <Set Name="Code_Size"                  Value="0x000B0000"/>
+
+        <Set Name="ER_RAM_RO_BaseAddress"      Value="0xA0000000"/>    
+        <Set Name="ER_RAM_RO_Size"             Value="0x00050000"/>           
+        <Set Name="Valid"                      Value="true"/>
+    </If>
+
+
+    <!-- ################################################################################ -->
+
+    <If Name="Valid" Value="false">
+        <Error Message="Configuration not recognized"/>
+    </If>
+
+    <!-- we start at 0x10080000 since PortBooter lives at 0x10000000 -->
+    <!-- the address and sizes for both load regions (LR_*) are chosen to start and completely fill a flash partition in the 28F320W18 flash chip -->
+
+    <NamedGroup Name="MEMORY">
+      <LoadRegion Name="LR_%TARGETLOCATION%" Base="%Code_BaseAddress%" Size="%Code_Size%"/>
+
+      <IfDefined Name="IFLASH_TC_BaseAddress">
+          <LoadRegion Name="LR_IFLASH" Base="%IFLASH_TC_BaseAddress%" Size="%IFLASH_TC_Size%"/>
+      </IfDefined>
+
+
+      <IfDefined Name="Config_BaseAddress">
+        <LoadRegion Name="LR_CONFIG" Base="%Config_BaseAddress%"  Size="%Config_Size%"/>
+      </IfDefined>
+      
+      <LoadRegion Name="HEAP" Base="%Heap_Begin%" Size="%Heap_End - Heap_Begin% + 1"/>
+      <LoadRegion Name="STACK" Base="%Stack_Bottom%" Size="%Stack_Top - Stack_Bottom% + 1"/>
+      <LoadRegion Name="RELOC_RAM" Base="%ER_RAM_RO_BaseAddress%" Size="%ER_RAM_RO_Size%"/>
+
+    </NamedGroup>
+
+    <EntryPoint Name="EntryPoint"/>
+
+    <NamedGroup Name="SECTIONS">
+      <ExecRegion Name="ER_%TARGETLOCATION%" Options="&gt;LR_%TARGETLOCATION%">
+        <FileMapping Name="*" Options="(i.EntryPoint)" />
+        <FileMapping Name="*" Options="(SectionForBootstrapOperations)" />
+        <FileMapping Name="*" Options="(.text*)" />
+        <FileMapping Name="*" Options="(i.*)" />
+        <FileMapping Name="*" Options="(rodata)" />
+        <FileMapping Name="*" Options="(.rodata*)" />
+        <FileMapping Name="*" Options="(.constdata*)" />
+        <FileMapping Name="*" Options="(.conststring*)" />
+        <FileMapping Name="*" Options="(SectionForConfig)" />
+        <FileMapping Name="*" Options="(.glue*)" />
+
+        <!-- libc thinks that it needs these routines, but they are never called -->
+        <Provide Name="_sbrk" />
+
+        <Provide Name="_write" />
+
+        <Provide Name="_close" />
+
+        <Provide Name="_fstat" />
+
+        <Provide Name="_lseek" />
+
+        <Provide Name="_read" />
+
+        <Provide Name="_exit" />
+
+        <Provide Name="_getpid" />
+
+        <Provide Name="_kill" />
+
+        <Provide Name="abort" />
+
+        <Provide Name="__errno" />
+
+        <Provide Name="_read" />
+
+        <Provide Name="isatty" />
+
+        <Provide Name="_isatty" />
+
+        <FileMapping Name="LONG(0xE12FFF1E);" />
+      </ExecRegion>
+      <ExecRegion Name="ER_RAM_RO" Align="0x10" Options="&gt;RELOC_RAM AT&gt;LR_%TARGETLOCATION%">
+        <FileMapping Name="*" Options="(SectionForFlashOperations)" />
+      </ExecRegion>
+      <ExecRegion Name="ER_RAM_RW" Align="0x10" Options="&gt;RELOC_RAM AT&gt;LR_%TARGETLOCATION%">
+        <FileMapping Name="*" Options="(rwdata)" />
+        <FileMapping Name="*" Options="(.data*)" />
+      </ExecRegion>
+
+      <ExecRegion Name="ER_IRAM" Base="%IRAM_BaseAddress%" Options="AT&gt;LR_%TARGETLOCATION%" Size="%IRAM_Size%">
+        <FileMapping Name="*" Options="(VectorsTrampolines)" />
+      </ExecRegion>
+
+
+      <ExecRegion Name="ER_IRAM_TC" Base="%IRAM_TC_BaseAddress%" Options="AT&gt;LR_%TARGETLOCATION%" Size="%IRAM_TC_Size%">
+          <FileMapping Name="*" Options="(SectionForInternalSRAM)" />
+       </ExecRegion>
+
+      
+      <ExecRegion Name=".bss" Align="0x10" Options="&gt;RELOC_RAM AT&gt;LR_%TARGETLOCATION%">
+        <FileMapping Name="*" Options="(.zidata*)" />
+        <FileMapping Name="*" Options="(.bss*)" />
+        <FileMapping Name="PROVIDE(__exidx_start = .);" />
+        <FileMapping Name="PROVIDE(__exidx_end = .);" />
+      </ExecRegion>
+      <ExecRegion Name="/DISCARD/">
+        <FileMapping Name="*" Options="(.ARM.exidx*)" />
+        <FileMapping Name="*" Options="(.ARM.extab*)" />
+      </ExecRegion>
+      <ExecRegion Name="ER_HEAP_BEGIN" Base="%Heap_Begin%">
+        <FileMapping Name="*" Options="(SectionForHeapBegin)" />
+      </ExecRegion>
+      <ExecRegion Name="ER_HEAP_END" Base="%Heap_End%">
+        <FileMapping Name="*" Options="(SectionForHeapEnd)" />
+      </ExecRegion>
+      <ExecRegion Name="ER_STACK_BOTTOM" Base="%Stack_Bottom%">
+        <FileMapping Name="*" Options="(SectionForStackBottom)" />
+      </ExecRegion>
+      <ExecRegion Name="ER_STACK_TOP" Base="%Stack_Top%">
+        <FileMapping Name="*" Options="(SectionForStackTop)" />
+      </ExecRegion>
+
+    <IfDefined Name="Config_BaseAddress">         
+      <ExecRegion Name="ER_CONFIG" Options="&gt;LR_CONFIG">
+        <FileMapping Name="*" Options="(SectionForConfig)" />
+      </ExecRegion>
+    </IfDefined>    
+      
+    </NamedGroup>
+
+    <!-- The following variables are used to simulate the ones autogenerated by RVDS -->
+    <GlobalVariable Name="Load$$ER_%TARGETLOCATION%$$Base"          Value="ADDR(ER_%TARGETLOCATION%)"/>
+    <GlobalVariable Name="Image$$ER_%TARGETLOCATION%$$Length"       Value="SIZEOF(ER_%TARGETLOCATION%)"/>
+    <GlobalVariable Name="Image$$ER_RAM_RO$$Base"                   Value="ADDR(ER_RAM_RO)"/> 
+    <GlobalVariable Name="Image$$ER_RAM_RO$$Length"                 Value="SIZEOF(ER_RAM_RO)"/>
+    <GlobalVariable Name="Load$$ER_RAM_RO$$Base"                    Value="LOADADDR(ER_RAM_RO)"/>
+
+    <GlobalVariable Name="Image$$ER_RAM_RW$$Base"                   Value="ADDR(ER_RAM_RW)"/>
+    <GlobalVariable Name="Image$$ER_RAM_RW$$Length"                 Value="SIZEOF(ER_RAM_RW)"/>
+    <GlobalVariable Name="Load$$ER_RAM_RW$$Base"                    Value="LOADADDR(ER_RAM_RW)"/>
+
+    <GlobalVariable Name="Image$$ER_RAM_RW$$ZI$$Base"               Value="ADDR(.bss)"/>
+    <GlobalVariable Name="Image$$ER_RAM_RW$$ZI$$Length"             Value="SIZEOF(.bss)"/>
+
+    <GlobalVariable Name="__use_no_semihosting_swi"                 Value="0"/>
+
+    <GlobalVariable Name="Image$$ER_IRAM$$Base"                     Value="ADDR(ER_IRAM)"/> 
+    <GlobalVariable Name="Image$$ER_IRAM$$Length"                   Value="SIZEOF(ER_IRAM)"/>
+    <GlobalVariable Name="Load$$ER_IRAM$$Base"                      Value="LOADADDR(ER_IRAM)"/>
+
+    <GlobalVariable Name="Image$$ER_IRAM_TC$$Base"                  Value="ADDR(ER_IRAM_TC)"/> 
+    <GlobalVariable Name="Image$$ER_IRAM_TC$$Length"                Value="SIZEOF(ER_IRAM_TC)"/>
+    <GlobalVariable Name="Load$$ER_IRAM_TC$$Base"                   Value="LOADADDR(ER_IRAM_TC)"/>
+
+</ScatterFile>

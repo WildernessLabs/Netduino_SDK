@@ -1,0 +1,11 @@
+<Project DefaultTargets="BuildSupport" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.Targets" />
+
+  <ItemGroup>
+    <Project Include="Targets_v4_0.wixproj" />
+    <Project Include="MicroFramework_v4_0.wixproj" />
+    <Project Include="MicroFramework_v4_0_pe.wixproj" />
+    <Project Include="Assemblies\RedistList\MicroFramework_v4_0_redist.wixproj" />
+    <Project Include="MicroFramework_v4_0_tools.wixproj" />
+  </ItemGroup>
+</Project>

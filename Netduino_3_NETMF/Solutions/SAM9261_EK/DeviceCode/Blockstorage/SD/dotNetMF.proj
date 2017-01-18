@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>SD_SAM9_config</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{FBC67BDB-5DC0-4d99-A65D-1AFCC057BA90}</ProjectGuid>
+    <Description>SD flash block storage configuration for SAM9261_EK</Description>
+    <Level>HAL</Level>
+    <LibraryFile>SD_SAM9_Config.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\Solutions\SAM9261_EK\DeviceCode\Blockstorage\SD\dotnetmf.proj</ProjectPath>
+    <ManifestFile>SD_SAM9_config.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Solutions\SAM9261_EK</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SD_Config_HAL" Guid="{55D65695-3439-42fc-A727-15802883E1CC}" ProjectPath="$(SPOCLIENT)\Framework\Features\SD_Config_HAL.libcatproj" Conditional="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-06-23</Date>
+          <Author>Microsoft</Author>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomFilter>
+    </CustomFilter>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <HasLibraryCategory>True</HasLibraryCategory>
+    <CustomSpecific>
+    </CustomSpecific>
+    <Directory>Solutions\SAM9261_EK\DeviceCode\Blockstorage\SD</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="SD_BL_Config.cpp" />
+    <IncludePaths Include="DeviceCode\Drivers\BlockStorage\SD" />
+  </ItemGroup>
+  <ItemGroup>
+    <HFiles Include="$(SPOCLIENT)\devicecode\drivers\blockstorage\sd\sd_bl.h" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

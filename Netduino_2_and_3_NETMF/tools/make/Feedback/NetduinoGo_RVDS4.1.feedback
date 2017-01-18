@@ -1,0 +1,578 @@
+;#<FEEDBACK># ARM Linker, 4.1 [Build 894]: Last Updated: Sun Dec 29 12:51:42 2013
+;VERSION 0.2
+;FILE Aborts.obj
+HARD_Breakpoint_Handler <= USED 0
+;FILE BinaryFormatter_stub.obj
+_ZN22CLR_RT_BinaryFormatter10WriteArrayEPKhi <= USED 0
+_ZN22CLR_RT_BinaryFormatter11DeserializeER16CLR_RT_HeapBlockPhjPS0_Pjj <= USED 0
+_ZN22CLR_RT_BinaryFormatter11TypeHandler11GetDataTypeEP21CLR_RT_TypeDescriptor <= USED 0
+_ZN22CLR_RT_BinaryFormatter11TypeHandler11TrackObjectERi <= USED 0
+_ZN22CLR_RT_BinaryFormatter11TypeHandler12CompareTypesEP21CLR_RT_TypeDescriptorS2_ <= USED 0
+_ZN22CLR_RT_BinaryFormatter11TypeHandler13EmitSignatureERi <= USED 0
+_ZN22CLR_RT_BinaryFormatter11TypeHandler13GetSignOfTypeEP21CLR_RT_TypeDescriptor <= USED 0
+_ZN22CLR_RT_BinaryFormatter11TypeHandler13GetSizeOfTypeEP21CLR_RT_TypeDescriptor <= USED 0
+_ZN22CLR_RT_BinaryFormatter11TypeHandler13ReadSignatureERi <= USED 0
+_ZN22CLR_RT_BinaryFormatter11TypeHandler14FixDereferenceEP16CLR_RT_HeapBlock <= USED 0
+_ZN22CLR_RT_BinaryFormatter11TypeHandler19EmitSignature_InnerEiP21CLR_RT_TypeDescriptorP16CLR_RT_HeapBlock <= USED 0
+_ZN22CLR_RT_BinaryFormatter11TypeHandler21SignatureRequirementsEv <= USED 0
+_ZN22CLR_RT_BinaryFormatter11TypeHandler22TypeHandler_InitializeEPS_PNS_27SerializationHintsAttributeEP21CLR_RT_TypeDescriptor <= USED 0
+_ZN22CLR_RT_BinaryFormatter11TypeHandler7FixNullEP16CLR_RT_HeapBlock <= USED 0
+_ZN22CLR_RT_BinaryFormatter11TypeHandler8SetValueEP16CLR_RT_HeapBlock <= USED 0
+_ZN22CLR_RT_BinaryFormatter11TypeHandler9EmitValueERi <= USED 0
+_ZN22CLR_RT_BinaryFormatter11TypeHandler9ReadValueERi <= USED 0
+_ZN22CLR_RT_BinaryFormatter12GetDuplicateEj <= USED 0
+_ZN22CLR_RT_BinaryFormatter12PrepareForGCEPv <= USED 0
+_ZN22CLR_RT_BinaryFormatter13BitsAvailableEv <= USED 0
+_ZN22CLR_RT_BinaryFormatter14CreateInstanceEPhiRPS_ <= USED 0
+_ZN22CLR_RT_BinaryFormatter14TrackDuplicateEP16CLR_RT_HeapBlock <= USED 0
+_ZN22CLR_RT_BinaryFormatter15DestroyInstanceEv <= USED 0
+_ZN22CLR_RT_BinaryFormatter15SearchDuplicateEP16CLR_RT_HeapBlock <= USED 0
+_ZN22CLR_RT_BinaryFormatter22ReadCompressedUnsignedERj <= USED 0
+_ZN22CLR_RT_BinaryFormatter23WriteCompressedUnsignedEj <= USED 0
+_ZN22CLR_RT_BinaryFormatter5State14CreateInstanceEPS_PNS_27SerializationHintsAttributeEP16CLR_RT_HeapBlock <= USED 0
+_ZN22CLR_RT_BinaryFormatter5State14CreateInstanceEPS_PNS_27SerializationHintsAttributeEP21CLR_RT_TypeDescriptor <= USED 0
+_ZN22CLR_RT_BinaryFormatter5State15DestroyInstanceEv <= USED 0
+_ZN22CLR_RT_BinaryFormatter5State18AssignAndFixBoxingER16CLR_RT_HeapBlock <= USED 0
+_ZN22CLR_RT_BinaryFormatter5State21AdvanceToTheNextFieldEv <= USED 0
+_ZN22CLR_RT_BinaryFormatter5State23AdvanceToTheNextElementEv <= USED 0
+_ZN22CLR_RT_BinaryFormatter5State26SetValueAndDestroyInstanceEv <= USED 0
+_ZN22CLR_RT_BinaryFormatter5State7AdvanceEv <= USED 0
+_ZN22CLR_RT_BinaryFormatter5State8GetValueEv <= USED 0
+_ZN22CLR_RT_BinaryFormatter5State9FindHintsERNS_27SerializationHintsAttributeERK23CLR_RT_TypeDef_Instance <= USED 0
+_ZN22CLR_RT_BinaryFormatter5State9FindHintsERNS_27SerializationHintsAttributeERK24CLR_RT_FieldDef_Instance <= USED 0
+_ZN22CLR_RT_BinaryFormatter7AdvanceEv <= USED 0
+_ZN22CLR_RT_BinaryFormatter8ReadBitsERji <= USED 0
+_ZN22CLR_RT_BinaryFormatter8ReadBitsERyi <= USED 0
+_ZN22CLR_RT_BinaryFormatter8ReadTypeER26CLR_RT_ReflectionDef_Index <= USED 0
+_ZN22CLR_RT_BinaryFormatter9ReadArrayEPhi <= USED 0
+_ZN22CLR_RT_BinaryFormatter9WriteBitsEji <= USED 0
+_ZN22CLR_RT_BinaryFormatter9WriteBitsEyi <= USED 0
+_ZN22CLR_RT_BinaryFormatter9WriteTypeERK26CLR_RT_ReflectionDef_Index <= USED 0
+_ZN22CLR_RT_BinaryFormatter9WriteTypeEj <= USED 0
+;FILE Bl_AddDevices.obj
+;FILE Buttons_stubs.obj
+_Z20Buttons_CurrentStatev <= USED 0
+_Z22Buttons_CurrentHWStatev <= USED 0
+_Z24Buttons_HW_To_Hal_Buttonj <= USED 0
+_Z26Buttons_GetNextStateChangeRjS_ <= USED 0
+_Z27Buttons_RegisterStateChangejj <= USED 0
+;FILE CLRStartup.obj
+_Z7ClrExitv <= USED 0
+_Z9ClrRebootv <= USED 0
+;FILE CLR_RT_HeapBlock_I2CXAction.obj
+_ZN27CLR_RT_HeapBlock_I2CXAction9GetStatusEv <= USED 0
+;FILE CLR_RT_HeapBlock_IOPort.obj
+_ZN38CLR_RT_HeapBlock_NativeEventDispatcher15ExtractInstanceER16CLR_RT_HeapBlockRPS_ <= USED 0
+;FILE CLR_RT_RuntimeMemory.obj
+;FILE CRC.obj
+SUPPORT_StubForARMEmulatorInterface <= USED 0
+;FILE ComDirector.obj
+_Z29CPU_ProtectCommunicationGPIOsj <= USED 0
+;FILE ConfigHelper.obj
+_ZN16HAL_CONFIG_BLOCK23InvalidateBlockWithNameEPKcj <= USED 0
+;FILE CorLib_fastcompile.obj
+_ZN38Library_corlib_native_System_Exception13GetStackTraceEP16CLR_RT_HeapBlockRj <= USED 0
+_ZN38Library_corlib_native_System_Exception9GetTargetER16CLR_RT_HeapBlock <= USED 0
+;FILE Debugger.obj
+_ZN16CLR_DBG_Debugger14BroadcastEventEjjPhj <= USED 0
+;FILE DeploymentTransport.obj
+_Z23DeploymentTransport_Getv <= USED 0
+_Z23DeploymentTransport_Seti <= USED 0
+;FILE Diagnostics_fastcompile.obj
+_ZN9CLR_Debug5FlushEv <= USED 0
+;FILE FAT_FS.obj
+;FILE FAT_FS_Utility.obj
+;FILE FAT_File.obj
+;FILE FAT_FileHandle.obj
+;FILE FAT_LogicDisk.obj
+;FILE FAT_MemoryManager.obj
+;FILE FAT_SectorCache.obj
+;FILE FS_config_NetduinoGo.obj
+;FILE FileStream.obj
+;FILE Hardware.obj
+_ZN15CLR_HW_Hardware12Screen_FlushER14CLR_GFX_Bitmaptttt <= USED 0
+;FILE Heap_Persistence.obj
+_ZN26CLR_RT_Persistence_Manager10BankHeader6DeleteEv <= USED 0
+_ZN26CLR_RT_Persistence_Manager18GenerateStatisticsERjS0_ <= USED 0
+_ZN26CLR_RT_Persistence_Manager8EraseAllEv <= USED 0
+;FILE IO_Init.obj
+__asm___11_IO_Init_cpp_23b06a74___Z7__REV16j <= USED 0
+__asm___11_IO_Init_cpp_23b06a74___Z7__REVSHi <= USED 0
+;FILE InterruptHandler.obj
+_ZN15CLR_HW_Hardware26ManagedHardware_InitializeEv <= USED 0
+;FILE LargeBuffer_stubs.obj
+_Z21LargeBuffer_PostEventt <= USED 0
+;FILE MFUpdate_stub.obj
+_Z15MFUpdate_Deletei <= USED 0
+_Z20MFUpdate_GetPropertyjPKcPhPi <= USED 0
+_Z20MFUpdate_SetPropertyjPKcPhi <= USED 0
+;FILE Messaging.obj
+_ZN13CLR_Messaging14BroadcastEventEjjPhj <= USED 0
+_ZN13CLR_Messaging21Messaging_Send__ReplyEP10WP_MessagePv <= USED 0
+_ZN13CLR_Messaging22Messaging_Query__ReplyEP10WP_MessagePv <= USED 0
+_ZN13CLR_Messaging22Messaging_Reply__ReplyEP10WP_MessagePv <= USED 0
+;FILE RPC_stub.obj
+_ZN25CLR_RT_HeapBlock_EndPoint11FindMessageEjPKj <= USED 0
+_ZN25CLR_RT_HeapBlock_EndPoint13RecoverFromGCEv <= USED 0
+_ZN25CLR_RT_HeapBlock_EndPoint14CreateInstanceERKNS_4PortER16CLR_RT_HeapBlockS4_ <= USED 0
+_ZN25CLR_RT_HeapBlock_EndPoint15ExtractInstanceER16CLR_RT_HeapBlockRPS_ <= USED 0
+_ZN25CLR_RT_HeapBlock_EndPoint17ReleaseWhenDeadExEv <= USED 0
+_ZN25CLR_RT_HeapBlock_EndPoint4Port7CompareERKS0_ <= USED 0
+;FILE STM32_AD_functions.obj
+__asm___22_STM32_AD_functions_cpp_b721fe35___Z7__REV16j <= USED 0
+__asm___22_STM32_AD_functions_cpp_b721fe35___Z7__REVSHi <= USED 0
+;FILE STM32_Flash_driver.obj
+__asm___22_STM32_Flash_driver_cpp_ecd1300d___Z7__REV16j <= USED 0
+__asm___22_STM32_Flash_driver_cpp_ecd1300d___Z7__REVSHi <= USED 0
+;FILE STM32_GPIO_functions.obj
+_Z18CPU_GPIO_PinIsBusyj <= USED 0
+__asm___24_STM32_GPIO_functions_cpp_aa3897cc___Z7__REV16j <= USED 0
+__asm___24_STM32_GPIO_functions_cpp_aa3897cc___Z7__REVSHi <= USED 0
+;FILE STM32_I2C_functions.obj
+__asm___23_STM32_I2C_functions_cpp_136d4036___Z7__REV16j <= USED 0
+__asm___23_STM32_I2C_functions_cpp_136d4036___Z7__REVSHi <= USED 0
+;FILE STM32_Power_functions.obj
+__asm___25_STM32_Power_functions_cpp_f9dd790f___Z7__REV16j <= USED 0
+__asm___25_STM32_Power_functions_cpp_f9dd790f___Z7__REVSHi <= USED 0
+;FILE STM32_RCC_functions.obj
+_Z36STM32_RCC_AHB1PeripheralClockDisablej <= USED 0
+_Z36STM32_RCC_AHB2PeripheralClockDisablej <= USED 0
+_Z36STM32_RCC_APB1PeripheralResetDisablej <= USED 0
+__asm___23_STM32_RCC_functions_cpp_2a40e04f___Z7__REV16j <= USED 0
+__asm___23_STM32_RCC_functions_cpp_2a40e04f___Z7__REVSHi <= USED 0
+;FILE STM32_SPI_functions.obj
+__asm___23_STM32_SPI_functions_cpp_1bd67797___Z7__REV16j <= USED 0
+__asm___23_STM32_SPI_functions_cpp_1bd67797___Z7__REVSHi <= USED 0
+;FILE STM32_Time_functions.obj
+_Z21HAL_Time_Uninitializev <= USED 0
+_Z23CPU_MillisecondsToTicksy <= USED 0
+_Z30CPU_MicrosecondsToSystemClocksi <= USED 0
+_Z30CPU_MicrosecondsToSystemClocksj <= USED 0
+_Z30CPU_SystemClocksToMicrosecondsi <= USED 0
+__asm___24_STM32_Time_functions_cpp_1fd90570___Z7__REV16j <= USED 0
+__asm___24_STM32_Time_functions_cpp_1fd90570___Z7__REVSHi <= USED 0
+;FILE STM32_USB_desc.obj
+__asm___18_STM32_USB_desc_cpp_94909d3a___Z7__REV16j <= USED 0
+__asm___18_STM32_USB_desc_cpp_94909d3a___Z7__REVSHi <= USED 0
+;FILE STM32_USB_functions.obj
+_Z25CPU_USB_GetInterruptStatev <= USED 0
+__asm___23_STM32_USB_functions_cpp_3d268f20___Z7__REV16j <= USED 0
+__asm___23_STM32_USB_functions_cpp_3d268f20___Z7__REVSHi <= USED 0
+;FILE STM32_Usart_functions.obj
+_Z22STM32_USART_Interrupt2Pv <= USED 0
+_Z22STM32_USART_Interrupt3Pv <= USED 0
+_Z22STM32_USART_Interrupt4Pv <= USED 0
+_Z22STM32_USART_Interrupt5Pv <= USED 0
+_Z36CPU_USART_RxBufferFullInterruptStatei <= USED 0
+__asm___25_STM32_Usart_functions_cpp_9fac597a___Z7__REV16j <= USED 0
+__asm___25_STM32_Usart_functions_cpp_9fac597a___Z7__REVSHi <= USED 0
+;FILE STM32_bootstrap.obj
+BootstrapCodeMinimal <= USED 0
+__asm___19_STM32_bootstrap_cpp_d7477631___Z7__REV16j <= USED 0
+__asm___19_STM32_bootstrap_cpp_d7477631___Z7__REVSHi <= USED 0
+;FILE STM32_intc_functions.obj
+_Z23CPU_INTC_InterruptStatej <= USED 0
+_Z24CPU_INTC_InterruptEnablej <= USED 0
+_Z25CPU_INTC_InterruptDisablej <= USED 0
+__asm___24_STM32_intc_functions_cpp_b979ff9e___Z7__REV16j <= USED 0
+__asm___24_STM32_intc_functions_cpp_b979ff9e___Z7__REVSHi <= USED 0
+;FILE STM32_pwm_functions.obj
+__asm___23_STM32_pwm_functions_cpp_92a40aad___Z7__REV16j <= USED 0
+__asm___23_STM32_pwm_functions_cpp_92a40aad___Z7__REVSHi <= USED 0
+;FILE SimpleHeap_config_stubs.obj
+;FILE SimpleHeap_stubs.obj
+_Z21SimpleHeap_ReAllocatePvj <= USED 0
+;FILE SmartPtr_cortex.obj
+_ZN12SmartPtr_IRQ7DisableEv <= USED 0
+_ZN12SmartPtr_IRQ7RestoreEv <= USED 0
+;FILE Spot_Hardware_fastcompile.obj
+_Z25CreateNativeEventInstanceR17CLR_RT_StackFrame <= USED 0
+;FILE Spot_Hardware_serial_fastcompile.obj
+;FILE Spot_Net_fastcompile.obj
+_Z17Network_PostEventjj <= USED 0
+;FILE Spot_time_fastcompile.obj
+;FILE Time_driver.obj
+_ZN10TimeDriver16DateTimeToStringERKx <= USED 0
+_ZN10TimeDriver16DateTimeToStringERKxRPcRj <= USED 0
+_ZN10TimeDriver16TimeSpanToStringERKx <= USED 0
+;FILE Time_functions.obj
+_Z21Time_DateTimeToStringRKx <= USED 0
+_Z21Time_TimeSpanToStringRKx <= USED 0
+_Z23Time_DateTimeToStringExRKxRPcRj <= USED 0
+_Z28Time_CurrentDateTimeToStringv <= USED 0
+;FILE Watchdog_stubs.obj
+_Z31EmulatorHook__Watchdog_Callbackv <= USED 0
+;FILE WireProtocol.obj
+_ZN10WP_Message10SetPayloadEPh <= USED 0
+;FILE allocator.obj
+_ZdaPv <= USED 0
+_ZdlPv <= USED 0
+_Znaj <= USED 0
+_Znwj <= USED 0
+;FILE asyncproccall_fastcompile.obj
+;FILE blockstoragelist.obj
+_ZN16BlockStorageList12RemoveDeviceEP18BlockStorageDevicej <= USED 0
+_ZN16BlockStorageList13GetNumDevicesEv <= USED 0
+_ZN18BlockStorageStream14ReadIntoBufferEPhj <= USED 0
+_ZN18BlockStorageStream5EraseEj <= USED 0
+_ZN18BlockStorageStream5WriteEPhj <= USED 0
+_ZN18BlockStorageStream8IsErasedEj <= USED 0
+_ZNK15BlockDeviceInfo23PhysicalToSectorAddressEPK15BlockRegionInfoj <= USED 0
+;FILE core_fastcompile.obj
+_Z14CLR_SoftRebootv <= USED 0
+_Z14SetResult_CHARR17CLR_RT_StackFramec <= USED 0
+_Z14SetResult_INT8R17CLR_RT_StackFramea <= USED 0
+_Z14SetResult_boolR17CLR_RT_StackFrameb <= USED 0
+_Z15SetResult_INT16R17CLR_RT_StackFrames <= USED 0
+_Z15SetResult_INT64R17CLR_RT_StackFramex <= USED 0
+_Z15SetResult_UINT8R17CLR_RT_StackFrameh <= USED 0
+_Z15SetResult_floatR17CLR_RT_StackFramef <= USED 0
+_Z16SetResult_LPCSTRR17CLR_RT_StackFramePKc <= USED 0
+_Z16SetResult_UINT16R17CLR_RT_StackFramet <= USED 0
+_Z16SetResult_UINT32R17CLR_RT_StackFramej <= USED 0
+_Z16SetResult_UINT64R17CLR_RT_StackFramey <= USED 0
+_Z16SetResult_doubleR17CLR_RT_StackFramed <= USED 0
+_Z17CLR_DebuggerBreakv <= USED 0
+_Z17CLR_RT_GetVersionPtS_S_S_ <= USED 0
+_Z20Interop_Marshal_CHARRK17CLR_RT_StackFramejRc <= USED 0
+_Z20Interop_Marshal_boolRK17CLR_RT_StackFramejRb <= USED 0
+_Z21Interop_Marshal_INT16RK17CLR_RT_StackFramejRs <= USED 0
+_Z21Interop_Marshal_INT64RK17CLR_RT_StackFramejRx <= USED 0
+_Z21Interop_Marshal_UINT8RK17CLR_RT_StackFramejRh <= USED 0
+_Z21Interop_Marshal_floatRK17CLR_RT_StackFramejRf <= USED 0
+_Z22Interop_Marshal_LPCSTRRK17CLR_RT_StackFramejRPKc <= USED 0
+_Z22Interop_Marshal_UINT16RK17CLR_RT_StackFramejRt <= USED 0
+_Z22Interop_Marshal_UINT32RK17CLR_RT_StackFramejRj <= USED 0
+_Z22Interop_Marshal_UINT64RK17CLR_RT_StackFramejRy <= USED 0
+_Z22Interop_Marshal_doubleRK17CLR_RT_StackFramejRd <= USED 0
+_Z24Interop_Marshal_StoreRefR17CLR_RT_StackFramePvj <= USED 0
+_Z25CLR_RetrieveCurrentMethodRjS_ <= USED 0
+_Z26Interop_Marshal_CHAR_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIcE <= USED 0
+_Z26Interop_Marshal_CHAR_ByRefRK17CLR_RT_StackFramePvjRPc <= USED 0
+_Z26Interop_Marshal_INT8_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIaE <= USED 0
+_Z26Interop_Marshal_INT8_ByRefRK17CLR_RT_StackFramePvjRPa <= USED 0
+_Z26Interop_Marshal_bool_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIhE <= USED 0
+_Z26Interop_Marshal_bool_ByRefRK17CLR_RT_StackFramePvjRPh <= USED 0
+_Z27Interop_Marshal_INT16_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIsE <= USED 0
+_Z27Interop_Marshal_INT16_ByRefRK17CLR_RT_StackFramePvjRPs <= USED 0
+_Z27Interop_Marshal_INT32_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIiE <= USED 0
+_Z27Interop_Marshal_INT32_ByRefRK17CLR_RT_StackFramePvjRPi <= USED 0
+_Z27Interop_Marshal_INT64_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIxE <= USED 0
+_Z27Interop_Marshal_INT64_ByRefRK17CLR_RT_StackFramePvjRPx <= USED 0
+_Z27Interop_Marshal_UINT8_ByRefRK17CLR_RT_StackFramePvjRPh <= USED 0
+_Z27Interop_Marshal_float_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIfE <= USED 0
+_Z27Interop_Marshal_float_ByRefRK17CLR_RT_StackFramePvjRPf <= USED 0
+_Z28Interop_Marshal_UINT16_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayItE <= USED 0
+_Z28Interop_Marshal_UINT16_ByRefRK17CLR_RT_StackFramePvjRPt <= USED 0
+_Z28Interop_Marshal_UINT32_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIjE <= USED 0
+_Z28Interop_Marshal_UINT32_ByRefRK17CLR_RT_StackFramePvjRPj <= USED 0
+_Z28Interop_Marshal_UINT64_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIyE <= USED 0
+_Z28Interop_Marshal_UINT64_ByRefRK17CLR_RT_StackFramePvjRPy <= USED 0
+_Z28Interop_Marshal_double_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIdE <= USED 0
+_Z28Interop_Marshal_double_ByRefRK17CLR_RT_StackFramePvjRPd <= USED 0
+_Z29Interop_Marshal_GetField_CHARP16CLR_RT_HeapBlockj <= USED 0
+_Z29Interop_Marshal_GetField_INT8P16CLR_RT_HeapBlockj <= USED 0
+_Z29Interop_Marshal_GetField_boolP16CLR_RT_HeapBlockj <= USED 0
+_Z30Interop_Marshal_GetField_INT16P16CLR_RT_HeapBlockj <= USED 0
+_Z30Interop_Marshal_GetField_INT32P16CLR_RT_HeapBlockj <= USED 0
+_Z30Interop_Marshal_GetField_INT64P16CLR_RT_HeapBlockj <= USED 0
+_Z30Interop_Marshal_GetField_UINT8P16CLR_RT_HeapBlockj <= USED 0
+_Z30Interop_Marshal_GetField_floatP16CLR_RT_HeapBlockj <= USED 0
+_Z31Interop_Marshal_GetField_UINT16P16CLR_RT_HeapBlockj <= USED 0
+_Z31Interop_Marshal_GetField_UINT64P16CLR_RT_HeapBlockj <= USED 0
+_Z31Interop_Marshal_GetField_doubleP16CLR_RT_HeapBlockj <= USED 0
+_Z32Interop_Marshal_UNSUPPORTED_TYPERK17CLR_RT_StackFramejRP16CLR_RT_HeapBlock <= USED 0
+_Z38Interop_Marshal_UNSUPPORTED_TYPE_ByRefRK17CLR_RT_StackFramePvjRPP16CLR_RT_HeapBlock <= USED 0
+_Z41Interop_Marshal_GetField_UNSUPPORTED_TYPEP16CLR_RT_HeapBlockj <= USED 0
+_ZN10CLR_Checks12VerifyObjectER16CLR_RT_HeapBlock <= USED 0
+_ZN13CLR_RT_Memory10ReAllocateEPvj <= USED 0
+_ZN13CLR_RT_Memory18SubtractFromSystemEj <= USED 0
+_ZN13CLR_RT_Thread16CouldBeActivatedEv <= USED 0
+_ZN14CLR_RT_AVLTree10FindLowestERPNS_5EntryES1_RNS_6ResultE <= USED 0
+_ZN14CLR_RT_AVLTree10InitializeEv <= USED 0
+_ZN14CLR_RT_AVLTree10LeftShrunkERPNS_5EntryE <= USED 0
+_ZN14CLR_RT_AVLTree10RightGrownERPNS_5EntryE <= USED 0
+_ZN14CLR_RT_AVLTree10RotateLeftERPNS_5EntryE <= USED 0
+_ZN14CLR_RT_AVLTree11FindHighestERPNS_5EntryES1_RNS_6ResultE <= USED 0
+_ZN14CLR_RT_AVLTree11RightShrunkERPNS_5EntryE <= USED 0
+_ZN14CLR_RT_AVLTree11RotateRightERPNS_5EntryE <= USED 0
+_ZN14CLR_RT_AVLTree4FindEPNS_5EntryE <= USED 0
+_ZN14CLR_RT_AVLTree6InsertEPNS_5EntryE <= USED 0
+_ZN14CLR_RT_AVLTree6InsertERPNS_5EntryES1_ <= USED 0
+_ZN14CLR_RT_AVLTree6RemoveEPNS_5EntryE <= USED 0
+_ZN14CLR_RT_AVLTree6RemoveERPNS_5EntryES1_ <= USED 0
+_ZN14CLR_RT_AVLTree9LeftGrownERPNS_5EntryE <= USED 0
+_ZN15CLR_RT_Assembly14GetStaticFieldEi <= USED 0
+_ZN16CLR_RT_HeapBlock10WriteValueERKxi <= USED 0
+_ZN16CLR_RT_HeapBlock17ExtractValueBlockEi <= USED 0
+_ZN16CLR_RT_HeapBlock9ReadValueERxi <= USED 0
+_ZN17CLR_RT_StackFrame12SetResult_R4Ef <= USED 0
+_ZN17CLR_RT_StackFrame12SetResult_U8ERy <= USED 0
+_ZN17CLR_RT_TypeSystem24MapElementTypeToDataTypeEj <= USED 0
+_ZN21CLR_RT_TypeDescriptor14ShouldEmitHashEv <= USED 0
+_ZN21CLR_RT_TypeDescriptor25TypeDescriptor_InitializeEv <= USED 0
+_ZN22CLR_RT_ArrayListHelper16PrepareArrayListER16CLR_RT_HeapBlockii <= USED 0
+_ZN22CLR_RT_ArrayListHelper25ExtractArrayFromArrayListER16CLR_RT_HeapBlockRP22CLR_RT_HeapBlock_ArrayRiS5_ <= USED 0
+_ZN22CLR_RT_AttributeParser10InitializeERK26CLR_RT_AttributeEnumerator <= USED 0
+_ZN22CLR_RT_AttributeParser4NextERPNS_5ValueE <= USED 0
+_ZN22CLR_RT_AttributeParser9GetStringEv <= USED 0
+_ZN22CLR_RT_ByteArrayReader4InitEPKhj <= USED 0
+_ZN22CLR_RT_ByteArrayReader4ReadEPvj <= USED 0
+_ZN22CLR_RT_ByteArrayReader4SkipEj <= USED 0
+_ZN22CLR_RT_ByteArrayReader9Read1ByteEPv <= USED 0
+_ZN22CLR_RT_ExecutionEngine12FindFieldDefER16CLR_RT_HeapBlockPKcR21CLR_RT_FieldDef_Index <= USED 0
+_ZN22CLR_RT_ExecutionEngine12FindFieldDefER23CLR_RT_TypeDef_InstancePKcR21CLR_RT_FieldDef_Index <= USED 0
+_ZN22CLR_RT_ExecutionEngine12NewArrayListER16CLR_RT_HeapBlockiRP22CLR_RT_HeapBlock_Array <= USED 0
+_ZN22CLR_RT_ExecutionEngine16ProcessTimeEventEj <= USED 0
+_ZN22CLR_RT_ExecutionEngine21RetrieveCurrentMethodERjS0_ <= USED 0
+_ZN22CLR_RT_ExecutionEngine33JoinAllThreadsAndExecuteFinalizerEv <= USED 0
+_ZN22CLR_RT_ExecutionEngine8GetFieldER16CLR_RT_HeapBlockPKcS1_ <= USED 0
+_ZN22CLR_RT_ExecutionEngine8SetFieldER16CLR_RT_HeapBlockPKcS1_ <= USED 0
+_ZN22CLR_RT_ExecutionEngine9FindFieldER16CLR_RT_HeapBlockPKcRPS0_ <= USED 0
+_ZN22CLR_RT_ExecutionEngine9NewObjectER16CLR_RT_HeapBlockjP15CLR_RT_Assembly <= USED 0
+_ZN23CLR_RT_HeapBlock_String14GetStringEmptyEv <= USED 0
+_ZN23CLR_RT_TypeDef_Instance14IsATypeHandlerEv <= USED 0
+_ZN24CLR_RT_Assembly_Instance5ClearEv <= USED 0
+_ZN26CLR_RT_AttributeEnumerator10InitializeEP15CLR_RT_Assembly <= USED 0
+_ZN26CLR_RT_AttributeEnumerator10InitializeERK23CLR_RT_TypeDef_Instance <= USED 0
+_ZN26CLR_RT_AttributeEnumerator10InitializeERK24CLR_RT_FieldDef_Instance <= USED 0
+_ZN26CLR_RT_AttributeEnumerator10InitializeERK25CLR_RT_MethodDef_Instance <= USED 0
+_ZN26CLR_RT_AttributeEnumerator7AdvanceEv <= USED 0
+_ZN26CLR_RT_AttributeEnumerator9MatchNextEPK23CLR_RT_TypeDef_InstancePK25CLR_RT_MethodDef_Instance <= USED 0
+_ZN26CLR_RT_ReflectionDef_Index10SetRawDataEy <= USED 0
+_ZN26CLR_RT_ReflectionDef_Index5ClearEv <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream10InitializeEPhj <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream10WriteArrayEPKhj <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream11BitsWrittenEv <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream13BitsAvailableEv <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream14CreateInstanceERPS_Phi <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream14DeleteInstanceERPS_ <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream5ResetEv <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream6RewindEv <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream7ReleaseEv <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream7ToArrayER16CLR_RT_HeapBlock <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream8ReadBitsERjj <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream8ReadBitsERyj <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream9NewBufferEv <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream9ReadArrayEPhj <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream9WriteBitsEjj <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream9WriteBitsEyj <= USED 0
+_ZNK18CLR_RT_MemoryRange12LimitToRangeERS_Phj <= USED 0
+_ZNK26CLR_RT_ReflectionDef_Index10GetRawDataEv <= USED 0
+private_realloc <= USED 0
+;FILE events.obj
+_Z18Events_SetCallbackPFvPvES_ <= USED 0
+_Z28Events_WaitForEventsInternaljjj <= USED 0
+;FILE fastcompile_BatteryMeasurement_stubs.obj
+_Z21Battery_StateOfChargeiiRh <= USED 0
+_Z27Battery_VoltageFilter_Resetv <= USED 0
+_Z29Battery_MostRecent_Millivoltsv <= USED 0
+_Z37Battery_MostRecent_DegreesCelcius_x10v <= USED 0
+;FILE fastcompile_backlight_stubs.obj
+_Z15BackLight_Forcej <= USED 0
+_Z18BackLight_RefCountj <= USED 0
+;FILE fastcompile_batterycharger_stubs.obj
+_Z15Charger_Restartj <= USED 0
+_Z16Charger_Shutdownj <= USED 0
+;FILE fastcompile_display_stubs.obj
+_Z10LCD_BitBltiiiPjj <= USED 0
+_Z12LCD_BitBltExiiiiPj <= USED 0
+_Z13LCD_PowerSavej <= USED 0
+_Z13LCD_WriteCharhii <= USED 0
+_Z16LCD_ConvertColorj <= USED 0
+_Z18LCD_GetFrameBufferv <= USED 0
+_Z24LCD_GetPixelClockDividerv <= USED 0
+_Z9LCD_Clearv <= USED 0
+;FILE fastcompile_timeservice.obj
+_Z37HAL_TIMESERVICE_GetTimeFromSNTPServerPhP10SYSTEMTIME <= USED 0
+_ZN10SNTPClient10getStratumEv <= USED 0
+_ZN10SNTPClient12getPrecisionEv <= USED 0
+_ZN10SNTPClient12getRootDelayEv <= USED 0
+_ZN10SNTPClient15getPollIntervalEv <= USED 0
+_ZN10SNTPClient16getLeapIndicatorEv <= USED 0
+_ZN10SNTPClient16getVersionNumberEv <= USED 0
+_ZN10SNTPClient17getRootDispersionEv <= USED 0
+_ZN10SNTPClient17getRoundTripDelayEv <= USED 0
+_ZN10SNTPClient19getLocalClockOffsetEv <= USED 0
+_ZN10SNTPClient19getReceiveTimestampEv <= USED 0
+_ZN10SNTPClient21getOriginateTimestampEv <= USED 0
+_ZN10SNTPClient21getReferenceTimestampEv <= USED 0
+_ZN10SNTPClientC1Ej <= USED 0
+;FILE fs.obj
+;FILE fs_pal.obj
+_Z14FS_MountVolumePKcjjP18BlockStorageDevice <= USED 0
+_Z16FS_UnmountVolumeP18BlockStorageDevice <= USED 0
+_ZN20FileSystemVolumeList12RemoveVolumeEP16FileSystemVolumej <= USED 0
+_ZN20FileSystemVolumeList9AddVolumeEP16FileSystemVolumePKcjjP23STREAM_DRIVER_INTERFACEP27FILESYSTEM_DRIVER_INTERFACEP18BlockStorageDevicejj <= USED 0
+;FILE gesture_stubs.obj
+_Z20Gesture_ProcessPointjtttx <= USED 0
+;FILE graphics_stub.obj
+_Z14GetCharInfoCmpPKvS0_ <= USED 0
+_Z25ConvertToNative1BppHelperiijRtPv <= USED 0
+_Z26ConvertToNative16BppHelperiijRtPv <= USED 0
+_ZN12CLR_GFX_Font11GetCharInfoEtR25CLR_GFX_FontCharacterInfo <= USED 0
+_ZN12CLR_GFX_Font15Font_InitializeEv <= USED 0
+_ZN12CLR_GFX_Font17RelocationHandlerEP27CLR_RT_HeapBlock_BinaryBlob <= USED 0
+_ZN12CLR_GFX_Font22CountCharactersInWidthEPKciiRibRS1_S2_ <= USED 0
+_ZN12CLR_GFX_Font8RelocateEv <= USED 0
+_ZN12CLR_GFX_Font9StringOutEPKciiP14CLR_GFX_Bitmapiij <= USED 0
+_ZN14CLR_GFX_Bitmap10DecompressEPKhPK25CLR_GFX_BitmapDescriptionj <= USED 0
+_ZN14CLR_GFX_Bitmap11DrawEllipseERK7GFX_PenRK9GFX_Brushiiii <= USED 0
+_ZN14CLR_GFX_Bitmap11RotateImageEiRK8GFX_RectRKS_S2_t <= USED 0
+_ZN14CLR_GFX_Bitmap11SetClippingER8GFX_Rect <= USED 0
+_ZN14CLR_GFX_Bitmap13DrawRectangleERK7GFX_PenRK9GFX_BrushRK8GFX_Rect <= USED 0
+_ZN14CLR_GFX_Bitmap14CreateInstanceER16CLR_RT_HeapBlockPKhjh <= USED 0
+_ZN14CLR_GFX_Bitmap14CreateInstanceER16CLR_RT_HeapBlockRK25CLR_GFX_BitmapDescription <= USED 0
+_ZN14CLR_GFX_Bitmap14DeleteInstanceER16CLR_RT_HeapBlock <= USED 0
+_ZN14CLR_GFX_Bitmap14DrawTextInRectERPKcRiS3_S3_S3_PS_iiiijjP12CLR_GFX_Font <= USED 0
+_ZN14CLR_GFX_Bitmap15ConvertToNativeEPK25CLR_GFX_BitmapDescriptionPj <= USED 0
+_ZN14CLR_GFX_Bitmap15SetPixelsHelperERK8GFX_RectjPFjiijRtPvES4_ <= USED 0
+_ZN14CLR_GFX_Bitmap17Bitmap_InitializeEv <= USED 0
+_ZN14CLR_GFX_Bitmap20DrawRoundedRectangleERK7GFX_PenRK9GFX_BrushRK8GFX_Rectii <= USED 0
+_ZN14CLR_GFX_Bitmap24GetInstanceFromHeapBlockERK16CLR_RT_HeapBlockRPS_ <= USED 0
+_ZN14CLR_GFX_Bitmap5ClearEv <= USED 0
+_ZN14CLR_GFX_Bitmap8DrawLineERK7GFX_Peniiii <= USED 0
+_ZN14CLR_GFX_Bitmap8DrawTextEPKcR12CLR_GFX_Fontjii <= USED 0
+_ZN14CLR_GFX_Bitmap8SetPixelEiij <= USED 0
+_ZN14CLR_GFX_Bitmap9DrawImageERK8GFX_RectRKS_S2_t <= USED 0
+_ZN25CLR_GFX_BitmapDescription28BitmapDescription_InitializeEiii <= USED 0
+_ZNK14CLR_GFX_Bitmap8GetPixelEii <= USED 0
+_ZNK23CLR_GFX_FontDescription12GetRangeSizeEv <= USED 0
+_ZNK23CLR_GFX_FontDescription14GetRangeExSizeEv <= USED 0
+_ZNK23CLR_GFX_FontDescription16GetCharacterSizeEv <= USED 0
+_ZNK23CLR_GFX_FontDescription18GetCharacterExSizeEv <= USED 0
+_ZNK25CLR_GFX_BitmapDescription12GetTotalSizeEv <= USED 0
+_ZNK25CLR_GFX_BitmapDescription15GetWidthInWordsEv <= USED 0
+_ZNK25CLR_GFX_FontDescriptionEx16GetAntiAliasSizeEv <= USED 0
+;FILE heap.obj
+;FILE i2c.obj
+_Z20I2C_XAction_GetStateP15I2C_HAL_XACTION <= USED 0
+;FILE ink_stubs.obj
+_Z13Ink_SetRegionP13InkRegionInfo <= USED 0
+_Z15Ink_ResetRegionv <= USED 0
+;FILE native_double_pal_fastcompile.obj
+_ZN6System4Math4SignEd <= USED 0
+_ZN6System4Math5RoundEd <= USED 0
+;FILE onewire_fastcompile.obj
+_Z11owHasErrorsv <= USED 0
+_Z12owClearErrorv <= USED 0
+_Z12owSkipFamilyi <= USED 0
+_Z13owGetErrorMsgi <= USED 0
+_Z13owGetErrorNumv <= USED 0
+_Z13owProgramByteiiiiii <= USED 0
+_Z14owHasOverDrivei <= USED 0
+_Z14owProgramPulsei <= USED 0
+_Z14owReadBitPowerii <= USED 0
+_Z15owPrintErrorMsgPSt6__FILE <= USED 0
+_Z16owWriteBytePowerii <= USED 0
+_Z17owHasProgramPulsei <= USED 0
+_Z17owOverdriveAccessi <= USED 0
+_Z18owHasPowerDeliveryi <= USED 0
+_Z18owPrintErrorMsgStdv <= USED 0
+_Z19owFamilySearchSetupii <= USED 0
+_Z6bitacciiiPh <= USED 0
+_Z7docrc16it <= USED 0
+_Z7msDelayj <= USED 0
+_Z7owBlockiiPhi <= USED 0
+_Z7owLevelii <= USED 0
+_Z7owSpeedii <= USED 0
+_Z8owAccessi <= USED 0
+_Z8owVerifyii <= USED 0
+_Z8setcrc16it <= USED 0
+_Z9msGettickv <= USED 0
+;FILE palevent_stubs.obj
+_Z13PalEvent_Postjj <= USED 0
+_Z15PalEvent_EnlistP16PalEventListener <= USED 0
+;FILE piezo_stubs.obj
+_Z15Piezo_IsEnabledv <= USED 0
+;FILE sockets_Stubs_lwip.obj
+_Z29SOCKETS_ProcessSocketActivityi <= USED 0
+_Z48HAL_SOCK_CONFIGURATION_LoadWirelessConfigurationjP26SOCK_WirelessConfiguration <= USED 0
+;FILE spot_Hardware_pwm_fastcompile.obj
+;FILE spot_Serialization_stub.obj
+;FILE spot_fastcompile.obj
+;FILE spot_hardware_onewire_native_Microsoft_SPOT_Hardware_OneWire.obj
+;FILE spot_hardware_onewire_native_Microsoft_SPOT_Hardware_OneWire_mshl.obj
+;FILE spot_hardware_usb_fastcompile.obj
+;FILE spot_io_fastcompile.obj
+;FILE spot_messaging_stub.obj
+;FILE ssl_pal_Stubs.obj
+_Z10SSL_Acceptii <= USED 0
+_Z11SSL_ConnectiPKci <= USED 0
+_Z11SSL_GetTimeP15_DATE_TIME_INFO <= USED 0
+_Z14SSL_ClientInitiiPKciS0_Ri <= USED 0
+_Z14SSL_Initializev <= USED 0
+_Z14SSL_ServerInitiiPKciS0_Ri <= USED 0
+_Z15SSL_CloseSocketi <= USED 0
+_Z15SSL_ExitContexti <= USED 0
+_Z16SSL_Uninitializev <= USED 0
+_Z17SSL_DataAvailablei <= USED 0
+_Z24SSL_RegisterTimeCallbackPFvP15_DATE_TIME_INFOE <= USED 0
+_Z27SSL_AddCertificateAuthorityiPKciS0_ <= USED 0
+_Z29SSL_ClearCertificateAuthorityi <= USED 0
+_Z8SSL_ReadiPcj <= USED 0
+_Z9SSL_WriteiPKcj <= USED 0
+ssl_rand_seed <= USED 0
+;FILE stubs_functions_DA.obj
+;FILE stubs_functions_WATCHDOG.obj
+_Z15Watchdog_EnablejPFvPvES_ <= USED 0
+_Z16Watchdog_Disablev <= USED 0
+_Z17Watchdog_ResetCpuv <= USED 0
+;FILE stubs_functions_cache.obj
+_Z15CPU_FlushCachesv <= USED 0
+_Z16CPU_EnableCachesv <= USED 0
+_Z17CPU_DisableCachesv <= USED 0
+_Z20CPU_InvalidateCachesv <= USED 0
+_Z21CPU_DrainWriteBuffersv <= USED 0
+_Z22CPU_GetCachableAddressj <= USED 0
+;FILE timeservice_driver.obj
+;FILE timeservice_functions.obj
+;FILE tinyclr.obj
+;FILE tinycrt.obj
+_Z30hal_fprintf_SetLoggingCallbackPFvPKcE <= USED 0
+__rt_div0 <= USED 0
+__rt_exit <= USED 0
+__rt_raise <= USED 0
+;FILE tinyhal.obj
+_Z13Stack_MaxUsedv <= USED 0
+_Z15SystemState_Set12SYSTEM_STATE <= USED 0
+_Z17SystemState_Clear12SYSTEM_STATE <= USED 0
+_Z17SystemState_Query12SYSTEM_STATE <= USED 0
+_Z19Verify_RAMConstantsPv <= USED 0
+_Z24HAL_AddSoftRebootHandlerPFvvE <= USED 0
+_Z47KEEP_THE_LINKER_HAPPY_SINCE_KEEP_IS_NOT_WORKINGv <= USED 0
+;FILE usart.obj
+_Z10COM1_writePcj <= USED 0
+_Z10COM2_writePcj <= USED 0
+_Z14USART_ForceXONi <= USED 0
+_Z14USART_SetEventij <= USED 0
+_Z15USART_PowerSaveia <= USED 0
+_Z19COM1_driver_detailsj <= USED 0
+_Z19COM2_driver_detailsj <= USED 0
+_Z23USART_ClockStopFinishedv <= USED 0
+_Z25USART_PrepareForClockStopv <= USED 0
+_Z9COM1_readPcj <= USED 0
+_Z9COM2_readPcj <= USED 0
+_ZN12USART_Driver17ClockStopFinishedEv <= USED 0
+_ZN12USART_Driver19PrepareForClockStopEv <= USED 0
+_ZN12USART_Driver9PowerSaveEia <= USED 0
+;FILE usb.obj
+_Z10USB1_writePcj <= USED 0
+_Z12USB_GetEventij <= USED 0
+_Z16USB_DataCallbackP20USB_CONTROLLER_STATE <= USED 0
+_Z16USB_debug_printfPKcz <= USED 0
+_Z19USB1_driver_detailsj <= USED 0
+_Z19USB_ControlCallbackP20USB_CONTROLLER_STATE <= USED 0
+_Z19USB_HandleGetStatusP20USB_CONTROLLER_STATEP16USB_SETUP_PACKET <= USED 0
+_Z20USB_HandleSetAddressP20USB_CONTROLLER_STATEP16USB_SETUP_PACKET <= USED 0
+_Z20USB_HandleSetFeatureP20USB_CONTROLLER_STATEP16USB_SETUP_PACKET <= USED 0
+_Z22USB_HandleClearFeatureP20USB_CONTROLLER_STATEP16USB_SETUP_PACKET <= USED 0
+_Z26USB_HandleGetConfigurationP20USB_CONTROLLER_STATEP16USB_SETUP_PACKET <= USED 0
+_Z26USB_HandleSetConfigurationP20USB_CONTROLLER_STATEP16USB_SETUP_PACKETj <= USED 0
+_Z31USB_HandleConfigurationRequestsP20USB_CONTROLLER_STATEP16USB_SETUP_PACKET <= USED 0
+_Z9USB1_readPcj <= USED 0
+_ZN10USB_Driver8GetEventEij <= USED 0
+;FILE usbd_netmf_core.obj
+__asm___19_usbd_netmf_core_cpp_917e11d5___Z7__REV16j <= USED 0
+__asm___19_usbd_netmf_core_cpp_917e11d5___Z7__REVSHi <= USED 0
+;FILE virtualkey_stubs.obj

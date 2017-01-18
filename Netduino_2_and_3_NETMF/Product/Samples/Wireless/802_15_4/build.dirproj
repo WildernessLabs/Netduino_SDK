@@ -1,0 +1,11 @@
+<Project DefaultTargets="TinyCLR_Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+    <Import Project="$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.Targets" />
+    <ItemGroup>
+        <Project Include="Physical\IEEE_802_15_4_PHY.csproj" />
+        <Project Include="Physical\IEEE_802_15_4_PHY.slnproj" />
+    </ItemGroup>
+    <ItemGroup>
+        <Project Include="Network\IEEE_802_15_4_Network.csproj" />
+        <Project Include="Network\IEEE_802_15_4_Network.slnproj" />
+    </ItemGroup>
+</Project>

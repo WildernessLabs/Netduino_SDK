@@ -1,0 +1,15 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <ComponentGuid>{1B4D71E1-7171-4CFB-A6EA-0EF72211C1B9}</ComponentGuid>
+    <DirectoryRef>VsFrameworkAssemblyRedist_V4_2</DirectoryRef>
+    <_curdir>$(SPOCLIENT)\Framework\IDE\Targets\v4.2\Assemblies\RedistList</_curdir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <WiXComponentFiles Include="$(_curdir)\FrameworkList.xml"/>
+  </ItemGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.WiX.Targets" />
+
+</Project>

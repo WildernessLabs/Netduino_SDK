@@ -1,0 +1,48 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectPath>$(SPOCLIENT)\Solutions\SH7264_RSK\DeviceCode\FS_Config_PAL\dotNetMF.proj</ProjectPath>
+    <AssemblyName>FS_Config_PAL_SH7264_RSK</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{b67e7fa8-5e50-4528-813b-ed442b79e1a4}</ProjectGuid>
+    <Description>File system config SH7264_RSK</Description>
+    <Level>PAL</Level>
+    <LibraryFile>FS_Config_PAL_SH7264_RSK.$(LIB_EXT)</LibraryFile>
+    <ManifestFile>FS_Config_PAL_SH7264_RSK.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>FileSystem</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="FileSystem_Config_PAL" Guid="{581729D7-D732-4fe3-961D-3898022F12FA}" ProjectPath="" Conditional="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+          <Author>Microsoft</Author>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomFilter>
+    </CustomFilter>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsSH7264_RSK>True</IsSH7264_RSK>
+    <HasLibraryCategory>True</HasLibraryCategory>
+    <Directory>Solutions\SH7264_RSK\DeviceCode\FS_Config_PAL</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="FS_config_SH7264_RSK.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

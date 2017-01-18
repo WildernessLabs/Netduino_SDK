@@ -1,0 +1,86 @@
+[Version]
+Signature = "$Windows NT$"
+; Windows 8 uses the values below
+;Class     = USB Device
+;ClassGUID = {88BAE032-5A81-49f0-BC3D-A4FF138216D6}
+
+; Windows 7 uses the values below
+Class     = USB
+ClassGUID = {36fc9e60-c465-11cf-8056-444553540000}
+
+Provider = %ManufacturerName%
+CatalogFile=MyCatFile.cat
+;DriverVer=01/24/2012,6.2.8181.0
+DriverVer=06/21/2006,6.1.7601.17514
+
+; ========== Manufacturer/Models sections ===========
+
+[Manufacturer]
+%ManufacturerName% = Standard,NTamd64,NTx86
+
+[Standard.NTamd64]
+%DeviceName% =USB_Install, USB\VID_03E8&PID_6150
+
+[Standard.NTx86]
+%DeviceName% =USB_Install, USB\VID_03E8&PID_6150
+
+; =================== Installation ===================
+
+[USB_Install]
+Include=winusb.inf
+Needs=WINUSB.NT
+
+[USB_Install.Services]
+Include=winusb.inf
+AddService=WinUsb,0x00000002,WinUsb_ServiceInstall
+
+[WinUsb_ServiceInstall]
+DisplayName     = %WinUsb_SvcDesc%
+ServiceType     = 1
+StartType       = 3
+ErrorControl    = 1
+ServiceBinary   = %12%\WinUSB.sys
+
+[USB_Install.Wdf]
+KmdfService=WINUSB, WinUsb_Install
+
+[WinUsb_Install]
+KmdfLibraryVersion=1.09
+
+[USB_Install.HW]
+AddReg=Dev_AddReg
+
+[Dev_AddReg]
+HKR,,DeviceInterfaceGUIDs,0x10000,"{D32D1D64-963D-463E-874A-8EC8C8082CBF}"
+
+[USB_Install.CoInstallers]
+AddReg=CoInstallers_AddReg
+CopyFiles=CoInstallers_CopyFiles
+
+[CoInstallers_AddReg]
+HKR,,CoInstallers32,0x00010000,"WdfCoInstaller01009.dll,WdfCoInstaller","WinUsbCoInstaller2.dll"
+
+[CoInstallers_CopyFiles]
+WinUsbCoInstaller2.dll
+WdfCoInstaller01009.dll
+
+[DestinationDirs]
+CoInstallers_CopyFiles=11
+
+; ================= Source Media Section =====================
+
+[SourceDisksNames]
+1 = %DiskName%
+
+[SourceDisksFiles]
+WinUsbCoInstaller2.dll=1
+WdfCoInstaller01009.dll=1
+
+; =================== Strings ===================
+
+[Strings]
+ManufacturerName="Freescale"
+ClassName="Samples"
+DiskName="USB Installation Disk"
+WinUsb_SvcDesc="WinUSB Driver"
+DeviceName="USB Device"

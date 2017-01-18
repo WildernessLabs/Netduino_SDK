@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<VisualStudioPropertySheet
+    ProjectType="Visual C++"
+    Version="8.00"
+    Name="MFPK version info"
+    >
+    <UserMacro Name="VERSION_MAJOR" Value="4" />
+    <UserMacro Name="VERSION_MINOR" Value="3" />
+    <UserMacro Name="VERSION_BUILD" Value="1" />
+    <UserMacro Name="VERSION_REVISION" Value="0" />
+</VisualStudioPropertySheet>

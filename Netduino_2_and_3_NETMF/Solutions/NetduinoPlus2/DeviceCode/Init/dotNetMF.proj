@@ -1,0 +1,35 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectPath>$(SPOCLIENT)\Solutions\NetduinoPlus2\DeviceCode\Init\dotnetmf.proj</ProjectPath>
+    <AssemblyName>IO_Init_NetduinoPlus2</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{574e5357-b05c-4efd-a2e1-edbb3d372b7a}</ProjectGuid>
+    <Description>IO port initialization for NetduinoPlus2 solution</Description>
+    <Level>HAL</Level>
+    <LibraryFile>IO_Init_NetduinoPlus2.$(LIB_EXT)</LibraryFile>
+    <ManifestFile>IO_Init_NetduinoPlus2.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Solutions\NetduinoPlus2</Groups>
+    <LibraryCategory>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomSpecific>
+    </CustomSpecific>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>Solutions\NetduinoPlus2\DeviceCode\Init</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="IO_Init.cpp" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

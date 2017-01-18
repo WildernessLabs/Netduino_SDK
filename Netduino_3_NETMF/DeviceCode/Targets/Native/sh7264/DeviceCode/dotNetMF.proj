@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Directory>DeviceCode\Targets\native\SH7264\DeviceCode</Directory>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <ItemGroup>
+    <SubDirectories Include="BlockStorage" />
+    <SubDirectories Include="Display" />
+    <SubDirectories Include="GPIO" />
+    <SubDirectories Include="INTC" />
+    <SubDirectories Include="Power" />
+    <SubDirectories Include="TIME" />
+    <SubDirectories Include="TIMER" />
+    <SubDirectories Include="USART" />
+    <SubDirectories Include="VDC3" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

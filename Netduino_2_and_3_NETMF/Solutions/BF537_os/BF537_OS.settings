@@ -1,0 +1,20 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <PlatformGuid>{317db9d9-416e-4084-ab8d-3b43001156e6}</PlatformGuid>
+    <TARGETPLATFORM>BF537_OS</TARGETPLATFORM>
+    <PLATFORM>BF537_OS</PLATFORM>
+    <Description>Blackfin BF537 OS solution</Description>
+    <Documentation>
+    </Documentation>
+    <INSTRUCTION_SET>BLACKFIN</INSTRUCTION_SET>
+    <ENDIANNESS>le</ENDIANNESS>
+    <DEVICE_TYPE>ADSP-BF537</DEVICE_TYPE>
+    <NO_BOOTLOADER_COMPRESSION>true</NO_BOOTLOADER_COMPRESSION>
+    <OS_PLATFORM>true</OS_PLATFORM>
+    <IsSolutionWizardVisible>false</IsSolutionWizardVisible>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\BF537_os" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\OS\Blackfin_os\BF537_OS.settings" />
+</Project>

@@ -1,0 +1,14 @@
+<VSTemplate Version="3.0.0" Type="ProjectGroup"
+  xmlns="http://schemas.microsoft.com/developer/vstemplate/2005">
+  <TemplateData>
+    <Name>TemperatureSample</Name>
+    <Description>TemperatureSample Managed Emulator Extension</Description>
+    <ProjectType>CSharp</ProjectType>
+  </TemplateData>
+  <TemplateContent>
+    <ProjectCollection>
+      <ProjectTemplateLink>TemperatureSample\TemperatureSample.vstemplate</ProjectTemplateLink>
+      <ProjectTemplateLink>TemperatureEmulator\TemperatureEmulator.vstemplate</ProjectTemplateLink>
+    </ProjectCollection>
+  </TemplateContent>
+</VSTemplate>

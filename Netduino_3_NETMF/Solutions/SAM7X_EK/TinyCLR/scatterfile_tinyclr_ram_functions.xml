@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ScatterFile xmlns="http://schemas.microsoft.com/netmf/ScatterfileSchema.xsd">
+  <If Name="COMPILER_TOOL_VERSION" Value="ADS1.2">
+  </If>
+  <If Name="COMPILER_TOOL_VERSION" In="RVDS3.0 RVDS3.1 RVDS4.0 RVDS4.1">
+  </If>
+</ScatterFile>
+

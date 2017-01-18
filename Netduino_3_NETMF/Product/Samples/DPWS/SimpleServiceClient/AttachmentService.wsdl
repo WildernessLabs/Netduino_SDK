@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<l:definitions xmlns:s12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://schemas.example.org/AttachmentService" xmlns:p="http://schemas.xmlsoap.org/ws/2006/02/devprof" xmlns:po="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:a="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:e="http://schemas.xmlsoap.org/ws/2004/08/eventing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="AttachmentService" targetNamespace="http://schemas.example.org/AttachmentService" xmlns:l="http://schemas.xmlsoap.org/wsdl/">
+  <po:Policy Id="AttachmentServicePolicy">
+    <p:profile />
+    <om:OptimizedMimeSerialization xmlns:om="http://schemas.xmlsoap.org/ws/2004/09/policy/optimizedmimeserialization" />
+  </po:Policy>
+  <l:types>
+    <schema targetNamespace="http://schemas.example.org/AttachmentService" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="OneWayAttachmentRequest" type="tns:OneWayAttachmentRequestType" />
+      <complexType name="OneWayAttachmentRequestType">
+        <sequence>
+          <element minOccurs="1" maxOccurs="1" name="Param" nillable="true" type="base64Binary" />
+          <any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="lax" />
+        </sequence>
+        <anyAttribute namespace="##any" processContents="lax" />
+      </complexType>
+      <element name="TwoWayAttachmentRequest" type="tns:TwoWayAttachmentRequestType" />
+      <complexType name="TwoWayAttachmentRequestType">
+        <sequence>
+          <element minOccurs="1" maxOccurs="1" name="Param" nillable="true" type="base64Binary" />
+          <any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="lax" />
+        </sequence>
+        <anyAttribute namespace="##any" processContents="lax" />
+      </complexType>
+      <element name="TwoWayAttachmentResponse" type="tns:TwoWayAttachmentResponseType" />
+      <complexType name="TwoWayAttachmentResponseType">
+        <sequence>
+          <element minOccurs="1" maxOccurs="1" name="Param" nillable="true" type="base64Binary" />
+          <any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="lax" />
+        </sequence>
+        <anyAttribute namespace="##any" processContents="lax" />
+      </complexType>
+    </schema>
+  </l:types>
+  <l:message name="OneWayAttachmentIn">
+    <l:part name="parameters" element="tns:OneWayAttachmentRequest" />
+  </l:message>
+  <l:message name="TwoWayAttachmentIn">
+    <l:part name="parameters" element="tns:TwoWayAttachmentRequest" />
+  </l:message>
+  <l:message name="TwoWayAttachmentOut">
+    <l:part name="parameters" element="tns:TwoWayAttachmentResponse" />
+  </l:message>
+  <l:portType name="AttachmentService">
+    <l:operation name="OneWayAttachment">
+      <l:input a:Action="http://schemas.example.org/AttachmentService/OneWayAttachment" message="tns:OneWayAttachmentIn" />
+    </l:operation>
+    <l:operation name="TwoWayAttachment">
+      <l:input a:Action="http://schemas.example.org/AttachmentService/TwoWayAttachment" message="tns:TwoWayAttachmentIn" />
+      <l:output a:Action="http://schemas.example.org/AttachmentService/TwoWayAttachmentResponse" message="tns:TwoWayAttachmentOut" />
+    </l:operation>
+  </l:portType>
+  <l:binding name="AttachmentServiceBinding" type="tns:AttachmentService">
+    <wsoap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <po:PolicyReference URI="#AttachmentServicePolicy" l:required="true" />
+    <l:operation name="OneWayAttachment">
+      <wsoap12:operation xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <l:input>
+        <wsoap12:body use="literal" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </l:input>
+    </l:operation>
+    <l:operation name="TwoWayAttachment">
+      <wsoap12:operation xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <l:input>
+        <wsoap12:body use="literal" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </l:input>
+      <l:output>
+        <wsoap12:body use="literal" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </l:output>
+    </l:operation>
+  </l:binding>
+</l:definitions>

@@ -1,0 +1,26 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <ComponentGuid>{138FB917-F9C1-4B9D-9960-BD219E5AF145}</ComponentGuid>
+    <DirectoryRef>ToolsDir_v4_2</DirectoryRef>
+    <_curdir>$(SPOCLIENT)\Framework\IDE\Targets\v4.2\Tools</_curdir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <WiXComponentFiles Include="$(_curdir)\MetaDataProcessor.exe" />
+    <WiXComponentFiles Include="$(_curdir)\MFSvcUtil.exe" />
+    <WiXComponentFiles Include="$(_curdir)\MFSvcUtilProcessor.dll" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.CLR.dll" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Debugger.dll" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Emulator.dll" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Emulator.Interface.dll" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Emulator.Sample.SampleEmulator.exe" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Emulator.Sample.SampleEmulator.exe.emulatorconfig" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Tasks.dll" />
+    <WiXComponentFiles Include="$(_curdir)\TFConvert.exe" />
+    <WiXComponentFiles Include="$(_curdir)\WinUsbInvoke.dll" />
+  </ItemGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.WiX.Targets" />
+
+</Project>

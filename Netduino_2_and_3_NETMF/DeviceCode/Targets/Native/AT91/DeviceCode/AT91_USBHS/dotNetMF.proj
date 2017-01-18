@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{524E06D4-E942-4d4d-ABD2-4728F85E0B82}</ProjectGuid>
+    <AssemblyName>AT91_USBHS</AssemblyName>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\Targets\Native\AT91\DeviceCode\AT91_USBHS\dotNetMF.proj</ProjectPath>
+    <Size>
+    </Size>
+    <Description>Atmel AT91 USB High Speed driver</Description>
+    <Level>HAL</Level>
+    <LibraryFile>AT91_USBHS.$(LIB_EXT)</LibraryFile>
+    <ManifestFile>AT91_USBHS.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Processor\AT91</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="USB_HAL" Guid="{D5D07F9F-0BB9-4077-836B-580C4E7A734C}" ProjectPath="" Conditional="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+          <Author>Microsoft</Author>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <HasLibraryCategory>True</HasLibraryCategory>
+    <CustomFilter>AT91;AT91SAM9RL64</CustomFilter>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <Directory>DeviceCode\Targets\Native\AT91\DeviceCode\AT91_USBHS</Directory>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AT91_USBHS.cpp" />
+    <Compile Include="AT91_usbhs_config.cpp" />
+    <Compile Include="AT91_usbhs_functions.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\arm_util.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\cpu.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\cpu_definitions.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\smartptr_fiq_arm.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\com\usb\usb.h" />
+    <HFiles Include="at91_usbhs.h" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

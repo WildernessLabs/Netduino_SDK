@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <AssemblyName>SH7264VDC3_Config_SH7264_RSK</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{6E60A949-4743-4413-B979-2020FAEE26A8}</ProjectGuid>
+    <Description>SH7264VDC3 display configuration for SH7264_RSK solution</Description>
+    <Level>HAL</Level>
+    <LibraryFile>SH7264VDC3_Config_SH7264_RSK.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\Solutions\Sh7264_RSK\DeviceCode\Display\SH7264VDC3\dotNetMF.proj</ProjectPath>
+    <ManifestFile>SH7264VDC3_Config_SH7264_RSK.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Solutions\Sh7264_RSK</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="LCDController_Config_HAL" Guid="{616E5384-4D7D-4299-A98F-BD5C887693BC}" ProjectPath="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>1</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-09-28</Date>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomSpecific>SH7264_RSK</CustomSpecific>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>Solutions\Sh7264_RSK\DeviceCode\Display\SH7264VDC3</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>1.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="SH7264VDC3_Config.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <HFiles Include="$(SPOCLIENT)\devicecode\targets\native\sh7264\devicecode\vdc3\sh7264_vdc3.h" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

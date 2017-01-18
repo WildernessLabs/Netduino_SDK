@@ -1,0 +1,23 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Name>SH2A</Name>
+    <CpuName>
+    </CpuName>
+    <DefaultISA>SHC</DefaultISA>
+    <Guid>{4989C886-63FD-46e4-8469-557AEF0C1F70}</Guid>
+    <Description>SHC SH2A </Description>
+    <Documentation>
+    </Documentation>
+    <ProjectPath>$(SPOCLIENT)\devicecode\Targets\Native\SH2A\SH2A.settings</ProjectPath>
+    <PLATFORM_FAMILY>SHC</PLATFORM_FAMILY>
+    <CustomFilter>
+    </CustomFilter>
+    <INSTRUCTION_SET Condition="'$(INSTRUCTION_SET)'==''">SH2A</INSTRUCTION_SET>
+    <TARGETPROCESSOR>SH2A</TARGETPROCESSOR>
+    <TARGETCODEBASE>SH2A</TARGETCODEBASE>
+    <TARGETCODEBASETYPE>Native</TARGETCODEBASETYPE>    
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="devicecode\Targets\Native\SH2A" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,19 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>
+    </Author>
+    <Description>
+    </Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{920fe291-8435-44b6-84bf-bac930ae7061}</PlatformGuid>
+    <TARGETPLATFORM>SAM9261_EK</TARGETPLATFORM>
+    <PLATFORM>SAM9261_EK</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\SAM9261_EK" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\AT91\AT91SAM9261.settings" />
+</Project>

@@ -1,0 +1,114 @@
+<?xml version="1.0"?>
+<ScatterFile xmlns="http://schemas.microsoft.com/netmf/ScatterfileSchema.xsd">
+
+    <Set Name="Valid" Value="false"/>
+
+    <!-- ################################################################################ -->
+
+    <Set Name="Heap_Begin"      Value="0x810F0000"/>
+    <Set Name="Heap_End"        Value="0x810F8000"/>        
+
+    <Set Name="Stack_Bottom"    Value="+0"/>
+    <Set Name="Stack_Top"       Value="0x810FFFF8"/>
+
+
+
+    <If Name="TARGETLOCATION" Value="FLASH">
+        <!-- PCM023 has 2MB of 32-bit FLASH at 0x80000000 -->
+   
+
+        <Set Name="Config_BaseAddress"        Value="0x801F8000"/>    
+        <Set Name="Config_Size"               Value="0x00008000"/>
+
+        <Set Name="Code_BaseAddress"          Value="0x80020000"/>
+        <Set Name="Code_Size"                 Value="0x000F0000"/>        
+
+        <Set Name="ER_RAM_RO_BaseAddress"     Value="0x81000000"/>    
+        <Set Name="ER_RAM_RO_Size"            Value="%Heap_Begin%-%ER_RAM_RO_BaseAddress%"/>    
+
+        <Set Name="Valid"                     Value="true"/>
+
+    </If>
+
+    <If Name="TARGETLOCATION" Value="RAM">
+        <Set Name="Code_BaseAddress"          Value="0x81050000"/>
+        <Set Name="Code_Size"                 Value="0x00050000"/>
+
+        <Set Name="ER_RAM_RO_BaseAddress"     Value="0x81000000"/>    
+        <Set Name="ER_RAM_RO_Size"            Value="0x50000"/>           
+        <Set Name="Valid"                     Value="true"/>
+
+    </If>
+
+
+    <!-- ################################################################################ -->
+
+    <If Name="Valid" Value="false">
+        <Error Message="Configuration not recognized"/>
+    </If>
+
+    <LoadRegion Name="LR_%TARGETLOCATION%" Base="%Code_BaseAddress%" Options="ABSOLUTE" Size="%Code_Size%">
+
+        <ExecRegion Name="ER_%TARGETLOCATION%" Base="%Code_BaseAddress%" Options="FIXED" Size="">
+
+            <FileMapping Name="FirstEntry.obj"   Options="(+RO, +FIRST)" /> <!-- the entry pointer section goes into this region -->
+            <FileMapping Name="ramtest.obj"      Options="(+RO)"         /> <!-- this must live somewhere other than RAM, for all but RAM builds -->
+            <FileMapping Name="*" Options="(SectionForBootstrapOperations)" />
+
+        </ExecRegion>
+
+        <ExecRegion Name="ER_RAM_RO" Base="%ER_RAM_RO_BaseAddress%" Options="ABSOLUTE" Size="%ER_RAM_RO_Size%">
+
+            <!-- all code and constants are in RAM, 0-WS, 32-bit wide -->
+            <FileMapping Name="*"                      Options="(SectionForFlashOperations)" />
+            <FileMapping Name="*"                      Options="(+RO)" />
+    
+        </ExecRegion>
+
+        <ExecRegion Name="ER_RAM_RW" Base="+0" Options="ABSOLUTE" Size="">
+            <FileMapping Name="*"                Options="(+RW-DATA, +ZI)" />
+        </ExecRegion>
+
+
+        <ExecRegion Name="ER_IRAM" Base="0x40000000" Options="ABSOLUTE" Size="0x40">
+            <FileMapping Name="VectorsTrampolines.obj" Options="(+RO, +FIRST)" /> <!-- for vector handlers to be far from the vectors -->
+        </ExecRegion>
+
+        <ExecRegion Name="ER_HEAP_BEGIN" Base="%Heap_Begin%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForHeapBegin)" />
+        </ExecRegion>
+
+        <!-- everything between heapbegin and heapend will be allocated for a heap -->
+
+        <ExecRegion Name="ER_HEAP_END" Base="%Heap_End%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForHeapEnd)" />
+        </ExecRegion>
+
+
+        <!-- this must go last here to provide a low water mark on the stack -->
+
+        <ExecRegion Name="ER_STACK_BOTTOM" Base="%Stack_Bottom%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForStackBottom)" />
+        </ExecRegion>
+        
+        <ExecRegion Name="ER_STACK_TOP" Base="%Stack_Top%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForStackTop)" />
+        </ExecRegion>
+
+    </LoadRegion>
+
+    <IfDefined Name="Config_BaseAddress">
+
+        <LoadRegion Name="LR_CONFIG" Base="%Config_BaseAddress%" Options="ABSOLUTE" Size="%Config_Size%">
+
+            <ExecRegion Name="ER_CONFIG" Base="%Config_BaseAddress%" Options="FIXED" Size="%Config_Size%">
+
+                <FileMapping Name="*" Options="(SectionForConfig)" />
+
+            </ExecRegion>
+
+        </LoadRegion>
+
+    </IfDefined>
+</ScatterFile>
+

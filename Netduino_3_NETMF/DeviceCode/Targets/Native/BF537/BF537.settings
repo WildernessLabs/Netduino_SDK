@@ -1,0 +1,28 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Name>BF537</Name>
+    <CpuName>
+    </CpuName>
+    <DefaultISA>
+    </DefaultISA>
+    <Guid>{0b932d56-4d60-4f9e-97c3-0368a85d5843}</Guid>
+    <Description>
+    </Description>
+    <Documentation>
+    </Documentation>
+    <ProjectPath>$(SPOCLIENT)\devicecode\Targets\Native\BF537\BF537.settings</ProjectPath>
+    <PLATFORM_FAMILY>BLACKFIN</PLATFORM_FAMILY>
+    <CustomFilter>Blackfin;BF537</CustomFilter>
+    <INSTRUCTION_SET Condition="'$(INSTRUCTION_SET)'==''">BLACKFIN</INSTRUCTION_SET>
+    <TARGETPROCESSOR>BF537</TARGETPROCESSOR>
+    <TARGETCODEBASE>BF537</TARGETCODEBASE>
+    <TARGETCODEBASETYPE>Native</TARGETCODEBASETYPE>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(COMPILER_TOOL)'=='BLACKFIN'">
+    <DEVICE_TYPE Condition="'$(DEVICE_TYPE)' == ''">ADSP-BF537</DEVICE_TYPE>
+    <BUILD_TOOL_GUID>{058A156D-9F2E-4E91-9E85-75494A054C11}</BUILD_TOOL_GUID>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="devicecode\Targets\Native\BF537" />
+  </ItemGroup>
+</Project>

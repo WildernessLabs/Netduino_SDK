@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ScatterFile>
+  <If Name="COMPILER_TOOL_VERSION" Value="ADS1.2">
+  </If>
+  <If Name="COMPILER_TOOL_VERSION" In="RVDS3.0 RVDS3.1 RVDS4.0 RVDS4.1">
+  </If>
+  <If Name="COMPILER_TOOL_VERSION" In="MDK3.1 MDK3.80a MDK4.12">
+  </If>
+</ScatterFile>
+

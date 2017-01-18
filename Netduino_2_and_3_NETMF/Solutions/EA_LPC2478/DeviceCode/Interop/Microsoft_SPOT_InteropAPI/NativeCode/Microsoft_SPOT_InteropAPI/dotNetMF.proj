@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Directory>Solutions\EA_LPC2478\DeviceCode\Interop\Microsoft_SPOT_InteropAPI\NativeCode\Microsoft_SPOT_InteropAPI</Directory>
+    <AssemblyName>Microsoft_SPOT_InteropAPI</AssemblyName>
+    <ProjectGuid>{12A275BE-6279-4B87-8233-606DAE8F7D4D}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <HFile Include="InteropAPI.h" />
+    <Compile Include="InteropAPI.cpp" />
+    <Compile Include="InteropAPI_Microsoft_SPOT_InteropAPI_API_mshl.cpp" />
+    <HFile Include="InteropAPI_Microsoft_SPOT_InteropAPI_API.h" />
+    <Compile Include="InteropAPI_Microsoft_SPOT_InteropAPI_API.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <HFiles Include="$(PLATFORM_INDEPENDENT_LIB_DIR)\CLR_defines.h" />
+    <HFiles Include="$(SPOCLIENT)\clr\include\tinyclr_errorcodes.h" />
+    <HFiles Include="$(SPOCLIENT)\clr\include\tinyclr_interop.h" />
+    <HFiles Include="$(SPOCLIENT)\clr\include\tinyclr_platformdef.h" />
+    <HFiles Include="interopapi.h" />
+    <HFiles Include="interopapi_microsoft_spot_interopapi_api.h" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

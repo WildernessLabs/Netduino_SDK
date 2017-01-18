@@ -1,0 +1,23 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Name>SH7216</Name>
+    <CpuName>
+    </CpuName>
+    <DefaultISA>SHC</DefaultISA>
+    <Guid>{209DACBB-1355-434A-B66A-95F5C54BB634}</Guid>
+    <Description>SHC SH7216 </Description>
+    <Documentation>
+    </Documentation>
+    <ProjectPath>$(SPOCLIENT)\devicecode\Targets\Native\SH7216\SH7216.settings</ProjectPath>
+    <PLATFORM_FAMILY>SHC</PLATFORM_FAMILY>
+    <CustomFilter>
+    </CustomFilter>
+    <INSTRUCTION_SET Condition="'$(INSTRUCTION_SET)'==''">SH2A</INSTRUCTION_SET>
+    <TARGETPROCESSOR>SH7216</TARGETPROCESSOR>
+    <TARGETCODEBASE>SH7216</TARGETCODEBASE>
+    <TARGETCODEBASETYPE>Native</TARGETCODEBASETYPE>    
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="devicecode\Targets\Native\SH7216" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,11 @@
+<Project DefaultTargets="BuildSupport" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.Targets" />
+
+  <ItemGroup>
+    <Project Include="Targets\v3.0\build.dirproj" />
+    <Project Include="Targets\v4.0\build.dirproj" />
+    <Project Include="Targets\v4.1\build.dirproj" />
+    <Project Include="Targets\v4.2\build.dirproj" />
+    <Project Include="Targets\v4.3\build.dirproj" />
+  </ItemGroup>
+</Project>

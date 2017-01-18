@@ -1,0 +1,22 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>Jennifer Cheng</Author>
+    <Description>SH7216_RSK  solution</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{26D9E7BA-6E3D-47d1-BA8D-9C36B1EE654A}</PlatformGuid>
+    <TARGETPLATFORM>SH7216_RSK</TARGETPLATFORM>
+    <PLATFORM>SH7216_RSK</PLATFORM>
+    <DEVICE_TYPE Condition=" '$(DEVICE_TYPE)' == ''">sh2a</DEVICE_TYPE>    
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>Be</ENDIANNESS>
+  </PropertyGroup>
+  <ItemGroup>
+    <TinyCLR_Defines Include="PLATFORM_EMULATED_FLOATINGPOINT=1" />
+    <TinyCLR_Defines Include="TINYCLR_EMULATED_FLOATINGPOINT=1" />
+  </ItemGroup>   
+  <ItemGroup>
+    <IncludePaths Include="Solutions\SH7216_RSK" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\SH7216\SH7216.settings" />
+</Project>

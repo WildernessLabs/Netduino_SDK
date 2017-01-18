@@ -1,0 +1,91 @@
+﻿<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C14669A2-2909-42E1-883D-102DF4BCBDAB}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Microsoft.SPOT.Emulator.Temperature</RootNamespace>
+    <AssemblyName>TemperatureEmulator</AssemblyName>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <PlatformTarget>x86</PlatformTarget>
+    <EmulatorId>{50d4577a-5c0d-4884-bf28-9508d5dbd8b7}</EmulatorId>
+    <TemplateID>Microsoft.CSharp.MicroFramework.Sample.Temperature.Emulator</TemplateID>
+    <TemplateProjectType>CSharp</TemplateProjectType>
+    <TemplateNameString>TemperatureEmulator</TemplateNameString>
+    <TemplateDescriptionString>Emulator for Temperature Sample</TemplateDescriptionString>
+    <TemplateSortOrder>1000</TemplateSortOrder>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.CSharp.Host.Targets" />
+  <ItemGroup>
+    <Reference Include="Microsoft.SPOT.Emulator">
+      <HintPath>$(BUILD_TREE_SERVER)\dll\Microsoft.SPOT.Emulator.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SPOT.CLR">
+      <HintPath>$(BUILD_TREE_SERVER)\dll\Microsoft.SPOT.CLR.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Button.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="ButtonCollection.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Lcd.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="SpiTemperatureComponent.cs" />
+    <Compile Include="TemperatureEmulatorForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TemperatureEmulatorForm.Designer.cs">
+      <DependentUpon>TemperatureEmulatorForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TemperatureEmulator.cs" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TemperatureEmulatorForm.resx">
+      <DependentUpon>TemperatureEmulatorForm.cs</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="Emulator.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefaultButtonDown.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DefaultButtonUp.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\EmulatorSkin.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="ReadMe.txt" />
+  </ItemGroup>
+</Project>

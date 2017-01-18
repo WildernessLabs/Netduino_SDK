@@ -1,0 +1,18 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>
+    </Author>
+    <Description>PCM023 solution</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{5e88637d-6f89-448f-8b39-e96c143e9b3a}</PlatformGuid>
+    <TARGETPLATFORM>PCM023</TARGETPLATFORM>
+    <PLATFORM>PCM023</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\PCM023" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\LPC22XX\LPC22XX.settings" />
+</Project>

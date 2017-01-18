@@ -1,0 +1,18 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>
+    </Author>
+    <Description>Freescale iMXS networking device with network debugging</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{0a333301-7e6c-4e82-a372-14da107d4b89}</PlatformGuid>
+    <TARGETPLATFORM>iMXS_net_dbg</TARGETPLATFORM>
+    <PLATFORM>iMXS_net_dbg</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\iMXS_net_dbg" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\MC9328\MC9328.settings" />
+</Project>

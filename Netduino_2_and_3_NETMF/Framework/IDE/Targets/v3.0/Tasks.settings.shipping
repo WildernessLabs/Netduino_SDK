@@ -1,0 +1,18 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+
+    <PropertyGroup>
+        <CurBuildNumber>$(Registry:HKEY_LOCAL_MACHINE\Software\Microsoft\.NETMicroFramework\v3.0@BuildNumber)</CurBuildNumber>
+        <CurRevNumber>$(Registry:HKEY_LOCAL_MACHINE\Software\Microsoft\.NETMicroFramework\v3.0@RevisionNumber)</CurRevNumber>
+
+        <TasksAssembly>$(Registry:HKEY_LOCAL_MACHINE\Software\Microsoft\.NETMicroFramework\v3.0@InstallRoot)\Tools\Microsoft.SPOT.Tasks.dll</TasksAssembly>
+    </PropertyGroup>
+
+    <!-- Msbuild loads tasks by full AssemblyName, but we have to provide the whole thing, including entire version tetrad. Yay Msbuild! -->
+    <UsingTask TaskName="Microsoft.SPOT.Tasks.GetDeviceFrameworkPaths"    AssemblyFile="$(TasksAssembly)"/>
+    <UsingTask TaskName="Microsoft.SPOT.Tasks.ResolveRuntimeDependencies" AssemblyFile="$(TasksAssembly)"/>
+    <UsingTask TaskName="Microsoft.SPOT.Tasks.GenerateTinyResource"       AssemblyFile="$(TasksAssembly)"/>
+    <UsingTask TaskName="Microsoft.SPOT.Tasks.MetaDataProcessor"          AssemblyFile="$(TasksAssembly)"/>
+    <UsingTask TaskName="Microsoft.SPOT.Tasks.RegisterEmulator"           AssemblyFile="$(TasksAssembly)"/>
+    <UsingTask TaskName="Microsoft.SPOT.Tasks.CreateInteropFeatureProj"   AssemblyFile="$(TasksAssembly)"/>
+
+</Project>

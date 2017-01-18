@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FeatureName>Netduino.IP.LinkLayers.AX88796C</FeatureName>
+    <Guid>{AEDE1909-BEEF-4A0B-8AFB-E697B845E95D}</Guid>
+    <Description />
+    <Groups />
+  </PropertyGroup>
+  <ItemGroup>
+    <MMP_DAT_CreateDatabase Include="$(SPOCLIENT)\Solutions\Netduino3Ethernet\ManagedCode\Netduino_IP_LinkLayers_AX88796C\bin\Release\le\Netduino.IP.LinkLayers.AX88796C.pe" />
+  </ItemGroup>
+</Project>

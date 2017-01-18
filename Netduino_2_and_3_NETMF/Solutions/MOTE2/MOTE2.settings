@@ -1,0 +1,19 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>
+    </Author>
+    <Description>Crossbow iMote2 solution</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{5a852e69-422c-49c1-bea6-c27ee3cc97fb}</PlatformGuid>
+    <TARGETPLATFORM>MOTE2</TARGETPLATFORM>
+    <PLATFORM>MOTE2</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+    <DEVICE_TYPE>xscale</DEVICE_TYPE>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\MOTE2" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\PXA271\PXA271.settings" />
+</Project>

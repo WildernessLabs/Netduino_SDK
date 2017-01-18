@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>BlackfinHal_native</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{96f016aa-a20e-4768-abbb-a1ff50bda3a9}</ProjectGuid>
+    <Description>Blackfin BF537 HAL code</Description>
+    <Level>HAL</Level>
+    <LibraryFile>BlackfinHal_native.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\Targets\Native\BF537\DeviceCode\dotNetMF.proj</ProjectPath>
+    <ManifestFile>BlackfinHal_native.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Processor\BF537</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <ProcessorSpecific>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="BF537" Guid="{0b932d56-4d60-4f9e-97c3-0368a85d5843}" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">Processor</ComponentType>
+      </MFComponent>
+    </ProcessorSpecific>
+    <CustomFilter>
+    </CustomFilter>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\Targets\Native\BF537\DeviceCode</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <FastCompileCPPFile Include="blackfinhal_native_fastcompile.cpp" />
+    <Compile Include="configuration.cpp" />
+    <Compile Include="cpu.cpp" />
+    <Compile Include="crypto.cpp" />
+    <Compile Include="GlobalLock.cpp" />
+    <Compile Include="various.cpp" />
+    <CFiles Include="Application_heaptab.c" />
+    <AssemblyFiles Include="AssemblyCode\Application_basiccrt.s" />
+  </ItemGroup>
+  <ItemGroup>
+    <HFiles Include="$(SPOCLIENT)\crypto\inc\crypto.h" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

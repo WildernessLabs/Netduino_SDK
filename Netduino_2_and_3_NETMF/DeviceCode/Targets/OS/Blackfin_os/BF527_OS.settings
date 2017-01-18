@@ -1,0 +1,23 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Name>BF527_OS</Name>
+    <CpuName>
+    </CpuName>
+    <DefaultISA>BLACKFIN</DefaultISA>
+    <Guid>{e804cbb3-f3a0-468e-ac9f-5ac32de2a7f9}</Guid>
+    <Description>Blackfin OS (for BF527)</Description>
+    <Documentation>
+    </Documentation>
+    <ProjectPath>$(SPOCLIENT)\devicecode\Targets\OS\Blackfin_os\BF527_OS.settings</ProjectPath>
+    <PLATFORM_FAMILY>BLACKFIN</PLATFORM_FAMILY>
+    <CustomFilter>
+    </CustomFilter>
+    <INSTRUCTION_SET Condition="'$(INSTRUCTION_SET)'==''">BLACKFIN</INSTRUCTION_SET>
+    <TARGETPROCESSOR>BF527</TARGETPROCESSOR>
+    <TARGETCODEBASE>Blackfin_os</TARGETCODEBASE>
+    <TARGETCODEBASETYPE>OS</TARGETCODEBASETYPE>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="devicecode\Targets\OS\Blackfin_os" />
+  </ItemGroup>
+</Project>

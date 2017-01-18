@@ -1,0 +1,382 @@
+The .Net Micro Framework Solution Wizard will create the 'SAM9RL64_EK' solution in the directory:
+
+	C:\dotMF_nov\Solutions\SAM9RL64_EK
+
+The following is a description of the components of this solution.  Each solution consists of a set of projects which in turn have a set of features and libraries.
+
+    Solution:                          	 SAM9RL64_EK
+    Author:                            	 
+    Description:                       	 
+    Processor:                         	 AT91SAM9RL64
+    Debugger Port:                     	 COM1
+
+
+Project NativeSample
+    Description:                       	 
+    Path:                              	 Solutions\SAM9RL64_EK\NativeSample
+
+Libraries:
+    CLRStartup:                        	 Common CLR initialization library
+    Core:                              	 CLR core library
+    CorLib:                            	 Subset of mscorlib
+    Hardware:                          	 Core hardware functionality
+    SPOT:                              	 Common inter-op library
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    BlockStorageDriver_stubs:          	 Stub block storage driver
+    blockstorage_pal:                  	 Block storage library
+    BlockStorageAddDevices_HAL_SAM9RL64_EK:	 
+    AT91_Bootstrap:                    	 Atmel AT91 bootstrap driver
+    ARM9_bootstrap:                    	 ARM9 Core bootstrap
+    ARM9_mmu:                          	 ARM9 MMU core driver
+    Buttons_pal:                       	 Buttons library
+    AT91_Cache:                        	 Atmel SAM9261 cache driver
+    cpu_cmu_stubs:                     	 CMU stub library
+    COM_pal:                           	 Communication port director
+    config_pal:                        	 System Configuration
+    CRC:                               	 CRC library
+    Crypto:                            	 Cryptography library
+    Debugger:                          	 Visual Studio Debugging support
+    Debugger_full:                     	 Full Visual Studio Debugging support
+    Diagnostics:                       	 Diagnostic functionality
+    cpu_dma_stubs:                     	 DMA stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    events_pal:                        	 System event library
+    FileSystem_Config_PAL_SAM9RL64_EK: 	 
+    fs_pal:                            	 File System PAL Driver
+    GlobalLock_hal:                    	 Global lock (native threading control)
+    AT91_GPIO:                         	 Atmel AT91 General Purpose Input Output (GPIO) driver
+    Graphics_Bmp:                      	 Bitmap support for graphics subsystem
+    Graphics:                          	 Graphics subsystem library
+    Graphics_Gif:                      	 GIF library for graphics subsystem
+    Graphics_Jpeg:                     	 JPEG library for graphics subsystem
+    graphics_pal:                      	 Graphics library
+    heap_pal:                          	 Simple Heap 
+    HeapPersistence:                   	 Extended Weak References Data Storage 
+    I2C_stub:                          	 I2C stub library
+    cpu_i2c_stubs:                     	 I2C stub library
+    i2c_pal_stubs:                     	 I2C stub library
+    system_initialization_hal:         	 System initialization library
+    AT91_AIC:                          	 Atmel AT91 interrupt controller driver
+    InterruptHandler:                  	 Interrupt Handler library
+    AT91_LCD:                          	 Atmel SAM9261 Display driver
+    TX09D71VM1CCA:                     	 TX09D71VM1CCA Display driver
+    Messaging:                         	 Core communication component
+    IOPort:                            	 Native Event Dispatcher (formerly IOPort)
+    piezo_pal_stubs:                   	 Piezo stub driver
+    AT91_SAM:                          	 Atmel processor power driver
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    RPC:                               	 Remote Procedure Call support
+    cpu_security_stubs:                	 Security stub library
+    Serialization:                     	 Binary Serialization (proprietary format)
+    sockets_pal_stubs:                 	 Network socket stub driver
+    cpu_spi_stubs:                     	 SPI stub library
+    SPOT_Crypto:                       	 Crypto inter-op library
+    SPOT_Graphics:                     	 Graphics inter-op library
+    SPOT_Hardware:                     	 Hardware inter-op library
+    SPOT_IO_stub:                      	 Stream inter-op stub library
+    SPOT_Messaging:                    	 Messaging inter-op library
+    SPOT_Serialization:                	 Serialization inter-op library
+    SPOT_Touch:                        	 Touch panel inter-op library
+    Stream:                            	 Generic Stream functionality
+    AT91_TIME:                         	 Atmel AT91 time driver
+    AT91_TIMER:                        	 Atmel AT91 timer driver
+    tinycrt_pal:                       	 CRT functionality
+    TinyHal:                           	 Core HAL library
+    TouchPanel_pal:                    	 Touch panel driver
+    TouchScreen_Config_HAL_SAM9RL64_EK:	 
+    TouchScreen_HAL_SAM9RL64_EK:       	 
+    AT91_USART:                        	 Atmel AT91 USART driver
+    usart_pal:                         	 USART driver
+    usb_pal:                           	 USB driver
+    USB_Config_PAL_SAM9RL64_EK:        	 
+    AT91_USB:                          	 Atmel AT91 USB driver
+    virtualkey_hal_stubs:              	 Virtual Key stub library
+    cpu_watchdog_stubs:                	 Watchdog driver
+    WireProtocol:                      	 Device communication protocol
+
+
+Project Tinybooter
+    Description:                       	 
+    Path:                              	 Solutions\SAM9RL64_EK\TinyBooter
+
+Libraries:
+    CLRStartup:                        	 Common CLR initialization library
+    Core:                              	 CLR core library
+    CorLib:                            	 Subset of mscorlib
+    Hardware:                          	 Core hardware functionality
+    SPOT:                              	 Common inter-op library
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    BlockStorageDriver_stubs:          	 Stub block storage driver
+    blockstorage_pal:                  	 Block storage library
+    BlockStorageAddDevices_HAL_SAM9RL64_EK:	 
+    AT91_Bootstrap:                    	 Atmel AT91 bootstrap driver
+    ARM9_bootstrap:                    	 ARM9 Core bootstrap
+    ARM9_mmu:                          	 ARM9 MMU core driver
+    Buttons_pal:                       	 Buttons library
+    AT91_Cache:                        	 Atmel SAM9261 cache driver
+    cpu_cmu_stubs:                     	 CMU stub library
+    COM_pal:                           	 Communication port director
+    config_pal:                        	 System Configuration
+    CRC:                               	 CRC library
+    Crypto:                            	 Cryptography library
+    Debugger:                          	 Visual Studio Debugging support
+    Debugger_full:                     	 Full Visual Studio Debugging support
+    Diagnostics:                       	 Diagnostic functionality
+    cpu_dma_stubs:                     	 DMA stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    events_pal:                        	 System event library
+    FileSystem_Config_PAL_SAM9RL64_EK: 	 
+    fs_pal:                            	 File System PAL Driver
+    GlobalLock_hal:                    	 Global lock (native threading control)
+    AT91_GPIO:                         	 Atmel AT91 General Purpose Input Output (GPIO) driver
+    Graphics_Bmp:                      	 Bitmap support for graphics subsystem
+    Graphics:                          	 Graphics subsystem library
+    Graphics_Gif:                      	 GIF library for graphics subsystem
+    Graphics_Jpeg:                     	 JPEG library for graphics subsystem
+    graphics_pal:                      	 Graphics library
+    heap_pal:                          	 Simple Heap 
+    HeapPersistence:                   	 Extended Weak References Data Storage 
+    I2C_stub:                          	 I2C stub library
+    cpu_i2c_stubs:                     	 I2C stub library
+    i2c_pal_stubs:                     	 I2C stub library
+    system_initialization_hal:         	 System initialization library
+    AT91_AIC:                          	 Atmel AT91 interrupt controller driver
+    InterruptHandler:                  	 Interrupt Handler library
+    AT91_LCD:                          	 Atmel SAM9261 Display driver
+    TX09D71VM1CCA:                     	 TX09D71VM1CCA Display driver
+    Messaging:                         	 Core communication component
+    IOPort:                            	 Native Event Dispatcher (formerly IOPort)
+    piezo_pal_stubs:                   	 Piezo stub driver
+    AT91_SAM:                          	 Atmel processor power driver
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    RPC:                               	 Remote Procedure Call support
+    cpu_security_stubs:                	 Security stub library
+    Serialization:                     	 Binary Serialization (proprietary format)
+    sockets_pal_stubs:                 	 Network socket stub driver
+    cpu_spi_stubs:                     	 SPI stub library
+    SPOT_Crypto:                       	 Crypto inter-op library
+    SPOT_Graphics:                     	 Graphics inter-op library
+    SPOT_Hardware:                     	 Hardware inter-op library
+    SPOT_IO_stub:                      	 Stream inter-op stub library
+    SPOT_Messaging:                    	 Messaging inter-op library
+    SPOT_Serialization:                	 Serialization inter-op library
+    SPOT_Touch:                        	 Touch panel inter-op library
+    Stream:                            	 Generic Stream functionality
+    AT91_TIME:                         	 Atmel AT91 time driver
+    AT91_TIMER:                        	 Atmel AT91 timer driver
+    tinycrt_pal:                       	 CRT functionality
+    TinyHal:                           	 Core HAL library
+    TouchPanel_pal:                    	 Touch panel driver
+    TouchScreen_Config_HAL_SAM9RL64_EK:	 
+    TouchScreen_HAL_SAM9RL64_EK:       	 
+    AT91_USART:                        	 Atmel AT91 USART driver
+    usart_pal:                         	 USART driver
+    usb_pal:                           	 USB driver
+    USB_Config_PAL_SAM9RL64_EK:        	 
+    AT91_USB:                          	 Atmel AT91 USB driver
+    virtualkey_hal_stubs:              	 Virtual Key stub library
+    cpu_watchdog_stubs:                	 Watchdog driver
+    WireProtocol:                      	 Device communication protocol
+
+
+Project TinyBooterDecompressor
+    Description:                       	 
+    Path:                              	 Solutions\SAM9RL64_EK\TinyBooter
+
+Libraries:
+    CLRStartup:                        	 Common CLR initialization library
+    Core:                              	 CLR core library
+    CorLib:                            	 Subset of mscorlib
+    Hardware:                          	 Core hardware functionality
+    SPOT:                              	 Common inter-op library
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    BlockStorageDriver_stubs:          	 Stub block storage driver
+    blockstorage_pal:                  	 Block storage library
+    BlockStorageAddDevices_HAL_SAM9RL64_EK:	 
+    AT91_Bootstrap:                    	 Atmel AT91 bootstrap driver
+    ARM9_bootstrap:                    	 ARM9 Core bootstrap
+    ARM9_mmu:                          	 ARM9 MMU core driver
+    Buttons_pal:                       	 Buttons library
+    AT91_Cache:                        	 Atmel SAM9261 cache driver
+    cpu_cmu_stubs:                     	 CMU stub library
+    COM_pal:                           	 Communication port director
+    config_pal:                        	 System Configuration
+    CRC:                               	 CRC library
+    Crypto:                            	 Cryptography library
+    Debugger:                          	 Visual Studio Debugging support
+    Debugger_full:                     	 Full Visual Studio Debugging support
+    Diagnostics:                       	 Diagnostic functionality
+    cpu_dma_stubs:                     	 DMA stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    events_pal:                        	 System event library
+    FileSystem_Config_PAL_SAM9RL64_EK: 	 
+    fs_pal:                            	 File System PAL Driver
+    GlobalLock_hal:                    	 Global lock (native threading control)
+    AT91_GPIO:                         	 Atmel AT91 General Purpose Input Output (GPIO) driver
+    Graphics_Bmp:                      	 Bitmap support for graphics subsystem
+    Graphics:                          	 Graphics subsystem library
+    Graphics_Gif:                      	 GIF library for graphics subsystem
+    Graphics_Jpeg:                     	 JPEG library for graphics subsystem
+    graphics_pal:                      	 Graphics library
+    heap_pal:                          	 Simple Heap 
+    HeapPersistence:                   	 Extended Weak References Data Storage 
+    I2C_stub:                          	 I2C stub library
+    cpu_i2c_stubs:                     	 I2C stub library
+    i2c_pal_stubs:                     	 I2C stub library
+    system_initialization_hal:         	 System initialization library
+    AT91_AIC:                          	 Atmel AT91 interrupt controller driver
+    InterruptHandler:                  	 Interrupt Handler library
+    AT91_LCD:                          	 Atmel SAM9261 Display driver
+    TX09D71VM1CCA:                     	 TX09D71VM1CCA Display driver
+    Messaging:                         	 Core communication component
+    IOPort:                            	 Native Event Dispatcher (formerly IOPort)
+    piezo_pal_stubs:                   	 Piezo stub driver
+    AT91_SAM:                          	 Atmel processor power driver
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    RPC:                               	 Remote Procedure Call support
+    cpu_security_stubs:                	 Security stub library
+    Serialization:                     	 Binary Serialization (proprietary format)
+    sockets_pal_stubs:                 	 Network socket stub driver
+    cpu_spi_stubs:                     	 SPI stub library
+    SPOT_Crypto:                       	 Crypto inter-op library
+    SPOT_Graphics:                     	 Graphics inter-op library
+    SPOT_Hardware:                     	 Hardware inter-op library
+    SPOT_IO_stub:                      	 Stream inter-op stub library
+    SPOT_Messaging:                    	 Messaging inter-op library
+    SPOT_Serialization:                	 Serialization inter-op library
+    SPOT_Touch:                        	 Touch panel inter-op library
+    Stream:                            	 Generic Stream functionality
+    AT91_TIME:                         	 Atmel AT91 time driver
+    AT91_TIMER:                        	 Atmel AT91 timer driver
+    tinycrt_pal:                       	 CRT functionality
+    TinyHal:                           	 Core HAL library
+    TouchPanel_pal:                    	 Touch panel driver
+    TouchScreen_Config_HAL_SAM9RL64_EK:	 
+    TouchScreen_HAL_SAM9RL64_EK:       	 
+    AT91_USART:                        	 Atmel AT91 USART driver
+    usart_pal:                         	 USART driver
+    usb_pal:                           	 USB driver
+    USB_Config_PAL_SAM9RL64_EK:        	 
+    AT91_USB:                          	 Atmel AT91 USB driver
+    virtualkey_hal_stubs:              	 Virtual Key stub library
+    cpu_watchdog_stubs:                	 Watchdog driver
+    WireProtocol:                      	 Device communication protocol
+
+
+Project tinyclr
+    Description:                       	 
+    Path:                              	 Solutions\SAM9RL64_EK\TinyCLR
+
+Features:
+    Backlight:                         	 Touch screen support
+    BlockStorage:                      	 BlockStorage support
+    Battery:                           	 Battery feature
+    Crypto:                            	 Cryptographic functionality
+    DataStorage:                       	 Data Storage (extended weak reference storage)
+    Debugger:                          	 Visual Studio debugger support
+    Diagnostics:                       	 Dignostic utilities
+    FileSystem:                        	 FileSystem
+    Stream:                            	 Stream component
+    Graphics:                          	 Core graphics functionality
+    I2C:                               	 I2C Support
+    InterruptHandler:                  	 Support for interrupt handling
+    NativeEventDispatcher:             	 Native event dispatching for inter-op
+    RPC:                               	 Remote procedure call support
+    Serialization:                     	 Data serialization support
+    SerialPort:                        	 Serial Port component
+    SPI:                               	 SPI support
+    Hardware:                          	 Core hardware component
+    TinyCore:                          	 TinyCore graphics subsystem
+    TouchScreen:                       	 Touch screen support
+    Usb:                               	 Usb client component
+
+Libraries:
+    CLRStartup:                        	 Common CLR initialization library
+    Core:                              	 CLR core library
+    CorLib:                            	 Subset of mscorlib
+    Hardware:                          	 Core hardware functionality
+    SPOT:                              	 Common inter-op library
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    BlockStorageDriver_stubs:          	 Stub block storage driver
+    blockstorage_pal:                  	 Block storage library
+    BlockStorageAddDevices_HAL_SAM9RL64_EK:	 
+    AT91_Bootstrap:                    	 Atmel AT91 bootstrap driver
+    ARM9_bootstrap:                    	 ARM9 Core bootstrap
+    ARM9_mmu:                          	 ARM9 MMU core driver
+    Buttons_pal:                       	 Buttons library
+    AT91_Cache:                        	 Atmel SAM9261 cache driver
+    cpu_cmu_stubs:                     	 CMU stub library
+    COM_pal:                           	 Communication port director
+    config_pal:                        	 System Configuration
+    CRC:                               	 CRC library
+    Crypto:                            	 Cryptography library
+    Debugger:                          	 Visual Studio Debugging support
+    Debugger_full:                     	 Full Visual Studio Debugging support
+    Diagnostics:                       	 Diagnostic functionality
+    cpu_dma_stubs:                     	 DMA stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    events_pal:                        	 System event library
+    FileSystem_Config_PAL_SAM9RL64_EK: 	 
+    fs_pal:                            	 File System PAL Driver
+    GlobalLock_hal:                    	 Global lock (native threading control)
+    AT91_GPIO:                         	 Atmel AT91 General Purpose Input Output (GPIO) driver
+    Graphics_Bmp:                      	 Bitmap support for graphics subsystem
+    Graphics:                          	 Graphics subsystem library
+    Graphics_Gif:                      	 GIF library for graphics subsystem
+    Graphics_Jpeg:                     	 JPEG library for graphics subsystem
+    graphics_pal:                      	 Graphics library
+    heap_pal:                          	 Simple Heap 
+    HeapPersistence:                   	 Extended Weak References Data Storage 
+    I2C_stub:                          	 I2C stub library
+    cpu_i2c_stubs:                     	 I2C stub library
+    i2c_pal_stubs:                     	 I2C stub library
+    system_initialization_hal:         	 System initialization library
+    AT91_AIC:                          	 Atmel AT91 interrupt controller driver
+    InterruptHandler:                  	 Interrupt Handler library
+    AT91_LCD:                          	 Atmel SAM9261 Display driver
+    TX09D71VM1CCA:                     	 TX09D71VM1CCA Display driver
+    Messaging:                         	 Core communication component
+    IOPort:                            	 Native Event Dispatcher (formerly IOPort)
+    piezo_pal_stubs:                   	 Piezo stub driver
+    AT91_SAM:                          	 Atmel processor power driver
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    RPC:                               	 Remote Procedure Call support
+    cpu_security_stubs:                	 Security stub library
+    Serialization:                     	 Binary Serialization (proprietary format)
+    sockets_pal_stubs:                 	 Network socket stub driver
+    cpu_spi_stubs:                     	 SPI stub library
+    SPOT_Crypto:                       	 Crypto inter-op library
+    SPOT_Graphics:                     	 Graphics inter-op library
+    SPOT_Hardware:                     	 Hardware inter-op library
+    SPOT_IO_stub:                      	 Stream inter-op stub library
+    SPOT_Messaging:                    	 Messaging inter-op library
+    SPOT_Serialization:                	 Serialization inter-op library
+    SPOT_Touch:                        	 Touch panel inter-op library
+    Stream:                            	 Generic Stream functionality
+    AT91_TIME:                         	 Atmel AT91 time driver
+    AT91_TIMER:                        	 Atmel AT91 timer driver
+    tinycrt_pal:                       	 CRT functionality
+    TinyHal:                           	 Core HAL library
+    TouchPanel_pal:                    	 Touch panel driver
+    TouchScreen_Config_HAL_SAM9RL64_EK:	 
+    TouchScreen_HAL_SAM9RL64_EK:       	 
+    AT91_USART:                        	 Atmel AT91 USART driver
+    usart_pal:                         	 USART driver
+    usb_pal:                           	 USB driver
+    USB_Config_PAL_SAM9RL64_EK:        	 
+    AT91_USB:                          	 Atmel AT91 USB driver
+    virtualkey_hal_stubs:              	 Virtual Key stub library
+    cpu_watchdog_stubs:                	 Watchdog driver
+    WireProtocol:                      	 Device communication protocol

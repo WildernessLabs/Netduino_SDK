@@ -1,0 +1,77 @@
+<!-- A simple scatterfile for SH -->
+<Project  xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+
+<PropertyGroup Condition="'$(TARGETLOCATION)'=='FLASH' and '$(EnableTCPIP)' !='true'">
+
+    <ER_CONFIG_ADDR>00000B40</ER_CONFIG_ADDR> 
+
+<!-- ER_PROG_ADDR= ER_CONFIG_ADDR + 0x90c -->
+    <ER_PROG_ADDR>01450</ER_PROG_ADDR>
+
+    <ER_INIT_LOAD>0008c900</ER_INIT_LOAD>
+
+    <ER_DATA_ADDR>00095000</ER_DATA_ADDR>
+  
+    <ER_INIT_EXEC>FFF80000</ER_INIT_EXEC>
+
+    <ER_RW_ADDR>fff80b40</ER_RW_ADDR>
+
+    <FRAM_ADDR>FFF88400</FRAM_ADDR>
+
+    <ER_VTR_ADDR>00</ER_VTR_ADDR>
+
+    <ER_PReset_ADDR>0800</ER_PReset_ADDR>
+
+    <HEAP_ADDR>FFF88B00</HEAP_ADDR> 
+
+    <HEAP_END>FFF98B00</HEAP_END> 
+
+    <STACK_ADDR>FFF9FC00</STACK_ADDR>
+
+    <PROG_RAM_ADDR></PROG_RAM_ADDR>
+
+    <PROG_RAM_END></PROG_RAM_END>
+
+    <ENTRY_ADDR></ENTRY_ADDR>
+
+</PropertyGroup>
+
+
+<PropertyGroup Condition="'$(TARGETLOCATION)'=='RAM'">
+
+    <ER_CONFIG_ADDR>00000B40</ER_CONFIG_ADDR> 
+
+<!-- ER_PROG_ADDR= ER_CONFIG_ADDR + 0x90c -->
+    <ER_PROG_ADDR>01450</ER_PROG_ADDR>
+
+    <ER_INIT_LOAD>00064400</ER_INIT_LOAD>
+
+    <ER_DATA_ADDR>00095000</ER_DATA_ADDR>
+  
+    <ER_INIT_EXEC>FFF80000</ER_INIT_EXEC>
+
+    <ER_RW_ADDR>fff81000</ER_RW_ADDR>
+
+    <ER_VTR_ADDR>00</ER_VTR_ADDR>
+
+    <ER_PReset_ADDR>0800</ER_PReset_ADDR>
+
+    <STACK_ADDR>FFF9FC00</STACK_ADDR>
+
+    <HEAP_ADDR>0C000000</HEAP_ADDR>
+
+    <HEAP_END>0C3fffff</HEAP_END>
+
+    <FRAM_ADDR>FFF90000</FRAM_ADDR>
+
+    <PROG_RAM_ADDR></PROG_RAM_ADDR>
+
+    <PROG_RAM_END></PROG_RAM_END>
+
+    <ENTRY_ADDR></ENTRY_ADDR>
+
+
+</PropertyGroup>
+
+
+</Project>

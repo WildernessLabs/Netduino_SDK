@@ -1,0 +1,22 @@
+#if 0
+Copyright (c) 1999-2000 Microsoft Corporation
+#endif
+
+#include <windows.h>
+
+#include <ntverp.h>
+
+#undef  VER_COMPANYNAME_STR
+#define VER_COMPANYNAME_STR         "Microsoft Corporation"
+#undef  VER_PRODUCTNAME_STR
+#define VER_PRODUCTNAME_STR         "Smart Personal Objects USB Host dual interface Driver"
+
+#define VER_FILETYPE                VFT_DRV
+#define VER_FILESUBTYPE             VFT2_DRV_SYSTEM
+#define VER_FILEDESCRIPTION_STR     "Smart Personal Objects USB Host dual interface Driver"
+#define VER_INTERNALNAME_STR        "MFUSB_DualInterface_PortingKitSample.sys"
+#define VER_ORIGINALFILENAME_STR    "MFUSB_DualInterface_PortingKitSample.sys"
+
+#define L_NEUTRAL
+
+#include "common.ver"

@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <AssemblyName>SD_BL_Config_iMXS</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{ADB0632A-A2A6-44c2-8A8E-7780BE53A2AC}</ProjectGuid>
+    <Description>
+    </Description>
+    <Description>SD flash block storage configuration for iMXS</Description>
+    <Level>HAL</Level>
+    <LibraryFile>SD_BL_Config_imxs.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\Solutions\iMXS\DeviceCode\Blockstorage\SD\dotnetmf.proj</ProjectPath>
+    <Groups>Solutions\iMXS</Groups>
+    <ManifestFile>SD_BL_Config_iMXS.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>
+    </Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomSpecific>
+    </CustomSpecific>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>Solutions\iMXS\DeviceCode\Blockstorage\SD</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <ItemGroup>
+    <IncludePaths Include="DeviceCode\Drivers\BlockStorage\SD" />
+    <Compile Include="SD_BL_Config_iMXS.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <HFiles Include="$(SPOCLIENT)\devicecode\drivers\blockstorage\sd\sd_bl.h" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

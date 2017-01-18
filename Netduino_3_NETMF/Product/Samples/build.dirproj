@@ -1,0 +1,23 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <Import Project="$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.Targets" />
+
+  <ItemGroup>
+    <Project Include="DPWS\build.dirproj" />
+    <Project Include="ExtendedWeakReferences\build.dirproj" />
+    <Project Include="FileSystem\build.dirproj" />
+    <Project Include="HttpClient\build.dirproj" /> 
+    <Project Include="HttpServer\build.dirproj" /> 
+    <Project Include="FtpServer\build.dirproj" /> 
+    <Project Include="SimpleWPFApplication\build.dirproj" /> 
+    <Project Include="SocketClient\build.dirproj" />
+    <Project Include="SocketServer\build.dirproj" />
+    <Project Include="TemperatureSample\build.dirproj" />
+    <Project Include="Threading\build.dirproj" />
+    <Project Include="Time\build.dirproj" />
+    <Project Include="TouchPanel\build.dirproj" />    
+    <Project Include="USBDevice\build.dirproj" />
+    <Project Include="WPFEmulator\build.dirproj" />
+    <Project Include="WeakDelegates\build.dirproj" />
+    <Project Include="Wireless\802_15_4\build.dirproj" />
+  </ItemGroup>
+</Project>

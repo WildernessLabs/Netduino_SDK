@@ -1,0 +1,32 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Directory>DeviceCode\Targets\Native\AT91\DeviceCode</Directory>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup>
+    <OutputType >Library</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <SubDirectories Include="AT91_AIC"/>
+    <SubDirectories Include="AT91_TIMER"/>
+    <SubDirectories Include="AT91_TIME"/>
+    <SubDirectories Include="AT91_GPIO"/>
+    <SubDirectories Include="AT91_USART"/>
+    <SubDirectories Include="AT91_Bootstrap"/>
+    <SubDirectories Include="AT91_SAM"/>
+    <SubDirectories Include="AT91_SPI"/>
+    <SubDirectories Include="AT91_USB"/>
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(TARGETPROCESSOR)'=='AT91SAM9261'">
+    <SubDirectories Include="AT91_LCD"/>
+    <SubDirectories Include="AT91_Cache"/>
+  </ItemGroup>
+  
+  <ItemGroup Condition="'$(TARGETPROCESSOR)'=='AT91SAM7X'">
+    <SubDirectories Include="AT91_BL_EFC"/>
+    <SubDirectories Include="AT91_EMAC"/>
+    <SubDirectories Include="AT91_PreStackInit"/>
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Author>Microsoft</Author>
+    <Description>Freescale iMXS platform with an open source network stack and OpenSSL.</Description>
+    <Documentation />
+    <PlatformGuid>{50c83f21-5bb0-4665-8ceb-b3327d7e8a0b}</PlatformGuid>
+    <TARGETPLATFORM>iMXS_net_open</TARGETPLATFORM>
+    <PLATFORM>iMXS_net_open</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+    <TARGETBSP>iMXS</TARGETBSP>
+    <TCP_IP_STACK>LWIP</TCP_IP_STACK>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\iMXS_net_open" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\MC9328\MC9328.settings" />
+</Project>

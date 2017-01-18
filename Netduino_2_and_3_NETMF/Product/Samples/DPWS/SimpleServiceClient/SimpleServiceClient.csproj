@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <AssemblyName>SimpleServiceClient</AssemblyName>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>SimpleServiceClient</RootNamespace>
+    <ProjectTypeGuids>{b69e3092-b931-443c-abe7-7e7b65f2a37f};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4EF9B76B-823C-4FA7-9323-16BE85474D77}</ProjectGuid>
+    <TemplateID>Microsoft.CSharp.MicroFramework.Sample.DPWS.SimpleServiceClient</TemplateID>
+    <TemplateProjectType>CSharp</TemplateProjectType>
+    <TemplateNameString>SimpleServiceClient</TemplateNameString>
+    <TemplateDescriptionString>SimpleServiceClient DPWS Sample</TemplateDescriptionString>
+    <TemplateSortOrder>1000</TemplateSortOrder>
+    <NetMfTargetsBaseDir Condition="'$(NetMfTargetsBaseDir)'==''">$(MSBuildExtensionsPath32)\Microsoft\.NET Micro Framework\</NetMfTargetsBaseDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="!Exists('$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.CSharp.Targets') And '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="!Exists('$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.CSharp.Targets') And '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'">
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>Interop.SimpleService.MFSimpleServiceClient</StartupObject>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.CSharp.Targets" Condition="Exists('$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.CSharp.Targets')" />
+  <Import Project="$(NetMfTargetsBaseDir)$(TargetFrameworkVersion)\CSharp.Targets" Condition="!Exists('$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.CSharp.Targets')" />
+  <ItemGroup>
+    <Compile Include="AttachmentService.cs" />
+    <Compile Include="AttachmentServiceClientProxy.cs" />
+    <Compile Include="DiscoveryClient.cs" />
+    <Compile Include="EventingClientImplementation.cs" />
+    <Compile Include="EventingService.cs" />
+    <Compile Include="EventingServiceClientProxy.cs" />
+    <Compile Include="HelpIcon.cs" />
+    <Compile Include="MFCodeGenSimpleServiceClient.cs" />
+    <Compile Include="SimpleService.cs" />
+    <Compile Include="SimpleServiceClientProxy.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="MFDpwsClient">
+      <HintPath>$(BUILD_TREE_DLL)\MFDpwsClient.dll</HintPath>
+    </Reference>
+    <Reference Include="MFDpwsDevice">
+      <HintPath>$(BUILD_TREE_DLL)\MFDpwsDevice.dll</HintPath>
+    </Reference>
+    <Reference Include="MFDpwsExtensions">
+      <HintPath>$(BUILD_TREE_DLL)\MFDpwsExtensions.dll</HintPath>
+    </Reference>
+    <Reference Include="MFWsStack">
+      <HintPath>$(BUILD_TREE_DLL)\MFWsStack.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SPOT.IO">
+      <HintPath>$(BUILD_TREE_DLL)\Microsoft.SPOT.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.SPOT.Native">
+      <HintPath>$(BUILD_TREE_DLL)\Microsoft.SPOT.Native.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>$(BUILD_TREE_DLL)\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.IO">
+      <HintPath>$(BUILD_TREE_DLL)\System.IO.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Http">
+      <HintPath>$(BUILD_TREE_DLL)\System.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml">
+      <HintPath>$(BUILD_TREE_DLL)\System.Xml.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="AttachmentService.wsdl" />
+    <None Include="EventingService.wsdl" />
+    <None Include="ReadMe.txt" />
+    <None Include="SimpleService.wsdl" />
+  </ItemGroup>
+</Project>

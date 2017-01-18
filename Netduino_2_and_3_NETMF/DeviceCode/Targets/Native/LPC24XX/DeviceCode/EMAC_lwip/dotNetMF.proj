@@ -1,0 +1,103 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>LPC24XX_EMAC_lwip</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{574CA0A0-6223-4A18-ACD0-E9C81A2D164B}</ProjectGuid>
+    <Description>LPC24XX EMAC lwIP Ethernet Driver</Description>
+    <Level>HAL</Level>
+    <LibraryFile>LPC24XX_EMAC_lwip.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\Targets\Native\LPC24XX\DeviceCode\EMAC_lwip\dotNetMF.proj</ProjectPath>
+    <ManifestFile>LPC24XX_EMAC_lwip.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Processor\LPC24XX</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="EthernetDriver_HAL" Guid="{7FD79853-56A2-4CB8-843B-57939B7468F4}" ProjectPath="" Conditional="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2008-12-03</Date>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomFilter>
+    </CustomFilter>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <ProcessorSpecific>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="LPC24XX" Guid="{72DD54F4-314F-4401-BDB7-9E03363A9310}" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2008-12-03</Date>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">Processor</ComponentType>
+      </MFComponent>
+    </ProcessorSpecific>
+    <HasLibraryCategory>True</HasLibraryCategory>
+    <Directory>DeviceCode\Targets\Native\LPC24XX\DeviceCode\EMAC_lwip</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>3.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="LPC24XX_EMAC_lwip.cpp" />
+    <Compile Include="LPC24XX_EMAC_lwip_driver.cpp" />
+    <IncludePaths Include="DeviceCode\pal\net" />
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\src\include" />
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\src\include\ipv4" />
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\contrib\ports\arm\include" />
+    <IncludePaths Include="DeviceCode\pal\lwip\lwip_1_3_2\contrib\ports\arm\proj\lwIPv4lib" />
+  </ItemGroup>
+  <ItemGroup>
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\arm_util.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\cpu.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\cpu_definitions.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\cores\arm\include\smartptr_fiq_arm.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\contrib\ports\arm\include\arch\cc.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\contrib\ports\arm\include\arch\sys_arch.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\ipv4\lwip\autoip.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\ipv4\lwip\icmp.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\ipv4\lwip\igmp.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\ipv4\lwip\inet.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\ipv4\lwip\ip.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\ipv4\lwip\ip_addr.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\api.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\api_msg.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\arch.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\debug.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\def.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\dhcp.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\err.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\mem.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\netbuf.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\netif.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\netifapi.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\opt.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\pbuf.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\sys.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\tcp.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\tcpip.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\lwip\udp.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\lwip\lwip_1_3_2\src\include\netif\etharp.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\net\network_defines_lwip.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\pal\net\net_decl_lwip.h" />
+    <HFiles Include="$(SPOCLIENT)\devicecode\targets\native\lpc24xx\devicecode\lpc24xx.h" />
+    <HFiles Include="lpc24xx_emac_lwip.h" />
+    <HFiles Include="lpc24xx_emac_lwip_driver.h" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

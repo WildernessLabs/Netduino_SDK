@@ -1,0 +1,16 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Directory>Solutions\SAM9261_EK\DeviceCode</Directory>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <ItemGroup>
+    <SubDirectories Include="USB"/>
+    <SubDirectories Include="TX09D71VM1CCA"/>
+    <SubDirectories Include="FS"/>
+    <SubDirectories Include="TouchPanel"/>
+    <SubDirectories Include="Init"/>
+    <SubDirectories Include="BlockStorage"/>
+    <SubDirectories Include="VirtualKey"/>
+ </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

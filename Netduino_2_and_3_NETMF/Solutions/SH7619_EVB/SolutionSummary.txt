@@ -1,0 +1,619 @@
+The .NET Micro Framework Solution Wizard will create the 'SH7619_EVB' solution in the directory:
+
+	C:\spot2\client_V4_1_Dev\Solutions\SH7619_EVB
+
+The following is a description of the components of this solution.  Each solution consists of a set of projects which in turn have a set of features and libraries.
+
+    Solution:                          	 SH7619_EVB
+    Author:                            	 Jennifer Cheng
+    Description:                       	 sh7619 evaluation board
+    Processor:                         	 SH2
+    Debugger Port:                     	 COM3
+
+
+Project nativesample
+    Description:                       	 
+    Path:                              	 Solutions\SH7619_EVB\NativeSample
+
+Libraries:
+    WireProtocol:                      	 Device communication protocol
+    CRC:                               	 CRC library
+    Crypto_stub:                       	 Crypto stub library
+    SimpleHeap_stubs:                  	 SimpleHeap unmanaged heap stub library
+    SimpleHeap_config_stubs:           	 SimpleHeap configuration stub library
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    usb_pal:                           	 USB driver
+    events_pal:                        	 System event library
+    Time_pal:                          	 Time set of methods used by Time, Time
+    Watchdog_pal_stubs:                	 Watchdog stub
+    heap_config_SH:                    	 Managed heap size and location configuration
+    cpu_cache_stubs:                   	 Cache stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    SH7619_INTC:                       	 SH7619 INTC driver
+    SH7619_power:                      	 SH7619 power library
+    SH7619_USART:                      	 SH7619 USART driver
+    SH7619_GPIO:                       	 SH7619 GPIO driver
+    cpu_usb_stubs:                     	 USB stub library
+    cpu_watchdog_stubs:                	 Watchdog driver
+    cpu_bootstrap_stubs:               	 Processor bootstrap stub library
+    usart_pal:                         	 USART driver
+    config_pal_Stubs:                  	 Configuration stub library
+    tinycrt_pal:                       	 CRT functionality
+    Native:                            	 
+    diagnostics_pal:                   	 Diagnostics library
+    TinyHal:                           	 Core HAL library
+    GlobalLock_hal_stubs:              	 Global lock stub library
+    system_initialization_hal:         	 System initialization library
+    HD66773R:                          	 HD66773R display driver
+    cpu_LCD_stubs:                     	 Display controller stub library
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    palevent_pal:                      	 palevent set of methods used by Gesture, Ink
+    piezo_pal_stubs:                   	 Piezo stub driver
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    cpu_spi_stubs:                     	 SPI stub library
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    FS_Config_stubs:                   	 File system config stub
+    blockstorage_pal:                  	 Block storage library
+    heap_pal:                          	 Managed heap size and location configuration
+    i2c_pal:                           	 I2C drivers
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    COM_pal:                           	 Communication port director
+    fs_pal_stubs:                      	 File System stub library
+    sockets_pal_stubs:                 	 Network socket stub driver
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    cpu_i2c_stubs:                     	 I2C stub library
+    AM29DL_16_BL:                      	 Block storage library for AM29DL 16-bit flash chip
+    cpu_time_stubs:                    	 Time stub library
+    S29GL032A_16_BS_Config_SH7619:     	 S29GL032A 32-bit flash block storage configuration library for SH7619
+    BlockStorage_AddDevices_SH7619:    	 Block storage add device driver for SH7619
+    KeyPad_pal:                        	 KeyPad library
+    usb_pal_config_SH7619_EVB:         	 USB PAL configuration for SH7619_EVB solution
+
+
+Project 
+    Description:                       	 
+    Path:                              	 
+
+Libraries:
+    usart_pal:                         	 USART driver
+    usb_pal_stubs:                     	 USB stub driver
+    CRC:                               	 CRC library
+    diagnostics_pal:                   	 Diagnostics library
+    TinyHal:                           	 Core HAL library
+    WireProtocol:                      	 Device communication protocol
+    SH7619_USART:                      	 SH7619 USART driver
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    cpu_bootstrap_stubs:               	 Processor bootstrap stub library
+    cpu_cache_stubs:                   	 Cache stub library
+    config_pal:                        	 System configuration
+    Crypto_stub:                       	 Crypto stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    events_pal:                        	 System event library
+    GlobalLock_hal_stubs:              	 Global lock stub library
+    SH7619_GPIO:                       	 SH7619 GPIO driver
+    system_initialization_hal:         	 System initialization library
+    SH7619_INTC:                       	 SH7619 INTC driver
+    HD66773R:                          	 HD66773R display driver
+    cpu_LCD_stubs:                     	 Display controller stub library
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    palevent_pal:                      	 palevent set of methods used by Gesture, Ink
+    piezo_pal_stubs:                   	 Piezo stub driver
+    SH7619_power:                      	 SH7619 power library
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    SimpleHeap_config:                 	 Simple unmanaged heap
+    SimpleHeap:                        	 SimpleHeap unmanaged heap
+    cpu_spi_stubs:                     	 SPI stub library
+    Time_pal:                          	 Time set of methods used by Time, Time
+    tinycrt_pal:                       	 CRT functionality
+    cpu_watchdog_stubs:                	 Watchdog driver
+    Watchdog_pal_stubs:                	 Watchdog stub
+    fs_pal:                            	 File system PAL Driver
+    TimeService_pal:                   	 Time set of methods used by Time, Time
+    i2c_pal:                           	 I2C drivers
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    COM_pal:                           	 Communication port director
+    BlockStorage_AddDevices_ARMulator: 	 Block storage add device driver for ARMulator
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    blockstorage_pal:                  	 Block storage library
+    FileSystem_Config_PAL_SH7619_EVB:  	 Generates template code in your solution's DeviceCode directory for the given Library Category.The project will be generated in Solutions\SH7619_EVB\DeviceCode\FileSystem_Config_PAL
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    sockets_pal:                       	 Network sockets driver
+    Network_config_SH7619_EVB:         	 Network configuration library for SH7619_EVB solution
+    sockets_hal:                       	 Network stack driver
+    Ssl_pal:                           	 SSL PAL layer
+    AM29DL_16_BL:                      	 Block storage library for AM29DL 16-bit flash chip
+    cpu_usb_stubs:                     	 USB stub library
+    cpu_i2c_stubs:                     	 I2C stub library
+    timeservice_hal_rtip:              	 Time Service hal library
+    FS_FAT:                            	 FAT file system 
+    sockets_sntp:                      	 sntp driver 
+    S29GL032A_16_BS_Config_SH7619:     	 S29GL032A 32-bit flash block storage configuration library for SH7619
+    sockets_hal_async:                 	 Network async abstraction layer
+    Ethernet_loopback:                 	 Loopback Ethernet Driver
+    sockets_hal_udp:                   	 UDP network Library
+    SH7619_ETHERNET:                   	 Ethernet driver for SH7619_NATIVE solution
+    sockets_hal_tcp:                   	 TCP network library
+    sockets_rtip_pal:                  	 RTIP network driver
+    sockets_ssl:                       	 SSL driver 
+    sockets_dhcp:                      	 DHCP network library
+    Buttons_pal:                       	 Buttons library
+    heap_pal:                          	 Managed heap size and location configuration
+    cpu_time_stubs:                    	 Time stub library
+
+
+Project PortBooter
+    Description:                       	 
+    Path:                              	 Solutions\SH7619_EVB\PortBooter
+
+Libraries:
+    WireProtocol:                      	 Device communication protocol
+    CRC:                               	 CRC library
+    Crypto_stub:                       	 Crypto stub library
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    usb_pal_stubs:                     	 USB stub driver
+    events_pal:                        	 System event library
+    heap_config_SH:                    	 Managed heap size and location configuration
+    SimpleHeap:                        	 SimpleHeap unmanaged heap
+    SimpleHeap_config:                 	 Simple unmanaged heap
+    Time_pal:                          	 Time set of methods used by Time, Time
+    Watchdog_pal_stubs:                	 Watchdog stub
+    cpu_cache_stubs:                   	 Cache stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    SH7619_INTC:                       	 SH7619 INTC driver
+    SH7619_power:                      	 SH7619 power library
+    SH7619_USART:                      	 SH7619 USART driver
+    SH7619_GPIO:                       	 SH7619 GPIO driver
+    cpu_watchdog_stubs:                	 Watchdog driver
+    cpu_bootstrap_stubs:               	 Processor bootstrap stub library
+    usart_pal:                         	 USART driver
+    config_pal_loader:                 	 System configuration boot loader library
+    tinycrt_pal_loader:                	 CRT functionality (for boot loaders)
+    diagnostics_pal:                   	 Diagnostics library
+    GlobalLock_hal_stubs:              	 Global lock stub library
+    system_initialization_hal_loader:  	 System initialization (for boot loaders)
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    TinyHal_loader:                    	 Core HAL library (for boot loaders)
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    FS_Config_stubs:                   	 File system config stub
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    piezo_pal_stubs:                   	 Piezo stub driver
+    HD66773R:                          	 HD66773R display driver
+    palevent_pal_stubs:                	 palevent set of methods used by Gesture, Ink
+    sockets_pal_stubs:                 	 Network socket stub driver
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    blockstorage_pal:                  	 Block storage library
+    cpu_spi_stubs:                     	 SPI stub library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    heap_pal:                          	 Managed heap size and location configuration
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    fs_pal_stubs:                      	 File System stub library
+    cpu_LCD_stubs:                     	 Display controller stub library
+    COM_pal:                           	 Communication port director
+    i2c_pal:                           	 I2C drivers
+    cpu_usb_stubs:                     	 USB stub library
+    AM29DL_16_BL:                      	 Block storage library for AM29DL 16-bit flash chip
+    cpu_i2c_stubs:                     	 I2C stub library
+    cpu_time_stubs:                    	 Time stub library
+    BlockStorage_AddDevices_SH7619:    	 Block storage add device driver for SH7619
+    S29GL032A_16_BS_Config_SH7619:     	 S29GL032A 32-bit flash block storage configuration library for SH7619
+    KeyPad_pal:                        	 KeyPad library
+
+
+Project 
+    Description:                       	 
+    Path:                              	 
+
+Libraries:
+    usart_pal:                         	 USART driver
+    usb_pal_stubs:                     	 USB stub driver
+    CRC:                               	 CRC library
+    diagnostics_pal:                   	 Diagnostics library
+    TinyHal:                           	 Core HAL library
+    WireProtocol:                      	 Device communication protocol
+    SH7619_USART:                      	 SH7619 USART driver
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    cpu_bootstrap_stubs:               	 Processor bootstrap stub library
+    cpu_cache_stubs:                   	 Cache stub library
+    Crypto_stub:                       	 Crypto stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    events_pal:                        	 System event library
+    GlobalLock_hal_stubs:              	 Global lock stub library
+    SH7619_GPIO:                       	 SH7619 GPIO driver
+    SH7619_INTC:                       	 SH7619 INTC driver
+    SH7619_power:                      	 SH7619 power library
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    SimpleHeap_config:                 	 Simple unmanaged heap
+    SimpleHeap:                        	 SimpleHeap unmanaged heap
+    Time_pal:                          	 Time set of methods used by Time, Time
+    cpu_watchdog_stubs:                	 Watchdog driver
+    Watchdog_pal_stubs:                	 Watchdog stub
+    config_pal:                        	 System configuration
+    system_initialization_hal:         	 System initialization library
+    tinycrt_pal:                       	 CRT functionality
+    fs_pal:                            	 File system PAL Driver
+    TimeService_pal:                   	 Time set of methods used by Time, Time
+    cpu_spi_stubs:                     	 SPI stub library
+    blockstorage_pal:                  	 Block storage library
+    i2c_pal:                           	 I2C drivers
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    piezo_pal_stubs:                   	 Piezo stub driver
+    palevent_pal:                      	 palevent set of methods used by Gesture, Ink
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    cpu_LCD_stubs:                     	 Display controller stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    COM_pal:                           	 Communication port director
+    BlockStorage_AddDevices_ARMulator: 	 Block storage add device driver for ARMulator
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    HD66773R:                          	 HD66773R display driver
+    FileSystem_Config_PAL_SH7619_EVB:  	 Generates template code in your solution's DeviceCode directory for the given Library Category.The project will be generated in Solutions\SH7619_EVB\DeviceCode\FileSystem_Config_PAL
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    sockets_pal:                       	 Network sockets driver
+    Network_config_SH7619_EVB:         	 Network configuration library for SH7619_EVB solution
+    sockets_hal:                       	 Network stack driver
+    Ssl_pal:                           	 SSL PAL layer
+    cpu_usb_stubs:                     	 USB stub library
+    cpu_i2c_stubs:                     	 I2C stub library
+    AM29DL_16_BL:                      	 Block storage library for AM29DL 16-bit flash chip
+    timeservice_hal_rtip:              	 Time Service hal library
+    FS_FAT:                            	 FAT file system 
+    sockets_sntp:                      	 sntp driver 
+    S29GL032A_16_BS_Config_SH7619:     	 S29GL032A 32-bit flash block storage configuration library for SH7619
+    sockets_hal_async:                 	 Network async abstraction layer
+    Ethernet_loopback:                 	 Loopback Ethernet Driver
+    sockets_hal_udp:                   	 UDP network Library
+    SH7619_ETHERNET:                   	 Ethernet driver for SH7619_NATIVE solution
+    sockets_hal_tcp:                   	 TCP network library
+    sockets_rtip_pal:                  	 RTIP network driver
+    sockets_ssl:                       	 SSL driver 
+    sockets_dhcp:                      	 DHCP network library
+    Buttons_pal:                       	 Buttons library
+    heap_pal:                          	 Managed heap size and location configuration
+    cpu_time_stubs:                    	 Time stub library
+
+
+Project 
+    Description:                       	 
+    Path:                              	 
+
+Libraries:
+    usart_pal:                         	 USART driver
+    usb_pal_stubs:                     	 USB stub driver
+    CRC:                               	 CRC library
+    diagnostics_pal:                   	 Diagnostics library
+    TinyHal:                           	 Core HAL library
+    WireProtocol:                      	 Device communication protocol
+    SH7619_USART:                      	 SH7619 USART driver
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    cpu_bootstrap_stubs:               	 Processor bootstrap stub library
+    cpu_cache_stubs:                   	 Cache stub library
+    Crypto_stub:                       	 Crypto stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    events_pal:                        	 System event library
+    GlobalLock_hal_stubs:              	 Global lock stub library
+    SH7619_GPIO:                       	 SH7619 GPIO driver
+    SH7619_INTC:                       	 SH7619 INTC driver
+    SH7619_power:                      	 SH7619 power library
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    SimpleHeap_config:                 	 Simple unmanaged heap
+    SimpleHeap:                        	 SimpleHeap unmanaged heap
+    Time_pal:                          	 Time set of methods used by Time, Time
+    cpu_watchdog_stubs:                	 Watchdog driver
+    Watchdog_pal_stubs:                	 Watchdog stub
+    config_pal:                        	 System configuration
+    system_initialization_hal:         	 System initialization library
+    tinycrt_pal:                       	 CRT functionality
+    fs_pal:                            	 File system PAL Driver
+    TimeService_pal:                   	 Time set of methods used by Time, Time
+    cpu_spi_stubs:                     	 SPI stub library
+    blockstorage_pal:                  	 Block storage library
+    i2c_pal:                           	 I2C drivers
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    piezo_pal_stubs:                   	 Piezo stub driver
+    palevent_pal:                      	 palevent set of methods used by Gesture, Ink
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    cpu_LCD_stubs:                     	 Display controller stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    COM_pal:                           	 Communication port director
+    BlockStorage_AddDevices_ARMulator: 	 Block storage add device driver for ARMulator
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    HD66773R:                          	 HD66773R display driver
+    FileSystem_Config_PAL_SH7619_EVB:  	 Generates template code in your solution's DeviceCode directory for the given Library Category.The project will be generated in Solutions\SH7619_EVB\DeviceCode\FileSystem_Config_PAL
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    sockets_pal:                       	 Network sockets driver
+    Network_config_SH7619_EVB:         	 Network configuration library for SH7619_EVB solution
+    sockets_hal:                       	 Network stack driver
+    Ssl_pal:                           	 SSL PAL layer
+    cpu_usb_stubs:                     	 USB stub library
+    cpu_i2c_stubs:                     	 I2C stub library
+    AM29DL_16_BL:                      	 Block storage library for AM29DL 16-bit flash chip
+    timeservice_hal_rtip:              	 Time Service hal library
+    FS_FAT:                            	 FAT file system 
+    sockets_sntp:                      	 sntp driver 
+    S29GL032A_16_BS_Config_SH7619:     	 S29GL032A 32-bit flash block storage configuration library for SH7619
+    sockets_hal_async:                 	 Network async abstraction layer
+    Ethernet_loopback:                 	 Loopback Ethernet Driver
+    sockets_hal_udp:                   	 UDP network Library
+    SH7619_ETHERNET:                   	 Ethernet driver for SH7619_NATIVE solution
+    sockets_hal_tcp:                   	 TCP network library
+    sockets_rtip_pal:                  	 RTIP network driver
+    sockets_ssl:                       	 SSL driver 
+    sockets_dhcp:                      	 DHCP network library
+    Buttons_pal:                       	 Buttons library
+    heap_pal:                          	 Managed heap size and location configuration
+    cpu_time_stubs:                    	 Time stub library
+
+
+Project Tinybooter
+    Description:                       	 
+    Path:                              	 Solutions\SH7619_EVB\TinyBooter
+
+Libraries:
+    TinybooterLib:                     	 TinyBooter core library
+    WireProtocol:                      	 Device communication protocol
+    CRC:                               	 CRC library
+    Crypto_stub:                       	 Crypto stub library
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    usb_pal_stubs:                     	 USB stub driver
+    events_pal:                        	 System event library
+    heap_config_SH:                    	 Managed heap size and location configuration
+    SimpleHeap:                        	 SimpleHeap unmanaged heap
+    SimpleHeap_config:                 	 Simple unmanaged heap
+    Time_pal:                          	 Time set of methods used by Time, Time
+    Watchdog_pal_stubs:                	 Watchdog stub
+    cpu_cache_stubs:                   	 Cache stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    SH7619_INTC:                       	 SH7619 INTC driver
+    SH7619_power:                      	 SH7619 power library
+    SH7619_USART:                      	 SH7619 USART driver
+    SH7619_GPIO:                       	 SH7619 GPIO driver
+    cpu_watchdog_stubs:                	 Watchdog driver
+    cpu_bootstrap_stubs:               	 Processor bootstrap stub library
+    usart_pal:                         	 USART driver
+    config_pal_loader:                 	 System configuration boot loader library
+    tinycrt_pal_loader:                	 CRT functionality (for boot loaders)
+    diagnostics_pal:                   	 Diagnostics library
+    GlobalLock_hal_stubs:              	 Global lock stub library
+    system_initialization_hal_loader:  	 System initialization (for boot loaders)
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    TinyHal_loader:                    	 Core HAL library (for boot loaders)
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    FS_Config_stubs:                   	 File system config stub
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    piezo_pal_stubs:                   	 Piezo stub driver
+    HD66773R:                          	 HD66773R display driver
+    palevent_pal_stubs:                	 palevent set of methods used by Gesture, Ink
+    sockets_pal_stubs:                 	 Network socket stub driver
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    blockstorage_pal:                  	 Block storage library
+    cpu_spi_stubs:                     	 SPI stub library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    heap_pal:                          	 Managed heap size and location configuration
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    fs_pal_stubs:                      	 File System stub library
+    cpu_LCD_stubs:                     	 Display controller stub library
+    COM_pal:                           	 Communication port director
+    i2c_pal:                           	 I2C drivers
+    cpu_usb_stubs:                     	 USB stub library
+    AM29DL_16_BL:                      	 Block storage library for AM29DL 16-bit flash chip
+    cpu_i2c_stubs:                     	 I2C stub library
+    cpu_time_stubs:                    	 Time stub library
+    BlockStorage_AddDevices_SH7619:    	 Block storage add device driver for SH7619
+    S29GL032A_16_BS_Config_SH7619:     	 S29GL032A 32-bit flash block storage configuration library for SH7619
+    KeyPad_pal:                        	 KeyPad library
+
+
+Project 
+    Description:                       	 
+    Path:                              	 
+
+Libraries:
+    usart_pal:                         	 USART driver
+    usb_pal_stubs:                     	 USB stub driver
+    CRC:                               	 CRC library
+    diagnostics_pal:                   	 Diagnostics library
+    TinyHal:                           	 Core HAL library
+    WireProtocol:                      	 Device communication protocol
+    SH7619_USART:                      	 SH7619 USART driver
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    cpu_bootstrap_stubs:               	 Processor bootstrap stub library
+    cpu_cache_stubs:                   	 Cache stub library
+    Crypto_stub:                       	 Crypto stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    events_pal:                        	 System event library
+    GlobalLock_hal_stubs:              	 Global lock stub library
+    SH7619_GPIO:                       	 SH7619 GPIO driver
+    SH7619_INTC:                       	 SH7619 INTC driver
+    SH7619_power:                      	 SH7619 power library
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    SimpleHeap_config:                 	 Simple unmanaged heap
+    SimpleHeap:                        	 SimpleHeap unmanaged heap
+    Time_pal:                          	 Time set of methods used by Time, Time
+    cpu_watchdog_stubs:                	 Watchdog driver
+    Watchdog_pal_stubs:                	 Watchdog stub
+    config_pal:                        	 System configuration
+    system_initialization_hal:         	 System initialization library
+    tinycrt_pal:                       	 CRT functionality
+    fs_pal:                            	 File system PAL Driver
+    TimeService_pal:                   	 Time set of methods used by Time, Time
+    cpu_spi_stubs:                     	 SPI stub library
+    blockstorage_pal:                  	 Block storage library
+    i2c_pal:                           	 I2C drivers
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    piezo_pal_stubs:                   	 Piezo stub driver
+    palevent_pal:                      	 palevent set of methods used by Gesture, Ink
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    cpu_LCD_stubs:                     	 Display controller stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    COM_pal:                           	 Communication port director
+    BlockStorage_AddDevices_ARMulator: 	 Block storage add device driver for ARMulator
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    HD66773R:                          	 HD66773R display driver
+    FileSystem_Config_PAL_SH7619_EVB:  	 Generates template code in your solution's DeviceCode directory for the given Library Category.The project will be generated in Solutions\SH7619_EVB\DeviceCode\FileSystem_Config_PAL
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    sockets_pal:                       	 Network sockets driver
+    Network_config_SH7619_EVB:         	 Network configuration library for SH7619_EVB solution
+    sockets_hal:                       	 Network stack driver
+    Ssl_pal:                           	 SSL PAL layer
+    cpu_usb_stubs:                     	 USB stub library
+    cpu_i2c_stubs:                     	 I2C stub library
+    AM29DL_16_BL:                      	 Block storage library for AM29DL 16-bit flash chip
+    timeservice_hal_rtip:              	 Time Service hal library
+    FS_FAT:                            	 FAT file system 
+    sockets_sntp:                      	 sntp driver 
+    S29GL032A_16_BS_Config_SH7619:     	 S29GL032A 32-bit flash block storage configuration library for SH7619
+    sockets_hal_async:                 	 Network async abstraction layer
+    Ethernet_loopback:                 	 Loopback Ethernet Driver
+    sockets_hal_udp:                   	 UDP network Library
+    SH7619_ETHERNET:                   	 Ethernet driver for SH7619_NATIVE solution
+    sockets_hal_tcp:                   	 TCP network library
+    sockets_rtip_pal:                  	 RTIP network driver
+    sockets_ssl:                       	 SSL driver 
+    sockets_dhcp:                      	 DHCP network library
+    Buttons_pal:                       	 Buttons library
+    heap_pal:                          	 Managed heap size and location configuration
+    cpu_time_stubs:                    	 Time stub library
+
+
+Project tinyclr
+    Description:                       	 
+    Path:                              	 Solutions\SH7619_EVB\TinyCLR
+
+Features:
+    Core:                              	 Core functionality (required)
+    Hardware:                          	 Core hardware component
+    NativeEventDispatcher:             	 Native event dispatching for interop
+    BlockStorage:                      	 Block storage support
+    Crypto:                            	 Cryptographic functionality
+    Debugger:                          	 Visual Studio debugger support
+    Diagnostics:                       	 Diagnostic utilities
+    DataStorage:                       	 Data storage (extended weak reference storage)
+    Stream:                            	 Stream component
+    FileSystem:                        	 File system
+    Graphics:                          	 Core graphics functionality
+    SOCKET:                            	 Socket transport
+    Network:                           	 Network core functionality
+    HTTP:                              	 Support for HTTP functionality.
+    I2C:                               	 I2C Support
+    Serialization:                     	 Data serialization support
+    Serial:                            	 Serial transport
+    SerialPort:                        	 Serial port component
+    SPI:                               	 SPI support
+    SSL:                               	 SSL support for networking
+    TimeService:                       	 Time Service support
+    TinyCore:                          	 TinyCore graphics subsystem
+    XML:                               	 Xml utilities component
+
+Libraries:
+    Core:                              	 CLR core library
+    CLRStartup:                        	 Common CLR initialization library
+    CorLib:                            	 Subset of mscorlib
+    SPOT:                              	 Common interop library
+    Serialization:                     	 Binary serialization (proprietary format)
+    Debugger:                          	 Visual Studio debugging support
+    Graphics:                          	 Graphics subsystem library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    SPOT_Hardware:                     	 Hardware interop library
+    Hardware:                          	 Core hardware functionality
+    IOPort:                            	 Native event dispatcher (formerly IOPort)
+    blockstorage_pal:                  	 Block storage library
+    SPOT_Crypto:                       	 Crypto interop library
+    Messaging:                         	 Core communication component
+    SPOT_Messaging_stub:               	 Messaging interop stub library
+    Diagnostics:                       	 Diagnostic functionality
+    HeapPersistence:                   	 Extended weak references data storage 
+    Stream:                            	 Generic stream functionality
+    SPOT_IO:                           	 Stream interop library
+    fs_pal:                            	 File system PAL Driver
+    SPOT_Graphics:                     	 Graphics interop library
+    sockets_pal:                       	 Network sockets driver
+    SPOT_Net:                          	 Network interop library
+    I2C:                               	 I2C support
+    i2c_pal:                           	 I2C drivers
+    SPOT_Serialization:                	 Serialization interop library
+    usart_pal:                         	 USART driver
+    SPOT_Hardware_SerialPort:          	 SerialPort interop library
+    SPOT_Net_Security:                 	 SSL interop library
+    SPOT_TimeService:                  	 TimeService interop library
+    usb_pal_stubs:                     	 USB stub driver
+    CRC:                               	 CRC library
+    diagnostics_pal:                   	 Diagnostics library
+    InterruptHandler_stub:             	 Interrupt handler stub library
+    RPC_stub:                          	 Remote procedure call stub library
+    TinyHal:                           	 Core HAL library
+    WireProtocol:                      	 Device communication protocol
+    TimeService_pal:                   	 Time set of methods used by Time, Time
+    sockets_hal:                       	 Network stack driver
+    Ssl_pal:                           	 SSL PAL layer
+    FS_FAT:                            	 FAT file system 
+    BlockStorage_AddDevices_ARMulator: 	 Block storage add device driver for ARMulator
+    SH7619_USART:                      	 SH7619 USART driver
+    Graphics_Jpeg:                     	 JPEG library for graphics subsystem
+    Graphics_Bmp:                      	 Bitmap support for graphics subsystem
+    Graphics_Gif:                      	 GIF library for graphics subsystem
+    graphics_pal:                      	 Graphics library
+    COM_pal:                           	 Communication port director
+    cpu_usb_stubs:                     	 USB stub library
+    Ethernet_loopback:                 	 Loopback Ethernet Driver
+    sockets_hal_udp:                   	 UDP network Library
+    sockets_hal_tcp:                   	 TCP network library
+    sockets_ssl:                       	 SSL driver 
+    sockets_dhcp:                      	 DHCP network library
+    timeservice_hal_rtip:              	 Time Service hal library
+    sockets_sntp:                      	 sntp driver 
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    AM29DL_16_BL:                      	 Block storage library for AM29DL 16-bit flash chip
+    BlockStorageConfig_HAL_SH7619_EVB: 	 Generates template code in your solution's DeviceCode directory for the given Library Category.The project will be generated in Solutions\SH7619_EVB\DeviceCode\BlockStorageConfig_HAL
+    cpu_bootstrap_stubs:               	 Processor bootstrap stub library
+    cpu_cache_stubs:                   	 Cache stub library
+    config_pal:                        	 System configuration
+    Crypto_stub:                       	 Crypto stub library
+    Debugger_full:                     	 Full Visual Studio debugging support
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    SH7619_ETHERNET:                   	 Ethernet driver for SH7619_NATIVE solution
+    events_pal:                        	 System event library
+    FileSystem_Config_PAL_SH7619_EVB:  	 Generates template code in your solution's DeviceCode directory for the given Library Category.The project will be generated in Solutions\SH7619_EVB\DeviceCode\FileSystem_Config_PAL
+    GlobalLock_hal_stubs:              	 Global lock stub library
+    SH7619_GPIO:                       	 SH7619 GPIO driver
+    cpu_i2c_stubs:                     	 I2C stub library
+    system_initialization_hal:         	 System initialization library
+    SH7619_INTC:                       	 SH7619 INTC driver
+    LargeBuffer_hal_stubs:             	 LargeBuffer stub library
+    HD66773R:                          	 HD66773R display driver
+    cpu_LCD_stubs:                     	 Display controller stub library
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    Network_Config_HAL_SH7619_EVB:     	 Generates template code in your solution's DeviceCode directory for the given Library Category.The project will be generated in Solutions\SH7619_EVB\DeviceCode\Network_Config_HAL
+    palevent_pal:                      	 palevent set of methods used by Gesture, Ink
+    cpu_performancecounter_stubs:      	 Performance counter stub library
+    piezo_pal_stubs:                   	 Piezo stub driver
+    SH7619_power:                      	 SH7619 power library
+    cpu_prestackinit_stubs:            	 Pre stack initialization stub driver
+    cpu_security_stubs:                	 Security stub library
+    SimpleHeap_config:                 	 Simple unmanaged heap
+    SimpleHeap:                        	 SimpleHeap unmanaged heap
+    sockets_rtip_pal:                  	 RTIP network driver
+    sockets_hal_async:                 	 Network async abstraction layer
+    cpu_spi_stubs:                     	 SPI stub library
+    Time_pal:                          	 Time set of methods used by Time, Time
+    tinycrt_pal:                       	 CRT functionality
+    VirtualKey_HAL_SH7619_EVB:         	 Generates template code in your solution's DeviceCode directory for the given Library Category.The project will be generated in Solutions\SH7619_EVB\DeviceCode\VirtualKey_HAL
+    cpu_watchdog_stubs:                	 Watchdog driver
+    Watchdog_pal_stubs:                	 Watchdog stub
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    Buttons_pal:                       	 Buttons library
+    heap_pal:                          	 Managed heap size and location configuration
+    cpu_time_stubs:                    	 Time stub library

@@ -1,0 +1,20 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>
+    </Author>
+    <Description>Freescale iMXS for networking (with SSL)</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{98713d76-7dde-4d7d-9c86-3f3192b0f6b6}</PlatformGuid>
+    <TARGETPLATFORM>iMXS_net</TARGETPLATFORM>
+    <PLATFORM>iMXS_net</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+    <TARGETBSP>iMXS</TARGETBSP>
+    <TCP_IP_STACK Condition="'$(TCP_IP_STACK)'==''">LWIP</TCP_IP_STACK>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\iMXS_net" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\MC9328\MC9328.settings" />
+</Project>

@@ -1,0 +1,36 @@
+<!-- Builds the MC9328MXL[_stub].$(LIB_EXT), for SPOT projects -->
+
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <Directory>DeviceCode\Targets\Native\MC9328\DeviceCode</Directory>
+  </PropertyGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+
+  <ItemGroup>
+    <SubDirectories Include="MC9328MXL_Bootstrap"/>
+    <SubDirectories Include="MC9328MXL_PreStackInit"/>
+    <SubDirectories Include="MC9328MXL_Cache"/>
+    <SubDirectories Include="MC9328MXL_CMU"/>
+    <SubDirectories Include="MC9328MXL_DMA"/>    
+    <SubDirectories Include="MC9328MXL_EBIU"/>
+    <SubDirectories Include="MC9328MXL_GPIO"/>
+    <SubDirectories Include="MC9328MXL_I2C"/>
+    <SubDirectories Include="MC9328MXL_INTC"/>    
+    <SubDirectories Include="MC9328MXL_LCD"/>
+    <SubDirectories Include="MC9328MXL_PerformanceCounter"/>    
+    <SubDirectories Include="MC9328MXL_Power"/>
+    <SubDirectories Include="MC9328MXL_Security"/>
+    <SubDirectories Include="MC9328MXL_SPI"/>
+    <SubDirectories Include="MC9328MXL_time"/>    
+    <SubDirectories Include="MC9328MXL_timer"/>
+    <SubDirectories Include="MC9328MXL_USART"/>
+    <SubDirectories Include="MC9328MXL_USB"/>
+    <SubDirectories Include="MC9328MXL_Watchdog"/>    
+  </ItemGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+
+</Project>
+

@@ -1,0 +1,38 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{0c2c1c25-9caa-4fc1-87c5-19a818cde345}</ProjectGuid>
+    <AssemblyName>AT91_TIMER</AssemblyName>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\Targets\Native\AT91\DeviceCode\AT91_TIMER\dotNetMF.proj</ProjectPath>
+    <Size>
+    </Size>
+    <Description>Atmel AT91 timer driver</Description>
+    <Level>HAL</Level>
+    <LibraryFile>AT91_TIMER.$(LIB_EXT)</LibraryFile>
+    <ManifestFile>AT91_TIMER.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Processor\AT91</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <HasLibraryCategory>False</HasLibraryCategory>
+    <CustomFilter>AT91;AT91SAM7X;AT91SAM9261;AT91SAM9RL64</CustomFilter>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <Directory>DeviceCode\Targets\Native\AT91\DeviceCode\AT91_TIMER</Directory>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ARMBUILD_ONLY>true</ARMBUILD_ONLY>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AT91_TIMER.cpp" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

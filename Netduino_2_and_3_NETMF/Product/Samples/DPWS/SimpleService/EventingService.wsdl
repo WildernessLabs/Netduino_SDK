@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<l:definitions xmlns:s12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://schemas.example.org/EventingService" xmlns:p="http://schemas.xmlsoap.org/ws/2006/02/devprof" xmlns:po="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:a="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:e="http://schemas.xmlsoap.org/ws/2004/08/eventing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="EventingService" targetNamespace="http://schemas.example.org/EventingService" xmlns:l="http://schemas.xmlsoap.org/wsdl/">
+  <po:Policy Id="EventingServicePolicy">
+    <p:profile />
+    <p:PushDelivery />
+    <p:DurationExpiration />
+    <p:ActionFilter />
+  </po:Policy>
+  <l:types>
+    <schema targetNamespace="http://schemas.example.org/EventingService" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="SimpleEventRequest" type="tns:SimpleEventRequestType" />
+      <complexType name="SimpleEventRequestType">
+        <sequence>
+            <element minOccurs="1" maxOccurs="1" name="Param" nillable="true" type="base64Binary" />
+            <any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="lax" />
+        </sequence>
+        <anyAttribute namespace="##any" processContents="lax" />
+      </complexType>
+      <element name="IntegerEventRequest" type="tns:IntegerEventRequestType" />
+      <complexType name="IntegerEventRequestType">
+        <sequence>
+          <element minOccurs="1" maxOccurs="1" name="Param" nillable="true" type="int" />
+          <any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="lax" />
+        </sequence>
+        <anyAttribute namespace="##any" processContents="lax" />
+      </complexType>
+    </schema>
+  </l:types>
+  <l:message name="SimpleEventOut">
+    <l:part name="parameters" element="tns:SimpleEventRequest" />
+  </l:message>
+  <l:message name="IntegerEventOut">
+    <l:part name="parameters" element="tns:IntegerEventRequest" />
+  </l:message>
+  <l:portType name="EventingService">
+    <l:operation name="SimpleEvent">
+      <l:output a:Action="http://schemas.example.org/EventingService/SimpleEvent" message="tns:SimpleEventOut" />
+    </l:operation>
+    <l:operation name="IntegerEvent">
+      <l:output a:Action="http://schemas.example.org/EventingService/IntegerEvent" message="tns:IntegerEventOut" />
+    </l:operation>
+  </l:portType>
+  <l:binding name="EventingServiceBinding" type="tns:EventingService">
+    <wsoap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <po:PolicyReference URI="#EventingServicePolicy" l:required="true" />
+    <l:operation name="SimpleEvent">
+      <wsoap12:operation xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <l:output>
+        <wsoap12:body use="literal" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </l:output>
+    </l:operation>
+    <l:operation name="IntegerEvent">
+      <wsoap12:operation xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <l:output>
+        <wsoap12:body use="literal" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </l:output>
+    </l:operation>
+  </l:binding>
+</l:definitions>

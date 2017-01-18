@@ -1,0 +1,16 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="3.5">
+
+    <PropertyGroup>
+        <TasksAssembly>$(SPOCLIENT)\Framework\IDE\Targets\v3.0\Tools\Microsoft.SPOT.Tasks.dll</TasksAssembly>
+    </PropertyGroup>
+
+    <!-- Msbuild loads tasks by explicit path, but may ignore us and load what it finds in the GAC anyway. Msbuild, you rock! -->
+
+    <UsingTask TaskName="Microsoft.SPOT.Tasks.GetDeviceFrameworkPaths"    AssemblyFile="$(TasksAssembly)"/>
+    <UsingTask TaskName="Microsoft.SPOT.Tasks.ResolveRuntimeDependencies" AssemblyFile="$(TasksAssembly)"/>
+    <UsingTask TaskName="Microsoft.SPOT.Tasks.GenerateTinyResource"       AssemblyFile="$(TasksAssembly)"/>
+    <UsingTask TaskName="Microsoft.SPOT.Tasks.MetaDataProcessor"          AssemblyFile="$(TasksAssembly)"/>
+    <UsingTask TaskName="Microsoft.SPOT.Tasks.RegisterEmulator"           AssemblyFile="$(TasksAssembly)"/>
+    <UsingTask TaskName="Microsoft.SPOT.Tasks.CreateInteropFeatureProj"   AssemblyFile="$(TasksAssembly)"/>
+
+</Project>

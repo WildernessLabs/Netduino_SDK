@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{8f9fc470-fee7-4794-a602-944ecefda12e}</ProjectGuid>
+    <AssemblyName>AT91_BL_EFC</AssemblyName>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\Targets\Native\AT91\DeviceCode\AT91_BL_EFC\dotNetMF.proj</ProjectPath>
+    <Size>
+    </Size>
+    <Description>Block storage driver for AT91</Description>
+    <Level>HAL</Level>
+    <LibraryFile>AT91_BL_EFC.$(LIB_EXT)</LibraryFile>
+    <ManifestFile>AT91_BL_EFC.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Processor\AT91</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="BlockStorage_HAL" Guid="{B87F1565-3D64-4531-A84B-2F9C2B221D1E}" ProjectPath="" Conditional="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+          <Author>Microsoft</Author>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <HasLibraryCategory>True</HasLibraryCategory>
+    <CustomFilter>AT91;AT91SAM7X;AT91SAM7S</CustomFilter>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <Directory>DeviceCode\Targets\Native\AT91\DeviceCode\AT91_BL_EFC</Directory>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <Import Project="$(SPOCLIENT)\Framework\features\BlockStorageConfig_HAL.libcatproj" />
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ARMBUILD_ONLY>true</ARMBUILD_ONLY>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="AT91_BL_EFC.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <HFiles Include="at91_bl_efc.h" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

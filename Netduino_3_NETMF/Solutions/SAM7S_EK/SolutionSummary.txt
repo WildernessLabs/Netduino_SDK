@@ -1,0 +1,441 @@
+The .NET Micro Framework Solution Wizard will create the 'SAM7S_EK' solution in the directory:
+
+	c:\jen\spot\sp1\client_V4_1_dev\Solutions\SAM7S_EK
+
+The following is a description of the components of this solution.  Each solution consists of a set of projects which in turn have a set of features and libraries.
+
+    Solution:                          	 SAM7S_EK
+    Author:                            	 Jennifer Cheng
+    Description:                       	 SAM7s platform
+    Processor:                         	 AT91SAM7X
+    Debugger Port:                     	 COM1
+
+
+Project NativeSample
+    Description:                       	 
+    Path:                              	 Solutions\SAM7S_EK\NativeSample
+
+Libraries:
+    Crypto_stub:                       	 Crypto stub library
+    GlobalLock_hal:                    	 Global lock (native threading control)
+    TinyHal:                           	 Core HAL library
+    AT91_PreStackInit:                 	 Freescale AT91 processor pre-stack initialization
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    lcd_hal_stubs:                     	 Stub display driver
+    Ethernet_loopback:                 	 Loopback Ethernet Driver
+    cpu_cache_stubs:                   	 Cache stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    cpu_LCD_stubs:                     	 Display controller stub library
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    cpu_spi_stubs:                     	 SPI stub library
+    cpu_watchdog_stubs:                	 Watchdog driver
+    system_initialization_hal:         	 System initialization library
+    Watchdog_pal_stubs:                	 Watchdog stub
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    blockstorage_pal:                  	 Block storage library
+    AT91_BL_EFC:                       	 Block storage driver for AT91
+    Buttons_pal:                       	 Buttons library
+    COM_pal:                           	 Communication port director
+    i2c_pal_stubs:                     	 I2C stub library
+    sockets_pal_stubs:                 	 Network socket stub driver
+    sockets_pal:                       	 Network sockets driver
+    ssl_pal_stubs:                     	 SSL PAL layer stub library
+    sockets_hal:                       	 Network stack driver
+    usb_pal:                           	 USB driver
+    config_pal:                        	 System configuration
+    diagnostics_pal:                   	 Diagnostics library
+    events_pal:                        	 System event library
+    heap_pal:                          	 Managed heap size and location configuration
+    piezo_pal_stubs:                   	 Piezo stub driver
+    sockets_dhcp:                      	 DHCP network library
+    sockets_hal_tcp:                   	 TCP network library
+    sockets_hal_udp:                   	 UDP network Library
+    sockets_rtip_pal:                  	 RTIP network driver
+    sockets_ssl_stubs:                 	 SSL stub library
+    sockets_hal_async:                 	 Network async abstraction layer
+    SimpleHeap_stubs:                  	 SimpleHeap unmanaged heap stub library
+    SimpleHeap_config_stubs:           	 SimpleHeap configuration stub library
+    tinycrt_pal:                       	 CRT functionality
+    AT91_AIC:                          	 Atmel AT91 interrupt controller driver
+    AT91_EMAC:                         	 Atmel AT91SAM7X Ethernet driver
+    AT91_GPIO:                         	 Atmel AT91 general purpose input-output (GPIO) driver
+    AT91_SAM:                          	 Atmel processor power driver
+    AT91_TIMER:                        	 Atmel AT91 timer driver
+    AT91_TIME:                         	 Atmel AT91 time driver
+    AT91_USB:                          	 Atmel AT91 USB driver
+    CRC:                               	 CRC library
+    WireProtocol:                      	 Device communication protocol
+    fs_pal_stubs:                      	 File System stub library
+    FS_Config_stubs:                   	 File system config stub
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    palevent_pal_stubs:                	 palevent set of methods used by Gesture, Ink
+    Time_pal:                          	 Time set of methods used by Time, Time
+    Native:                            	 
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    SAM7X_Bootstrap:                   	 Atmel Sam7x bootstrap driver
+    usart_pal:                         	 USART driver
+    AT91_USART:                        	 Atmel AT91 USART driver
+    usb_pal_config_AT91SAM7:           	 USB PAL configuration for Atmel SAM7X
+    SAM7X_EMAC_Config:                 	 Ethernet configuration driver for SAM7S_EK solution
+    BlockStorage_AddDevices_SAM7S_EK:  	 Block storage add device driver for SAM7S_EK
+    Sam7x_BL_config:                   	 Block storage configuration for SAM7S_EK
+    Network_config_SAM7S_EK:           	 Network configuration for SAM7_EK
+
+
+Project PortBooter
+    Description:                       	 
+    Path:                              	 Solutions\SAM7S_EK\PortBooter
+
+Libraries:
+    Crypto_stub:                       	 Crypto stub library
+    GlobalLock_hal:                    	 Global lock (native threading control)
+    TinyHal_loader:                    	 Core HAL library (for boot loaders)
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    lcd_hal_stubs:                     	 Stub display driver
+    cpu_cache_stubs:                   	 Cache stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    cpu_LCD_stubs:                     	 Display controller stub library
+    cpu_spi_stubs:                     	 SPI stub library
+    cpu_watchdog_stubs:                	 Watchdog driver
+    system_initialization_hal_loader:  	 System initialization (for boot loaders)
+    Watchdog_pal_stubs:                	 Watchdog stub
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    blockstorage_pal:                  	 Block storage library
+    AT91_BL_EFC:                       	 Block storage driver for AT91
+    Buttons_pal:                       	 Buttons library
+    COM_pal:                           	 Communication port director
+    i2c_pal_stubs:                     	 I2C stub library
+    sockets_pal_stubs:                 	 Network socket stub driver
+    usb_pal:                           	 USB driver
+    config_pal_loader:                 	 System configuration boot loader library
+    diagnostics_pal:                   	 Diagnostics library
+    events_pal:                        	 System event library
+    heap_pal:                          	 Managed heap size and location configuration
+    piezo_pal_stubs:                   	 Piezo stub driver
+    SimpleHeap_stubs:                  	 SimpleHeap unmanaged heap stub library
+    SimpleHeap_config_stubs:           	 SimpleHeap configuration stub library
+    tinycrt_pal_loader:                	 CRT functionality (for boot loaders)
+    AT91_AIC:                          	 Atmel AT91 interrupt controller driver
+    AT91_GPIO:                         	 Atmel AT91 general purpose input-output (GPIO) driver
+    AT91_PreStackInit:                 	 Freescale AT91 processor pre-stack initialization
+    AT91_SAM:                          	 Atmel processor power driver
+    AT91_TIMER:                        	 Atmel AT91 timer driver
+    AT91_TIME:                         	 Atmel AT91 time driver
+    AT91_USB:                          	 Atmel AT91 USB driver
+    CRC:                               	 CRC library
+    fs_pal_stubs:                      	 File System stub library
+    FS_Config_stubs:                   	 File system config stub
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    palevent_pal_stubs:                	 palevent set of methods used by Gesture, Ink
+    Time_pal:                          	 Time set of methods used by Time, Time
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    SAM7X_Bootstrap:                   	 Atmel Sam7x bootstrap driver
+    usart_pal:                         	 USART driver
+    AT91_USART:                        	 Atmel AT91 USART driver
+    WireProtocol:                      	 Device communication protocol
+    usb_pal_config_AT91SAM7:           	 USB PAL configuration for Atmel SAM7X
+    BlockStorage_AddDevices_SAM7S_EK:  	 Block storage add device driver for SAM7S_EK
+    Sam7x_BL_config:                   	 Block storage configuration for SAM7S_EK
+
+
+Project PortBooterLoader
+    Description:                       	 
+    Path:                              	 Solutions\SAM7S_EK\PortBooter
+
+Libraries:
+    Crypto_stub:                       	 Crypto stub library
+    GlobalLock_hal:                    	 Global lock (native threading control)
+    TinyHal_loader:                    	 Core HAL library (for boot loaders)
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    lcd_hal_stubs:                     	 Stub display driver
+    cpu_cache_stubs:                   	 Cache stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    cpu_LCD_stubs:                     	 Display controller stub library
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    cpu_spi_stubs:                     	 SPI stub library
+    cpu_watchdog_stubs:                	 Watchdog driver
+    system_initialization_hal_loader:  	 System initialization (for boot loaders)
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    blockstorage_pal_stubs:            	 Block storage stub library
+    BlockStorage_AddDevices_stubs:     	 Block storage add device stub driver
+    Buttons_pal:                       	 Buttons library
+    Watchdog_pal_stubs:                	 Watchdog stub
+    COM_pal:                           	 Communication port director
+    i2c_pal_stubs:                     	 I2C stub library
+    sockets_pal_stubs:                 	 Network socket stub driver
+    usb_pal_stubs:                     	 USB stub driver
+    config_pal_loader:                 	 System configuration boot loader library
+    diagnostics_pal:                   	 Diagnostics library
+    events_pal_stubs:                  	 System event stub library
+    heap_pal:                          	 Managed heap size and location configuration
+    piezo_pal_stubs:                   	 Piezo stub driver
+    SimpleHeap_stubs:                  	 SimpleHeap unmanaged heap stub library
+    SimpleHeap_config_stubs:           	 SimpleHeap configuration stub library
+    tinycrt_pal_loader:                	 CRT functionality (for boot loaders)
+    AT91_AIC:                          	 Atmel AT91 interrupt controller driver
+    AT91_GPIO:                         	 Atmel AT91 general purpose input-output (GPIO) driver
+    AT91_PreStackInit:                 	 Freescale AT91 processor pre-stack initialization
+    AT91_SAM:                          	 Atmel processor power driver
+    AT91_TIMER:                        	 Atmel AT91 timer driver
+    AT91_TIME:                         	 Atmel AT91 time driver
+    cpu_usb_stubs:                     	 USB stub library
+    CRC:                               	 CRC library
+    WireProtocol:                      	 Device communication protocol
+    fs_pal_stubs:                      	 File System stub library
+    FS_Config_stubs:                   	 File system config stub
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    palevent_pal_stubs:                	 palevent set of methods used by Gesture, Ink
+    Time_pal:                          	 Time set of methods used by Time, Time
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    SAM7X_Bootstrap:                   	 Atmel Sam7x bootstrap driver
+    usart_pal:                         	 USART driver
+    AT91_USART:                        	 Atmel AT91 USART driver
+    usart_pal_stubs:                   	 USART stub driver
+    cpu_usart_stubs:                   	 USART stub library
+
+
+Project Tinybooter
+    Description:                       	 
+    Path:                              	 Solutions\SAM7S_EK\TinyBooter
+
+Libraries:
+    TinybooterLib:                     	 TinyBooter core library
+    Crypto_stub:                       	 Crypto stub library
+    GlobalLock_hal:                    	 Global lock (native threading control)
+    TinyHal_loader:                    	 Core HAL library (for boot loaders)
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    lcd_hal_stubs:                     	 Stub display driver
+    cpu_cache_stubs:                   	 Cache stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    cpu_LCD_stubs:                     	 Display controller stub library
+    cpu_spi_stubs:                     	 SPI stub library
+    cpu_watchdog_stubs:                	 Watchdog driver
+    system_initialization_hal_loader:  	 System initialization (for boot loaders)
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    blockstorage_pal:                  	 Block storage library
+    AT91_BL_EFC:                       	 Block storage driver for AT91
+    Watchdog_pal_stubs:                	 Watchdog stub
+    Buttons_pal:                       	 Buttons library
+    COM_pal:                           	 Communication port director
+    i2c_pal_stubs:                     	 I2C stub library
+    sockets_pal_stubs:                 	 Network socket stub driver
+    config_pal_loader:                 	 System configuration boot loader library
+    diagnostics_pal:                   	 Diagnostics library
+    events_pal:                        	 System event library
+    heap_pal:                          	 Managed heap size and location configuration
+    piezo_pal_stubs:                   	 Piezo stub driver
+    SimpleHeap:                        	 SimpleHeap unmanaged heap
+    SimpleHeap_config_stubs:           	 SimpleHeap configuration stub library
+    tinycrt_pal_loader:                	 CRT functionality (for boot loaders)
+    AT91_AIC:                          	 Atmel AT91 interrupt controller driver
+    AT91_GPIO:                         	 Atmel AT91 general purpose input-output (GPIO) driver
+    AT91_PreStackInit:                 	 Freescale AT91 processor pre-stack initialization
+    AT91_SAM:                          	 Atmel processor power driver
+    AT91_TIMER:                        	 Atmel AT91 timer driver
+    AT91_TIME:                         	 Atmel AT91 time driver
+    CRC:                               	 CRC library
+    WireProtocol:                      	 Device communication protocol
+    fs_pal_stubs:                      	 File System stub library
+    FS_Config_stubs:                   	 File system config stub
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    palevent_pal_stubs:                	 palevent set of methods used by Gesture, Ink
+    Time_pal:                          	 Time set of methods used by Time, Time
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    SAM7X_Bootstrap:                   	 Atmel Sam7x bootstrap driver
+    AT91_USB:                          	 Atmel AT91 USB driver
+    usb_pal:                           	 USB driver
+    usart_pal:                         	 USART driver
+    AT91_USART:                        	 Atmel AT91 USART driver
+    usart_pal_stubs:                   	 USART stub driver
+    cpu_usart_stubs:                   	 USART stub library
+    usb_pal_config_AT91SAM7:           	 USB PAL configuration for Atmel SAM7X
+    BlockStorage_AddDevices_SAM7S_EK:  	 Block storage add device driver for SAM7S_EK
+    Sam7x_BL_config:                   	 Block storage configuration for SAM7S_EK
+
+
+Project TinyBooterDecompressor
+    Description:                       	 
+    Path:                              	 Solutions\SAM7S_EK\TinyBooter
+
+Libraries:
+    TinyBooterDecompressorLib:         	 TinyBooter decompressor library
+    TinybooterLib:                     	 TinyBooter core library
+    Crypto_stub:                       	 Crypto stub library
+    GlobalLock_hal:                    	 Global lock (native threading control)
+    TinyHal_loader:                    	 Core HAL library (for boot loaders)
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    lcd_hal_stubs:                     	 Stub display driver
+    cpu_cache_stubs:                   	 Cache stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    cpu_LCD_stubs:                     	 Display controller stub library
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    cpu_spi_stubs:                     	 SPI stub library
+    cpu_watchdog_stubs:                	 Watchdog driver
+    system_initialization_hal_loader:  	 System initialization (for boot loaders)
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    blockstorage_pal:                  	 Block storage library
+    AT91_BL_EFC:                       	 Block storage driver for AT91
+    Watchdog_pal_stubs:                	 Watchdog stub
+    Buttons_pal:                       	 Buttons library
+    COM_pal:                           	 Communication port director
+    i2c_pal_stubs:                     	 I2C stub library
+    sockets_pal_stubs:                 	 Network socket stub driver
+    usb_pal_stubs:                     	 USB stub driver
+    config_pal_loader:                 	 System configuration boot loader library
+    diagnostics_pal:                   	 Diagnostics library
+    events_pal:                        	 System event library
+    heap_pal:                          	 Managed heap size and location configuration
+    piezo_pal_stubs:                   	 Piezo stub driver
+    SimpleHeap_stubs:                  	 SimpleHeap unmanaged heap stub library
+    SimpleHeap_config_stubs:           	 SimpleHeap configuration stub library
+    tinycrt_pal_loader:                	 CRT functionality (for boot loaders)
+    AT91_AIC:                          	 Atmel AT91 interrupt controller driver
+    AT91_GPIO:                         	 Atmel AT91 general purpose input-output (GPIO) driver
+    AT91_PreStackInit:                 	 Freescale AT91 processor pre-stack initialization
+    AT91_SAM:                          	 Atmel processor power driver
+    AT91_TIMER:                        	 Atmel AT91 timer driver
+    AT91_TIME:                         	 Atmel AT91 time driver
+    usart_pal_stubs:                   	 USART stub driver
+    cpu_usart_stubs:                   	 USART stub library
+    cpu_usb_stubs:                     	 USB stub library
+    CRC:                               	 CRC library
+    WireProtocol:                      	 Device communication protocol
+    fs_pal_stubs:                      	 File System stub library
+    FS_Config_stubs:                   	 File system config stub
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    palevent_pal_stubs:                	 palevent set of methods used by Gesture, Ink
+    Time_pal:                          	 Time set of methods used by Time, Time
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    SAM7X_Bootstrap:                   	 Atmel Sam7x bootstrap driver
+    BlockStorage_AddDevices_SAM7S_EK:  	 Block storage add device driver for SAM7S_EK
+    Sam7x_BL_config:                   	 Block storage configuration for SAM7S_EK
+
+
+Project tinyclr
+    Description:                       	 
+    Path:                              	 Solutions\SAM7S_EK\TinyCLR
+
+Features:
+    Core:                              	 Core functionality (required)
+    Hardware:                          	 Core hardware component
+    NativeEventDispatcher:             	 Native event dispatching for interop
+    SOCKET:                            	 Socket transport
+    USB:                               	 Usb Transport
+    Serial:                            	 Serial transport
+    BlockStorage:                      	 Block storage support
+    SPI:                               	 SPI support
+    Debugger:                          	 Visual Studio debugger support
+    SerialPort:                        	 Serial port component
+    I2C:                               	 I2C Support
+    InterruptHandler:                  	 Support for interrupt handling
+    Network:                           	 Network core functionality
+
+Libraries:
+    LargeBuffer_hal_stubs:             	 LargeBuffer stub library
+    Core:                              	 CLR core library
+    Hardware:                          	 Core hardware functionality
+    InterruptHandler:                  	 Interrupt handler library
+    HeapPersistence_stub:              	 Heap persistence stub library
+    I2C_stub:                          	 I2C stub library
+    IOPort:                            	 Native event dispatcher (formerly IOPort)
+    RPC_stub:                          	 Remote procedure call stub library
+    Serialization_stub:                	 Binary serialization stub library
+    Debugger:                          	 Visual Studio debugging support
+    Debugger_full:                     	 Full Visual Studio debugging support
+    Debugger_minimal:                  	 Minimal debug API methods
+    Diagnostics_stub:                  	 Diagnostics stub library
+    Graphics_stub:                     	 Graphics stub library
+    CorLib:                            	 Subset of mscorlib
+    SPOT:                              	 Common interop library
+    SPOT_Crypto_stub:                  	 Crypto stub library
+    SPOT_Messaging_stub:               	 Messaging interop stub library
+    SPOT_Serialization_stub:           	 Serialization interop stub library
+    SPOT_Hardware:                     	 Hardware interop library
+    virtualkey_hal_stubs:              	 Virtual key stub library
+    Messaging:                         	 Core communication component
+    CLRStartup:                        	 Common CLR initialization library
+    Crypto_stub:                       	 Crypto stub library
+    GlobalLock_hal:                    	 Global lock (native threading control)
+    TinyHal:                           	 Core HAL library
+    AT91_PreStackInit:                 	 Freescale AT91 processor pre-stack initialization
+    backlight_hal_stubs:               	 Backlight HAL stub library
+    batterycharger_hal_stubs:          	 Battery charger stub library
+    batterymeasurement_hal_stubs:      	 Battery measurement stub library
+    lcd_hal_stubs:                     	 Stub display driver
+    cpu_cache_stubs:                   	 Cache stub library
+    cpu_ebiu_stubs:                    	 EBIU stub library
+    cpu_i2c_stubs:                     	 I2C stub library
+    cpu_LCD_stubs:                     	 Display controller stub library
+    cpu_spi_stubs:                     	 SPI stub library
+    cpu_watchdog_stubs:                	 Watchdog driver
+    system_initialization_hal:         	 System initialization library
+    asyncproccall_pal:                 	 Asynchronous procedure call library
+    Watchdog_pal_stubs:                	 Watchdog stub
+    blockstorage_pal:                  	 Block storage library
+    AT91_BL_EFC:                       	 Block storage driver for AT91
+    Buttons_pal_stubs:                 	 Buttons stub library
+    COM_pal:                           	 Communication port director
+    i2c_pal_stubs:                     	 I2C stub library
+    usb_pal:                           	 USB driver
+    config_pal:                        	 System configuration
+    diagnostics_pal:                   	 Diagnostics library
+    events_pal:                        	 System event library
+    heap_pal:                          	 Managed heap size and location configuration
+    piezo_pal_stubs:                   	 Piezo stub driver
+    SimpleHeap_stubs:                  	 SimpleHeap unmanaged heap stub library
+    SimpleHeap_config_stubs:           	 SimpleHeap configuration stub library
+    tinycrt_pal:                       	 CRT functionality
+    AT91_AIC:                          	 Atmel AT91 interrupt controller driver
+    AT91_GPIO:                         	 Atmel AT91 general purpose input-output (GPIO) driver
+    AT91_SAM:                          	 Atmel processor power driver
+    AT91_TIMER:                        	 Atmel AT91 timer driver
+    AT91_TIME:                         	 Atmel AT91 time driver
+    AT91_USB:                          	 Atmel AT91 USB driver
+    CRC:                               	 CRC library
+    WireProtocol:                      	 Device communication protocol
+    fs_pal_stubs:                      	 File System stub library
+    FS_Config_stubs:                   	 File system config stub
+    Ink_pal_stubs:                     	 Ink set of methods used by Ink, Ink
+    Gesture_pal_stubs:                 	 Gesture set of methods used by Gesture, Ink
+    palevent_pal_stubs:                	 palevent set of methods used by Gesture, Ink
+    Time_pal:                          	 Time set of methods used by Time, Time
+    TimeService_pal_stubs:             	 TimeService set of methods used by TimeService, TimeService
+    cpu_mmu_stubs:                     	 Memory management unit stub library
+    SAM7X_Bootstrap:                   	 Atmel Sam7x bootstrap driver
+    SPOT_Hardware_SerialPort:          	 SerialPort interop library
+    usart_pal:                         	 USART driver
+    AT91_USART:                        	 Atmel AT91 USART driver
+    sockets_pal:                       	 Network sockets driver
+    SPOT_Net:                          	 Network interop library
+    ssl_pal_stubs:                     	 SSL PAL layer stub library
+    sockets_hal:                       	 Network stack driver
+    sockets_hal_async:                 	 Network async abstraction layer
+    sockets_hal_tcp:                   	 TCP network library
+    Ethernet_loopback:                 	 Loopback Ethernet Driver
+    sockets_hal_udp:                   	 UDP network Library
+    sockets_rtip_pal:                  	 RTIP network driver
+    AT91_EMAC:                         	 Atmel AT91SAM7X Ethernet driver
+    sockets_ssl_stubs:                 	 SSL stub library
+    sockets_dhcp:                      	 DHCP network library
+    usb_pal_config_AT91SAM7:           	 USB PAL configuration for Atmel SAM7X
+    SAM7X_EMAC_Config:                 	 Ethernet configuration driver for SAM7S_EK solution
+    BlockStorage_AddDevices_SAM7S_EK:  	 Block storage add device driver for SAM7S_EK
+    Sam7x_BL_config:                   	 Block storage configuration for SAM7S_EK
+    Network_config_SAM7S_EK:           	 Network configuration for SAM7_EK

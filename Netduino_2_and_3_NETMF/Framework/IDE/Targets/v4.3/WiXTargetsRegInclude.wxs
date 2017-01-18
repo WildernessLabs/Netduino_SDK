@@ -1,0 +1,42 @@
+<?xml version='1.0'?>
+<Include>
+  <?include defines.wxs?>
+  <RegistryValue
+    Root="HKLM"
+    Key="$(var.FxKey)\v4.3"
+    Name="BuildNumber"
+    Type ="string"
+    Value ="$(var.ProdVerBuild)"
+    Id="Registry_BuildVersionValue"
+    />
+
+  <RegistryValue
+    Root="HKLM"
+    Key="$(var.FxKey)\v4.3"
+    Name="RevisionNumber"
+    Type ="string"
+    Value ="$(var.ProdVerRevision)"
+    Id="Registry_RevisionVersionValue"
+    />
+
+    <RegistryKey
+        Root="HKLM"
+        Id="Registry_AssemblyFolder_v4_3"
+        Key="$(var.FxKey)\v4.3\AssemblyFolder"
+        Action="createAndRemoveOnUninstall"
+        >
+        <RegistryValue
+            Type="string"
+            Value="[AssembliesDirLE]"
+            Id="Registry_AsemblyFolderDefault_v4_3"
+            />
+    </RegistryKey>
+
+  <!-- Windows Desktop Express 2012 -->
+  <?include vs_skus\WDExpress11.wxs?>
+  <?include $(env.SPOCLIENT)\Framework\IDE\Targets\v4.3\WixTargetsRegIncludeInner.wxs?>
+  <!-- VisualStudio 2010 -->
+  <?include vs_skus\VisualStudio11.wxs?>
+  <?include $(env.SPOCLIENT)\Framework\IDE\Targets\v4.3\WixTargetsRegIncludeInner.wxs?>
+
+</Include>

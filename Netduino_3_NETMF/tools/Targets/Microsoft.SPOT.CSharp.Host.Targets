@@ -1,0 +1,21 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003"  ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <TinyCLR_Platform>Server</TinyCLR_Platform>
+    <DocFile Condition=" '$(TinyCLR_CSharp_Documentation)'=='true' ">$(OutputPath)$(AssemblyName).xml</DocFile>
+    <NoWarn>$(NoWarn),1668,1762</NoWarn>
+    <AllowUnsafeBlocks Condition="'$(AllowUnsafeBlocks)'==''" >false</AllowUnsafeBlocks>
+    <CheckForOverflowUnderflow Condition="'$(CheckForOverflowUnderflow)'==''" >false</CheckForOverflowUnderflow>
+    <CommonAssemblyInfoTemplate>$(SPOCLIENT)\tools\AssemblyInfo.cs.template</CommonAssemblyInfoTemplate>
+    <CommonAssemblyInfoItemName>Compile</CommonAssemblyInfoItemName>
+    <CommonAssemblyInfoLanguage>CSharp</CommonAssemblyInfoLanguage>
+  </PropertyGroup>
+
+  <Import Project="Microsoft.SPOT.Build.Setup.Targets" />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <Import Project="Microsoft.SPOT.Build.Host.Targets" />
+
+  <PropertyGroup>
+    <ImportToSDK>false</ImportToSDK>
+  </PropertyGroup>
+</Project>

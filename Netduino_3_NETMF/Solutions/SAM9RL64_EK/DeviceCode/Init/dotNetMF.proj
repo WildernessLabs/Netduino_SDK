@@ -1,0 +1,34 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>AT91_SAM_Init</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{83429a5a-814c-4466-b846-9df77517f190}</ProjectGuid>
+    <Description>Atmel AT91 initialization code</Description>
+    <Level>HAL</Level>
+    <LibraryFile>AT91_SAM_Init.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\Solutions\SAM9RL64_EK\DeviceCode\Init\dotnetmf.proj</ProjectPath>
+    <ManifestFile>AT91_SAM_Init.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Processor\AT91</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomSpecific>
+    </CustomSpecific>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>Solutions\SAM9RL64_EK\DeviceCode\Init</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="AT91_SAM_Init.cpp" />
+    <IncludePaths Include="DeviceCode\include" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

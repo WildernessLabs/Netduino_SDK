@@ -1,0 +1,18 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>
+    </Author>
+    <Description>Freescale iMXS full functionality (except networking)</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{7895a3c9-aafb-47b0-9b66-da3ea37527c2}</PlatformGuid>
+    <TARGETPLATFORM>iMXS</TARGETPLATFORM>
+    <PLATFORM>iMXS</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\iMXS" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\MC9328\MC9328.settings" />
+</Project>

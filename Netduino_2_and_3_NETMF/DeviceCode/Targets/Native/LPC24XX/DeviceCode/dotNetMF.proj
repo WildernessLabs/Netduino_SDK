@@ -1,0 +1,25 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Directory>DeviceCode\Targets\Native\LPC24XX\DeviceCode</Directory>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <SubDirectories Include="EMAC"/>
+    <SubDirectories Include="GPIO"/>
+    <SubDirectories Include="I2C"/>
+    <SubDirectories Include="LCDC"/>
+    <SubDirectories Include="Power"/>
+    <SubDirectories Include="PWM"/>
+    <SubDirectories Include="Bootstrap"/>
+    <SubDirectories Include="PreStackInit"/>
+    <SubDirectories Include="SPI"/>
+    <SubDirectories Include="TIME"/>
+    <SubDirectories Include="USART"/>
+    <SubDirectories Include="VIC"/>
+    <SubDirectories Include="WATCHDOG"/>
+    <SubDirectories Include="DAC"/>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

@@ -1,0 +1,19 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>
+    </Author>
+    <Description>
+    </Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{434f8ec0-9ddb-4690-b89e-768eadc58ac9}</PlatformGuid>
+    <TARGETPLATFORM>SAM9RL64_EK</TARGETPLATFORM>
+    <PLATFORM>SAM9RL64_EK</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+	<ENDIANNESS>le</ENDIANNESS>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\SAM9RL64_EK" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\AT91\AT91SAM9RL64.settings" />
+</Project>

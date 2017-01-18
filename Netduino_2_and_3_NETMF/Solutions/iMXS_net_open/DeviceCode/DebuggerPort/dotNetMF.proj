@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>DebuggerPort_SSL_iMXS_net_open</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{DE2612A7-DAFC-41C3-BC73-AABA8127856C}</ProjectGuid>
+    <Description>Debugger SSL upgrade mechanism for iMXS_net_open</Description>
+    <Level>HAL</Level>
+    <LibraryFile>DebuggerPort_SSL_iMXS_net_open.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\Solutions\iMXS_net_open\DeviceCode\DebuggerPort\dotnetmf.proj</ProjectPath>
+    <ManifestFile>DebuggerPort_SSL_iMXS_net_open.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Solutions\iMXS_net_open</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomSpecific>
+    </CustomSpecific>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>Solutions\iMXS_net_open\DeviceCode\DebuggerPort</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="DebuggerPort_SSL_iMXS_net_open.cpp" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

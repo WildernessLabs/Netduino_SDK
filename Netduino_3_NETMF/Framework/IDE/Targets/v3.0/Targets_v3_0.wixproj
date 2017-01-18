@@ -1,0 +1,22 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <ComponentGuid>{22839f5e-32ae-43f0-9482-d90790e7b54d}</ComponentGuid>
+    <DirectoryRef>MSBuildExtensionsPath_MFv3_0</DirectoryRef>
+    <_curdir>$(SPOCLIENT)\Framework\IDE\Targets\v3.0</_curdir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <WiXComponentFiles Include="$(_curdir)\CSharp.targets" />
+    <WiXComponentFiles Include="$(_curdir)\VisualBasic.targets" />
+    <WiXComponentFiles Include="$(_curdir)\Emulator.targets" />
+    <WiXComponentFiles Include="$(_curdir)\Device.targets" />
+    <WiXComponentFiles Include="$(_curdir)\Tasks.settings.shipping">
+        <Name>Tasks.settings</Name>
+    </WiXComponentFiles>
+    <WiXComponentIncludeFile Include="$(MSBuildProjectDirectory)\WiXTargetsRegInclude.wxs" />
+  </ItemGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.WiX.Targets" />
+
+</Project>

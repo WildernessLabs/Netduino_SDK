@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Directory>Solutions\EA_LPC2478\DeviceCode\Interop\Microsoft_SPOT_MP3Decoder\NativeCode\MP3Decoder</Directory>
+    <AssemblyName>Mp3Decoder</AssemblyName>
+    <ProjectGuid>{7FFF73F1-B907-4562-8AC1-FE51C3EDF966}</ProjectGuid>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <HFile Include="Mp3Decoder.h" />
+    <Compile Include="Mp3Decoder.cpp" />
+    <Compile Include="Mp3Decoder_NXP_Interop_MP3Decoder_mshl.cpp" />
+    <HFile Include="Mp3Decoder_NXP_Interop_MP3Decoder.h" />
+    <Compile Include="Mp3Decoder_NXP_Interop_MP3Decoder.cpp" />
+    <!-- Helix MP3 Decoder -->
+    <Compile Include="helix\mp3dec.c" />
+    <Compile Include="helix\mp3tabs.c" />
+    <Compile Include="helix\real\bitstream.c" />
+    <Compile Include="helix\real\buffers.c" />
+    <Compile Include="helix\real\dct32.c" />
+    <Compile Include="helix\real\dequant.c" />
+    <Compile Include="helix\real\dqchan.c" />
+    <Compile Include="helix\real\huffman.c" />
+    <Compile Include="helix\real\hufftabs.c" />
+    <Compile Include="helix\real\imdct.c" />
+    <!--<Compile Include="helix\real\polyphase.c" />-->
+    <Compile Include="helix\real\scalfact.c" />
+    <Compile Include="helix\real\stproc.c" />
+    <Compile Include="helix\real\subband.c" />
+    <Compile Include="helix\real\trigtabs.c" />
+    <Compile Include="helix\real\arm\asmmisc.s" />
+    <Compile Include="helix\real\arm\asmpoly.s" />
+    <HFile Include="helix\pub\mp3common.h" />
+    <HFile Include="helix\pub\mp3dec.h" />
+    <!--<HFile Include="helix\pub\statname.h" />
+<HFile Include="helix\real\assembly.h" />-->
+    <IncludePaths Include="Solutions\EA_LPC2478\DeviceCode\Interop\Microsoft_SPOT_MP3Decoder\NativeCode\MP3Decoder\helix\pub\" />
+    <IncludePaths Include="Solutions\EA_LPC2478\DeviceCode\Interop\Microsoft_SPOT_MP3Decoder\NativeCode\MP3Decoder\helix\real\" />
+  </ItemGroup>
+  <ItemGroup>
+    <HFiles Include="$(PLATFORM_INDEPENDENT_LIB_DIR)\CLR_defines.h" />
+    <HFiles Include="$(SPOCLIENT)\clr\include\tinyclr_errorcodes.h" />
+    <HFiles Include="$(SPOCLIENT)\clr\include\tinyclr_interop.h" />
+    <HFiles Include="$(SPOCLIENT)\clr\include\tinyclr_platformdef.h" />
+    <HFiles Include="$(SPOCLIENT)\Solutions\$(PLATFORM)\assembly.h" />
+    <HFiles Include="$(SPOCLIENT)\Solutions\$(PLATFORM)\coder.h" />
+    <HFiles Include="$(SPOCLIENT)\Solutions\$(PLATFORM)\mp3common.h" />
+    <HFiles Include="$(SPOCLIENT)\Solutions\$(PLATFORM)\mp3dec.h" />
+    <HFiles Include="$(SPOCLIENT)\Solutions\$(PLATFORM)\statname.h" />
+    <HFiles Include="mp3decoder.h" />
+    <HFiles Include="mp3decoder_nxp_interop_mp3decoder.h" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

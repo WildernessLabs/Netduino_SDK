@@ -1,0 +1,85 @@
+<?xml version="1.0"?>
+<ScatterFile xmlns="http://schemas.microsoft.com/netmf/ScatterfileSchema.xsd">
+
+    <!-- EA_LPC2478 -->
+
+    <Set Name="Valid" Value="false"/>
+
+    <!-- ################################################################################ -->
+
+    <Set Name="Stack_Bottom"    Value="0xA0200000"/>
+    <Set Name="Stack_Top"       Value="0xA0300000"/>
+
+    
+    <If Name="TARGETLOCATION" In="FLASH">
+
+        <!-- LPC24XX has 504KB of 32-bit FLASH at 0x00000000 -->
+        <Set Name="Code_BaseAddress" Value="0x00000000"/>
+        <Set Name="Code_Size"        Value="0x00040000"/>
+        <Set Name="Valid"            Value="true"/>
+
+    </If>
+
+    <If Name="TARGETLOCATION" In="RAM">
+
+        <Set Name="Code_BaseAddress" Value="0xA1050000"/> 
+        <Set Name="Code_Size"        Value="0x00040000"/>
+        <Set Name="Valid"            Value="true"/>
+        
+    </If>
+
+
+    <!-- ################################################################################ -->
+
+    <If Name="Valid" Value="false">
+        <Error Message="Configuration not recognized"/>
+    </If>
+
+    <LoadRegion Name="LR_%TARGETLOCATION%" Base="%Code_BaseAddress%" Options="ABSOLUTE" Size="%Code_Size%">
+        
+        <ExecRegion Name="ER_%TARGETLOCATION%" Base="%Code_BaseAddress%" Options="FIXED" Size="">
+
+            <FileMapping Name="FirstEntry.obj"   Options="(+RO, +FIRST)" /> <!-- the entry pointer section goes into this region -->
+
+            <FileMapping Name="*" Options="(SectionForBootstrapOperations)" />
+
+            <FileMapping Name="*"                Options="(+RO)" />
+
+        </ExecRegion>
+
+        <!-- skip vector area -->
+        <ExecRegion Name="ER_IRAM" Base="0x40000000" Options="ABSOLUTE" Size="0x40">
+
+            <FileMapping Name="BooterVectorTable.obj" Options="(+RO, +FIRST)" /> <!-- for vector handlers to be far from the vectors -->
+
+        </ExecRegion>
+		
+		<ExecRegion Name="ER_IRAM_TC" Base="0x40000040" Options="ABSOLUTE" Size="0x4000FFFF-0x40000040">
+
+        </ExecRegion>
+
+
+        <ExecRegion Name="ER_RAM_RO" Base="0xA0000000" Options="ABSOLUTE" Size="">
+
+
+        </ExecRegion>
+
+        <ExecRegion Name="ER_RAM_RW" Base="+0" Options="ABSOLUTE" Size="">
+
+            <FileMapping Name="*"                Options="(+RW-DATA, +ZI)" />
+
+        </ExecRegion>
+
+        <!-- this must go last here to provide a low water mark on the stack -->
+
+        <ExecRegion Name="ER_STACK_BOTTOM" Base="%Stack_Bottom%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForStackBottom)" />
+        </ExecRegion>
+	    
+        <ExecRegion Name="ER_STACK_TOP" Base="%Stack_Top%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForStackTop)" />
+        </ExecRegion>
+
+    </LoadRegion>
+
+</ScatterFile>

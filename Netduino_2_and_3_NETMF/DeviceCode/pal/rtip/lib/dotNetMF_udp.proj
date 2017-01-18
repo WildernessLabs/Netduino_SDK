@@ -1,0 +1,65 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>sockets_hal_udp</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{61bc1ace-dd36-43fa-9a00-2c4689121cf5}</ProjectGuid>
+    <Description>UDP network Library</Description>
+    <Level>PAL</Level>
+    <LibraryFile>sockets_hal_udp.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\pal\rtip\lib\dotNetMF_udp.proj</ProjectPath>
+    <ManifestFile>sockets_hal_udp.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Network</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="Sockets_udp_PAL" Guid="{F3CFF2CB-AF06-4F82-B3B9-D743FC8F248D}" ProjectPath="" Conditional="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomFilter>RTIP</CustomFilter>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\pal\rtip\lib</Directory>
+    <OutputType>Custom</OutputType>
+    <CustomTargets>CopyFilesX</CustomTargets>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+
+  <ItemGroup Condition="'$(PLATFORM_FAMILY)'=='arm' and !Exists('$(SPOCLIENT)\$(Directory)\RVDS3.1\$(INSTRUCTION_SET)\$(TARGETLOCATION)\$(FLAVOR)\sockets_hal_udp.$(LIB_EXT)')">
+    <RequiredProjects Include="$(SPOCLIENT)\DeviceCode\pal\rtip\stubs\udp\dotNetMF.proj"/>    
+  </ItemGroup>
+  <ItemGroup Condition="'$(PLATFORM_FAMILY)'=='SHC' and !Exists('$(SPOCLIENT)\$(Directory)\HEW9.2\$(RTIP_INSTRUCTION_SET)\$(TARGETLOCATION)\$(FLAVOR)\sockets_hal_udp.$(LIB_EXT)')">
+    <RequiredProjects Include="$(SPOCLIENT)\DeviceCode\pal\rtip\stubs\udp\dotNetMF.proj"/>    
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(PLATFORM_FAMILY)'=='arm'">
+    <CopyFrom Condition="Exists('$(SPOCLIENT)\$(Directory)\RVDS3.1\$(INSTRUCTION_SET)\$(TARGETLOCATION)\$(FLAVOR)\sockets_hal_udp.$(LIB_EXT)')" Include="$(SPOCLIENT)\$(Directory)\RVDS3.1\$(INSTRUCTION_SET)\$(TARGETLOCATION)\$(FLAVOR)\sockets_hal_udp.$(LIB_EXT)" />
+    <CopyFrom Condition="!Exists('$(SPOCLIENT)\$(Directory)\RVDS3.1\$(INSTRUCTION_SET)\$(TARGETLOCATION)\$(FLAVOR)\sockets_hal_udp.$(LIB_EXT)')" Include="$(LIB_DIR)\sockets_hal_udp_stubs.$(LIB_EXT)" />
+    <ExtraCleanFiles Include="$(LIB_DIR)\sockets_hal_udp.$(LIB_EXT)" />
+  </ItemGroup>
+
+  <ItemGroup Condition="'$(PLATFORM_FAMILY)'=='SHC'">
+    <CopyFrom Condition="Exists('$(SPOCLIENT)\$(Directory)\HEW9.2\$(RTIP_INSTRUCTION_SET)\$(TARGETLOCATION)\$(FLAVOR)\sockets_hal_udp.$(LIB_EXT)')" Include="$(SPOCLIENT)\$(Directory)\HEW9.2\$(RTIP_INSTRUCTION_SET)\$(TARGETLOCATION)\$(FLAVOR)\sockets_hal_udp.$(LIB_EXT)" />
+    <CopyFrom Condition="!Exists('$(SPOCLIENT)\$(Directory)\HEW9.2\$(RTIP_INSTRUCTION_SET)\$(TARGETLOCATION)\$(FLAVOR)\sockets_hal_udp.$(LIB_EXT)')" Include="$(LIB_DIR)\sockets_hal_udp_stubs.$(LIB_EXT)" />
+    <ExtraCleanFiles Include="$(LIB_DIR)\sockets_hal_udp.$(LIB_EXT)" />
+  </ItemGroup>
+
+  <Target Name="CopyFilesX" Inputs="@(CopyFrom)" Outputs="$(LIB_DIR)\$(LibraryFile)$(LIB_EXT)">
+    <Copy SourceFiles="@(CopyFrom)" DestinationFiles="$(LIB_DIR)\$(LibraryFile)$(LIB_EXT)"/>         
+  </Target>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

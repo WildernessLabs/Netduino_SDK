@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>SHHal_7619</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{8297e9dc-12f9-4444-a293-5012de0313e5}</ProjectGuid>
+    <Description>SH7619  backbone layer</Description>
+    <Level>HAL</Level>
+    <LibraryFile>SHHal_7619.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\Targets\native\SH2\DeviceCode\sh7619\dotNetMF.proj</ProjectPath>
+    <ManifestFile>shHal_7619.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Processor\SH2</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <ProcessorSpecific>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="SH 7619" Guid="{B2821FF2-6BD1-4d57-8190-E8BCE745AF19}" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">Processor</ComponentType>
+      </MFComponent>
+    </ProcessorSpecific>
+    <CustomFilter>
+    </CustomFilter>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>DeviceCode\Targets\native\SH2\DeviceCode\sh7619</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="Hwsetup.cpp" />
+    <Compile Include="intprg.c" />
+    <Compile Include="resetprg.c" />
+    <Compile Include="dbsct.c" />
+    <Compile Include="sbrk.c" />
+    <Compile Include="vecttbl.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <HFiles Include="iodefine.h" />
+    <HFiles Include="sbrk.h" />
+    <HFiles Include="stacksct.h" />
+    <HFiles Include="typedefine.h" />
+    <HFiles Include="vect.h" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

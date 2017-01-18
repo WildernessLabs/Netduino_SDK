@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FeatureName>NetduinoGo.ShieldBase</FeatureName>
+    <Guid>{d74fcfba-6c7d-4493-a92c-701649af94bd}</Guid>
+    <Description />
+    <Groups />
+  </PropertyGroup>
+  <ItemGroup>
+    <MMP_DAT_CreateDatabase Include="$(SPOCLIENT)\Solutions\NetduinoGo\ManagedCode\NetduinoGo_ShieldBase\bin\Release\le\GoBusSerialTransport.pe" />
+    <MMP_DAT_CreateDatabase Include="$(SPOCLIENT)\Solutions\NetduinoGo\ManagedCode\NetduinoGo_ShieldBase\bin\Release\le\NetduinoGo.ShieldBase.pe" />
+  </ItemGroup>
+</Project>

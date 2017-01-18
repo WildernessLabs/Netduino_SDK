@@ -1,0 +1,33 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+// Copyright (c) Microsoft Corporation.  All rights reserved.
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+#include <tinyhal.h>
+
+
+GPIO_PIN VirtualKey_GetPins(UINT32 virtualKey)
+{
+    GPIO_PIN pin;
+
+    switch (virtualKey)
+    {
+    case VK_MENU:
+        pin = AT91_GPIO_Driver::PA25;
+        break;
+    case VK_SELECT:
+        pin = AT91_GPIO_Driver::PA26;
+        break;
+    case VK_LEFT:
+        pin = AT91_GPIO_Driver::PA27;
+        break;
+    case VK_RIGHT:
+        pin = AT91_GPIO_Driver::PA24;
+        break;
+    default:
+        pin = GPIO_PIN_NONE;
+        break;
+    }
+   
+   return pin;
+}
+

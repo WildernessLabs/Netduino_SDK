@@ -1,0 +1,50 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>BlockStorageConfig_HAL_SH7264_RSK</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{de32e828-b3bc-4ea0-b319-27bacb349529}</ProjectGuid>
+    <Description>Block storage SH7264_RSK config</Description>
+    <Level>HAL</Level>
+    <LibraryFile>BlockStorageConfig_HAL_SH7264_RSK.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\Solutions\SH7264_RSK\DeviceCode\Blockstorage\BlockStorageConfig_HAL\dotNetMF.proj</ProjectPath>
+    <Groups>BlockStorage</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="BlockStorageConfig_HAL" Guid="{497F59BB-55D3-404e-B958-A6284806D184}" ProjectPath="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-04-30</Date>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsSH7264_RSK>True</IsSH7264_RSK>
+    <ManifestFile>BlockStorageConfig_HAL_SH7264_RSK.$(LIB_EXT).manifest</ManifestFile>
+    <CustomFilter>
+    </CustomFilter>
+    <Directory>Solutions\SH7264_RSK\DeviceCode\Blockstorage\BlockStorageConfig_HAL</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <!--Compile Include="blconfig_SH7264_RSK.cpp" /-->
+    <Compile Include="S29GL032A_16_config.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <HFiles Include="$(SPOCLIENT)\devicecode\drivers\blockstorage\flash\am29dl_16\am29dl_16.h" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

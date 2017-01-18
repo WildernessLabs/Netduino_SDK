@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+<ScatterFile xmlns="http://schemas.microsoft.com/netmf/ScatterfileSchema.xsd">
+
+
+    <!-- ################################################################################ -->
+
+    <Set Name="Heap_Begin"      Value="0x23000000"/>
+    <Set Name="Heap_End"        Value="0x237FFFF8"/>
+	<Set Name="Custom_Heap_Begin" Value="0x23800000"/>
+    <Set Name="Custom_Heap_End"   Value="0x23EFFFF8"/>
+    <Set Name="Stack_Bottom"    Value="0x0030E000"/>
+    <Set Name="Stack_Top"       Value="0x0030FFF8"/>
+
+
+    <LoadRegion Name="LR_%TARGETLOCATION%" Base="0x20000000" Options="ABSOLUTE" Size="0x00026000">
+
+        <ExecRegion Name="ER_%TARGETLOCATION%" Base="0x20000000" Options="FIXED" Size="">
+
+            <FileMapping Name="FirstEntryMinimal.obj"   Options="(+RO)" /> <!-- the entry pointer section goes into this region -->
+
+        </ExecRegion>
+
+        <!-- skip vector area -->
+        <ExecRegion Name="ER_RAM_RO" Base="+0" Options="ABSOLUTE" Size="">
+
+            <!-- all code and constants are in RAM, 0-WS, 32-bit wide -->
+
+            <FileMapping Name="*" Options="(+RO)" /> <!-- this must live somewhere other than RAM, for all but RAM builds -->
+
+        </ExecRegion>
+
+        <ExecRegion Name="ER_RAM_RW" Base="+0" Options="ABSOLUTE" Size="">
+
+            <FileMapping Name="*"   Options="(+RW-DATA, +ZI)" />
+
+        </ExecRegion>
+
+        <ExecRegion Name="ER_HEAP_BEGIN" Base="%Heap_Begin%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForHeapBegin)" />
+        </ExecRegion>
+
+        <!-- everything between heapbegin and heapend will be allocated for a heap -->
+
+        <ExecRegion Name="ER_HEAP_END" Base="%Heap_End%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForHeapEnd)" />
+        </ExecRegion>
+
+
+		<ExecRegion Name="ER_CUSTOM_HEAP_BEGIN" Base="%Custom_Heap_Begin%" Options="ABSOLUTE" Size="UNINIT">
+          <FileMapping Name="*" Options="(SectionForCustomHeapBegin)" />
+        </ExecRegion>
+
+        <!-- everything between heapbegin and heapend will be allocated for the unmanaged SimpleHeap -->
+
+        <ExecRegion Name="ER_CUSTOM_HEAP_END" Base="%Custom_Heap_End%" Options="ABSOLUTE" Size="UNINIT">
+          <FileMapping Name="*" Options="(SectionForCustomHeapEnd)" />
+        </ExecRegion>
+		
+        <!-- this must go last here to provide a low water mark on the stack -->
+
+        <ExecRegion Name="ER_STACK_BOTTOM" Base="%Stack_Bottom%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForStackBottom)" />
+        </ExecRegion>
+	    
+        <ExecRegion Name="ER_STACK_TOP" Base="%Stack_Top%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForStackTop)" />
+        </ExecRegion>
+
+    </LoadRegion>
+</ScatterFile>

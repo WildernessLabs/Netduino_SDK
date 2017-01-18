@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FeatureName>Netduino.IP.LinkLayers.ENC28J60</FeatureName>
+    <Guid>{D114FF4B-E725-46C2-9302-93DE4AC5347A}</Guid>
+    <Description />
+    <Groups />
+  </PropertyGroup>
+  <ItemGroup>
+    <MMP_DAT_CreateDatabase Include="$(SPOCLIENT)\Solutions\NetduinoPlus2\ManagedCode\Netduino_IP_LinkLayers_ENC28J60\bin\Release\le\Netduino.IP.LinkLayers.ENC28J60.pe" />
+  </ItemGroup>
+</Project>

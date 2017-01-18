@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<ScatterFile xmlns="http://schemas.microsoft.com/netmf/ScatterfileSchema.xsd">
+
+    <!-- LPC2478  -->
+
+    <Set Name="Valid" Value="false"/>
+
+    <!-- ################################################################################ -->
+
+    <Set Name="Heap_Begin"      Value="0xA0100000"/>
+    <Set Name="Heap_End"        Value="0xA0200000"/>
+    <Set Name="Stack_Bottom"    Value="+0"/>
+    <Set Name="Stack_Top"       Value="0xA0300000"/>
+
+    <If Name="TARGETLOCATION" Value="FLASH">
+
+        <!-- LPC2478 has 504K of 32-bit On-Chip FLASH at 0x00000000 -->
+        <Set Name="Config_BaseAddress"        Value="0x803DF000"/>      
+        <Set Name="Config_Size"               Value="0x00001000"/>      
+        <Set Name="Code_BaseAddress"          Value="0x80000000"/>
+        <Set Name="Code_Size"                 Value="0x00080000"/>        
+        <Set Name="ER_RAM_RO_BaseAddress"     Value="0xA0000000"/>    
+        <Set Name="ER_RAM_RO_Size"            Value="%Heap_Begin%-%ER_RAM_RO_BaseAddress%"/>    
+        <Set Name="Valid"                     Value="true"/>
+
+        <!-- -->
+        
+        <!-- use internal SRAM for fast execution of application-critical tasks-->
+        <Set Name="IRAM_TC_BaseAddress"   Value="0x40000040"/>  <!-- skip SRAM vector table -->
+        <Set Name="IRAM_TC_Size"          Value="0x4000FFFF-%IRAM_TC_BaseAddress%"/>    <!-- Fill up SRAM -->
+        
+        <!-- use internal FLASH for fast execution of application-critical tasks. Just RO code and data! -->
+        <Set Name="IFLASH_TC_BaseAddress"     Value="0x00020000"/>-->   <!-- skip TinyBooterDecompressor (0x185b0 bytes) -->
+        <Set Name="IFLASH_TC_Size"        Value="0x5D000"/>-->  
+        
+        <If Name="ALTERNATEFLASHLOCATION" Value="True">
+            <Set Name="Code_BaseAddress" Value="%Code_BaseAddress + Code_Size%"/>
+        </If>
+
+    </If>
+
+    <If Name="TARGETLOCATION" Value="RAM">
+        <Set Name="Code_BaseAddress"          Value="0xA0050000"/>
+        <Set Name="Code_Size"                 Value="0x00050000"/>
+        <Set Name="ER_RAM_RO_BaseAddress"     Value="0xA0000000"/>    
+        <Set Name="ER_RAM_RO_Size"            Value="0x50000"/>           
+        <Set Name="Valid"                     Value="true"/>
+
+        <!-- use internal SRAM for fast execution of application-critical tasks-->
+        <Set Name="IRAM_TC_BaseAddress"   Value="0x40000040"/>  <!-- skip SRAM vector table -->
+        <Set Name="IRAM_TC_Size"          Value="0x4000FFFF-%IRAM_TC_BaseAddress%"/>    <!-- Fill up SRAM -->
+
+
+    </If>
+
+
+    <!-- ################################################################################ -->
+
+    <If Name="Valid" Value="false">
+        <Error Message="Configuration not recognized"/>
+    </If>
+
+
+    <LoadRegion Name="LR_%TARGETLOCATION%" Base="%Code_BaseAddress%" Options="ABSOLUTE" Size="%Code_Size%">
+
+
+        <ExecRegion Name="ER_%TARGETLOCATION%" Base="%Code_BaseAddress%" Options="FIXED" Size="">
+
+            <FileMapping Name="FirstEntry.obj"   Options="(+RO, +FIRST)" /> <!-- the entry pointer section goes into this region -->
+            <FileMapping Name="ramtest.obj"      Options="(+RO)"         /> <!-- this must live somewhere other than RAM, for all but RAM builds -->
+            <FileMapping Name="*" Options="(SectionForBootstrapOperations)" />
+            <FileMapping Name="*" Options="(+RO-CODE)" />
+            <FileMapping Name="*" Options="(+RO-DATA)" />
+            <IfNotDefined Name="Config_BaseAddress">
+               <FileMapping Name="*" Options="(SectionForConfig)" />
+            </IfNotDefined>
+            <IfNotDefined Name="IFLASH_TC_BaseAddress">
+                <FileMapping Name="*" Options="(SectionForInternalFLASH)" />
+            </IfNotDefined>
+
+        </ExecRegion>
+
+        <!-- skip vector area -->
+
+        <ExecRegion Name="ER_RAM_RO" Base="%ER_RAM_RO_BaseAddress%" Options="ABSOLUTE" Size="%ER_RAM_RO_Size%">
+
+            <!-- all code and constants are in RAM, 0-WS, 32-bit wide -->
+
+            <FileMapping Name="*"                      Options="(SectionForFlashOperations)" />
+    
+        </ExecRegion>
+
+        <ExecRegion Name="ER_RAM_RW" Base="+0" Options="ABSOLUTE" Size="">
+
+            <FileMapping Name="*"                Options="(+RW-DATA, +ZI)" />
+
+        </ExecRegion>
+
+        <ExecRegion Name="ER_IRAM" Base="0x40000000" Options="ABSOLUTE" Size="0x40">
+            <FileMapping Name="VectorsTrampolines.obj" Options="(+RO, +FIRST)" /> <!-- for vector handlers to be far from the vectors -->
+        </ExecRegion>
+        
+        <!-- Internal SRAM regions for time-critical data and code -->
+
+        <IfDefined Name="IRAM_TC_BaseAddress">
+        
+          <ExecRegion Name="ER_IRAM_TC" Base="%IRAM_TC_BaseAddress%" Options="ABSOLUTE" Size="%IRAM_TC_Size%">
+            
+            <FileMapping Name="*" Options="(SectionForInternalSRAM)" />
+            
+          </ExecRegion>
+        </IfDefined>    
+
+        <ExecRegion Name="ER_HEAP_BEGIN" Base="%Heap_Begin%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForHeapBegin)" />
+        </ExecRegion>
+
+        <!-- everything between heapbegin and heapend will be allocated for a heap -->
+
+        <ExecRegion Name="ER_HEAP_END" Base="%Heap_End%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForHeapEnd)" />
+        </ExecRegion>
+
+
+        <!-- this must go last here to provide a low water mark on the stack -->
+
+        <ExecRegion Name="ER_STACK_BOTTOM" Base="%Stack_Bottom%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForStackBottom)" />
+        </ExecRegion>
+        
+        <ExecRegion Name="ER_STACK_TOP" Base="%Stack_Top%" Options="ABSOLUTE" Size="UNINIT">
+            <FileMapping Name="*" Options="(SectionForStackTop)" />
+        </ExecRegion>
+
+    </LoadRegion>
+    
+    <IfDefined Name="IFLASH_TC_BaseAddress">
+
+        <LoadRegion Name="LR_IFLASH" Base="%IFLASH_TC_BaseAddress%" Options="ABSOLUTE" Size="%IFLASH_TC_Size%">
+
+            <ExecRegion Name="ER_IFLASH" Base="%IFLASH_TC_BaseAddress%" Options="FIXED" Size="%IFLASH_TC_Size%">
+
+                <FileMapping Name="*" Options="(SectionForInternalFLASH)" />
+
+            </ExecRegion>
+
+        </LoadRegion>
+
+    </IfDefined>
+
+    <IfDefined Name="Config_BaseAddress">
+
+        <LoadRegion Name="LR_CONFIG" Base="%Config_BaseAddress%" Options="ABSOLUTE" Size="%Config_Size%">
+
+            <ExecRegion Name="ER_CONFIG" Base="%Config_BaseAddress%" Options="FIXED" Size="%Config_Size%">
+
+                <FileMapping Name="*" Options="(SectionForConfig)" />
+
+            </ExecRegion>
+
+        </LoadRegion>
+
+    </IfDefined>
+
+</ScatterFile>

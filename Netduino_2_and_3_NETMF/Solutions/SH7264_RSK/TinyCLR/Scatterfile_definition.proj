@@ -1,0 +1,92 @@
+﻿<!-- A simple scatterfile for SH -->
+<Project  xmlns="http://schemas.microsoft.com/developer/msbuild/2003" >
+
+<PropertyGroup Condition="'$(SERIALFLASH)'!='true' ">
+
+    <ER_PROG_ADDR>0001a000</ER_PROG_ADDR>
+
+    <ER_DATA_ADDR>202E0000</ER_DATA_ADDR>
+
+    <ER_CONFIG_ADDR>203E0000</ER_CONFIG_ADDR>
+    
+    <ER_INIT_LOAD>00011000</ER_INIT_LOAD>
+
+    <ER_INIT_EXEC>0c000000</ER_INIT_EXEC>
+
+    <ER_RW_ADDR>0C020000</ER_RW_ADDR>
+
+    <ER_VTR_ADDR>00</ER_VTR_ADDR>
+
+    <ER_PReset_ADDR>20001000</ER_PReset_ADDR>
+
+    <STACK_ADDR>0c06fff8</STACK_ADDR>
+
+    <HEAP_ADDR>0c300000</HEAP_ADDR>
+
+    <HEAP_END>0cfffffc</HEAP_END>
+
+    <PROG_RAM_ADDR>0c100000</PROG_RAM_ADDR>
+
+    <PROG_RAM_END>0c16fff8</PROG_RAM_END>
+
+    <ENTRY_ADDR></ENTRY_ADDR>
+
+</PropertyGroup>
+    
+<PropertyGroup Condition="'$(SERIALFLASH)'=='true' and '$(FLAVOR)'!='RTM' ">
+
+  <ER_PROG_ADDR>1c001100</ER_PROG_ADDR>
+
+  <ER_DATA_ADDR>000b2000</ER_DATA_ADDR>
+
+  <ER_CONFIG_ADDR>1c0af000</ER_CONFIG_ADDR>
+
+  <ER_INIT_LOAD>1c0ada00</ER_INIT_LOAD>
+
+  <ER_INIT_EXEC></ER_INIT_EXEC>
+
+  <ER_RW_ADDR>FFF80000</ER_RW_ADDR>
+
+  <ER_VTR_ADDR>1C000000</ER_VTR_ADDR>
+
+  <ER_PReset_ADDR>1C000E00</ER_PReset_ADDR>
+
+  <STACK_ADDR>fff89800</STACK_ADDR>
+
+  <HEAP_ADDR>0c000000</HEAP_ADDR>
+
+  <HEAP_END>0c1ffffc</HEAP_END>
+
+  <ENTRY_ADDR></ENTRY_ADDR>
+
+</PropertyGroup>
+
+<PropertyGroup Condition="'$(SERIALFLASH)'=='true' and '$(FLAVOR)'=='RTM' ">
+
+  <ER_PROG_ADDR>1c001100</ER_PROG_ADDR>
+
+  <ER_DATA_ADDR>000b2000</ER_DATA_ADDR>
+
+  <ER_CONFIG_ADDR>1c094000</ER_CONFIG_ADDR>
+
+  <ER_INIT_LOAD>1c094a00</ER_INIT_LOAD>
+
+  <ER_INIT_EXEC></ER_INIT_EXEC>
+    
+  <ER_RW_ADDR>FFF80000</ER_RW_ADDR>
+
+  <ER_VTR_ADDR>1C000000</ER_VTR_ADDR>
+
+  <ER_PReset_ADDR>1C000E00</ER_PReset_ADDR>
+
+  <STACK_ADDR>fff89800</STACK_ADDR>
+
+  <HEAP_ADDR>0c000000</HEAP_ADDR>
+
+  <HEAP_END>0c0ffffc</HEAP_END>
+
+  <ENTRY_ADDR></ENTRY_ADDR>
+
+</PropertyGroup>
+
+</Project>

@@ -1,0 +1,28 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Author>
+    </Author>
+    <Description>Atmel AT91 SAM7X_EK solution</Description>
+    <Documentation>
+    </Documentation>
+    <PlatformGuid>{2afb0bdf-9f1a-4e3e-8e81-5eb41458a8a8}</PlatformGuid>
+    <INSTRUCTION_SET>THUMB</INSTRUCTION_SET>
+    <TARGETPLATFORM>SAM7X_EK</TARGETPLATFORM>
+    <PLATFORM>SAM7X_EK</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+    <PLATFORM_EMULATED_FLOATINGPOINT>true</PLATFORM_EMULATED_FLOATINGPOINT>
+    <TCP_IP_STACK Condition="'$(TCP_IP_STACK)'==''">LWIP</TCP_IP_STACK>
+  </PropertyGroup>
+  <ItemGroup>
+    <TinyCLR_Defines Include="PLATFORM_DEPENDENT_HEAP_SIZE_THRESHOLD=10240" />
+    <TinyCLR_Defines Include="PLATFORM_DEPENDENT_HEAP_SIZE_THRESHOLD_UPPER=15360" />
+    <TinyCLR_Defines Include="TINYCLR_NO_APPDOMAINS=1" />
+    <TinyCLR_Defines Include="PLATFORM_NO_CLR_TRACE=1" />
+    <TinyCLR_Defines Include="PLATFORM_EMULATED_FLOATINGPOINT=1" />
+  </ItemGroup>   
+  <ItemGroup>
+    <IncludePaths Include="Solutions\SAM7X_EK" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\AT91\AT91SAM7X.settings" />
+</Project>

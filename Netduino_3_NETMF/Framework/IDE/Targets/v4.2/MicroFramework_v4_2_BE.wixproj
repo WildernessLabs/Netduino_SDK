@@ -1,0 +1,168 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+  <PropertyGroup>
+    <ComponentGuid>{A89F5D91-7544-4A72-A869-DB56AA3CE885}</ComponentGuid>
+    <DirectoryRef>AssembliesDirBE_V4_2</DirectoryRef>
+    <_curdir>$(SPOCLIENT)\Framework\IDE\Targets\v4.2\Assemblies\be</_curdir>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <WiXComponentFiles Include="$(_curdir)\..\MFDpwsClient.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\MFDpwsClient.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\MFDpwsClient.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\MFDpwsClient.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\MFDpwsDevice.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\MFDpwsDevice.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\MFDpwsDevice.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\MFDpwsDevice.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\MFDpwsExtensions.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\MFDpwsExtensions.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\MFDpwsExtensions.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\MFDpwsExtensions.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\MFWsStack.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\MFWsStack.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\MFWsStack.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\MFWsStack.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Graphics.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Graphics.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Graphics.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Graphics.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Hardware.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Hardware.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Hardware.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Hardware.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Hardware.OneWire.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Hardware.OneWire.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Hardware.OneWire.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Hardware.OneWire.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Hardware.PWM.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Hardware.PWM.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Hardware.PWM.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Hardware.PWM.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Hardware.SerialPort.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Hardware.SerialPort.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Hardware.SerialPort.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Hardware.SerialPort.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Hardware.Usb.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Hardware.Usb.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Hardware.Usb.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Hardware.Usb.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Ink.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Ink.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Ink.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Ink.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.IO.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.IO.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.IO.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.IO.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Native.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Native.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Native.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Native.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Net.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Net.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Net.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Net.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Net.Security.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Net.Security.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Net.Security.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Net.Security.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Security.PKCS11.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Security.PKCS11.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Security.PKCS11.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Security.PKCS11.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Time.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Time.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Time.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Time.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.TinyCore.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.TinyCore.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.TinyCore.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.TinyCore.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Touch.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Touch.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Touch.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Touch.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Update.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.SPOT.Update.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Update.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.SPOT.Update.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.VisualBasic.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\Microsoft.VisualBasic.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.VisualBasic.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\Microsoft.VisualBasic.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\mscorlib.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\mscorlib.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\mscorlib.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\mscorlib.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\System.Ftp.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\System.Ftp.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\System.Ftp.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\System.Ftp.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\System.Http.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\System.Http.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\System.Http.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\System.Http.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\System.IO.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\System.IO.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\System.IO.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\System.IO.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\System.Net.Security.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\System.Net.Security.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\System.Net.Security.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\System.Net.Security.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\System.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\System.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\System.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\System.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\System.Security.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\System.Security.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\System.Security.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\System.Security.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\System.Text.RegularExpressions.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\System.Text.RegularExpressions.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\System.Text.RegularExpressions.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\System.Text.RegularExpressions.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\System.Xml.Legacy.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\System.Xml.Legacy.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\System.Xml.Legacy.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\System.Xml.Legacy.pe" />
+
+    <WiXComponentFiles Include="$(_curdir)\..\System.Xml.dll" />
+    <WiXComponentFiles Include="$(_curdir)\..\System.Xml.pdb" />
+    <WiXComponentFiles Include="$(_curdir)\System.Xml.pdbx" />
+    <WiXComponentFiles Include="$(_curdir)\System.Xml.pe" />
+  </ItemGroup>
+
+  <Import Project="$(SPOCLIENT)\tools\Targets\Microsoft.SPOT.WiX.Targets" />
+
+</Project>

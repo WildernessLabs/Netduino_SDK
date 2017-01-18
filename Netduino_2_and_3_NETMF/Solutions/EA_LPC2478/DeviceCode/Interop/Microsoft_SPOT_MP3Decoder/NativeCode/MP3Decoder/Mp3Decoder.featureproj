@@ -1,0 +1,16 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FeatureName>Mp3Decoder</FeatureName>
+    <Guid>{b6556045-f047-4713-a64f-6259d17222c1}</Guid>
+    <Description>
+    </Description>
+    <Groups>
+    </Groups>
+  </PropertyGroup>
+  <ItemGroup>
+    <InteropFeature Include="Mp3Decoder" />
+    <DriverLibs Include="Mp3Decoder.$(LIB_EXT)" />
+    <MMP_DAT_CreateDatabase Include="$(BUILD_TREE_CLIENT)\pe\Mp3Decoder.pe" />
+    <RequiredProjects Include="Stubs\Stubs\dotnetmf.proj" />
+  </ItemGroup>
+</Project>

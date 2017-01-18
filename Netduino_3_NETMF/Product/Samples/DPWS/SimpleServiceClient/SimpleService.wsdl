@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<l:definitions xmlns:s12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:tns="http://schemas.example.org/SimpleService" xmlns:p="http://schemas.xmlsoap.org/ws/2006/02/devprof" xmlns:po="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:a="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:e="http://schemas.xmlsoap.org/ws/2004/08/eventing" xmlns:u="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" name="SimpleService" targetNamespace="http://schemas.example.org/SimpleService" xmlns:l="http://schemas.xmlsoap.org/wsdl/">
+  <po:Policy Id="SimpleServicePolicy">
+    <p:profile />
+  </po:Policy>
+  <l:types>
+    <schema targetNamespace="http://schemas.example.org/SimpleService" xmlns="http://www.w3.org/2001/XMLSchema">
+      <element name="OneWayRequest" type="tns:OneWayRequestType" />
+      <complexType name="OneWayRequestType">
+        <sequence>
+          <element minOccurs="1" maxOccurs="1" name="Param" nillable="true" type="int" />
+          <any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="lax" />
+        </sequence>
+        <anyAttribute namespace="##any" processContents="lax" />
+      </complexType>
+      <element name="TwoWayRequest" type="tns:TwoWayRequestType" />
+      <complexType name="TwoWayRequestType">
+        <sequence>
+          <element minOccurs="1" maxOccurs="1" name="X" nillable="true" type="int" />
+          <element minOccurs="1" maxOccurs="1" name="Y" nillable="true" type="int" />
+          <any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="lax" />
+        </sequence>
+        <anyAttribute namespace="##any" processContents="lax" />
+      </complexType>
+      <element name="TwoWayResponse" type="tns:TwoWayResponseType" />
+      <complexType name="TwoWayResponseType">
+        <sequence>
+          <element minOccurs="1" maxOccurs="1" name="Sum" nillable="true" type="int" />
+          <any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="lax" />
+        </sequence>
+        <anyAttribute namespace="##any" processContents="lax" />
+      </complexType>
+      <element name="TypeCheckRequest" type="tns:TypeCheckRequestType" />
+      <complexType name="TypeCheckRequestType">
+        <sequence>
+          <element minOccurs="1" maxOccurs="1" name="BoolCheck" nillable="true" type="boolean" />
+          <element minOccurs="1" maxOccurs="1" name="DecimalCheck" nillable="true" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="FloatCheck" nillable="true" type="float" />
+          <element minOccurs="1" maxOccurs="1" name="UriListCheck" nillable="true" type="tns:UriListCheckListType" />
+          <any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="lax" />
+        </sequence>
+        <anyAttribute namespace="##any" processContents="lax" />
+      </complexType>
+      <simpleType name="UriListCheckListType">
+        <list itemType="string" />
+      </simpleType>
+      <element name="TypeCheckResponse" type="tns:TypeCheckResponseType" />
+      <complexType name="TypeCheckResponseType">
+        <sequence>
+          <element minOccurs="1" maxOccurs="1" name="BoolCheck" nillable="true" type="boolean" />
+          <element minOccurs="1" maxOccurs="1" name="DecimalCheck" nillable="true" type="string" />
+          <element minOccurs="1" maxOccurs="1" name="FloatCheck" nillable="true" type="float" />
+          <element minOccurs="1" maxOccurs="1" name="UriListCheck" nillable="true" type="tns:UriListCheckListType" />
+          <any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="lax" />
+        </sequence>
+        <anyAttribute namespace="##any" processContents="lax" />
+      </complexType>
+      <element name="AnyCheckRequest" type="tns:AnyCheckRequestType" />
+      <complexType name="AnyCheckRequestType">
+        <sequence>
+          <any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="lax" />
+        </sequence>
+        <anyAttribute namespace="##any" processContents="lax" />
+      </complexType>
+      <element name="AnyCheckResponse" type="tns:AnyCheckResponseType" />
+      <complexType name="AnyCheckResponseType">
+        <sequence>
+          <any minOccurs="0" maxOccurs="unbounded" namespace="##other" processContents="lax" />
+        </sequence>
+        <anyAttribute namespace="##any" processContents="lax" />
+      </complexType>
+    </schema>
+  </l:types>
+  <l:message name="OneWayIn">
+    <l:part name="parameters" element="tns:OneWayRequest" />
+  </l:message>
+  <l:message name="TwoWayIn">
+    <l:part name="parameters" element="tns:TwoWayRequest" />
+  </l:message>
+  <l:message name="TwoWayOut">
+    <l:part name="parameters" element="tns:TwoWayResponse" />
+  </l:message>
+  <l:message name="TypeCheckIn">
+    <l:part name="parameters" element="tns:TypeCheckRequest" />
+  </l:message>
+  <l:message name="TypeCheckOut">
+    <l:part name="parameters" element="tns:TypeCheckResponse" />
+  </l:message>
+  <l:message name="AnyCheckIn">
+    <l:part name="parameters" element="tns:AnyCheckRequest" />
+  </l:message>
+  <l:message name="AnyCheckOut">
+    <l:part name="parameters" element="tns:AnyCheckResponse" />
+  </l:message>
+  <l:portType name="SimpleService">
+    <l:operation name="OneWay">
+      <l:input a:Action="http://schemas.example.org/SimpleService/OneWay" message="tns:OneWayIn" />
+    </l:operation>
+    <l:operation name="TwoWay">
+      <l:input a:Action="http://schemas.example.org/SimpleService/TwoWay" message="tns:TwoWayIn" />
+      <l:output a:Action="http://schemas.example.org/SimpleService/TwoWayResponse" message="tns:TwoWayOut" />
+    </l:operation>
+    <l:operation name="TypeCheck">
+      <l:input a:Action="http://schemas.example.org/SimpleService/TypeCheck" message="tns:TypeCheckIn" />
+      <l:output a:Action="http://schemas.example.org/SimpleService/TypeCheckResponse" message="tns:TypeCheckOut" />
+    </l:operation>
+    <l:operation name="AnyCheck">
+      <l:input a:Action="http://schemas.example.org/SimpleService/AnyCheck" message="tns:AnyCheckIn" />
+      <l:output a:Action="http://schemas.example.org/SimpleService/AnyCheckResponse" message="tns:AnyCheckOut" />
+    </l:operation>
+  </l:portType>
+  <l:binding name="SimpleServiceBinding" type="tns:SimpleService">
+    <wsoap12:binding style="document" transport="http://schemas.xmlsoap.org/soap/http" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+    <po:PolicyReference URI="#SimpleServicePolicy" l:required="true" />
+    <l:operation name="OneWay">
+      <wsoap12:operation xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <l:input>
+        <wsoap12:body use="literal" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </l:input>
+    </l:operation>
+    <l:operation name="TwoWay">
+      <wsoap12:operation xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <l:input>
+        <wsoap12:body use="literal" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </l:input>
+      <l:output>
+        <wsoap12:body use="literal" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </l:output>
+    </l:operation>
+    <l:operation name="TypeCheck">
+      <wsoap12:operation xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <l:input>
+        <wsoap12:body use="literal" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </l:input>
+      <l:output>
+        <wsoap12:body use="literal" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </l:output>
+    </l:operation>
+    <l:operation name="AnyCheck">
+      <wsoap12:operation xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      <l:input>
+        <wsoap12:body use="literal" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </l:input>
+      <l:output>
+        <wsoap12:body use="literal" xmlns:wsoap12="http://schemas.xmlsoap.org/wsdl/soap12/" />
+      </l:output>
+    </l:operation>
+  </l:binding>
+</l:definitions>

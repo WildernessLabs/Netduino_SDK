@@ -1,0 +1,23 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Name>BF537_OS</Name>
+    <CpuName>
+    </CpuName>
+    <DefaultISA>BLACKFIN</DefaultISA>
+    <Guid>{29D102C0-03CF-4E56-A3B3-A3AB45DA0360}</Guid>
+    <Description>Blackfin OS (for BF537)</Description>
+    <Documentation>
+    </Documentation>
+    <ProjectPath>$(SPOCLIENT)\devicecode\Targets\OS\Blackfin_os\BF537_OS.settings</ProjectPath>
+    <PLATFORM_FAMILY>BLACKFIN</PLATFORM_FAMILY>
+    <CustomFilter>
+    </CustomFilter>
+    <INSTRUCTION_SET Condition="'$(INSTRUCTION_SET)'==''">BLACKFIN</INSTRUCTION_SET>
+    <TARGETPROCESSOR>BF537</TARGETPROCESSOR>
+    <TARGETCODEBASE>Blackfin_os</TARGETCODEBASE>
+    <TARGETCODEBASETYPE>OS</TARGETCODEBASETYPE>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="devicecode\Targets\OS\Blackfin_os" />
+  </ItemGroup>
+</Project>

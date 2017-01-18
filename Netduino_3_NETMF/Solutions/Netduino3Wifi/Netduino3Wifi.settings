@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Author>Secret Labs LLC</Author>
+    <Description />
+    <Documentation />
+    <PlatformGuid>{9f9457fc-31c9-4be2-a3c3-c9c67f63ca17}</PlatformGuid>
+    <INSTRUCTION_SET>THUMB2</INSTRUCTION_SET>
+    <TARGETPLATFORM>Netduino3Wifi</TARGETPLATFORM>
+    <PLATFORM>Netduino3Wifi</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+    <OEMSystemInfoString>Netduino 3 Wi-Fi (v4.3.2.2) by Secret Labs LLC</OEMSystemInfoString>
+    <NO_BOOTLOADER_COMPRESSION>true</NO_BOOTLOADER_COMPRESSION>
+    <TCP_IP_STACK>NETDUINOIP</TCP_IP_STACK>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\Netduino3Wifi" />
+    <TinyCLR_Defines Include="PLATFORM_DEPENDENT_HEAP_SIZE_THRESHOLD=10240" />
+    <TinyCLR_Defines Include="PLATFORM_DEPENDENT_HEAP_SIZE_THRESHOLD_UPPER=196608" />
+    <TinyCLR_Defines Include="PLATFORM_NO_CLR_TRACE=1" />
+    <TinyCLR_Defines Include="TINYCLR_NO_IL_INLINE=1" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\Netduino_STM32\STM32.settings" />
+</Project>
