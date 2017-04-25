@@ -55,7 +55,7 @@
   <Import Project="$(SPOCLIENT)\Framework\Features\SPI.featureproj" />
 <!--  <Import Project="$(SPOCLIENT)\Solutions\Netduino3\DeviceCode\NetduinoExtensions\NetduinoExtensions.featureproj" /> -->
   <Import Project="$(SPOCLIENT)\Solutions\Netduino3\DeviceCode\SecretLabs_NETMF_Diagnostics\SecretLabs.NETMF.Diagnostics.featureproj" />
-  <Import Project="$(SPOCLIENT)\Solutions\Netduino3\DeviceCode\GoBus\GoBus.featureproj" />
+  <!--  <Import Project="$(SPOCLIENT)\Solutions\Netduino3\DeviceCode\GoBus\GoBus.featureproj" /> -->
   <Import Project="$(SPOCLIENT)\Solutions\Netduino3\DeviceCode\SecretLabs_NETMF_Hardware_Netduino\SecretLabs.NETMF.Hardware.Netduino.featureproj" />
   <Import Project="$(SPOCLIENT)\Solutions\Netduino3\DeviceCode\SecretLabs_NETMF_IO\SecretLabs.NETMF.IO.featureproj" />
   <Import Project="$(SPOCLIENT)\Framework\Features\OneWire.featureproj" />

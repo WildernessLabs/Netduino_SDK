@@ -59,7 +59,7 @@
   <Import Project="$(SPOCLIENT)\Solutions\NetduinoPlus2\DeviceCode\Netduino_IP_Interop\Netduino.IP.Interop.featureproj" />
   <Import Project="$(SPOCLIENT)\Solutions\NetduinoPlus2\DeviceCode\Netduino_IP_LinkLayers_ENC28J60\Netduino.IP.LinkLayers.ENC28J60.featureproj" />
   <Import Project="$(SPOCLIENT)\Solutions\NetduinoPlus2\DeviceCode\SecretLabs_NETMF_Diagnostics\SecretLabs.NETMF.Diagnostics.featureproj" />
-  <Import Project="$(SPOCLIENT)\Solutions\NetduinoPlus2\DeviceCode\GoBus\GoBus.featureproj" />
+  <!--  <Import Project="$(SPOCLIENT)\Solutions\NetduinoPlus2\DeviceCode\GoBus\GoBus.featureproj" /> -->
   <Import Project="$(SPOCLIENT)\Solutions\NetduinoPlus2\DeviceCode\SecretLabs_NETMF_Hardware_Netduino\SecretLabs.NETMF.Hardware.Netduino.featureproj" />
   <Import Project="$(SPOCLIENT)\Framework\Features\OneWire.featureproj" />
   <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Interop.Settings" />
