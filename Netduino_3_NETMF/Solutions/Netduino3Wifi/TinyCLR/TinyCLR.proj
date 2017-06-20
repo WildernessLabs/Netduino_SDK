@@ -61,6 +61,10 @@
   <Import Project="$(SPOCLIENT)\Solutions\Netduino3Wifi\DeviceCode\SecretLabs_NETMF_Diagnostics\SecretLabs.NETMF.Diagnostics.featureproj" />
   <Import Project="$(SPOCLIENT)\Solutions\Netduino3Wifi\DeviceCode\GoBus\GoBus.featureproj" />
   <Import Project="$(SPOCLIENT)\Solutions\Netduino3Wifi\DeviceCode\SecretLabs_NETMF_Hardware_Netduino\SecretLabs.NETMF.Hardware.Netduino.featureproj" />
+  <Import Project="$(SPOCLIENT)\Solutions\Netduino3Wifi\DeviceCode\Microsoft_SPOT_Net\Microsoft.SPOT.Net.featureproj" />
+  <Import Project="$(SPOCLIENT)\Solutions\Netduino3Wifi\DeviceCode\System\System.featureproj" />
+  <Import Project="$(SPOCLIENT)\Solutions\Netduino3Wifi\DeviceCode\System_Http\System.Http.featureproj" />
+  <Import Project="$(SPOCLIENT)\Solutions\Netduino3Wifi\DeviceCode\System_Net_Security\System.Net.Security.featureproj" />
   <Import Project="$(SPOCLIENT)\Framework\Features\OneWire.featureproj" />
   <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Interop.Settings" />
   <ItemGroup>
