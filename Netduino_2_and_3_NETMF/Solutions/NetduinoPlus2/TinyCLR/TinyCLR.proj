@@ -55,6 +55,8 @@
   <Import Project="$(SPOCLIENT)\Framework\Features\Usb.featureproj" />
   <Import Project="$(SPOCLIENT)\Framework\Features\SPI.featureproj" />
 <!--  <Import Project="$(SPOCLIENT)\Solutions\NetduinoPlus2\DeviceCode\NetduinoExtensions\NetduinoExtensions.featureproj" /> -->
+  <Import Project="$(SPOCLIENT)\Solutions\Netduino3Ethernet\DeviceCode\Microsoft_SPOT_Net\Microsoft.SPOT.Net.featureproj" />
+  <Import Project="$(SPOCLIENT)\Solutions\Netduino3Ethernet\DeviceCode\System\System.featureproj" />
   <Import Project="$(SPOCLIENT)\Solutions\NetduinoPlus2\DeviceCode\Netduino_IP\Netduino.IP.featureproj" />
   <Import Project="$(SPOCLIENT)\Solutions\NetduinoPlus2\DeviceCode\Netduino_IP_Interop\Netduino.IP.Interop.featureproj" />
   <Import Project="$(SPOCLIENT)\Solutions\NetduinoPlus2\DeviceCode\Netduino_IP_LinkLayers_ENC28J60\Netduino.IP.LinkLayers.ENC28J60.featureproj" />
