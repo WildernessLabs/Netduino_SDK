@@ -6,11 +6,11 @@
 #endif
 #include "usbd_netmf_core.h"
 
-#define USBD_VID                      0x22B1          // Secret Labs LLC
+#define USBD_VID                      0x22B1          // Wilderness Labs LLC
 #define USBD_PID                      0x1000          // Netduino (MFUSB)
 
 #define USBD_LANGID_STRING            USB_LANGID_ENG_US
-#define USBD_MANUFACTURER_STRING      "Secret Labs LLC"
+#define USBD_MANUFACTURER_STRING      "Wilderness Labs LLC"
 
 #if defined(PLATFORM_ARM_Netduino2)
 #define USBD_PRODUCT_FS_STRING        "Netduino 2"
