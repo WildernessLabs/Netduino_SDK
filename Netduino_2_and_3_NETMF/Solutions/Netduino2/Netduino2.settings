@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
   <PropertyGroup>
-    <Author>Secret Labs LLC</Author>
+    <Author>Wilderness Labs LLC</Author>
     <Description />
     <Documentation />
     <PlatformGuid>{af8da62f-a97c-4262-b5f9-a0a326df2fc8}</PlatformGuid>
@@ -10,7 +10,7 @@
     <PLATFORM>Netduino2</PLATFORM>
     <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
     <ENDIANNESS>le</ENDIANNESS>
-    <OEMSystemInfoString>Netduino 2 (v4.3.2.0) by Secret Labs LLC</OEMSystemInfoString>
+    <OEMSystemInfoString>Netduino 2 (v4.3.2.3) by Wilderness Labs LLC</OEMSystemInfoString>
     <NO_BOOTLOADER_COMPRESSION>true</NO_BOOTLOADER_COMPRESSION>
   </PropertyGroup>
   <ItemGroup>

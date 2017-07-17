@@ -13,7 +13,7 @@
 //--//
 
 //string descriptor
-#define     MANUFACTURER_NAME_SIZE 15   /* "Secret Labs LLC*/
+#define     MANUFACTURER_NAME_SIZE 18   /* "Wilderness Labs LLC*/
 // NOTE: Having more than (probably) 32 characters causes the MFUSB KERNEL driver
 // to *CRASH* which, of course, causes Windows to crash
 #define     PRODUCT_NAME_SIZE      10   /* "Netduino 2" */

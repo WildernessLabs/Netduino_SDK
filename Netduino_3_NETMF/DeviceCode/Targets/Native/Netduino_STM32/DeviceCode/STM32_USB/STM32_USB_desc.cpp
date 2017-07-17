@@ -10,10 +10,11 @@
 #define USBD_PID                      0x1000          // Netduino (MFUSB)
 
 #define USBD_LANGID_STRING            USB_LANGID_ENG_US
-#define USBD_MANUFACTURER_STRING      "Secret Labs LLC"
+#define USBD_MANUFACTURER_STRING      "Wilderness Labs LLC"
 
 #if defined(PLATFORM_ARM_Netduino2)
 #define USBD_PRODUCT_FS_STRING        "Netduino 2"
+#err
 #elif defined(PLATFORM_ARM_NetduinoPlus2)
 #define USBD_PRODUCT_FS_STRING        "Netduino Plus 2"
 #elif defined(PLATFORM_ARM_NetduinoGo)
@@ -29,6 +30,7 @@
 
 #if defined(PLATFORM_ARM_Netduino2)
 #define USBD_CONFIGURATION_FS_STRING  "Netduino2"
+#err
 #elif defined(PLATFORM_ARM_NetduinoPlus2)
 #define USBD_CONFIGURATION_FS_STRING  "NetduinoPlus2"
 #elif defined(PLATFORM_ARM_NetduinoGo)

@@ -10,7 +10,7 @@
     <PLATFORM>Netduino3Wifi</PLATFORM>
     <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
     <ENDIANNESS>le</ENDIANNESS>
-    <OEMSystemInfoString>Netduino 3 Wi-Fi (v4.3.2.2) by Secret Labs LLC</OEMSystemInfoString>
+    <OEMSystemInfoString>Netduino 3 Wi-Fi (v4.3.2.3) by Wilderness Labs LLC</OEMSystemInfoString>
     <NO_BOOTLOADER_COMPRESSION>true</NO_BOOTLOADER_COMPRESSION>
     <TCP_IP_STACK>NETDUINOIP</TCP_IP_STACK>
   </PropertyGroup>
