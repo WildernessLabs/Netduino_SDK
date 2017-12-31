@@ -79,6 +79,9 @@ rem @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 rem set tool-chains variables 
 
 IF /I NOT "%COMPILER_TOOL%" == "VS" (
+IF NOT "%VS120COMNTOOLS%" == "" (
+      CALL "%VS120COMNTOOLS%vsvars32.bat"
+  ) ELSE (
   IF NOT "%VS110COMNTOOLS%" == "" (
       CALL "%VS110COMNTOOLS%vsvars32.bat"
   ) ELSE (
@@ -94,6 +97,7 @@ IF /I NOT "%COMPILER_TOOL%" == "VS" (
       )
     )
   )
+)
 )
 
 set TINYCLR_USE_MSBUILD=1   
@@ -359,6 +363,12 @@ IF "%COMPILER_TOOL_VERSION_NUM%"=="10" (
 IF "%COMPILER_TOOL_VERSION_NUM%"=="11" (
   IF "" == "%VS110COMNTOOLS%" GOTO BAD_VS_ARG
   CALL "%VS110COMNTOOLS%vsvars32.bat"
+  GOTO :EOF
+)
+
+IF "%COMPILER_TOOL_VERSION_NUM%"=="12" (
+  IF "" == "%VS120COMNTOOLS%" GOTO BAD_VS_ARG
+  CALL "%VS120COMNTOOLS%vsvars32.bat"
   GOTO :EOF
 )
 
