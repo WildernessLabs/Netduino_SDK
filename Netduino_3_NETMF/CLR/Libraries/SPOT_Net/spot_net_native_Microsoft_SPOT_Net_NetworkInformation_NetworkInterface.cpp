@@ -169,7 +169,7 @@ HRESULT Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInt
 {
     NATIVE_PROFILE_CLR_NETWORK();
     TINYCLR_HEADER();
-
+	CLR_Debug::Printf("Made it to Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::UpdateConfiguration");
     SOCK_NetworkConfiguration config; 
     CLR_RT_HeapBlock* pConfig           = stack.Arg0().Dereference();  _ASSERTE(pConfig != NULL);
     CLR_UINT32 interfaceIndex           = pConfig[ FIELD___interfaceIndex ].NumericByRefConst().u4;

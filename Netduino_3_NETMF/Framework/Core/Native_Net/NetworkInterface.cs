@@ -9,6 +9,7 @@ using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using Microsoft.SPOT.Hardware;
+using Microsoft.SPOT;
 
 namespace Microsoft.SPOT.Net.NetworkInformation
 {
@@ -43,7 +44,7 @@ namespace Microsoft.SPOT.Net.NetworkInformation
         private NetworkInterfaceType _networkInterfaceType;
         private byte[] _macAddress;
 
-        protected NetworkInterface(int interfaceIndex)
+        public NetworkInterface(int interfaceIndex)
         {
             this._interfaceIndex = interfaceIndex;
             _networkInterfaceType = NetworkInterfaceType.Unknown;
@@ -62,33 +63,79 @@ namespace Microsoft.SPOT.Net.NetworkInformation
             return ifaces;
         }
 
-        private static int GetNetworkInterfaceCount()
+
+
+        public static int GetNetworkInterfaceCount()
         {
-            //return Netduino.IP.Interop.NetworkInterface.GetNetworkInterfaceCount();
             MethodInfo methodInfo = Type.GetType("Netduino.IP.Interop.NetworkInterface, Netduino.IP.Interop").GetMethod("GetNetworkInterfaceCount", BindingFlags.Public | BindingFlags.Static);
             return (int)methodInfo.Invoke(null, new object[] { });
         }
 
-        private static NetworkInterface GetNetworkInterface(uint interfaceIndex)
+        public static NetworkInterface GetNetworkInterface(uint interfaceIndex)
         {
-            //return (NetworkInterface)Netduino.IP.Interop.NetworkInterface.GetNetworkInterface(interfaceIndex);
             MethodInfo methodInfo = Type.GetType("Netduino.IP.Interop.NetworkInterface, Netduino.IP.Interop").GetMethod("GetNetworkInterface", BindingFlags.Public | BindingFlags.Static);
             return (NetworkInterface)methodInfo.Invoke(null, new object[] { interfaceIndex });
         }
 
-        private void InitializeNetworkInterfaceSettings()
+        
+        public void InitializeNetworkInterfaceSettings()
         {
-            throw new NotImplementedException();
+           
+            NetworkInterface ni = GetNetworkInterface(0);
+            _flags = ni._flags;
+            _ipAddress = ni._ipAddress;
+            _gatewayAddress = ni._gatewayAddress;
+            _subnetMask = ni._subnetMask;
+            _dnsAddress1 = ni._dnsAddress1;
+            _dnsAddress2 = ni._dnsAddress2;
+            _networkInterfaceType = ni._networkInterfaceType;
+            _macAddress = ni._macAddress;
+            Dump();
+        }
+        
+
+        /*
+        public void InitializeNetworkInterfaceSettings()
+        {
+            var type = Type.GetType("Netduino.IP.Interop.NetworkInterface, Netduino.IP.Interop");
+            if (type == null)
+            {
+                return;
+            }
+            MethodInfo methodInfo = type.GetMethod("InitializeNetworkInterfaceSettings", BindingFlags.Public | BindingFlags.Instance);
+            if (methodInfo == null)
+            {
+                return;
+            }
+            methodInfo.Invoke(this, new Object[] {});
+            Debug.Print("InitializeNetworkInterfaceSettings: Invoke method completed");
+            Dump();
+        }*/
+
+
+        public void UpdateConfiguration(int updateType)
+        {
+            
+            var type = Type.GetType("Netduino.IP.Interop.NetworkInterface, Netduino.IP.Interop");
+            if (type == null)
+            {
+                return;
+            }
+            MethodInfo methodInfo = type.GetMethod("UpdateConfiguration", BindingFlags.Public | BindingFlags.Instance);
+            if (methodInfo == null)
+            {
+                return;
+            }
+            methodInfo.Invoke(this, new Object[] { updateType });
+            Debug.Print("UpdateConfiguration: Invoke method completed");
         }
 
-        private void UpdateConfiguration(int updateType)
+        public static uint IPAddressFromString(string ipAddress)
         {
-            throw new NotImplementedException();
-        }
+            if (ipAddress == null)
+                throw new System.ArgumentNullException();
 
-        private static uint IPAddressFromString(string ipAddress)
-        {
-            /* NOTE: this code is copy-and-pasted from System.Net.IPAddress.Parse */
+
             if (ipAddress == null)
                 throw new ArgumentNullException();
 
@@ -112,8 +159,10 @@ namespace Microsoft.SPOT.Net.NetworkInformation
                     else
                     {
                         i = i == length - 1 ? ++i : i;
-                        // Int32 stoi32 = Netduino.IP.LinkLayers.CC3100.ConvertStringToInt32(ipAddress.Substring(lastIndex, i - lastIndex)
-                        Int32 stoi32 = (Int32)(Type.GetType("Netduino.IP.LinkLayers.CC3100, Netduino.IP.LinkLayers.CC3100").GetMethod("ConvertStringToInt32", BindingFlags.Static).Invoke(null, new object[] { lastIndex, i - lastIndex }));
+                        System.Type type = System.Type.GetType("Netduino.IP.LinkLayers.CC3100");
+                        MethodInfo[] methodInfos = type.GetMethods(BindingFlags.Public | BindingFlags.Static);
+                        var method = type.GetMethod("ConvertStringToInt32", BindingFlags.Public | BindingFlags.Static);
+                        System.Int32 stoi32 = (System.Int32)method.Invoke(null, new object[] { ipAddress.Substring(lastIndex, i - lastIndex) });
                         octet = (ulong)(stoi32 & 0x00000000000000FF);
                         ipAddressValue = ipAddressValue + (ulong)((octet << shiftIndex) & mask);
                         lastIndex = i + 1;
@@ -125,9 +174,9 @@ namespace Microsoft.SPOT.Net.NetworkInformation
             return (uint)ipAddressValue;
         }
 
-        private string IPAddressToString(uint ipAddress)
+        public string IPAddressToString(uint ipAddress)
         {
-            if(SystemInfo.IsBigEndian)
+            if (SystemInfo.IsBigEndian)
             {
                 return string.Concat(
                                 ((ipAddress >> 24) & 0xFF).ToString(),
@@ -150,13 +199,15 @@ namespace Microsoft.SPOT.Net.NetworkInformation
                                  ".",
                                 ((ipAddress >> 24) & 0xFF).ToString()
                                 );
-             }
+            }
         }
 
         public void EnableStaticIP(string ipAddress, string subnetMask, string gatewayAddress)
         {
+
             try
             {
+ 
                 _ipAddress = IPAddressFromString(ipAddress);
                 _subnetMask = IPAddressFromString(subnetMask);
                 _gatewayAddress = IPAddressFromString(gatewayAddress);
@@ -165,21 +216,31 @@ namespace Microsoft.SPOT.Net.NetworkInformation
                 /* change CC3100 to static IP configuration */
 
                 //if (!Netduino.IP.LinkLayers.CC3100SocketNative._isInitialized) Netduino.IP.LinkLayers.CC3100SocketNative.Initialize();
+
                 Type cc3100SocketNativeType = Type.GetType("Netduino.IP.LinkLayers.CC3100SocketNative, Netduino.IP.LinkLayers.CC3100");
                 bool isInitialized = (bool)(cc3100SocketNativeType.GetField("_isInitialized").GetValue(null));
                 if (!isInitialized)
                 {
+                    Debug.Print("Initializing");
                     cc3100SocketNativeType.GetMethod("Initialize").Invoke(null, new object[] { });
                 }
-                //Netduino.IP.LinkLayers.CC3100SocketNative._cc3100.SetIpv4ConfigurationLE(_ipAddress, _subnetMask, _gatewayAddress, _dnsAddress1);
-                FieldInfo cc3100FieldInfo = cc3100SocketNativeType.GetField("_cc3100");
-                cc3100FieldInfo.FieldType.GetMethod("SetIpv4ConfigurationLE").Invoke(cc3100FieldInfo.GetValue(null), new object[] { _ipAddress, _subnetMask, _gatewayAddress, _dnsAddress1 });
+                
 
+                FieldInfo cc3100FieldInfo = cc3100SocketNativeType.GetField("_cc3100");
+                cc3100FieldInfo.FieldType.GetMethod("SetIpv4ConfigurationLE").Invoke(cc3100FieldInfo.GetValue(null), new object[] { _ipAddress, _subnetMask, _gatewayAddress, _dnsAddress1 }); ;
                 UpdateConfiguration(UPDATE_FLAGS_DHCP);
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+
             }
             finally
             {
                 ReloadSettings();
+                Dump();
+                Debug.Print("Reloaded the settings");
+
             }
         }
 
@@ -187,20 +248,40 @@ namespace Microsoft.SPOT.Net.NetworkInformation
         {
             try
             {
+                InitializeNetworkInterfaceSettings();
                 _flags |= FLAGS_DHCP;
 
                 /* change CC3100 to DHCP IP configuration */
                 //if (!Netduino.IP.LinkLayers.CC3100SocketNative._isInitialized) Netduino.IP.LinkLayers.CC3100SocketNative.Initialize();
                 Type cc3100SocketNativeType = Type.GetType("Netduino.IP.LinkLayers.CC3100SocketNative, Netduino.IP.LinkLayers.CC3100");
+                if (cc3100SocketNativeType == null)
+                {
+                    Debug.Print("cc3100SocketNativeType is null");
+                    return;
+                }
                 bool isInitialized = (bool)(cc3100SocketNativeType.GetField("_isInitialized").GetValue(null));
                 if (!isInitialized)
                 {
+                    Debug.Print("We are initializing");
                     cc3100SocketNativeType.GetMethod("Initialize").Invoke(null, new object[] { });
                 }
-                //Netduino.IP.LinkLayers.CC3100SocketNative._cc3100.SetIpv4ConfigurationLE(_ipAddress, _subnetMask, _gatewayAddress, _dnsAddress1);
+               
                 FieldInfo cc3100FieldInfo = cc3100SocketNativeType.GetField("_cc3100");
-                cc3100FieldInfo.FieldType.GetMethod("SetIpv4ConfigurationAsDhcp").Invoke(cc3100FieldInfo.GetValue(null), new object[] { });
-                
+                if (cc3100FieldInfo == null)
+                {
+                    Debug.Print("cc3100FieldInfo was null");
+                    return;
+                }
+                MethodInfo methodInfo = cc3100FieldInfo.FieldType.GetMethod("SetIpv4ConfigurationAsDhcp");
+                if (methodInfo == null)
+                {
+                    Debug.Print("methodInfo was null");
+                    return;
+                }
+
+                methodInfo.Invoke(cc3100FieldInfo.GetValue(null), new object[] { });
+                Debug.Print("Invoke returned");
+
                 UpdateConfiguration(UPDATE_FLAGS_DHCP);
             }
             finally
@@ -262,7 +343,7 @@ namespace Microsoft.SPOT.Net.NetworkInformation
 
         public string IPAddress
         {
-            get 
+            get
             {
                 UInt32 ipAddress = 0;
                 if (IsDhcpEnabled)
@@ -291,13 +372,14 @@ namespace Microsoft.SPOT.Net.NetworkInformation
                 {
                     ipAddress = _ipAddress;
                 }
-                return IPAddressToString(ipAddress); 
+                return IPAddressToString(ipAddress);
             }
         }
 
+
         public string GatewayAddress
         {
-            get 
+            get
             {
                 UInt32 gatewayAddress = 0;
                 if (IsDhcpEnabled)
@@ -323,7 +405,7 @@ namespace Microsoft.SPOT.Net.NetworkInformation
 
         public string SubnetMask
         {
-            get 
+            get
             {
                 UInt32 subnetMask = 0;
                 if (IsDhcpEnabled)
@@ -449,7 +531,19 @@ namespace Microsoft.SPOT.Net.NetworkInformation
         {
             get { return _networkInterfaceType; }
         }
+
+        private void Dump()
+        {
+            Debug.Print("Flags: " + _flags.ToString());
+            Debug.Print("IP Address: " + IPAddressToString(_ipAddress));
+            Debug.Print("Gateway Address: " + IPAddressToString(_gatewayAddress));
+            Debug.Print("Subnet MASK: " + IPAddressToString(_subnetMask));
+            Debug.Print("DNS Address: " + IPAddressToString(_dnsAddress1));
+            //if (_flags & FLAGS_DHCP != 0) Debug.Print("DHCP enabled"); else Debug.Print("DHCP disabled");
+            //if (_flags & FLAGS_DYNAMIC_DNS != 0) Debug.Print("Dynamic DHCP enabled"); else Debug.Print("Dynamic DHCP disabled");
+        }
     }
+    
 }
 
 

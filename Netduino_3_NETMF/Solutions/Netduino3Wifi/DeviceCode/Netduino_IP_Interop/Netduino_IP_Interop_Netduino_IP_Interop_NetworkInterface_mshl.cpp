@@ -14,20 +14,23 @@ HRESULT Library_Netduino_IP_Interop_Netduino_IP_Interop_NetworkInterface::Initia
     NATIVE_PROFILE_CLR_NETWORK();
     TINYCLR_HEADER();
 
+	CLR_Debug::Printf("Made it to InitializeNetworkInterfaceSettings\n");
     SOCK_NetworkConfiguration config; 
     CLR_RT_HeapBlock* pConfig           = stack.Arg0().Dereference();  _ASSERTE(pConfig != NULL);
     CLR_UINT32 interfaceIndex           = pConfig[ Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___interfaceIndex ].NumericByRefConst().u4;
 
     TINYCLR_CLEAR(config);
     TINYCLR_CHECK_HRESULT(SOCK_CONFIGURATION_LoadAdapterConfiguration( interfaceIndex, &config ));
+	CLR_Debug::Printf("Read the config. IP Address = %d, subnat mask = %d", config.ipaddr, config.subnetmask);
 
-    pConfig[ Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___flags                ].SetInteger( config.flags      );
-    pConfig[ Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___ipAddress            ].SetInteger( config.ipaddr     );
-    pConfig[ Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___gatewayAddress       ].SetInteger( config.gateway    );
-    pConfig[ Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___subnetMask           ].SetInteger( config.subnetmask );
-    pConfig[ Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___dnsAddress1          ].SetInteger( config.dnsServer1 );
-    pConfig[ Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___dnsAddress2          ].SetInteger( config.dnsServer2 );    
-    pConfig[ Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___networkInterfaceType ].SetInteger( config.networkInterfaceType );
+    pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___flags                ].SetInteger( config.flags      );
+    pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___ipAddress            ].SetInteger( config.ipaddr     );
+    pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___gatewayAddress       ].SetInteger( config.gateway    );
+    pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___subnetMask           ].SetInteger( config.subnetmask );
+    pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___dnsAddress1          ].SetInteger( config.dnsServer1 );
+    pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___dnsAddress2          ].SetInteger( config.dnsServer2 );
+    pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___networkInterfaceType ].SetInteger( config.networkInterfaceType );
+	CLR_Debug::Printf("Copy of values complete");
 
     TINYCLR_CHECK_HRESULT(CLR_RT_HeapBlock_Array::CreateInstance( pConfig[ Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___macAddress ], config.macAddressLen, g_CLR_RT_WellKnownTypes.m_UInt8 ));   
 
@@ -165,8 +168,39 @@ HRESULT Library_Netduino_IP_Interop_Netduino_IP_Interop_NetworkInterface::GetNet
 
 HRESULT Library_Netduino_IP_Interop_Netduino_IP_Interop_NetworkInterface::UpdateConfiguration___VOID__I4( CLR_RT_StackFrame& stack )
 {
-    TINYCLR_HEADER(); hr = S_OK;
-    TINYCLR_NOCLEANUP();
+	NATIVE_PROFILE_CLR_NETWORK();
+	TINYCLR_HEADER();
+	CLR_Debug::Printf("Made it to Library_Netduino_IP_Interop_Netduino_IP_Interop_NetworkInterface::UpdateConfiguration\n");
+	SOCK_NetworkConfiguration config;
+	CLR_RT_HeapBlock* pConfig = stack.Arg0().Dereference();  _ASSERTE(pConfig != NULL);
+	CLR_UINT32 interfaceIndex = pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___interfaceIndex].NumericByRefConst().u4;
+	CLR_UINT32 updateFlags = stack.Arg1().NumericByRef().u4;
+	CLR_RT_HeapBlock_Array* pMACAddress = pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___macAddress].DereferenceArray();
+
+	TINYCLR_CLEAR(config);
+
+	config.flags = pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___flags].NumericByRef().u4;
+	config.ipaddr = pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___ipAddress].NumericByRef().u4;
+	config.gateway = pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___gatewayAddress].NumericByRef().u4;
+	config.subnetmask = pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___subnetMask].NumericByRef().u4;
+	config.dnsServer1 = pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___dnsAddress1].NumericByRef().u4;
+	config.dnsServer2 = pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___dnsAddress2].NumericByRef().u4;
+	config.networkInterfaceType = pConfig[Library_spot_net_native_Microsoft_SPOT_Net_NetworkInformation_NetworkInterface::FIELD___networkInterfaceType].NumericByRef().u4;
+
+	if (pMACAddress != NULL)
+	{
+		config.macAddressLen = pMACAddress->m_numOfElements;
+
+		if (config.macAddressLen > sizeof(config.macAddressBuffer)) TINYCLR_SET_AND_LEAVE(CLR_E_INVALID_PARAMETER);
+
+		memcpy(&config.macAddressBuffer, pMACAddress->GetFirstElement(), config.macAddressLen);
+	}
+	CLR_Debug::Printf("Setting the config\n");
+	// Disable this for now. We do not want to write this to flash.
+	CLR_Debug::Printf("interfaceIndex %d updateFlags %d\n", interfaceIndex, updateFlags);
+	//TINYCLR_CHECK_HRESULT(SOCK_CONFIGURATION_UpdateAdapterConfiguration(interfaceIndex, updateFlags, &config));
+	CLR_Debug::Printf("Finished setting the config\n");
+	TINYCLR_NOCLEANUP();
 }
 
 HRESULT Library_Netduino_IP_Interop_Netduino_IP_Interop_NetworkInterface::IPAddressFromString___STATIC__U4__STRING( CLR_RT_StackFrame& stack )
