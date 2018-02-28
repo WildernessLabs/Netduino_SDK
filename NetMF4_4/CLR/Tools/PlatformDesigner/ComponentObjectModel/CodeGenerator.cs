@@ -1,0 +1,6 @@
+namespace ComponentObjectModel
+{
+    class CodeGenerator
+    {
+    }
+}

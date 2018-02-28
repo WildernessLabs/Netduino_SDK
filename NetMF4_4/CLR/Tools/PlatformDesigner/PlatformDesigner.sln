@@ -1,0 +1,30 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.24720.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentBuilder", "ComponentBuilder\ComponentBuilder.csproj", "{AB5C04D8-DDE9-4AAA-831E-C51F5EACB612}"
+	ProjectSection(ProjectDependencies) = postProject
+		{E0580777-E882-46C9-82B5-947D7A69586A} = {E0580777-E882-46C9-82B5-947D7A69586A}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ComponentObjectModel", "ComponentObjectModel\ComponentObjectModel.csproj", "{E0580777-E882-46C9-82B5-947D7A69586A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB5C04D8-DDE9-4AAA-831E-C51F5EACB612}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB5C04D8-DDE9-4AAA-831E-C51F5EACB612}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB5C04D8-DDE9-4AAA-831E-C51F5EACB612}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB5C04D8-DDE9-4AAA-831E-C51F5EACB612}.Release|Any CPU.Build.0 = Debug|Any CPU
+		{E0580777-E882-46C9-82B5-947D7A69586A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0580777-E882-46C9-82B5-947D7A69586A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0580777-E882-46C9-82B5-947D7A69586A}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0580777-E882-46C9-82B5-947D7A69586A}.Release|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
