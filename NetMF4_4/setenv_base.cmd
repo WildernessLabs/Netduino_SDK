@@ -93,6 +93,7 @@ IF NOT "%VS120COMNTOOLS%" == "" (
       ) ELSE (
       IF NOT "%VS150COMNTOOLS%" == "" (
         CALL "%VS150COMNTOOLS%VsDevCmd.bat"
+        GOTO :EOF
       ) ELSE ( 
         @ECHO WARNING: Could not find vsvars32.bat.
         @ECHO WARNING: VISUAL C++ DOES NOT APPEAR TO BE INSTALLED ON THIS MACHINE
