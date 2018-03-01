@@ -12,12 +12,12 @@ The build system requires the installation of several software components:
 
 The build system requires two Visual Studio components to be installed:
 
-* Visual Studio Windows platform development
+* Visual Studio Desktop development with C++
 * Visual Studio extensions development
 
 ### Download the Repository
 
-Download the [Netduino SDK repositry](https://github.com/WildernessLabs/Netduino_SDK) using _git clone_ or by downloading and expanding the zip file.
+Download the [Netduino SDK repository](https://github.com/WildernessLabs/Netduino_SDK) using _git clone_ or by downloading and expanding the zip file.
 
 ### Setup Compiler Environment Variables
 
@@ -38,6 +38,10 @@ Keep the command prompt open as this will be used in the following steps.
 ### Install Additional Tools
 
 A number of tools are required and these can be installed using a PowerShell script by executing the following:
+
+_powershell ./Install-BinTools.ps1_
+
+If you receive an error message regarding the execution not beinallowed due to your execution policy settings then try the following:
 
 _powershell -ExecutionPolicy ByPass ./Install-BinTools.ps1_
 
