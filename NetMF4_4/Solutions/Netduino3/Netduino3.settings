@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" DefaultTargets="Build">
+  <PropertyGroup>
+    <Author>IngenuityMicro</Author>
+    <Description>
+      <!--
+        NETMF port to Netduino3 (STM32F407VGT6 Cortex-M4F) board from STMicroelectronics.
+        http://www.st.com/web/catalog/tools/FM116/SC959/SS1532/PF252419
+        Based on the STM32F4 port by Oberon Systems, CSA Engineering and, Mountaineering Group.
+       -->
+    </Description>
+    <Documentation />
+    <PlatformGuid>{5DB3948E-BF45-4C50-BAA5-6A31962C163B}</PlatformGuid>
+    <TARGETPLATFORM>Netduino3</TARGETPLATFORM>
+    <PLATFORM>Netduino3</PLATFORM>
+    <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
+    <ENDIANNESS>le</ENDIANNESS>
+    <NO_BOOTLOADER_COMPRESSION>true</NO_BOOTLOADER_COMPRESSION>
+  </PropertyGroup>
+  <PropertyGroup>
+    <!-- FIXME: Replaced with an appropriate value. -->
+    <OEMSystemInfoString>Netduino3 by IngenuityMicro</OEMSystemInfoString>
+  </PropertyGroup>
+  <ItemGroup>
+    <IncludePaths Include="Solutions\Netduino3" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\devicecode\Targets\Native\STM32F4\STM32F4.settings" />
+</Project>

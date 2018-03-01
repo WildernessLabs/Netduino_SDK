@@ -1,0 +1,1312 @@
+;#<FEEDBACK># ARM Linker, 5040049: Last Updated: Tue Feb 27 07:49:25 2018
+;VERSION 0.2
+;FILE Aborts.obj
+HARD_Breakpoint_Handler <= USED 0
+__asm___10_Aborts_cpp_fc2c8df4___Z5__RRXj <= USED 0
+__asm___10_Aborts_cpp_fc2c8df4___Z7__REV16j <= USED 0
+__asm___10_Aborts_cpp_fc2c8df4___Z7__REVSHi <= USED 0
+;FILE Backlight_stubs_functions.obj
+_Z15BackLight_Forcej <= USED 0
+_Z18BackLight_RefCountj <= USED 0
+__asm___29_Backlight_stubs_functions_cpp_06aa65d5___Z5__RRXj <= USED 0
+__asm___29_Backlight_stubs_functions_cpp_06aa65d5___Z7__REV16j <= USED 0
+__asm___29_Backlight_stubs_functions_cpp_06aa65d5___Z7__REVSHi <= USED 0
+;FILE BatteryCharger_stubs_functions.obj
+_Z15Charger_Restartj <= USED 0
+_Z16Charger_Shutdownj <= USED 0
+__asm___34_BatteryCharger_stubs_functions_cpp_a2f33438___Z5__RRXj <= USED 0
+__asm___34_BatteryCharger_stubs_functions_cpp_a2f33438___Z7__REV16j <= USED 0
+__asm___34_BatteryCharger_stubs_functions_cpp_a2f33438___Z7__REVSHi <= USED 0
+;FILE BatteryMeas_stubs_functions.obj
+_Z21Battery_StateOfChargeiiRh <= USED 0
+_Z27Battery_VoltageFilter_Resetv <= USED 0
+_Z29Battery_MostRecent_Millivoltsv <= USED 0
+_Z37Battery_MostRecent_DegreesCelcius_x10v <= USED 0
+__asm___31_BatteryMeas_stubs_functions_cpp_714c2806___Z5__RRXj <= USED 0
+__asm___31_BatteryMeas_stubs_functions_cpp_714c2806___Z7__REV16j <= USED 0
+__asm___31_BatteryMeas_stubs_functions_cpp_714c2806___Z7__REVSHi <= USED 0
+;FILE BinaryFormatter.obj
+_ZN22CLR_RT_BinaryFormatter11TypeHandler11GetDataTypeEP21CLR_RT_TypeDescriptor <= USED 0
+_ZN22CLR_RT_BinaryFormatter5State9FindHintsERNS_27SerializationHintsAttributeERK23CLR_RT_TypeDef_Instance <= USED 0
+__asm___19_BinaryFormatter_cpp_3015e9e1___Z5__RRXj <= USED 0
+__asm___19_BinaryFormatter_cpp_3015e9e1___Z7__REV16j <= USED 0
+__asm___19_BinaryFormatter_cpp_3015e9e1___Z7__REVSHi <= USED 0
+;FILE Bitmap.obj
+__asm___10_Bitmap_cpp_6dea35a8___Z5__RRXj <= USED 0
+__asm___10_Bitmap_cpp_6dea35a8___Z7__REV16j <= USED 0
+__asm___10_Bitmap_cpp_6dea35a8___Z7__REVSHi <= USED 0
+;FILE Bl_AddDevices.obj
+__asm___17_Bl_AddDevices_cpp_26a03215___Z5__RRXj <= USED 0
+__asm___17_Bl_AddDevices_cpp_26a03215___Z7__REV16j <= USED 0
+__asm___17_Bl_AddDevices_cpp_26a03215___Z7__REVSHi <= USED 0
+;FILE CLRStartup.obj
+_Z7ClrExitv <= USED 0
+_Z9ClrRebootv <= USED 0
+__asm___14_CLRStartup_cpp_42e2abdf___Z5__RRXj <= USED 0
+__asm___14_CLRStartup_cpp_42e2abdf___Z7__REV16j <= USED 0
+__asm___14_CLRStartup_cpp_42e2abdf___Z7__REVSHi <= USED 0
+;FILE CLR_RT_DblLinkedList.obj
+__asm___24_CLR_RT_DblLinkedList_cpp_8cd595f6___Z5__RRXj <= USED 0
+__asm___24_CLR_RT_DblLinkedList_cpp_8cd595f6___Z7__REV16j <= USED 0
+__asm___24_CLR_RT_DblLinkedList_cpp_8cd595f6___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock.obj
+_ZN16CLR_RT_HeapBlock10WriteValueERKxi <= USED 0
+_ZN16CLR_RT_HeapBlock17ExtractValueBlockEi <= USED 0
+_ZN16CLR_RT_HeapBlock9ReadValueERxi <= USED 0
+__asm___20_CLR_RT_HeapBlock_cpp_20a9a786___Z5__RRXj <= USED 0
+__asm___20_CLR_RT_HeapBlock_cpp_20a9a786___Z7__REV16j <= USED 0
+__asm___20_CLR_RT_HeapBlock_cpp_20a9a786___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_Array.obj
+__asm___26_CLR_RT_HeapBlock_Array_cpp_c11a12ad___Z5__RRXj <= USED 0
+__asm___26_CLR_RT_HeapBlock_Array_cpp_c11a12ad___Z7__REV16j <= USED 0
+__asm___26_CLR_RT_HeapBlock_Array_cpp_c11a12ad___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_ArrayList.obj
+__asm___30_CLR_RT_HeapBlock_ArrayList_cpp_46073c64___Z5__RRXj <= USED 0
+__asm___30_CLR_RT_HeapBlock_ArrayList_cpp_46073c64___Z7__REV16j <= USED 0
+__asm___30_CLR_RT_HeapBlock_ArrayList_cpp_46073c64___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_BinaryBlob.obj
+__asm___31_CLR_RT_HeapBlock_BinaryBlob_cpp_05e6dd40___Z5__RRXj <= USED 0
+__asm___31_CLR_RT_HeapBlock_BinaryBlob_cpp_05e6dd40___Z7__REV16j <= USED 0
+__asm___31_CLR_RT_HeapBlock_BinaryBlob_cpp_05e6dd40___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_Delegate.obj
+__asm___29_CLR_RT_HeapBlock_Delegate_cpp_f6b687e7___Z5__RRXj <= USED 0
+__asm___29_CLR_RT_HeapBlock_Delegate_cpp_f6b687e7___Z7__REV16j <= USED 0
+__asm___29_CLR_RT_HeapBlock_Delegate_cpp_f6b687e7___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_Delegate_List.obj
+__asm___34_CLR_RT_HeapBlock_Delegate_List_cpp_13e4f6e0___Z5__RRXj <= USED 0
+__asm___34_CLR_RT_HeapBlock_Delegate_List_cpp_13e4f6e0___Z7__REV16j <= USED 0
+__asm___34_CLR_RT_HeapBlock_Delegate_List_cpp_13e4f6e0___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_Finalizer.obj
+__asm___30_CLR_RT_HeapBlock_Finalizer_cpp_6df0b3ae___Z5__RRXj <= USED 0
+__asm___30_CLR_RT_HeapBlock_Finalizer_cpp_6df0b3ae___Z7__REV16j <= USED 0
+__asm___30_CLR_RT_HeapBlock_Finalizer_cpp_6df0b3ae___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_I2CXAction.obj
+_ZN27CLR_RT_HeapBlock_I2CXAction9GetStatusEv <= USED 0
+__asm___31_CLR_RT_HeapBlock_I2CXAction_cpp_d60d8959___Z5__RRXj <= USED 0
+__asm___31_CLR_RT_HeapBlock_I2CXAction_cpp_d60d8959___Z7__REV16j <= USED 0
+__asm___31_CLR_RT_HeapBlock_I2CXAction_cpp_d60d8959___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_IOPort.obj
+_ZN38CLR_RT_HeapBlock_NativeEventDispatcher15ExtractInstanceER16CLR_RT_HeapBlockRPS_ <= USED 0
+__asm___27_CLR_RT_HeapBlock_IOPort_cpp_ae031621___Z5__RRXj <= USED 0
+__asm___27_CLR_RT_HeapBlock_IOPort_cpp_ae031621___Z7__REV16j <= USED 0
+__asm___27_CLR_RT_HeapBlock_IOPort_cpp_ae031621___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_Lock.obj
+__asm___25_CLR_RT_HeapBlock_Lock_cpp_7b2ace47___Z5__RRXj <= USED 0
+__asm___25_CLR_RT_HeapBlock_Lock_cpp_7b2ace47___Z7__REV16j <= USED 0
+__asm___25_CLR_RT_HeapBlock_Lock_cpp_7b2ace47___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_LockRequest.obj
+__asm___32_CLR_RT_HeapBlock_LockRequest_cpp_250650a6___Z5__RRXj <= USED 0
+__asm___32_CLR_RT_HeapBlock_LockRequest_cpp_250650a6___Z7__REV16j <= USED 0
+__asm___32_CLR_RT_HeapBlock_LockRequest_cpp_250650a6___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_Node.obj
+__asm___25_CLR_RT_HeapBlock_Node_cpp_c9b07b75___Z5__RRXj <= USED 0
+__asm___25_CLR_RT_HeapBlock_Node_cpp_c9b07b75___Z7__REV16j <= USED 0
+__asm___25_CLR_RT_HeapBlock_Node_cpp_c9b07b75___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_Queue.obj
+__asm___26_CLR_RT_HeapBlock_Queue_cpp_28e2be89___Z5__RRXj <= USED 0
+__asm___26_CLR_RT_HeapBlock_Queue_cpp_28e2be89___Z7__REV16j <= USED 0
+__asm___26_CLR_RT_HeapBlock_Queue_cpp_28e2be89___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_Stack.obj
+__asm___26_CLR_RT_HeapBlock_Stack_cpp_301cd676___Z5__RRXj <= USED 0
+__asm___26_CLR_RT_HeapBlock_Stack_cpp_301cd676___Z7__REV16j <= USED 0
+__asm___26_CLR_RT_HeapBlock_Stack_cpp_301cd676___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_String.obj
+_ZN23CLR_RT_HeapBlock_String14GetStringEmptyEv <= USED 0
+__asm___27_CLR_RT_HeapBlock_String_cpp_894c9d85___Z5__RRXj <= USED 0
+__asm___27_CLR_RT_HeapBlock_String_cpp_894c9d85___Z7__REV16j <= USED 0
+__asm___27_CLR_RT_HeapBlock_String_cpp_894c9d85___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_Timer.obj
+__asm___26_CLR_RT_HeapBlock_Timer_cpp_8d1451eb___Z5__RRXj <= USED 0
+__asm___26_CLR_RT_HeapBlock_Timer_cpp_8d1451eb___Z7__REV16j <= USED 0
+__asm___26_CLR_RT_HeapBlock_Timer_cpp_8d1451eb___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapBlock_WaitForObject.obj
+__asm___34_CLR_RT_HeapBlock_WaitForObject_cpp_5d790a15___Z5__RRXj <= USED 0
+__asm___34_CLR_RT_HeapBlock_WaitForObject_cpp_5d790a15___Z7__REV16j <= USED 0
+__asm___34_CLR_RT_HeapBlock_WaitForObject_cpp_5d790a15___Z7__REVSHi <= USED 0
+;FILE CLR_RT_HeapCluster.obj
+__asm___22_CLR_RT_HeapCluster_cpp_adc61161___Z5__RRXj <= USED 0
+__asm___22_CLR_RT_HeapCluster_cpp_adc61161___Z7__REV16j <= USED 0
+__asm___22_CLR_RT_HeapCluster_cpp_adc61161___Z7__REVSHi <= USED 0
+;FILE CLR_RT_Interop.obj
+_Z14SetResult_CHARR17CLR_RT_StackFramec <= USED 0
+_Z14SetResult_INT8R17CLR_RT_StackFramea <= USED 0
+_Z14SetResult_boolR17CLR_RT_StackFrameb <= USED 0
+_Z15SetResult_INT16R17CLR_RT_StackFrames <= USED 0
+_Z15SetResult_INT64R17CLR_RT_StackFramex <= USED 0
+_Z15SetResult_UINT8R17CLR_RT_StackFrameh <= USED 0
+_Z15SetResult_floatR17CLR_RT_StackFramef <= USED 0
+_Z16SetResult_LPCSTRR17CLR_RT_StackFramePKc <= USED 0
+_Z16SetResult_UINT16R17CLR_RT_StackFramet <= USED 0
+_Z16SetResult_UINT32R17CLR_RT_StackFramej <= USED 0
+_Z16SetResult_UINT64R17CLR_RT_StackFramey <= USED 0
+_Z16SetResult_doubleR17CLR_RT_StackFramed <= USED 0
+_Z20Interop_Marshal_CHARRK17CLR_RT_StackFramejRc <= USED 0
+_Z20Interop_Marshal_boolRK17CLR_RT_StackFramejRb <= USED 0
+_Z21Interop_Marshal_INT16RK17CLR_RT_StackFramejRs <= USED 0
+_Z21Interop_Marshal_INT64RK17CLR_RT_StackFramejRx <= USED 0
+_Z21Interop_Marshal_UINT8RK17CLR_RT_StackFramejRh <= USED 0
+_Z21Interop_Marshal_floatRK17CLR_RT_StackFramejRf <= USED 0
+_Z22Interop_Marshal_LPCSTRRK17CLR_RT_StackFramejRPKc <= USED 0
+_Z22Interop_Marshal_UINT16RK17CLR_RT_StackFramejRt <= USED 0
+_Z22Interop_Marshal_UINT32RK17CLR_RT_StackFramejRj <= USED 0
+_Z22Interop_Marshal_UINT64RK17CLR_RT_StackFramejRy <= USED 0
+_Z22Interop_Marshal_doubleRK17CLR_RT_StackFramejRd <= USED 0
+_Z24Interop_Marshal_StoreRefR17CLR_RT_StackFramePvj <= USED 0
+_Z26Interop_Marshal_CHAR_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIcE <= USED 0
+_Z26Interop_Marshal_CHAR_ByRefRK17CLR_RT_StackFramePvjRPc <= USED 0
+_Z26Interop_Marshal_INT8_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIaE <= USED 0
+_Z26Interop_Marshal_INT8_ByRefRK17CLR_RT_StackFramePvjRPa <= USED 0
+_Z26Interop_Marshal_bool_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIhE <= USED 0
+_Z26Interop_Marshal_bool_ByRefRK17CLR_RT_StackFramePvjRPh <= USED 0
+_Z27Interop_Marshal_INT16_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIsE <= USED 0
+_Z27Interop_Marshal_INT16_ByRefRK17CLR_RT_StackFramePvjRPs <= USED 0
+_Z27Interop_Marshal_INT32_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIiE <= USED 0
+_Z27Interop_Marshal_INT32_ByRefRK17CLR_RT_StackFramePvjRPi <= USED 0
+_Z27Interop_Marshal_INT64_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIxE <= USED 0
+_Z27Interop_Marshal_INT64_ByRefRK17CLR_RT_StackFramePvjRPx <= USED 0
+_Z27Interop_Marshal_UINT8_ByRefRK17CLR_RT_StackFramePvjRPh <= USED 0
+_Z27Interop_Marshal_float_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIfE <= USED 0
+_Z27Interop_Marshal_float_ByRefRK17CLR_RT_StackFramePvjRPf <= USED 0
+_Z28Interop_Marshal_UINT16_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayItE <= USED 0
+_Z28Interop_Marshal_UINT16_ByRefRK17CLR_RT_StackFramePvjRPt <= USED 0
+_Z28Interop_Marshal_UINT32_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIjE <= USED 0
+_Z28Interop_Marshal_UINT32_ByRefRK17CLR_RT_StackFramePvjRPj <= USED 0
+_Z28Interop_Marshal_UINT64_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIyE <= USED 0
+_Z28Interop_Marshal_UINT64_ByRefRK17CLR_RT_StackFramePvjRPy <= USED 0
+_Z28Interop_Marshal_double_ARRAYRK17CLR_RT_StackFramejR17CLR_RT_TypedArrayIdE <= USED 0
+_Z28Interop_Marshal_double_ByRefRK17CLR_RT_StackFramePvjRPd <= USED 0
+_Z29Interop_Marshal_GetField_CHARP16CLR_RT_HeapBlockj <= USED 0
+_Z29Interop_Marshal_GetField_INT8P16CLR_RT_HeapBlockj <= USED 0
+_Z29Interop_Marshal_GetField_boolP16CLR_RT_HeapBlockj <= USED 0
+_Z30Interop_Marshal_GetField_INT16P16CLR_RT_HeapBlockj <= USED 0
+_Z30Interop_Marshal_GetField_INT32P16CLR_RT_HeapBlockj <= USED 0
+_Z30Interop_Marshal_GetField_INT64P16CLR_RT_HeapBlockj <= USED 0
+_Z30Interop_Marshal_GetField_UINT8P16CLR_RT_HeapBlockj <= USED 0
+_Z30Interop_Marshal_GetField_floatP16CLR_RT_HeapBlockj <= USED 0
+_Z31Interop_Marshal_GetField_UINT16P16CLR_RT_HeapBlockj <= USED 0
+_Z31Interop_Marshal_GetField_UINT64P16CLR_RT_HeapBlockj <= USED 0
+_Z31Interop_Marshal_GetField_doubleP16CLR_RT_HeapBlockj <= USED 0
+_Z32Interop_Marshal_UNSUPPORTED_TYPERK17CLR_RT_StackFramejRP16CLR_RT_HeapBlock <= USED 0
+_Z38Interop_Marshal_UNSUPPORTED_TYPE_ByRefRK17CLR_RT_StackFramePvjRPP16CLR_RT_HeapBlock <= USED 0
+_Z41Interop_Marshal_GetField_UNSUPPORTED_TYPEP16CLR_RT_HeapBlockj <= USED 0
+__asm___18_CLR_RT_Interop_cpp_8e5bbfca___Z5__RRXj <= USED 0
+__asm___18_CLR_RT_Interop_cpp_8e5bbfca___Z7__REV16j <= USED 0
+__asm___18_CLR_RT_Interop_cpp_8e5bbfca___Z7__REVSHi <= USED 0
+;FILE CLR_RT_InteropAssembliesTable.obj
+__asm___33_CLR_RT_InteropAssembliesTable_cpp_4e44718e___Z5__RRXj <= USED 0
+__asm___33_CLR_RT_InteropAssembliesTable_cpp_4e44718e___Z7__REV16j <= USED 0
+__asm___33_CLR_RT_InteropAssembliesTable_cpp_4e44718e___Z7__REVSHi <= USED 0
+;FILE CLR_RT_Memory.obj
+_ZN13CLR_RT_Memory10ReAllocateEPvj <= USED 0
+_ZN13CLR_RT_Memory18SubtractFromSystemEj <= USED 0
+__asm___17_CLR_RT_Memory_cpp_f8623b49___Z5__RRXj <= USED 0
+__asm___17_CLR_RT_Memory_cpp_f8623b49___Z7__REV16j <= USED 0
+__asm___17_CLR_RT_Memory_cpp_f8623b49___Z7__REVSHi <= USED 0
+private_realloc <= USED 0
+;FILE CLR_RT_ObjectToEvent_Destination.obj
+__asm___36_CLR_RT_ObjectToEvent_Destination_cpp_f26380b0___Z5__RRXj <= USED 0
+__asm___36_CLR_RT_ObjectToEvent_Destination_cpp_f26380b0___Z7__REV16j <= USED 0
+__asm___36_CLR_RT_ObjectToEvent_Destination_cpp_f26380b0___Z7__REVSHi <= USED 0
+;FILE CLR_RT_ObjectToEvent_Source.obj
+__asm___31_CLR_RT_ObjectToEvent_Source_cpp_57e905f8___Z5__RRXj <= USED 0
+__asm___31_CLR_RT_ObjectToEvent_Source_cpp_57e905f8___Z7__REV16j <= USED 0
+__asm___31_CLR_RT_ObjectToEvent_Source_cpp_57e905f8___Z7__REVSHi <= USED 0
+;FILE CLR_RT_RuntimeMemory.obj
+__asm___24_CLR_RT_RuntimeMemory_cpp_2ec4c2d0___Z5__RRXj <= USED 0
+__asm___24_CLR_RT_RuntimeMemory_cpp_2ec4c2d0___Z7__REV16j <= USED 0
+__asm___24_CLR_RT_RuntimeMemory_cpp_2ec4c2d0___Z7__REVSHi <= USED 0
+;FILE CLR_RT_StackFrame.obj
+__asm___21_CLR_RT_StackFrame_cpp_ea9115e9___Z5__RRXj <= USED 0
+__asm___21_CLR_RT_StackFrame_cpp_ea9115e9___Z7__REV16j <= USED 0
+__asm___21_CLR_RT_StackFrame_cpp_ea9115e9___Z7__REVSHi <= USED 0
+;FILE CLR_RT_SystemAssembliesTable.obj
+__asm___32_CLR_RT_SystemAssembliesTable_cpp_c9bf66e0___Z5__RRXj <= USED 0
+__asm___32_CLR_RT_SystemAssembliesTable_cpp_c9bf66e0___Z7__REV16j <= USED 0
+__asm___32_CLR_RT_SystemAssembliesTable_cpp_c9bf66e0___Z7__REVSHi <= USED 0
+;FILE CLR_RT_UnicodeHelper.obj
+_ZN13UnicodeString6AssignEPKc <= USED 0
+_ZN13UnicodeString7ReleaseEv <= USED 0
+_ZN13UnicodeStringC1Ev <= USED 0
+_ZN13UnicodeStringD1Ev <= USED 0
+__asm___24_CLR_RT_UnicodeHelper_cpp_e1872bd7___Z5__RRXj <= USED 0
+__asm___24_CLR_RT_UnicodeHelper_cpp_e1872bd7___Z7__REV16j <= USED 0
+__asm___24_CLR_RT_UnicodeHelper_cpp_e1872bd7___Z7__REVSHi <= USED 0
+;FILE CRC.obj
+SUPPORT_StubForARMEmulatorInterface <= USED 0
+__asm___7_CRC_cpp_bb4bee46___Z5__RRXj <= USED 0
+__asm___7_CRC_cpp_bb4bee46___Z7__REV16j <= USED 0
+__asm___7_CRC_cpp_bb4bee46___Z7__REVSHi <= USED 0
+;FILE Cache.obj
+__asm___9_Cache_cpp_1fc4324c___Z5__RRXj <= USED 0
+__asm___9_Cache_cpp_1fc4324c___Z7__REV16j <= USED 0
+__asm___9_Cache_cpp_1fc4324c___Z7__REVSHi <= USED 0
+;FILE Checks.obj
+_ZN10CLR_Checks12VerifyObjectER16CLR_RT_HeapBlock <= USED 0
+__asm___10_Checks_cpp_a222fb1b___Z5__RRXj <= USED 0
+__asm___10_Checks_cpp_a222fb1b___Z7__REV16j <= USED 0
+__asm___10_Checks_cpp_a222fb1b___Z7__REVSHi <= USED 0
+;FILE ComDirector.obj
+_Z29CPU_ProtectCommunicationGPIOsj <= USED 0
+__asm___15_ComDirector_cpp_5e096763___Z5__RRXj <= USED 0
+__asm___15_ComDirector_cpp_5e096763___Z7__REV16j <= USED 0
+__asm___15_ComDirector_cpp_5e096763___Z7__REVSHi <= USED 0
+;FILE Completions.obj
+__asm___15_Completions_cpp_d80a87c0___Z5__RRXj <= USED 0
+__asm___15_Completions_cpp_d80a87c0___Z7__REV16j <= USED 0
+__asm___15_Completions_cpp_d80a87c0___Z7__REVSHi <= USED 0
+;FILE ConfigHelper.obj
+_ZN16HAL_CONFIG_BLOCK23InvalidateBlockWithNameEPKcj <= USED 0
+__asm___16_ConfigHelper_cpp_55d51291___Z5__RRXj <= USED 0
+__asm___16_ConfigHelper_cpp_55d51291___Z7__REV16j <= USED 0
+__asm___16_ConfigHelper_cpp_55d51291___Z7__REVSHi <= USED 0
+;FILE Continuations.obj
+_ZN16HAL_CONTINUATION8IsLinkedEv <= USED 0
+__asm___17_Continuations_cpp_0bf9912c___Z5__RRXj <= USED 0
+__asm___17_Continuations_cpp_0bf9912c___Z7__REV16j <= USED 0
+__asm___17_Continuations_cpp_0bf9912c___Z7__REVSHi <= USED 0
+;FILE Debugger.obj
+_ZN16CLR_DBG_Debugger14BroadcastEventEjjPhj <= USED 0
+__asm___12_Debugger_cpp_92dd0da1___Z5__RRXj <= USED 0
+__asm___12_Debugger_cpp_92dd0da1___Z7__REV16j <= USED 0
+__asm___12_Debugger_cpp_92dd0da1___Z7__REVSHi <= USED 0
+;FILE DebuggerPort_SSL_Config_stub.obj
+__asm___32_DebuggerPort_SSL_Config_stub_cpp_cc0c46f9___Z5__RRXj <= USED 0
+__asm___32_DebuggerPort_SSL_Config_stub_cpp_cc0c46f9___Z7__REV16j <= USED 0
+__asm___32_DebuggerPort_SSL_Config_stub_cpp_cc0c46f9___Z7__REVSHi <= USED 0
+;FILE Debugger_full.obj
+__asm___17_Debugger_full_cpp_4e5ca814___Z5__RRXj <= USED 0
+__asm___17_Debugger_full_cpp_4e5ca814___Z7__REV16j <= USED 0
+__asm___17_Debugger_full_cpp_4e5ca814___Z7__REVSHi <= USED 0
+;FILE DefaultHandlers.obj
+Default_Handler <= USED 0
+;FILE Display_stubs_functions.obj
+_Z10LCD_BitBltiiiPjj <= USED 0
+_Z13LCD_PowerSavej <= USED 0
+_Z13LCD_WriteCharhii <= USED 0
+_Z16LCD_ConvertColorj <= USED 0
+_Z18LCD_GetFrameBufferv <= USED 0
+_Z24LCD_GetPixelClockDividerv <= USED 0
+_Z9LCD_Clearv <= USED 0
+__asm___27_Display_stubs_functions_cpp_de17dc7a___Z5__RRXj <= USED 0
+__asm___27_Display_stubs_functions_cpp_de17dc7a___Z7__REV16j <= USED 0
+__asm___27_Display_stubs_functions_cpp_de17dc7a___Z7__REVSHi <= USED 0
+;FILE Execution.obj
+_Z14CLR_SoftRebootv <= USED 0
+_Z17CLR_DebuggerBreakv <= USED 0
+_Z25CLR_RetrieveCurrentMethodRjS_ <= USED 0
+_ZN22CLR_RT_ExecutionEngine12FindFieldDefER16CLR_RT_HeapBlockPKcR21CLR_RT_FieldDef_Index <= USED 0
+_ZN22CLR_RT_ExecutionEngine16ProcessTimeEventEj <= USED 0
+_ZN22CLR_RT_ExecutionEngine21RetrieveCurrentMethodERjS0_ <= USED 0
+_ZN22CLR_RT_ExecutionEngine33JoinAllThreadsAndExecuteFinalizerEv <= USED 0
+_ZN22CLR_RT_ExecutionEngine8GetFieldER16CLR_RT_HeapBlockPKcS1_ <= USED 0
+_ZN22CLR_RT_ExecutionEngine8SetFieldER16CLR_RT_HeapBlockPKcS1_ <= USED 0
+_ZN22CLR_RT_ExecutionEngine9FindFieldER16CLR_RT_HeapBlockPKcRPS0_ <= USED 0
+_ZN22CLR_RT_ExecutionEngine9NewObjectER16CLR_RT_HeapBlockjP15CLR_RT_Assembly <= USED 0
+__asm___13_Execution_cpp_2659e411___Z5__RRXj <= USED 0
+__asm___13_Execution_cpp_2659e411___Z7__REV16j <= USED 0
+__asm___13_Execution_cpp_2659e411___Z7__REVSHi <= USED 0
+;FILE FS_config_stubs.obj
+_Z24FS_MountRemovableVolumesv <= USED 0
+__asm___19_FS_config_stubs_cpp_e8dd55a5___Z5__RRXj <= USED 0
+__asm___19_FS_config_stubs_cpp_e8dd55a5___Z7__REV16j <= USED 0
+__asm___19_FS_config_stubs_cpp_e8dd55a5___Z7__REVSHi <= USED 0
+;FILE Font.obj
+__asm___8_Font_cpp_a6401bd9___Z5__RRXj <= USED 0
+__asm___8_Font_cpp_a6401bd9___Z7__REV16j <= USED 0
+__asm___8_Font_cpp_a6401bd9___Z7__REVSHi <= USED 0
+;FILE GPIO_Buttons.obj
+_Z20Buttons_CurrentStatev <= USED 0
+_Z22Buttons_CurrentHWStatev <= USED 0
+_Z26Buttons_GetNextStateChangeRjS_ <= USED 0
+_ZN18GPIO_BUTTON_Driver12CurrentStateEv <= USED 0
+_ZN18GPIO_BUTTON_Driver14CurrentHWStateEv <= USED 0
+_ZN18GPIO_BUTTON_Driver18GetNextStateChangeERjS0_ <= USED 0
+__asm___16_GPIO_Buttons_cpp_45501569___Z5__RRXj <= USED 0
+__asm___16_GPIO_Buttons_cpp_45501569___Z7__REV16j <= USED 0
+__asm___16_GPIO_Buttons_cpp_45501569___Z7__REVSHi <= USED 0
+;FILE GPIO_config.obj
+__asm___15_GPIO_config_cpp_5ac9ba1b___Z5__RRXj <= USED 0
+__asm___15_GPIO_config_cpp_5ac9ba1b___Z7__REV16j <= USED 0
+__asm___15_GPIO_config_cpp_5ac9ba1b___Z7__REVSHi <= USED 0
+;FILE GarbageCollector.obj
+__asm___20_GarbageCollector_cpp_996a03c8___Z5__RRXj <= USED 0
+__asm___20_GarbageCollector_cpp_996a03c8___Z7__REV16j <= USED 0
+__asm___20_GarbageCollector_cpp_996a03c8___Z7__REVSHi <= USED 0
+;FILE GarbageCollector_Compaction.obj
+__asm___31_GarbageCollector_Compaction_cpp_534ac062___Z5__RRXj <= USED 0
+__asm___31_GarbageCollector_Compaction_cpp_534ac062___Z7__REV16j <= USED 0
+__asm___31_GarbageCollector_Compaction_cpp_534ac062___Z7__REVSHi <= USED 0
+;FILE GarbageCollector_ComputeReachabilityGraph.obj
+__asm___45_GarbageCollector_ComputeReachabilityGraph_cpp_666cc9bd___Z5__RRXj <= USED 0
+__asm___45_GarbageCollector_ComputeReachabilityGraph_cpp_666cc9bd___Z7__REV16j <= USED 0
+__asm___45_GarbageCollector_ComputeReachabilityGraph_cpp_666cc9bd___Z7__REVSHi <= USED 0
+;FILE GenericPort.obj
+_Z23GenericPort_ProtectPinsij <= USED 0
+__asm___15_GenericPort_cpp_ec136fd4___Z5__RRXj <= USED 0
+__asm___15_GenericPort_cpp_ec136fd4___Z7__REV16j <= USED 0
+__asm___15_GenericPort_cpp_ec136fd4___Z7__REVSHi <= USED 0
+;FILE Gif.obj
+__asm___7_Gif_cpp_7b7f98ba___Z5__RRXj <= USED 0
+__asm___7_Gif_cpp_7b7f98ba___Z7__REV16j <= USED 0
+__asm___7_Gif_cpp_7b7f98ba___Z7__REVSHi <= USED 0
+;FILE Graphics.obj
+__asm___12_Graphics_cpp_7344b27e___Z5__RRXj <= USED 0
+__asm___12_Graphics_cpp_7344b27e___Z7__REV16j <= USED 0
+__asm___12_Graphics_cpp_7344b27e___Z7__REVSHi <= USED 0
+;FILE Graphics_Bmp.obj
+__asm___16_Graphics_Bmp_cpp_c2668f51___Z5__RRXj <= USED 0
+__asm___16_Graphics_Bmp_cpp_c2668f51___Z7__REV16j <= USED 0
+__asm___16_Graphics_Bmp_cpp_c2668f51___Z7__REVSHi <= USED 0
+;FILE Graphics_Gif.obj
+__asm___16_Graphics_Gif_cpp_695f578e___Z5__RRXj <= USED 0
+__asm___16_Graphics_Gif_cpp_695f578e___Z7__REV16j <= USED 0
+__asm___16_Graphics_Gif_cpp_695f578e___Z7__REVSHi <= USED 0
+;FILE Hardware.obj
+__asm___12_Hardware_cpp_c3cba1da___Z5__RRXj <= USED 0
+__asm___12_Hardware_cpp_c3cba1da___Z7__REV16j <= USED 0
+__asm___12_Hardware_cpp_c3cba1da___Z7__REVSHi <= USED 0
+;FILE Heap_Persistence.obj
+_ZN26CLR_RT_Persistence_Manager10BankHeader6DeleteEv <= USED 0
+_ZN26CLR_RT_Persistence_Manager18GenerateStatisticsERjS0_ <= USED 0
+_ZN26CLR_RT_Persistence_Manager8EraseAllEv <= USED 0
+__asm___20_Heap_Persistence_cpp_e0074696___Z5__RRXj <= USED 0
+__asm___20_Heap_Persistence_cpp_e0074696___Z7__REV16j <= USED 0
+__asm___20_Heap_Persistence_cpp_e0074696___Z7__REVSHi <= USED 0
+;FILE IO_Init.obj
+_Z18Netduino3_InitSRamv <= USED 0
+__asm___11_IO_Init_cpp_5ab4c0bc___Z5__RRXj <= USED 0
+__asm___11_IO_Init_cpp_5ab4c0bc___Z7__REV16j <= USED 0
+__asm___11_IO_Init_cpp_5ab4c0bc___Z7__REVSHi <= USED 0
+;FILE Info.obj
+_ZN11CLR_RT_DUMP4TYPEERK26CLR_RT_ReflectionDef_Index <= USED 0
+_ZN11CLR_RT_DUMP5FIELDERK21CLR_RT_FieldDef_Index <= USED 0
+_ZN11CLR_RT_DUMP6OBJECTEP16CLR_RT_HeapBlockPKc <= USED 0
+_ZN9CLR_Debug5FlushEv <= USED 0
+__asm___8_Info_cpp_3fa0fd0b___Z5__RRXj <= USED 0
+__asm___8_Info_cpp_3fa0fd0b___Z7__REV16j <= USED 0
+__asm___8_Info_cpp_3fa0fd0b___Z7__REVSHi <= USED 0
+;FILE Interlocked.obj
+InterlockedCompareExchange <= USED 0
+InterlockedDecrement <= USED 0
+InterlockedExchangeAdd <= USED 0
+InterlockedIncrement <= USED 0
+;FILE Interpreter.obj
+__asm___15_Interpreter_cpp_6fa8b5b0___Z5__RRXj <= USED 0
+__asm___15_Interpreter_cpp_6fa8b5b0___Z7__REV16j <= USED 0
+__asm___15_Interpreter_cpp_6fa8b5b0___Z7__REVSHi <= USED 0
+;FILE InterruptHandler.obj
+_ZN15CLR_HW_Hardware26ManagedHardware_InitializeEv <= USED 0
+__asm___20_InterruptHandler_cpp_dc999d09___Z5__RRXj <= USED 0
+__asm___20_InterruptHandler_cpp_dc999d09___Z7__REV16j <= USED 0
+__asm___20_InterruptHandler_cpp_dc999d09___Z7__REVSHi <= USED 0
+;FILE ItmPort.obj
+__asm___11_ItmPort_cpp_490157dd___Z5__RRXj <= USED 0
+__asm___11_ItmPort_cpp_490157dd___Z7__REV16j <= USED 0
+__asm___11_ItmPort_cpp_490157dd___Z7__REVSHi <= USED 0
+;FILE Jpeg.obj
+__asm___8_Jpeg_cpp_91613d17___Z5__RRXj <= USED 0
+__asm___8_Jpeg_cpp_91613d17___Z7__REV16j <= USED 0
+__asm___8_Jpeg_cpp_91613d17___Z7__REVSHi <= USED 0
+;FILE LargeBuffer_stubs.obj
+_Z21LargeBuffer_PostEventt <= USED 0
+__asm___21_LargeBuffer_stubs_cpp_54a545be___Z5__RRXj <= USED 0
+__asm___21_LargeBuffer_stubs_cpp_54a545be___Z7__REV16j <= USED 0
+__asm___21_LargeBuffer_stubs_cpp_54a545be___Z7__REVSHi <= USED 0
+;FILE MFUpdate_stub.obj
+_Z15MFUpdate_Deletei <= USED 0
+_Z20MFUpdate_GetPropertyjPKcPhPi <= USED 0
+_Z20MFUpdate_SetPropertyjPKcPhi <= USED 0
+__asm___17_MFUpdate_stub_cpp_daf9ad18___Z5__RRXj <= USED 0
+__asm___17_MFUpdate_stub_cpp_daf9ad18___Z7__REV16j <= USED 0
+__asm___17_MFUpdate_stub_cpp_daf9ad18___Z7__REVSHi <= USED 0
+;FILE Messaging.obj
+_ZN13CLR_Messaging14BroadcastEventEjjPhj <= USED 0
+_ZN13CLR_Messaging21Messaging_Send__ReplyEP10WP_MessagePv <= USED 0
+_ZN13CLR_Messaging22Messaging_Query__ReplyEP10WP_MessagePv <= USED 0
+_ZN13CLR_Messaging22Messaging_Reply__ReplyEP10WP_MessagePv <= USED 0
+__asm___13_Messaging_cpp_42fccbc7___Z5__RRXj <= USED 0
+__asm___13_Messaging_cpp_42fccbc7___Z7__REV16j <= USED 0
+__asm___13_Messaging_cpp_42fccbc7___Z7__REVSHi <= USED 0
+;FILE OEM_Model_SKU_NetworkID.obj
+__asm___27_OEM_Model_SKU_NetworkID_cpp_390ff93c___Z5__RRXj <= USED 0
+__asm___27_OEM_Model_SKU_NetworkID_cpp_390ff93c___Z7__REV16j <= USED 0
+__asm___27_OEM_Model_SKU_NetworkID_cpp_390ff93c___Z7__REVSHi <= USED 0
+;FILE OneWireLinkLevelDriver.obj
+_Z14owHasOverDrivei <= USED 0
+_Z14owProgramPulsei <= USED 0
+_Z14owReadBitPowerii <= USED 0
+_Z16owWriteBytePowerii <= USED 0
+_Z17owHasProgramPulsei <= USED 0
+_Z18owHasPowerDeliveryi <= USED 0
+_Z7msDelayj <= USED 0
+_Z7owLevelii <= USED 0
+_Z7owSpeedii <= USED 0
+_Z9msGettickv <= USED 0
+__asm___26_OneWireLinkLevelDriver_cpp_d39831f4___Z5__RRXj <= USED 0
+__asm___26_OneWireLinkLevelDriver_cpp_d39831f4___Z7__REV16j <= USED 0
+__asm___26_OneWireLinkLevelDriver_cpp_d39831f4___Z7__REVSHi <= USED 0
+;FILE OneWireLinkLevelSession.obj
+__asm___27_OneWireLinkLevelSession_cpp_d0ec2d72___Z5__RRXj <= USED 0
+__asm___27_OneWireLinkLevelSession_cpp_d0ec2d72___Z7__REV16j <= USED 0
+__asm___27_OneWireLinkLevelSession_cpp_d0ec2d72___Z7__REVSHi <= USED 0
+;FILE RPC_stub.obj
+_ZN25CLR_RT_HeapBlock_EndPoint11FindMessageEjPKj <= USED 0
+_ZN25CLR_RT_HeapBlock_EndPoint13RecoverFromGCEv <= USED 0
+_ZN25CLR_RT_HeapBlock_EndPoint14CreateInstanceERKNS_4PortER16CLR_RT_HeapBlockS4_ <= USED 0
+_ZN25CLR_RT_HeapBlock_EndPoint15ExtractInstanceER16CLR_RT_HeapBlockRPS_ <= USED 0
+_ZN25CLR_RT_HeapBlock_EndPoint17ReleaseWhenDeadExEv <= USED 0
+_ZN25CLR_RT_HeapBlock_EndPoint4Port7CompareERKS0_ <= USED 0
+__asm___12_RPC_stub_cpp_ac6037de___Z5__RRXj <= USED 0
+__asm___12_RPC_stub_cpp_ac6037de___Z7__REV16j <= USED 0
+__asm___12_RPC_stub_cpp_ac6037de___Z7__REVSHi <= USED 0
+;FILE Random.obj
+__asm___10_Random_cpp_6fb1e646___Z5__RRXj <= USED 0
+__asm___10_Random_cpp_6fb1e646___Z7__REV16j <= USED 0
+__asm___10_Random_cpp_6fb1e646___Z7__REVSHi <= USED 0
+;FILE STM32F4_AD_functions.obj
+__asm___24_STM32F4_AD_functions_cpp_b721fe35___Z5__RRXj <= USED 0
+__asm___24_STM32F4_AD_functions_cpp_b721fe35___Z7__REV16j <= USED 0
+__asm___24_STM32F4_AD_functions_cpp_b721fe35___Z7__REVSHi <= USED 0
+;FILE STM32F4_DA_functions.obj
+__asm___24_STM32F4_DA_functions_cpp_31fdf270___Z5__RRXj <= USED 0
+__asm___24_STM32F4_DA_functions_cpp_31fdf270___Z7__REV16j <= USED 0
+__asm___24_STM32F4_DA_functions_cpp_31fdf270___Z7__REVSHi <= USED 0
+;FILE STM32F4_Flash_driver.obj
+__asm___24_STM32F4_Flash_driver_cpp_2236e2d0___Z5__RRXj <= USED 0
+__asm___24_STM32F4_Flash_driver_cpp_2236e2d0___Z7__REV16j <= USED 0
+__asm___24_STM32F4_Flash_driver_cpp_2236e2d0___Z7__REVSHi <= USED 0
+;FILE STM32F4_GPIO_functions.obj
+_Z18CPU_GPIO_PinIsBusyj <= USED 0
+__asm___26_STM32F4_GPIO_functions_cpp_fc8f1b0b___Z5__RRXj <= USED 0
+__asm___26_STM32F4_GPIO_functions_cpp_fc8f1b0b___Z7__REV16j <= USED 0
+__asm___26_STM32F4_GPIO_functions_cpp_fc8f1b0b___Z7__REVSHi <= USED 0
+;FILE STM32F4_I2C_functions.obj
+__asm___25_STM32F4_I2C_functions_cpp_692014d0___Z5__RRXj <= USED 0
+__asm___25_STM32F4_I2C_functions_cpp_692014d0___Z7__REV16j <= USED 0
+__asm___25_STM32F4_I2C_functions_cpp_692014d0___Z7__REVSHi <= USED 0
+;FILE STM32F4_Power_functions.obj
+_Z24STM32F4_SetPowerHandlersPFvvES0_ <= USED 0
+__asm___27_STM32F4_Power_functions_cpp_c15d8db7___Z5__RRXj <= USED 0
+__asm___27_STM32F4_Power_functions_cpp_c15d8db7___Z7__REV16j <= USED 0
+__asm___27_STM32F4_Power_functions_cpp_c15d8db7___Z7__REVSHi <= USED 0
+;FILE STM32F4_RTC_functions.obj
+__asm___25_STM32F4_RTC_functions_cpp_090acbb4___Z5__RRXj <= USED 0
+__asm___25_STM32F4_RTC_functions_cpp_090acbb4___Z7__REV16j <= USED 0
+__asm___25_STM32F4_RTC_functions_cpp_090acbb4___Z7__REVSHi <= USED 0
+;FILE STM32F4_SPI_functions.obj
+__asm___25_STM32F4_SPI_functions_cpp_1bd67797___Z5__RRXj <= USED 0
+__asm___25_STM32F4_SPI_functions_cpp_1bd67797___Z7__REV16j <= USED 0
+__asm___25_STM32F4_SPI_functions_cpp_1bd67797___Z7__REVSHi <= USED 0
+;FILE STM32F4_Time_functions.obj
+Time_CurrentTicks <= USED 0
+_Z15CPU_TicksToTimej <= USED 0
+_Z21HAL_Time_Uninitializev <= USED 0
+_Z23CPU_MillisecondsToTicksy <= USED 0
+_Z30CPU_MicrosecondsToSystemClocksi <= USED 0
+_Z30CPU_MicrosecondsToSystemClocksj <= USED 0
+_Z30CPU_SystemClocksToMicrosecondsi <= USED 0
+__asm___26_STM32F4_Time_functions_cpp_1fd90570___Z5__RRXj <= USED 0
+__asm___26_STM32F4_Time_functions_cpp_1fd90570___Z7__REV16j <= USED 0
+__asm___26_STM32F4_Time_functions_cpp_1fd90570___Z7__REVSHi <= USED 0
+;FILE STM32F4_USB_functions.obj
+_Z25CPU_USB_GetInterruptStatev <= USED 0
+_Z31STM32F4_USB_Driver_HS_InterruptPv <= USED 0
+__asm___25_STM32F4_USB_functions_cpp_c0ea7bb6___Z5__RRXj <= USED 0
+__asm___25_STM32F4_USB_functions_cpp_c0ea7bb6___Z7__REV16j <= USED 0
+__asm___25_STM32F4_USB_functions_cpp_c0ea7bb6___Z7__REVSHi <= USED 0
+;FILE STM32F4_Usart_functions.obj
+_Z36CPU_USART_RxBufferFullInterruptStatei <= USED 0
+__asm___27_STM32F4_Usart_functions_cpp_96c9bb44___Z5__RRXj <= USED 0
+__asm___27_STM32F4_Usart_functions_cpp_96c9bb44___Z7__REV16j <= USED 0
+__asm___27_STM32F4_Usart_functions_cpp_96c9bb44___Z7__REVSHi <= USED 0
+;FILE STM32F4_blconfig.obj
+__asm___20_STM32F4_blconfig_cpp_892f79c4___Z5__RRXj <= USED 0
+__asm___20_STM32F4_blconfig_cpp_892f79c4___Z7__REV16j <= USED 0
+__asm___20_STM32F4_blconfig_cpp_892f79c4___Z7__REVSHi <= USED 0
+;FILE STM32F4_bootstrap.obj
+BootstrapCodeMinimal <= USED 0
+__asm___21_STM32F4_bootstrap_cpp_b7aaefb2___Z5__RRXj <= USED 0
+__asm___21_STM32F4_bootstrap_cpp_b7aaefb2___Z7__REV16j <= USED 0
+__asm___21_STM32F4_bootstrap_cpp_b7aaefb2___Z7__REVSHi <= USED 0
+;FILE STM32F4_intc_functions.obj
+_Z23CPU_INTC_InterruptStatej <= USED 0
+_Z24CPU_INTC_InterruptEnablej <= USED 0
+_Z25CPU_INTC_InterruptDisablej <= USED 0
+__asm___26_STM32F4_intc_functions_cpp_b979ff9e___Z5__RRXj <= USED 0
+__asm___26_STM32F4_intc_functions_cpp_b979ff9e___Z7__REV16j <= USED 0
+__asm___26_STM32F4_intc_functions_cpp_b979ff9e___Z7__REVSHi <= USED 0
+;FILE STM32F4_pwm_functions.obj
+__asm___25_STM32F4_pwm_functions_cpp_4ea1354e___Z5__RRXj <= USED 0
+__asm___25_STM32F4_pwm_functions_cpp_4ea1354e___Z7__REV16j <= USED 0
+__asm___25_STM32F4_pwm_functions_cpp_4ea1354e___Z7__REVSHi <= USED 0
+;FILE SimpleHeap_config_stubs.obj
+__asm___27_SimpleHeap_config_stubs_cpp_5f016531___Z5__RRXj <= USED 0
+__asm___27_SimpleHeap_config_stubs_cpp_5f016531___Z7__REV16j <= USED 0
+__asm___27_SimpleHeap_config_stubs_cpp_5f016531___Z7__REVSHi <= USED 0
+;FILE SimpleHeap_stubs.obj
+_Z21SimpleHeap_ReAllocatePvj <= USED 0
+__asm___20_SimpleHeap_stubs_cpp_a01f0e2e___Z5__RRXj <= USED 0
+__asm___20_SimpleHeap_stubs_cpp_a01f0e2e___Z7__REV16j <= USED 0
+__asm___20_SimpleHeap_stubs_cpp_a01f0e2e___Z7__REVSHi <= USED 0
+;FILE SmartPtr_cortex.obj
+__asm___19_SmartPtr_cortex_cpp_38f688d0___Z5__RRXj <= USED 0
+__asm___19_SmartPtr_cortex_cpp_38f688d0___Z7__REV16j <= USED 0
+__asm___19_SmartPtr_cortex_cpp_38f688d0___Z7__REVSHi <= USED 0
+;FILE Streams.obj
+_ZN29CLR_RT_HeapBlock_MemoryStream11BitsWrittenEv <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream5ResetEv <= USED 0
+_ZN29CLR_RT_HeapBlock_MemoryStream6RewindEv <= USED 0
+__asm___11_Streams_cpp_fda97a00___Z5__RRXj <= USED 0
+__asm___11_Streams_cpp_fda97a00___Z7__REV16j <= USED 0
+__asm___11_Streams_cpp_fda97a00___Z7__REVSHi <= USED 0
+;FILE StringTable.obj
+__asm___15_StringTable_cpp_925a7430___Z5__RRXj <= USED 0
+__asm___15_StringTable_cpp_925a7430___Z7__REV16j <= USED 0
+__asm___15_StringTable_cpp_925a7430___Z7__REVSHi <= USED 0
+;FILE Thread.obj
+_ZN13CLR_RT_Thread16CouldBeActivatedEv <= USED 0
+__asm___10_Thread_cpp_43c7b775___Z5__RRXj <= USED 0
+__asm___10_Thread_cpp_43c7b775___Z7__REV16j <= USED 0
+__asm___10_Thread_cpp_43c7b775___Z7__REVSHi <= USED 0
+;FILE TimeService_stubs.obj
+__asm___21_TimeService_stubs_cpp_016053e5___Z5__RRXj <= USED 0
+__asm___21_TimeService_stubs_cpp_016053e5___Z7__REV16j <= USED 0
+__asm___21_TimeService_stubs_cpp_016053e5___Z7__REVSHi <= USED 0
+;FILE Time_driver.obj
+_ZN10TimeDriver16DateTimeToStringERKx <= USED 0
+_ZN10TimeDriver16DateTimeToStringERKxRPcRj <= USED 0
+_ZN10TimeDriver16TimeSpanToStringERKx <= USED 0
+__asm___15_Time_driver_cpp_ffacc4cd___Z5__RRXj <= USED 0
+__asm___15_Time_driver_cpp_ffacc4cd___Z7__REV16j <= USED 0
+__asm___15_Time_driver_cpp_ffacc4cd___Z7__REVSHi <= USED 0
+;FILE Time_functions_rtc.obj
+_Z21Time_DateTimeToStringRKx <= USED 0
+_Z21Time_TimeSpanToStringRKx <= USED 0
+_Z23Time_DateTimeToStringExRKxRPcRj <= USED 0
+_Z28Time_CurrentDateTimeToStringv <= USED 0
+__asm___22_Time_functions_rtc_cpp_1fe1567b___Z5__RRXj <= USED 0
+__asm___22_Time_functions_rtc_cpp_1fe1567b___Z7__REV16j <= USED 0
+__asm___22_Time_functions_rtc_cpp_1fe1567b___Z7__REVSHi <= USED 0
+;FILE TypeSystem.obj
+_ZN15CLR_RT_Assembly14GetStaticFieldEi <= USED 0
+_ZN21CLR_RT_TypeDescriptor14ShouldEmitHashEv <= USED 0
+_ZN24CLR_RT_Assembly_Instance5ClearEv <= USED 0
+_ZN26CLR_RT_AttributeEnumerator10InitializeERK23CLR_RT_TypeDef_Instance <= USED 0
+_ZN26CLR_RT_AttributeEnumerator10InitializeERK25CLR_RT_MethodDef_Instance <= USED 0
+__asm___14_TypeSystem_cpp_325c203b___Z5__RRXj <= USED 0
+__asm___14_TypeSystem_cpp_325c203b___Z7__REV16j <= USED 0
+__asm___14_TypeSystem_cpp_325c203b___Z7__REVSHi <= USED 0
+;FILE TypeSystemLookup.obj
+__asm___20_TypeSystemLookup_cpp_27b08185___Z5__RRXj <= USED 0
+__asm___20_TypeSystemLookup_cpp_27b08185___Z7__REV16j <= USED 0
+__asm___20_TypeSystemLookup_cpp_27b08185___Z7__REVSHi <= USED 0
+;FILE Various.obj
+_Z17CLR_RT_GetVersionPtS_S_S_ <= USED 0
+__asm___11_Various_cpp_fab3891c___Z5__RRXj <= USED 0
+__asm___11_Various_cpp_fab3891c___Z7__REV16j <= USED 0
+__asm___11_Various_cpp_fab3891c___Z7__REVSHi <= USED 0
+;FILE Watchdog_stubs.obj
+_Z31EmulatorHook__Watchdog_Callbackv <= USED 0
+__asm___18_Watchdog_stubs_cpp_99249fe3___Z5__RRXj <= USED 0
+__asm___18_Watchdog_stubs_cpp_99249fe3___Z7__REV16j <= USED 0
+__asm___18_Watchdog_stubs_cpp_99249fe3___Z7__REVSHi <= USED 0
+;FILE WireProtocol.obj
+_ZN10WP_Message10SetPayloadEPh <= USED 0
+__asm___16_WireProtocol_cpp_a5b2ddaa___Z5__RRXj <= USED 0
+__asm___16_WireProtocol_cpp_a5b2ddaa___Z7__REV16j <= USED 0
+__asm___16_WireProtocol_cpp_a5b2ddaa___Z7__REVSHi <= USED 0
+;FILE allocator.obj
+_ZdlPv <= USED 0
+_Znwj <= USED 0
+__asm___13_allocator_cpp__Znwj___Z5__RRXj <= USED 0
+__asm___13_allocator_cpp__Znwj___Z7__REV16j <= USED 0
+__asm___13_allocator_cpp__Znwj___Z7__REVSHi <= USED 0
+;FILE blockstoragelist.obj
+_ZN16BlockStorageList12RemoveDeviceEP18BlockStorageDevicej <= USED 0
+_ZN16BlockStorageList13GetNumDevicesEv <= USED 0
+_ZN18BlockStorageStream14ReadIntoBufferEPhj <= USED 0
+_ZN18BlockStorageStream5EraseEj <= USED 0
+_ZN18BlockStorageStream5WriteEPhj <= USED 0
+_ZN18BlockStorageStream8IsErasedEj <= USED 0
+_ZNK15BlockDeviceInfo23PhysicalToSectorAddressEPK15BlockRegionInfoj <= USED 0
+__asm___20_blockstoragelist_cpp_b7839bb3___Z5__RRXj <= USED 0
+__asm___20_blockstoragelist_cpp_b7839bb3___Z7__REV16j <= USED 0
+__asm___20_blockstoragelist_cpp_b7839bb3___Z7__REVSHi <= USED 0
+;FILE core.obj
+__asm___8_core_cpp_840d144c___Z5__RRXj <= USED 0
+__asm___8_core_cpp_840d144c___Z7__REV16j <= USED 0
+__asm___8_core_cpp_840d144c___Z7__REVSHi <= USED 0
+;FILE corlib_native.obj
+__asm___17_corlib_native_cpp_e5e3873f___Z5__RRXj <= USED 0
+__asm___17_corlib_native_cpp_e5e3873f___Z7__REV16j <= USED 0
+__asm___17_corlib_native_cpp_e5e3873f___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_AppDomain.obj
+__asm___34_corlib_native_System_AppDomain_cpp_4029f5f4___Z5__RRXj <= USED 0
+__asm___34_corlib_native_System_AppDomain_cpp_4029f5f4___Z7__REV16j <= USED 0
+__asm___34_corlib_native_System_AppDomain_cpp_4029f5f4___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Array.obj
+__asm___30_corlib_native_System_Array_cpp_51309421___Z5__RRXj <= USED 0
+__asm___30_corlib_native_System_Array_cpp_51309421___Z7__REV16j <= USED 0
+__asm___30_corlib_native_System_Array_cpp_51309421___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_BitConverter.obj
+__asm___37_corlib_native_System_BitConverter_cpp_1ff06ab1___Z5__RRXj <= USED 0
+__asm___37_corlib_native_System_BitConverter_cpp_1ff06ab1___Z7__REV16j <= USED 0
+__asm___37_corlib_native_System_BitConverter_cpp_1ff06ab1___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Collections_ArrayList.obj
+__asm___46_corlib_native_System_Collections_ArrayList_cpp_9c144be2___Z5__RRXj <= USED 0
+__asm___46_corlib_native_System_Collections_ArrayList_cpp_9c144be2___Z7__REV16j <= USED 0
+__asm___46_corlib_native_System_Collections_ArrayList_cpp_9c144be2___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Collections_Queue.obj
+__asm___42_corlib_native_System_Collections_Queue_cpp_23f52f3b___Z5__RRXj <= USED 0
+__asm___42_corlib_native_System_Collections_Queue_cpp_23f52f3b___Z7__REV16j <= USED 0
+__asm___42_corlib_native_System_Collections_Queue_cpp_23f52f3b___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Collections_Stack.obj
+__asm___42_corlib_native_System_Collections_Stack_cpp_0f809eec___Z5__RRXj <= USED 0
+__asm___42_corlib_native_System_Collections_Stack_cpp_0f809eec___Z7__REV16j <= USED 0
+__asm___42_corlib_native_System_Collections_Stack_cpp_0f809eec___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_DateTime.obj
+__asm___33_corlib_native_System_DateTime_cpp_a49917ae___Z5__RRXj <= USED 0
+__asm___33_corlib_native_System_DateTime_cpp_a49917ae___Z7__REV16j <= USED 0
+__asm___33_corlib_native_System_DateTime_cpp_a49917ae___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Delegate.obj
+__asm___33_corlib_native_System_Delegate_cpp_cf65a9b9___Z5__RRXj <= USED 0
+__asm___33_corlib_native_System_Delegate_cpp_cf65a9b9___Z7__REV16j <= USED 0
+__asm___33_corlib_native_System_Delegate_cpp_cf65a9b9___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Diagnostics_Debugger.obj
+__asm___45_corlib_native_System_Diagnostics_Debugger_cpp_18413fe5___Z5__RRXj <= USED 0
+__asm___45_corlib_native_System_Diagnostics_Debugger_cpp_18413fe5___Z7__REV16j <= USED 0
+__asm___45_corlib_native_System_Diagnostics_Debugger_cpp_18413fe5___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Double.obj
+__asm___31_corlib_native_System_Double_cpp_5153aa4f___Z5__RRXj <= USED 0
+__asm___31_corlib_native_System_Double_cpp_5153aa4f___Z7__REV16j <= USED 0
+__asm___31_corlib_native_System_Double_cpp_5153aa4f___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Exception.obj
+__asm___34_corlib_native_System_Exception_cpp_d2cb4789___Z5__RRXj <= USED 0
+__asm___34_corlib_native_System_Exception_cpp_d2cb4789___Z7__REV16j <= USED 0
+__asm___34_corlib_native_System_Exception_cpp_d2cb4789___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_GC.obj
+__asm___27_corlib_native_System_GC_cpp_eb21c354___Z5__RRXj <= USED 0
+__asm___27_corlib_native_System_GC_cpp_eb21c354___Z7__REV16j <= USED 0
+__asm___27_corlib_native_System_GC_cpp_eb21c354___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Globalization_CultureInfo.obj
+__asm___50_corlib_native_System_Globalization_CultureInfo_cpp_8299cbfa___Z5__RRXj <= USED 0
+__asm___50_corlib_native_System_Globalization_CultureInfo_cpp_8299cbfa___Z7__REV16j <= USED 0
+__asm___50_corlib_native_System_Globalization_CultureInfo_cpp_8299cbfa___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Globalization_DateTimeFormat.obj
+__asm___53_corlib_native_System_Globalization_DateTimeFormat_cpp_21f24ef1___Z5__RRXj <= USED 0
+__asm___53_corlib_native_System_Globalization_DateTimeFormat_cpp_21f24ef1___Z7__REV16j <= USED 0
+__asm___53_corlib_native_System_Globalization_DateTimeFormat_cpp_21f24ef1___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Math.obj
+__asm___29_corlib_native_System_Math_cpp_ec71764a___Z5__RRXj <= USED 0
+__asm___29_corlib_native_System_Math_cpp_ec71764a___Z7__REV16j <= USED 0
+__asm___29_corlib_native_System_Math_cpp_ec71764a___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_MulticastDelegate.obj
+__asm___42_corlib_native_System_MulticastDelegate_cpp_96d7b023___Z5__RRXj <= USED 0
+__asm___42_corlib_native_System_MulticastDelegate_cpp_96d7b023___Z7__REV16j <= USED 0
+__asm___42_corlib_native_System_MulticastDelegate_cpp_96d7b023___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Number.obj
+__asm___31_corlib_native_System_Number_cpp_c5fecbbc___Z5__RRXj <= USED 0
+__asm___31_corlib_native_System_Number_cpp_c5fecbbc___Z7__REV16j <= USED 0
+__asm___31_corlib_native_System_Number_cpp_c5fecbbc___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Object.obj
+__asm___31_corlib_native_System_Object_cpp_ff616225___Z5__RRXj <= USED 0
+__asm___31_corlib_native_System_Object_cpp_ff616225___Z7__REV16j <= USED 0
+__asm___31_corlib_native_System_Object_cpp_ff616225___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Random.obj
+__asm___31_corlib_native_System_Random_cpp_1c1b201a___Z5__RRXj <= USED 0
+__asm___31_corlib_native_System_Random_cpp_1c1b201a___Z7__REV16j <= USED 0
+__asm___31_corlib_native_System_Random_cpp_1c1b201a___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Reflection_Assembly.obj
+__asm___44_corlib_native_System_Reflection_Assembly_cpp_7c4713a5___Z5__RRXj <= USED 0
+__asm___44_corlib_native_System_Reflection_Assembly_cpp_7c4713a5___Z7__REV16j <= USED 0
+__asm___44_corlib_native_System_Reflection_Assembly_cpp_7c4713a5___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Reflection_ConstructorInfo.obj
+__asm___51_corlib_native_System_Reflection_ConstructorInfo_cpp_0b598dd7___Z5__RRXj <= USED 0
+__asm___51_corlib_native_System_Reflection_ConstructorInfo_cpp_0b598dd7___Z7__REV16j <= USED 0
+__asm___51_corlib_native_System_Reflection_ConstructorInfo_cpp_0b598dd7___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Reflection_FieldInfo.obj
+__asm___45_corlib_native_System_Reflection_FieldInfo_cpp_d96e8750___Z5__RRXj <= USED 0
+__asm___45_corlib_native_System_Reflection_FieldInfo_cpp_d96e8750___Z7__REV16j <= USED 0
+__asm___45_corlib_native_System_Reflection_FieldInfo_cpp_d96e8750___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Reflection_MethodBase.obj
+__asm___46_corlib_native_System_Reflection_MethodBase_cpp_894c5902___Z5__RRXj <= USED 0
+__asm___46_corlib_native_System_Reflection_MethodBase_cpp_894c5902___Z7__REV16j <= USED 0
+__asm___46_corlib_native_System_Reflection_MethodBase_cpp_894c5902___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Reflection_PropertyInfo.obj
+__asm___48_corlib_native_System_Reflection_PropertyInfo_cpp_2e773667___Z5__RRXj <= USED 0
+__asm___48_corlib_native_System_Reflection_PropertyInfo_cpp_2e773667___Z7__REV16j <= USED 0
+__asm___48_corlib_native_System_Reflection_PropertyInfo_cpp_2e773667___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Reflection_RuntimeFieldInfo.obj
+__asm___52_corlib_native_System_Reflection_RuntimeFieldInfo_cpp_60d04660___Z5__RRXj <= USED 0
+__asm___52_corlib_native_System_Reflection_RuntimeFieldInfo_cpp_60d04660___Z7__REV16j <= USED 0
+__asm___52_corlib_native_System_Reflection_RuntimeFieldInfo_cpp_60d04660___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Reflection_RuntimeMethodInfo.obj
+__asm___53_corlib_native_System_Reflection_RuntimeMethodInfo_cpp_f610b1b2___Z5__RRXj <= USED 0
+__asm___53_corlib_native_System_Reflection_RuntimeMethodInfo_cpp_f610b1b2___Z7__REV16j <= USED 0
+__asm___53_corlib_native_System_Reflection_RuntimeMethodInfo_cpp_f610b1b2___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Resources_ResourceManager.obj
+__asm___50_corlib_native_System_Resources_ResourceManager_cpp_17cbd605___Z5__RRXj <= USED 0
+__asm___50_corlib_native_System_Resources_ResourceManager_cpp_17cbd605___Z7__REV16j <= USED 0
+__asm___50_corlib_native_System_Resources_ResourceManager_cpp_17cbd605___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_RuntimeType.obj
+__asm___36_corlib_native_System_RuntimeType_cpp_d5180b63___Z5__RRXj <= USED 0
+__asm___36_corlib_native_System_RuntimeType_cpp_d5180b63___Z7__REV16j <= USED 0
+__asm___36_corlib_native_System_RuntimeType_cpp_d5180b63___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Runtime_CompilerServices_RuntimeHelpers.obj
+__asm___64_corlib_native_System_Runtime_CompilerServices_RuntimeHelpers_cpp_6e9c5207___Z5__RRXj <= USED 0
+__asm___64_corlib_native_System_Runtime_CompilerServices_RuntimeHelpers_cpp_6e9c5207___Z7__REV16j <= USED 0
+__asm___64_corlib_native_System_Runtime_CompilerServices_RuntimeHelpers_cpp_6e9c5207___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Runtime_Remoting_RemotingServices.obj
+__asm___58_corlib_native_System_Runtime_Remoting_RemotingServices_cpp_c6d07ce4___Z5__RRXj <= USED 0
+__asm___58_corlib_native_System_Runtime_Remoting_RemotingServices_cpp_c6d07ce4___Z7__REV16j <= USED 0
+__asm___58_corlib_native_System_Runtime_Remoting_RemotingServices_cpp_c6d07ce4___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_String.obj
+__asm___31_corlib_native_System_String_cpp_fc0f4efe___Z5__RRXj <= USED 0
+__asm___31_corlib_native_System_String_cpp_fc0f4efe___Z7__REV16j <= USED 0
+__asm___31_corlib_native_System_String_cpp_fc0f4efe___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Text_UTF8Decoder.obj
+__asm___41_corlib_native_System_Text_UTF8Decoder_cpp_5326524c___Z5__RRXj <= USED 0
+__asm___41_corlib_native_System_Text_UTF8Decoder_cpp_5326524c___Z7__REV16j <= USED 0
+__asm___41_corlib_native_System_Text_UTF8Decoder_cpp_5326524c___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Text_UTF8Encoding.obj
+__asm___42_corlib_native_System_Text_UTF8Encoding_cpp_ffe99871___Z5__RRXj <= USED 0
+__asm___42_corlib_native_System_Text_UTF8Encoding_cpp_ffe99871___Z7__REV16j <= USED 0
+__asm___42_corlib_native_System_Text_UTF8Encoding_cpp_ffe99871___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Threading_AutoResetEvent.obj
+__asm___49_corlib_native_System_Threading_AutoResetEvent_cpp_69a5ab9d___Z5__RRXj <= USED 0
+__asm___49_corlib_native_System_Threading_AutoResetEvent_cpp_69a5ab9d___Z7__REV16j <= USED 0
+__asm___49_corlib_native_System_Threading_AutoResetEvent_cpp_69a5ab9d___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Threading_Interlocked.obj
+__asm___46_corlib_native_System_Threading_Interlocked_cpp_3ca4773e___Z5__RRXj <= USED 0
+__asm___46_corlib_native_System_Threading_Interlocked_cpp_3ca4773e___Z7__REV16j <= USED 0
+__asm___46_corlib_native_System_Threading_Interlocked_cpp_3ca4773e___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Threading_ManualResetEvent.obj
+__asm___51_corlib_native_System_Threading_ManualResetEvent_cpp_592e3f4a___Z5__RRXj <= USED 0
+__asm___51_corlib_native_System_Threading_ManualResetEvent_cpp_592e3f4a___Z7__REV16j <= USED 0
+__asm___51_corlib_native_System_Threading_ManualResetEvent_cpp_592e3f4a___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Threading_Monitor.obj
+__asm___42_corlib_native_System_Threading_Monitor_cpp_a231979a___Z5__RRXj <= USED 0
+__asm___42_corlib_native_System_Threading_Monitor_cpp_a231979a___Z7__REV16j <= USED 0
+__asm___42_corlib_native_System_Threading_Monitor_cpp_a231979a___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Threading_Thread.obj
+__asm___41_corlib_native_System_Threading_Thread_cpp_4fcf7741___Z5__RRXj <= USED 0
+__asm___41_corlib_native_System_Threading_Thread_cpp_4fcf7741___Z7__REV16j <= USED 0
+__asm___41_corlib_native_System_Threading_Thread_cpp_4fcf7741___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Threading_Timer.obj
+__asm___40_corlib_native_System_Threading_Timer_cpp_663e2bdd___Z5__RRXj <= USED 0
+__asm___40_corlib_native_System_Threading_Timer_cpp_663e2bdd___Z7__REV16j <= USED 0
+__asm___40_corlib_native_System_Threading_Timer_cpp_663e2bdd___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Threading_WaitHandle.obj
+__asm___45_corlib_native_System_Threading_WaitHandle_cpp_0b92356a___Z5__RRXj <= USED 0
+__asm___45_corlib_native_System_Threading_WaitHandle_cpp_0b92356a___Z7__REV16j <= USED 0
+__asm___45_corlib_native_System_Threading_WaitHandle_cpp_0b92356a___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_TimeSpan.obj
+__asm___33_corlib_native_System_TimeSpan_cpp_ca8eb218___Z5__RRXj <= USED 0
+__asm___33_corlib_native_System_TimeSpan_cpp_ca8eb218___Z7__REV16j <= USED 0
+__asm___33_corlib_native_System_TimeSpan_cpp_ca8eb218___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_TimeZone.obj
+__asm___33_corlib_native_System_TimeZone_cpp_6eb9b155___Z5__RRXj <= USED 0
+__asm___33_corlib_native_System_TimeZone_cpp_6eb9b155___Z7__REV16j <= USED 0
+__asm___33_corlib_native_System_TimeZone_cpp_6eb9b155___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_Type.obj
+__asm___29_corlib_native_System_Type_cpp_d33ab8f7___Z5__RRXj <= USED 0
+__asm___29_corlib_native_System_Type_cpp_d33ab8f7___Z7__REV16j <= USED 0
+__asm___29_corlib_native_System_Type_cpp_d33ab8f7___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_ValueType.obj
+__asm___34_corlib_native_System_ValueType_cpp_02bdd86c___Z5__RRXj <= USED 0
+__asm___34_corlib_native_System_ValueType_cpp_02bdd86c___Z7__REV16j <= USED 0
+__asm___34_corlib_native_System_ValueType_cpp_02bdd86c___Z7__REVSHi <= USED 0
+;FILE corlib_native_System_WeakReference.obj
+__asm___38_corlib_native_System_WeakReference_cpp_99e12d69___Z5__RRXj <= USED 0
+__asm___38_corlib_native_System_WeakReference_cpp_99e12d69___Z7__REV16j <= USED 0
+__asm___38_corlib_native_System_WeakReference_cpp_99e12d69___Z7__REVSHi <= USED 0
+;FILE crcutil.obj
+_Z7docrc16it <= USED 0
+_Z8setcrc16it <= USED 0
+__asm___11_crcutil_cpp_effb4dea___Z5__RRXj <= USED 0
+__asm___11_crcutil_cpp_effb4dea___Z7__REV16j <= USED 0
+__asm___11_crcutil_cpp_effb4dea___Z7__REVSHi <= USED 0
+;FILE events.obj
+_Z18Events_SetCallbackPFvPvES_ <= USED 0
+_Z28Events_WaitForEventsInternaljjj <= USED 0
+__asm___10_events_cpp_92edfe82___Z5__RRXj <= USED 0
+__asm___10_events_cpp_92edfe82___Z7__REV16j <= USED 0
+__asm___10_events_cpp_92edfe82___Z7__REVSHi <= USED 0
+;FILE fs_stubs.obj
+_Z14FS_MountVolumePKcjjP18BlockStorageDevice <= USED 0
+_Z16FS_UnmountVolumeP18BlockStorageDevice <= USED 0
+_ZN20FileSystemVolumeList10FindVolumeEPKcj <= USED 0
+_ZN20FileSystemVolumeList12RemoveVolumeEP16FileSystemVolumej <= USED 0
+_ZN20FileSystemVolumeList13GetNextVolumeER16FileSystemVolume <= USED 0
+_ZN20FileSystemVolumeList13GetNumVolumesEv <= USED 0
+_ZN20FileSystemVolumeList14GetFirstVolumeEv <= USED 0
+_ZN20FileSystemVolumeList8ContainsEP16FileSystemVolume <= USED 0
+_ZN20FileSystemVolumeList9AddVolumeEP16FileSystemVolumePKcjjP23STREAM_DRIVER_INTERFACEP27FILESYSTEM_DRIVER_INTERFACEP18BlockStorageDevicejj <= USED 0
+__asm___12_fs_stubs_cpp_f429f414___Z5__RRXj <= USED 0
+__asm___12_fs_stubs_cpp_f429f414___Z7__REV16j <= USED 0
+__asm___12_fs_stubs_cpp_f429f414___Z7__REVSHi <= USED 0
+;FILE gesture_stubs.obj
+_Z20Gesture_ProcessPointjtttx <= USED 0
+__asm___17_gesture_stubs_cpp_0e238e9f___Z5__RRXj <= USED 0
+__asm___17_gesture_stubs_cpp_0e238e9f___Z7__REV16j <= USED 0
+__asm___17_gesture_stubs_cpp_0e238e9f___Z7__REVSHi <= USED 0
+;FILE graphics.obj
+_Z20Graphics_DrawLineRawRK14PAL_GFX_BitmapRK7GFX_Peniiii <= USED 0
+_ZN15Graphics_Driver11DrawLineRawERK14PAL_GFX_BitmapRK7GFX_Peniiii <= USED 0
+__asm___12_graphics_cpp_8cf9fe54___Z5__RRXj <= USED 0
+__asm___12_graphics_cpp_8cf9fe54___Z7__REV16j <= USED 0
+__asm___12_graphics_cpp_8cf9fe54___Z7__REVSHi <= USED 0
+;FILE heap.obj
+__asm___8_heap_cpp_00372add___Z5__RRXj <= USED 0
+__asm___8_heap_cpp_00372add___Z7__REV16j <= USED 0
+__asm___8_heap_cpp_00372add___Z7__REVSHi <= USED 0
+;FILE i2c.obj
+_Z20I2C_XAction_GetStateP15I2C_HAL_XACTION <= USED 0
+__asm___7_i2c_cpp_e783369a___Z5__RRXj <= USED 0
+__asm___7_i2c_cpp_e783369a___Z7__REV16j <= USED 0
+__asm___7_i2c_cpp_e783369a___Z7__REVSHi <= USED 0
+;FILE ink_stubs.obj
+_Z13Ink_SetRegionP13InkRegionInfo <= USED 0
+_Z15Ink_ResetRegionv <= USED 0
+__asm___13_ink_stubs_cpp_0300f4b2___Z5__RRXj <= USED 0
+__asm___13_ink_stubs_cpp_0300f4b2___Z7__REV16j <= USED 0
+__asm___13_ink_stubs_cpp_0300f4b2___Z7__REVSHi <= USED 0
+;FILE jbytearraydatasrc.obj
+;FILE jcomapi.obj
+;FILE jdapimin.obj
+jpeg_abort_decompress <= USED 0
+jpeg_finish_decompress <= USED 0
+jpeg_has_multiple_scans <= USED 0
+jpeg_input_complete <= USED 0
+;FILE jdapistd.obj
+jpeg_finish_output <= USED 0
+jpeg_read_raw_data <= USED 0
+jpeg_start_output <= USED 0
+;FILE jdcoefct.obj
+;FILE jdcolor.obj
+;FILE jddctmgr.obj
+;FILE jdhuff.obj
+;FILE jdinput.obj
+;FILE jdmainct.obj
+;FILE jdmarker.obj
+jpeg_save_markers <= USED 0
+jpeg_save_markers_all <= USED 0
+jpeg_set_marker_processor <= USED 0
+;FILE jdmaster.obj
+jpeg_new_colormap <= USED 0
+;FILE jdmerge.obj
+;FILE jdphuff.obj
+;FILE jdpostct.obj
+;FILE jdsample.obj
+;FILE jerror.obj
+;FILE jidctfst.obj
+;FILE jidctred.obj
+;FILE jmemmgr.obj
+;FILE jmemtinyclr.obj
+;FILE jutils.obj
+;FILE lzwread.obj
+_ZN15LZWDecompressor5ResetEh <= USED 0
+;FILE native_double_pal.obj
+_ZN6System4Math4SignEd <= USED 0
+_ZN6System4Math5RoundEd <= USED 0
+__asm___21_native_double_pal_cpp_ada81347___Z5__RRXj <= USED 0
+__asm___21_native_double_pal_cpp_ada81347___Z7__REV16j <= USED 0
+__asm___21_native_double_pal_cpp_ada81347___Z7__REVSHi <= USED 0
+;FILE owerr.obj
+_Z11owHasErrorsv <= USED 0
+_Z12owClearErrorv <= USED 0
+_Z13owGetErrorMsgi <= USED 0
+_Z13owGetErrorNumv <= USED 0
+_Z15owPrintErrorMsgPSt6__FILE <= USED 0
+_Z18owPrintErrorMsgStdv <= USED 0
+__asm___9_owerr_cpp_433c2062___Z5__RRXj <= USED 0
+__asm___9_owerr_cpp_433c2062___Z7__REV16j <= USED 0
+__asm___9_owerr_cpp_433c2062___Z7__REVSHi <= USED 0
+;FILE ownet.obj
+_Z12owSkipFamilyi <= USED 0
+_Z17owOverdriveAccessi <= USED 0
+_Z19owFamilySearchSetupii <= USED 0
+_Z6bitacciiiPh <= USED 0
+_Z8owAccessi <= USED 0
+_Z8owVerifyii <= USED 0
+__asm___9_ownet_cpp_0cf7a00f___Z5__RRXj <= USED 0
+__asm___9_ownet_cpp_0cf7a00f___Z7__REV16j <= USED 0
+__asm___9_ownet_cpp_0cf7a00f___Z7__REVSHi <= USED 0
+;FILE owtran.obj
+_Z13owProgramByteiiiiii <= USED 0
+_Z7owBlockiiPhi <= USED 0
+__asm___10_owtran_cpp_d96f6fbd___Z5__RRXj <= USED 0
+__asm___10_owtran_cpp_d96f6fbd___Z7__REV16j <= USED 0
+__asm___10_owtran_cpp_d96f6fbd___Z7__REVSHi <= USED 0
+;FILE palevent_driver.obj
+_ZN14PalEventDriver14EnlistListenerEP16PalEventListener <= USED 0
+_ZN14PalEventDriver9PostEventEjj <= USED 0
+__asm___19_palevent_driver_cpp_92602964___Z5__RRXj <= USED 0
+__asm___19_palevent_driver_cpp_92602964___Z7__REV16j <= USED 0
+__asm___19_palevent_driver_cpp_92602964___Z7__REVSHi <= USED 0
+;FILE palevent_functions.obj
+_Z13PalEvent_Postjj <= USED 0
+_Z15PalEvent_EnlistP16PalEventListener <= USED 0
+__asm___22_palevent_functions_cpp_9081a137___Z5__RRXj <= USED 0
+__asm___22_palevent_functions_cpp_9081a137___Z7__REV16j <= USED 0
+__asm___22_palevent_functions_cpp_9081a137___Z7__REVSHi <= USED 0
+;FILE piezo_stubs.obj
+_Z15Piezo_IsEnabledv <= USED 0
+__asm___15_piezo_stubs_cpp_aa33e673___Z5__RRXj <= USED 0
+__asm___15_piezo_stubs_cpp_aa33e673___Z7__REV16j <= USED 0
+__asm___15_piezo_stubs_cpp_aa33e673___Z7__REVSHi <= USED 0
+;FILE sockets_Stubs.obj
+_Z10SOCK_closei <= USED 0
+_Z10SOCK_ioctliiPi <= USED 0
+_Z11SOCK_acceptiP13SOCK_sockaddrPi <= USED 0
+_Z11SOCK_listenii <= USED 0
+_Z11SOCK_selectiP11SOCK_fd_setS0_S0_PK12SOCK_timeval <= USED 0
+_Z11SOCK_sendtoiPKciiPK13SOCK_sockaddri <= USED 0
+_Z11SOCK_socketiii <= USED 0
+_Z12SOCK_connectiPK13SOCK_sockaddri <= USED 0
+_Z13SOCK_recvfromiPciiP13SOCK_sockaddrPi <= USED 0
+_Z13SOCK_shutdownii <= USED 0
+_Z15SOCK_getsockoptiiiPcPi <= USED 0
+_Z15SOCK_setsockoptiiiPKci <= USED 0
+_Z16SOCK_getaddrinfoPKcPcPK13SOCK_addrinfoPPS2_ <= USED 0
+_Z16SOCK_getpeernameiP13SOCK_sockaddrPi <= USED 0
+_Z16SOCK_getsocknameiP13SOCK_sockaddrPi <= USED 0
+_Z17SOCK_freeaddrinfoP13SOCK_addrinfo <= USED 0
+_Z17SOCK_getlasterrorv <= USED 0
+_Z29SOCKETS_ProcessSocketActivityi <= USED 0
+_Z34SOCK_CONFIGURATION_GetAdapterCountv <= USED 0
+_Z36SOCK_CONFIGURATION_LoadConfigurationjP25SOCK_NetworkConfiguration <= USED 0
+_Z43SOCK_CONFIGURATION_LoadAdapterConfigurationjP25SOCK_NetworkConfiguration <= USED 0
+_Z44SOCK_CONFIGURATION_LoadWirelessConfigurationjP26SOCK_WirelessConfiguration <= USED 0
+_Z45SOCK_CONFIGURATION_UpdateAdapterConfigurationjjP25SOCK_NetworkConfiguration <= USED 0
+_Z46SOCK_CONFIGURATION_UpdateWirelessConfigurationjP26SOCK_WirelessConfiguration <= USED 0
+_Z48HAL_SOCK_CONFIGURATION_LoadWirelessConfigurationjP26SOCK_WirelessConfiguration <= USED 0
+_Z48SOCK_CONFIGURATION_SaveAllWirelessConfigurationsv <= USED 0
+_Z9SOCK_bindiPK13SOCK_sockaddri <= USED 0
+_Z9SOCK_recviPcii <= USED 0
+_Z9SOCK_sendiPKcii <= USED 0
+__asm___17_sockets_Stubs_cpp_00b13512___Z5__RRXj <= USED 0
+__asm___17_sockets_Stubs_cpp_00b13512___Z7__REV16j <= USED 0
+__asm___17_sockets_Stubs_cpp_00b13512___Z7__REVSHi <= USED 0
+;FILE spot_Time_native.obj
+__asm___20_spot_Time_native_cpp_abc11597___Z5__RRXj <= USED 0
+__asm___20_spot_Time_native_cpp_abc11597___Z7__REV16j <= USED 0
+__asm___20_spot_Time_native_cpp_abc11597___Z7__REVSHi <= USED 0
+;FILE spot_Time_native_Microsoft_SPOT_Time_TimeService.obj
+__asm___52_spot_Time_native_Microsoft_SPOT_Time_TimeService_cpp_5d39a3bc___Z5__RRXj <= USED 0
+__asm___52_spot_Time_native_Microsoft_SPOT_Time_TimeService_cpp_5d39a3bc___Z7__REV16j <= USED 0
+__asm___52_spot_Time_native_Microsoft_SPOT_Time_TimeService_cpp_5d39a3bc___Z7__REVSHi <= USED 0
+;FILE spot_graphics_native.obj
+__asm___24_spot_graphics_native_cpp_febcea21___Z5__RRXj <= USED 0
+__asm___24_spot_graphics_native_cpp_febcea21___Z7__REV16j <= USED 0
+__asm___24_spot_graphics_native_cpp_febcea21___Z7__REVSHi <= USED 0
+;FILE spot_graphics_native_Microsoft_SPOT_Bitmap.obj
+__asm___46_spot_graphics_native_Microsoft_SPOT_Bitmap_cpp_154ba4a0___Z5__RRXj <= USED 0
+__asm___46_spot_graphics_native_Microsoft_SPOT_Bitmap_cpp_154ba4a0___Z7__REV16j <= USED 0
+__asm___46_spot_graphics_native_Microsoft_SPOT_Bitmap_cpp_154ba4a0___Z7__REVSHi <= USED 0
+;FILE spot_graphics_native_Microsoft_SPOT_Font.obj
+__asm___44_spot_graphics_native_Microsoft_SPOT_Font_cpp_cd2ddbf3___Z5__RRXj <= USED 0
+__asm___44_spot_graphics_native_Microsoft_SPOT_Font_cpp_cd2ddbf3___Z7__REV16j <= USED 0
+__asm___44_spot_graphics_native_Microsoft_SPOT_Font_cpp_cd2ddbf3___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native.obj
+__asm___24_spot_hardware_native_cpp_c0ecbf99___Z5__RRXj <= USED 0
+__asm___24_spot_hardware_native_cpp_c0ecbf99___Z7__REV16j <= USED 0
+__asm___24_spot_hardware_native_cpp_c0ecbf99___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_EventSink.obj
+__asm___49_spot_hardware_native_Microsoft_SPOT_EventSink_cpp_8f376ee0___Z5__RRXj <= USED 0
+__asm___49_spot_hardware_native_Microsoft_SPOT_EventSink_cpp_8f376ee0___Z7__REV16j <= USED 0
+__asm___49_spot_hardware_native_Microsoft_SPOT_EventSink_cpp_8f376ee0___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_AnalogInput.obj
+__asm___60_spot_hardware_native_Microsoft_SPOT_Hardware_AnalogInput_cpp_59644929___Z5__RRXj <= USED 0
+__asm___60_spot_hardware_native_Microsoft_SPOT_Hardware_AnalogInput_cpp_59644929___Z7__REV16j <= USED 0
+__asm___60_spot_hardware_native_Microsoft_SPOT_Hardware_AnalogInput_cpp_59644929___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_Battery.obj
+__asm___56_spot_hardware_native_Microsoft_SPOT_Hardware_Battery_cpp_177beb3a___Z5__RRXj <= USED 0
+__asm___56_spot_hardware_native_Microsoft_SPOT_Hardware_Battery_cpp_177beb3a___Z7__REV16j <= USED 0
+__asm___56_spot_hardware_native_Microsoft_SPOT_Hardware_Battery_cpp_177beb3a___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_Battery__ChargerModel.obj
+__asm___70_spot_hardware_native_Microsoft_SPOT_Hardware_Battery__ChargerModel_cpp_148ac7e1___Z5__RRXj <= USED 0
+__asm___70_spot_hardware_native_Microsoft_SPOT_Hardware_Battery__ChargerModel_cpp_148ac7e1___Z7__REV16j <= USED 0
+__asm___70_spot_hardware_native_Microsoft_SPOT_Hardware_Battery__ChargerModel_cpp_148ac7e1___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_Cpu.obj
+__asm___52_spot_hardware_native_Microsoft_SPOT_Hardware_Cpu_cpp_cc132305___Z5__RRXj <= USED 0
+__asm___52_spot_hardware_native_Microsoft_SPOT_Hardware_Cpu_cpp_cc132305___Z7__REV16j <= USED 0
+__asm___52_spot_hardware_native_Microsoft_SPOT_Hardware_Cpu_cpp_cc132305___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_HardwareProvider.obj
+__asm___65_spot_hardware_native_Microsoft_SPOT_Hardware_HardwareProvider_cpp_30be17c8___Z5__RRXj <= USED 0
+__asm___65_spot_hardware_native_Microsoft_SPOT_Hardware_HardwareProvider_cpp_30be17c8___Z7__REV16j <= USED 0
+__asm___65_spot_hardware_native_Microsoft_SPOT_Hardware_HardwareProvider_cpp_30be17c8___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_I2CDevice.obj
+__asm___58_spot_hardware_native_Microsoft_SPOT_Hardware_I2CDevice_cpp_edd09997___Z5__RRXj <= USED 0
+__asm___58_spot_hardware_native_Microsoft_SPOT_Hardware_I2CDevice_cpp_edd09997___Z7__REV16j <= USED 0
+__asm___58_spot_hardware_native_Microsoft_SPOT_Hardware_I2CDevice_cpp_edd09997___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_I2CDevice__Configuration.obj
+__asm___73_spot_hardware_native_Microsoft_SPOT_Hardware_I2CDevice__Configuration_cpp_4a2b5cc1___Z5__RRXj <= USED 0
+__asm___73_spot_hardware_native_Microsoft_SPOT_Hardware_I2CDevice__Configuration_cpp_4a2b5cc1___Z7__REV16j <= USED 0
+__asm___73_spot_hardware_native_Microsoft_SPOT_Hardware_I2CDevice__Configuration_cpp_4a2b5cc1___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_InputPort.obj
+__asm___58_spot_hardware_native_Microsoft_SPOT_Hardware_InputPort_cpp_2c1772d3___Z5__RRXj <= USED 0
+__asm___58_spot_hardware_native_Microsoft_SPOT_Hardware_InputPort_cpp_2c1772d3___Z7__REV16j <= USED 0
+__asm___58_spot_hardware_native_Microsoft_SPOT_Hardware_InputPort_cpp_2c1772d3___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_InterruptPort.obj
+__asm___62_spot_hardware_native_Microsoft_SPOT_Hardware_InterruptPort_cpp_ebdeacb2___Z5__RRXj <= USED 0
+__asm___62_spot_hardware_native_Microsoft_SPOT_Hardware_InterruptPort_cpp_ebdeacb2___Z7__REV16j <= USED 0
+__asm___62_spot_hardware_native_Microsoft_SPOT_Hardware_InterruptPort_cpp_ebdeacb2___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_LargeBuffer.obj
+__asm___60_spot_hardware_native_Microsoft_SPOT_Hardware_LargeBuffer_cpp_bd45ab55___Z5__RRXj <= USED 0
+__asm___60_spot_hardware_native_Microsoft_SPOT_Hardware_LargeBuffer_cpp_bd45ab55___Z7__REV16j <= USED 0
+__asm___60_spot_hardware_native_Microsoft_SPOT_Hardware_LargeBuffer_cpp_bd45ab55___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_NativeEventDispatcher_mshl.obj
+_Z25CreateNativeEventInstanceR17CLR_RT_StackFrame <= USED 0
+__asm___75_spot_hardware_native_Microsoft_SPOT_Hardware_NativeEventDispatcher_mshl_cpp_a633c92a___Z5__RRXj <= USED 0
+__asm___75_spot_hardware_native_Microsoft_SPOT_Hardware_NativeEventDispatcher_mshl_cpp_a633c92a___Z7__REV16j <= USED 0
+__asm___75_spot_hardware_native_Microsoft_SPOT_Hardware_NativeEventDispatcher_mshl_cpp_a633c92a___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_OutputPort.obj
+__asm___59_spot_hardware_native_Microsoft_SPOT_Hardware_OutputPort_cpp_89a4a841___Z5__RRXj <= USED 0
+__asm___59_spot_hardware_native_Microsoft_SPOT_Hardware_OutputPort_cpp_89a4a841___Z7__REV16j <= USED 0
+__asm___59_spot_hardware_native_Microsoft_SPOT_Hardware_OutputPort_cpp_89a4a841___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_Port.obj
+__asm___53_spot_hardware_native_Microsoft_SPOT_Hardware_Port_cpp_a95a43dc___Z5__RRXj <= USED 0
+__asm___53_spot_hardware_native_Microsoft_SPOT_Hardware_Port_cpp_a95a43dc___Z7__REV16j <= USED 0
+__asm___53_spot_hardware_native_Microsoft_SPOT_Hardware_Port_cpp_a95a43dc___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_PowerState.obj
+__asm___59_spot_hardware_native_Microsoft_SPOT_Hardware_PowerState_cpp_cc4f9166___Z5__RRXj <= USED 0
+__asm___59_spot_hardware_native_Microsoft_SPOT_Hardware_PowerState_cpp_cc4f9166___Z7__REV16j <= USED 0
+__asm___59_spot_hardware_native_Microsoft_SPOT_Hardware_PowerState_cpp_cc4f9166___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_SPI.obj
+__asm___52_spot_hardware_native_Microsoft_SPOT_Hardware_SPI_cpp_ff9fc81a___Z5__RRXj <= USED 0
+__asm___52_spot_hardware_native_Microsoft_SPOT_Hardware_SPI_cpp_ff9fc81a___Z7__REV16j <= USED 0
+__asm___52_spot_hardware_native_Microsoft_SPOT_Hardware_SPI_cpp_ff9fc81a___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_SPI__Configuration.obj
+__asm___67_spot_hardware_native_Microsoft_SPOT_Hardware_SPI__Configuration_cpp_92a93b63___Z5__RRXj <= USED 0
+__asm___67_spot_hardware_native_Microsoft_SPOT_Hardware_SPI__Configuration_cpp_92a93b63___Z7__REV16j <= USED 0
+__asm___67_spot_hardware_native_Microsoft_SPOT_Hardware_SPI__Configuration_cpp_92a93b63___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_TristatePort.obj
+__asm___61_spot_hardware_native_Microsoft_SPOT_Hardware_TristatePort_cpp_b70fe595___Z5__RRXj <= USED 0
+__asm___61_spot_hardware_native_Microsoft_SPOT_Hardware_TristatePort_cpp_b70fe595___Z7__REV16j <= USED 0
+__asm___61_spot_hardware_native_Microsoft_SPOT_Hardware_TristatePort_cpp_b70fe595___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_Microsoft_SPOT_Hardware_Watchdog.obj
+__asm___57_spot_hardware_native_Microsoft_SPOT_Hardware_Watchdog_cpp_5aa7dd73___Z5__RRXj <= USED 0
+__asm___57_spot_hardware_native_Microsoft_SPOT_Hardware_Watchdog_cpp_5aa7dd73___Z7__REV16j <= USED 0
+__asm___57_spot_hardware_native_Microsoft_SPOT_Hardware_Watchdog_cpp_5aa7dd73___Z7__REVSHi <= USED 0
+;FILE spot_hardware_native_microsoft_spot_hardware_AnalogOutput.obj
+__asm___61_spot_hardware_native_microsoft_spot_hardware_AnalogOutput_cpp_f8d56762___Z5__RRXj <= USED 0
+__asm___61_spot_hardware_native_microsoft_spot_hardware_AnalogOutput_cpp_f8d56762___Z7__REV16j <= USED 0
+__asm___61_spot_hardware_native_microsoft_spot_hardware_AnalogOutput_cpp_f8d56762___Z7__REVSHi <= USED 0
+;FILE spot_hardware_onewire_native.obj
+__asm___32_spot_hardware_onewire_native_cpp_67274722___Z5__RRXj <= USED 0
+__asm___32_spot_hardware_onewire_native_cpp_67274722___Z7__REV16j <= USED 0
+__asm___32_spot_hardware_onewire_native_cpp_67274722___Z7__REVSHi <= USED 0
+;FILE spot_hardware_onewire_native_Microsoft_SPOT_Hardware_OneWire.obj
+__asm___64_spot_hardware_onewire_native_Microsoft_SPOT_Hardware_OneWire_cpp_86a83544___Z5__RRXj <= USED 0
+__asm___64_spot_hardware_onewire_native_Microsoft_SPOT_Hardware_OneWire_cpp_86a83544___Z7__REV16j <= USED 0
+__asm___64_spot_hardware_onewire_native_Microsoft_SPOT_Hardware_OneWire_cpp_86a83544___Z7__REVSHi <= USED 0
+;FILE spot_hardware_onewire_native_Microsoft_SPOT_Hardware_OneWire_mshl.obj
+__asm___69_spot_hardware_onewire_native_Microsoft_SPOT_Hardware_OneWire_mshl_cpp_91111da9___Z5__RRXj <= USED 0
+__asm___69_spot_hardware_onewire_native_Microsoft_SPOT_Hardware_OneWire_mshl_cpp_91111da9___Z7__REV16j <= USED 0
+__asm___69_spot_hardware_onewire_native_Microsoft_SPOT_Hardware_OneWire_mshl_cpp_91111da9___Z7__REVSHi <= USED 0
+;FILE spot_hardware_pwm_native.obj
+__asm___28_spot_hardware_pwm_native_cpp_44e471b5___Z5__RRXj <= USED 0
+__asm___28_spot_hardware_pwm_native_cpp_44e471b5___Z7__REV16j <= USED 0
+__asm___28_spot_hardware_pwm_native_cpp_44e471b5___Z7__REVSHi <= USED 0
+;FILE spot_hardware_pwm_native_Microsoft_spot_hardware_PWM.obj
+__asm___56_spot_hardware_pwm_native_Microsoft_spot_hardware_PWM_cpp_f732ba15___Z5__RRXj <= USED 0
+__asm___56_spot_hardware_pwm_native_Microsoft_spot_hardware_PWM_cpp_f732ba15___Z7__REV16j <= USED 0
+__asm___56_spot_hardware_pwm_native_Microsoft_spot_hardware_PWM_cpp_f732ba15___Z7__REVSHi <= USED 0
+;FILE spot_hardware_serial_native.obj
+__asm___31_spot_hardware_serial_native_cpp_12c3bf85___Z5__RRXj <= USED 0
+__asm___31_spot_hardware_serial_native_cpp_12c3bf85___Z7__REV16j <= USED 0
+__asm___31_spot_hardware_serial_native_cpp_12c3bf85___Z7__REVSHi <= USED 0
+;FILE spot_hardware_serial_native_Microsoft_spot_hardware_SerialPort_events.obj
+__asm___73_spot_hardware_serial_native_Microsoft_spot_hardware_SerialPort_events_cpp_a699fcf1___Z5__RRXj <= USED 0
+__asm___73_spot_hardware_serial_native_Microsoft_spot_hardware_SerialPort_events_cpp_a699fcf1___Z7__REV16j <= USED 0
+__asm___73_spot_hardware_serial_native_Microsoft_spot_hardware_SerialPort_events_cpp_a699fcf1___Z7__REVSHi <= USED 0
+;FILE spot_hardware_serial_native_System_IO_Ports_SerialPort.obj
+__asm___58_spot_hardware_serial_native_System_IO_Ports_SerialPort_cpp_3bf3f44e___Z5__RRXj <= USED 0
+__asm___58_spot_hardware_serial_native_System_IO_Ports_SerialPort_cpp_3bf3f44e___Z7__REV16j <= USED 0
+__asm___58_spot_hardware_serial_native_System_IO_Ports_SerialPort_cpp_3bf3f44e___Z7__REVSHi <= USED 0
+;FILE spot_hardware_usb_native.obj
+__asm___28_spot_hardware_usb_native_cpp_18166fa1___Z5__RRXj <= USED 0
+__asm___28_spot_hardware_usb_native_cpp_18166fa1___Z7__REV16j <= USED 0
+__asm___28_spot_hardware_usb_native_cpp_18166fa1___Z7__REVSHi <= USED 0
+;FILE spot_hardware_usb_native_Microsoft_SPOT_Hardware_UsbClient_UsbController.obj
+__asm___76_spot_hardware_usb_native_Microsoft_SPOT_Hardware_UsbClient_UsbController_cpp_8ca06bad___Z5__RRXj <= USED 0
+__asm___76_spot_hardware_usb_native_Microsoft_SPOT_Hardware_UsbClient_UsbController_cpp_8ca06bad___Z7__REV16j <= USED 0
+__asm___76_spot_hardware_usb_native_Microsoft_SPOT_Hardware_UsbClient_UsbController_cpp_8ca06bad___Z7__REVSHi <= USED 0
+;FILE spot_hardware_usb_native_Microsoft_SPOT_Hardware_UsbClient_UsbStream.obj
+__asm___72_spot_hardware_usb_native_Microsoft_SPOT_Hardware_UsbClient_UsbStream_cpp_3b5e18e9___Z5__RRXj <= USED 0
+__asm___72_spot_hardware_usb_native_Microsoft_SPOT_Hardware_UsbClient_UsbStream_cpp_3b5e18e9___Z7__REV16j <= USED 0
+__asm___72_spot_hardware_usb_native_Microsoft_SPOT_Hardware_UsbClient_UsbStream_cpp_3b5e18e9___Z7__REVSHi <= USED 0
+;FILE spot_messaging_stub.obj
+__asm___23_spot_messaging_stub_cpp_be75356f___Z5__RRXj <= USED 0
+__asm___23_spot_messaging_stub_cpp_be75356f___Z7__REV16j <= USED 0
+__asm___23_spot_messaging_stub_cpp_be75356f___Z7__REVSHi <= USED 0
+;FILE spot_native.obj
+__asm___15_spot_native_cpp_e08f81e2___Z5__RRXj <= USED 0
+__asm___15_spot_native_cpp_e08f81e2___Z7__REV16j <= USED 0
+__asm___15_spot_native_cpp_e08f81e2___Z7__REVSHi <= USED 0
+;FILE spot_native_Microsoft_SPOT_Debug.obj
+__asm___36_spot_native_Microsoft_SPOT_Debug_cpp_4c3809a9___Z5__RRXj <= USED 0
+__asm___36_spot_native_Microsoft_SPOT_Debug_cpp_4c3809a9___Z7__REV16j <= USED 0
+__asm___36_spot_native_Microsoft_SPOT_Debug_cpp_4c3809a9___Z7__REVSHi <= USED 0
+;FILE spot_native_Microsoft_SPOT_ExecutionConstraint.obj
+__asm___50_spot_native_Microsoft_SPOT_ExecutionConstraint_cpp_18fa5321___Z5__RRXj <= USED 0
+__asm___50_spot_native_Microsoft_SPOT_ExecutionConstraint_cpp_18fa5321___Z7__REV16j <= USED 0
+__asm___50_spot_native_Microsoft_SPOT_ExecutionConstraint_cpp_18fa5321___Z7__REVSHi <= USED 0
+;FILE spot_native_Microsoft_SPOT_ExtendedTimer.obj
+__asm___44_spot_native_Microsoft_SPOT_ExtendedTimer_cpp_dbc4d900___Z5__RRXj <= USED 0
+__asm___44_spot_native_Microsoft_SPOT_ExtendedTimer_cpp_dbc4d900___Z7__REV16j <= USED 0
+__asm___44_spot_native_Microsoft_SPOT_ExtendedTimer_cpp_dbc4d900___Z7__REVSHi <= USED 0
+;FILE spot_native_Microsoft_SPOT_ExtendedWeakReference.obj
+__asm___52_spot_native_Microsoft_SPOT_ExtendedWeakReference_cpp_a4f25750___Z5__RRXj <= USED 0
+__asm___52_spot_native_Microsoft_SPOT_ExtendedWeakReference_cpp_a4f25750___Z7__REV16j <= USED 0
+__asm___52_spot_native_Microsoft_SPOT_ExtendedWeakReference_cpp_a4f25750___Z7__REVSHi <= USED 0
+;FILE spot_native_Microsoft_SPOT_Hardware_SystemInfo.obj
+__asm___50_spot_native_Microsoft_SPOT_Hardware_SystemInfo_cpp_a9a5f68c___Z5__RRXj <= USED 0
+__asm___50_spot_native_Microsoft_SPOT_Hardware_SystemInfo_cpp_a9a5f68c___Z7__REV16j <= USED 0
+__asm___50_spot_native_Microsoft_SPOT_Hardware_SystemInfo_cpp_a9a5f68c___Z7__REVSHi <= USED 0
+;FILE spot_native_Microsoft_SPOT_Hardware_SystemInfo__SystemID.obj
+__asm___60_spot_native_Microsoft_SPOT_Hardware_SystemInfo__SystemID_cpp_5011a1b9___Z5__RRXj <= USED 0
+__asm___60_spot_native_Microsoft_SPOT_Hardware_SystemInfo__SystemID_cpp_5011a1b9___Z7__REV16j <= USED 0
+__asm___60_spot_native_Microsoft_SPOT_Hardware_SystemInfo__SystemID_cpp_5011a1b9___Z7__REVSHi <= USED 0
+;FILE spot_native_Microsoft_SPOT_Hardware_Utility.obj
+__asm___47_spot_native_Microsoft_SPOT_Hardware_Utility_cpp_89141fb0___Z5__RRXj <= USED 0
+__asm___47_spot_native_Microsoft_SPOT_Hardware_Utility_cpp_89141fb0___Z7__REV16j <= USED 0
+__asm___47_spot_native_Microsoft_SPOT_Hardware_Utility_cpp_89141fb0___Z7__REVSHi <= USED 0
+;FILE spot_native_Microsoft_SPOT_Math.obj
+__asm___35_spot_native_Microsoft_SPOT_Math_cpp_71c24ee3___Z5__RRXj <= USED 0
+__asm___35_spot_native_Microsoft_SPOT_Math_cpp_71c24ee3___Z7__REV16j <= USED 0
+__asm___35_spot_native_Microsoft_SPOT_Math_cpp_71c24ee3___Z7__REVSHi <= USED 0
+;FILE spot_native_Microsoft_SPOT_Reflection.obj
+__asm___41_spot_native_Microsoft_SPOT_Reflection_cpp_fca0bbb6___Z5__RRXj <= USED 0
+__asm___41_spot_native_Microsoft_SPOT_Reflection_cpp_fca0bbb6___Z7__REV16j <= USED 0
+__asm___41_spot_native_Microsoft_SPOT_Reflection_cpp_fca0bbb6___Z7__REVSHi <= USED 0
+;FILE spot_native_Microsoft_SPOT_ResourceUtility.obj
+__asm___46_spot_native_Microsoft_SPOT_ResourceUtility_cpp_d705e69f___Z5__RRXj <= USED 0
+__asm___46_spot_native_Microsoft_SPOT_ResourceUtility_cpp_d705e69f___Z7__REV16j <= USED 0
+__asm___46_spot_native_Microsoft_SPOT_ResourceUtility_cpp_d705e69f___Z7__REVSHi <= USED 0
+;FILE spot_native_Microsoft_SPOT_Serialization.obj
+__asm___44_spot_native_Microsoft_SPOT_Serialization_cpp_396a0562___Z5__RRXj <= USED 0
+__asm___44_spot_native_Microsoft_SPOT_Serialization_cpp_396a0562___Z7__REV16j <= USED 0
+__asm___44_spot_native_Microsoft_SPOT_Serialization_cpp_396a0562___Z7__REVSHi <= USED 0
+;FILE spot_native_Microsoft_SPOT_WeakDelegate.obj
+__asm___43_spot_native_Microsoft_SPOT_WeakDelegate_cpp_18cb15b3___Z5__RRXj <= USED 0
+__asm___43_spot_native_Microsoft_SPOT_WeakDelegate_cpp_18cb15b3___Z7__REV16j <= USED 0
+__asm___43_spot_native_Microsoft_SPOT_WeakDelegate_cpp_18cb15b3___Z7__REVSHi <= USED 0
+;FILE spot_native_System_Security_Cryptography_X509Certificates_X509Certificate.obj
+__asm___77_spot_native_System_Security_Cryptography_X509Certificates_X509Certificate_cpp_663009a8___Z5__RRXj <= USED 0
+__asm___77_spot_native_System_Security_Cryptography_X509Certificates_X509Certificate_cpp_663009a8___Z7__REV16j <= USED 0
+__asm___77_spot_native_System_Security_Cryptography_X509Certificates_X509Certificate_cpp_663009a8___Z7__REVSHi <= USED 0
+;FILE ssl_pal_Stubs.obj
+_Z10SSL_Acceptii <= USED 0
+_Z11SSL_ConnectiPKci <= USED 0
+_Z11SSL_GetTimeP15_DATE_TIME_INFO <= USED 0
+_Z14SSL_ClientInitiiPKciS0_Ri <= USED 0
+_Z14SSL_Initializev <= USED 0
+_Z14SSL_ServerInitiiPKciS0_Ri <= USED 0
+_Z15SSL_CloseSocketi <= USED 0
+_Z15SSL_ExitContexti <= USED 0
+_Z16SSL_Uninitializev <= USED 0
+_Z17SSL_DataAvailablei <= USED 0
+_Z24SSL_RegisterTimeCallbackPFvP15_DATE_TIME_INFOE <= USED 0
+_Z27SSL_AddCertificateAuthorityiPKciS0_ <= USED 0
+_Z29SSL_ClearCertificateAuthorityi <= USED 0
+_Z8SSL_ReadiPcj <= USED 0
+_Z9SSL_WriteiPKcj <= USED 0
+__asm___17_ssl_pal_Stubs_cpp_1c378974___Z5__RRXj <= USED 0
+__asm___17_ssl_pal_Stubs_cpp_1c378974___Z7__REV16j <= USED 0
+__asm___17_ssl_pal_Stubs_cpp_1c378974___Z7__REVSHi <= USED 0
+ssl_rand_seed <= USED 0
+;FILE stubs_functions_WATCHDOG.obj
+_Z15Watchdog_EnablejPFvPvES_ <= USED 0
+_Z16Watchdog_Disablev <= USED 0
+_Z17Watchdog_ResetCpuv <= USED 0
+__asm___28_stubs_functions_WATCHDOG_cpp_cf8f3c24___Z5__RRXj <= USED 0
+__asm___28_stubs_functions_WATCHDOG_cpp_cf8f3c24___Z7__REV16j <= USED 0
+__asm___28_stubs_functions_WATCHDOG_cpp_cf8f3c24___Z7__REVSHi <= USED 0
+;FILE stubs_functions_cache.obj
+_Z15CPU_FlushCachesv <= USED 0
+_Z16CPU_EnableCachesv <= USED 0
+_Z17CPU_DisableCachesv <= USED 0
+_Z20CPU_InvalidateCachesv <= USED 0
+_Z21CPU_DrainWriteBuffersv <= USED 0
+_Z22CPU_GetCachableAddressj <= USED 0
+;FILE tinyclr.obj
+__asm___11_tinyclr_cpp_9c7b87fd___Z5__RRXj <= USED 0
+__asm___11_tinyclr_cpp_9c7b87fd___Z7__REV16j <= USED 0
+__asm___11_tinyclr_cpp_9c7b87fd___Z7__REVSHi <= USED 0
+;FILE tinycrt.obj
+_Z13hal_strncmp_sPKcS0_j <= USED 0
+_Z30hal_fprintf_SetLoggingCallbackPFvPKcE <= USED 0
+__asm___11_tinycrt_cpp_3a1dd38b___Z5__RRXj <= USED 0
+__asm___11_tinycrt_cpp_3a1dd38b___Z7__REV16j <= USED 0
+__asm___11_tinycrt_cpp_3a1dd38b___Z7__REVSHi <= USED 0
+__rt_div0 <= USED 0
+__rt_exit <= USED 0
+__rt_raise <= USED 0
+;FILE tinyhal.obj
+_Z13Stack_MaxUsedv <= USED 0
+_Z15SystemState_Set12SYSTEM_STATE <= USED 0
+_Z17SystemState_Clear12SYSTEM_STATE <= USED 0
+_Z17SystemState_Query12SYSTEM_STATE <= USED 0
+_Z19Verify_RAMConstantsPv <= USED 0
+_Z47KEEP_THE_LINKER_HAPPY_SINCE_KEEP_IS_NOT_WORKINGv <= USED 0
+__asm___11_tinyhal_cpp_276b0114___Z5__RRXj <= USED 0
+__asm___11_tinyhal_cpp_276b0114___Z7__REV16j <= USED 0
+__asm___11_tinyhal_cpp_276b0114___Z7__REVSHi <= USED 0
+;FILE usart.obj
+_Z10COM1_writePcj <= USED 0
+_Z10COM2_writePcj <= USED 0
+_Z14USART_ForceXONi <= USED 0
+_Z14USART_SetEventij <= USED 0
+_Z15USART_PowerSaveia <= USED 0
+_Z19COM1_driver_detailsj <= USED 0
+_Z19COM2_driver_detailsj <= USED 0
+_Z23USART_ClockStopFinishedv <= USED 0
+_Z25USART_PrepareForClockStopv <= USED 0
+_Z9COM1_readPcj <= USED 0
+_Z9COM2_readPcj <= USED 0
+_ZN12USART_Driver17ClockStopFinishedEv <= USED 0
+_ZN12USART_Driver19PrepareForClockStopEv <= USED 0
+_ZN12USART_Driver9PowerSaveEia <= USED 0
+__asm___9_usart_cpp_bdcf1770___Z5__RRXj <= USED 0
+__asm___9_usart_cpp_bdcf1770___Z7__REV16j <= USED 0
+__asm___9_usart_cpp_bdcf1770___Z7__REVSHi <= USED 0
+;FILE usb.obj
+_Z10USB1_writePcj <= USED 0
+_Z12USB_GetEventij <= USED 0
+_Z16USB_debug_printfPKcz <= USED 0
+_Z19USB1_driver_detailsj <= USED 0
+_Z9USB1_readPcj <= USED 0
+_ZN10USB_Driver8GetEventEij <= USED 0
+__asm___7_usb_cpp_cede6b78___Z5__RRXj <= USED 0
+__asm___7_usb_cpp_cede6b78___Z7__REV16j <= USED 0
+__asm___7_usb_cpp_cede6b78___Z7__REVSHi <= USED 0
+;FILE usb_config.obj
+__asm___14_usb_config_cpp_c3bc6d89___Z5__RRXj <= USED 0
+__asm___14_usb_config_cpp_c3bc6d89___Z7__REV16j <= USED 0
+__asm___14_usb_config_cpp_c3bc6d89___Z7__REVSHi <= USED 0
+;FILE virtualkey_stubs.obj
+__asm___20_virtualkey_stubs_cpp_3fc566f0___Z5__RRXj <= USED 0
+__asm___20_virtualkey_stubs_cpp_3fc566f0___Z7__REV16j <= USED 0
+__asm___20_virtualkey_stubs_cpp_3fc566f0___Z7__REVSHi <= USED 0
+;FILE windows_devices_native.obj
+__asm___26_windows_devices_native_cpp_b9680908___Z5__RRXj <= USED 0
+__asm___26_windows_devices_native_cpp_b9680908___Z7__REV16j <= USED 0
+__asm___26_windows_devices_native_cpp_b9680908___Z7__REVSHi <= USED 0
+;FILE windows_devices_native_Windows_Devices_Gpio_GpioController.obj
+__asm___62_windows_devices_native_Windows_Devices_Gpio_GpioController_cpp_7b99cb2c___Z5__RRXj <= USED 0
+__asm___62_windows_devices_native_Windows_Devices_Gpio_GpioController_cpp_7b99cb2c___Z7__REV16j <= USED 0
+__asm___62_windows_devices_native_Windows_Devices_Gpio_GpioController_cpp_7b99cb2c___Z7__REVSHi <= USED 0
+;FILE windows_devices_native_Windows_Devices_Gpio_GpioPin.obj
+__asm___55_windows_devices_native_Windows_Devices_Gpio_GpioPin_cpp_da4b9ed3___Z5__RRXj <= USED 0
+__asm___55_windows_devices_native_Windows_Devices_Gpio_GpioPin_cpp_da4b9ed3___Z7__REV16j <= USED 0
+__asm___55_windows_devices_native_Windows_Devices_Gpio_GpioPin_cpp_da4b9ed3___Z7__REVSHi <= USED 0
+;FILE windows_devices_native_Windows_Devices_Spi_SpiBusInfo.obj
+__asm___57_windows_devices_native_Windows_Devices_Spi_SpiBusInfo_cpp_f261bedb___Z5__RRXj <= USED 0
+__asm___57_windows_devices_native_Windows_Devices_Spi_SpiBusInfo_cpp_f261bedb___Z7__REV16j <= USED 0
+__asm___57_windows_devices_native_Windows_Devices_Spi_SpiBusInfo_cpp_f261bedb___Z7__REVSHi <= USED 0
+;FILE windows_devices_native_Windows_Devices_Spi_SpiDevice.obj
+__asm___56_windows_devices_native_Windows_Devices_Spi_SpiDevice_cpp_80347155___Z5__RRXj <= USED 0
+__asm___56_windows_devices_native_Windows_Devices_Spi_SpiDevice_cpp_80347155___Z7__REV16j <= USED 0
+__asm___56_windows_devices_native_Windows_Devices_Spi_SpiDevice_cpp_80347155___Z7__REVSHi <= USED 0
