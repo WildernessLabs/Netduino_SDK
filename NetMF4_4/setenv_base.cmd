@@ -93,7 +93,6 @@ IF NOT "%VS120COMNTOOLS%" == "" (
       ) ELSE (
       IF NOT "%VS150COMNTOOLS%" == "" (
         CALL "%VS150COMNTOOLS%VsDevCmd.bat"
-        GOTO :EOF
       ) ELSE ( 
         @ECHO WARNING: Could not find vsvars32.bat.
         @ECHO WARNING: VISUAL C++ DOES NOT APPEAR TO BE INSTALLED ON THIS MACHINE
@@ -101,7 +100,7 @@ IF NOT "%VS120COMNTOOLS%" == "" (
       )
     )
   )
- )
+)
 )
 
 set TINYCLR_USE_MSBUILD=1   
@@ -380,6 +379,7 @@ IF "%COMPILER_TOOL_VERSION_NUM%"=="12" (
 IF "%COMPILER_TOOL_VERSION_NUM%"=="15" (
   IF NOT "%VS150COMNTOOLS%" == "" (
         CALL "%VS150COMNTOOLS%VsDevCmd.bat"
+        GOTO :EOF
     ) ELSE (    
         @ECHO WARNING: Could not find VsDevCmd.bat.
         @ECHO WARNING: VISUAL STUDIO 2017 DOES NOT APPEAR TO BE INSTALLED ON THIS MACHINE
