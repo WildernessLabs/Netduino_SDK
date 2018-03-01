@@ -31,8 +31,15 @@
     <VSToolsPath>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v14.0</VSToolsPath>
     <!-- Additional VS SDK version specific properties go here -->
   </PropertyGroup>
-    
-  <PropertyGroup>
+
+    <PropertyGroup Condition="'$(NetMFBuildVsSdkVersion)'=='15'">
+      <VSSDKINSTALLDIR>$(VSSDK15INSTALLDIR)</VSSDKINSTALLDIR>
+      <VSToolsPath>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v15.0</VSToolsPath>
+      <VSSDKAssemblySearchPath Condition="'$(DevEnvDir)'!=''">$(DevEnvDir)</VSSDKAssemblySearchPath>  <!-- Assemblies no longer in GAC (AppDesigner & Editors) -->
+      <!-- Additional VS SDK version specific properties go here -->
+    </PropertyGroup>
+
+    <PropertyGroup>
     <GACAssemblySearchPathToken Condition="'$(UseGacInAssembllySearchPath)'!='true'">$(VSSDKINSTALLDIR)\GAC;{GAC};</GACAssemblySearchPathToken>
     <GACAssemblySearchPathToken Condition="'$(UseGacInAssembllySearchPath)'=='true'">{GAC};</GACAssemblySearchPathToken>
     
@@ -44,7 +51,7 @@
     <CommonAssemblyInfoTemplate>$(SPOCLIENT)\tools\AssemblyInfo.cs.template</CommonAssemblyInfoTemplate>
     <CommonAssemblyInfoItemName>Compile</CommonAssemblyInfoItemName>
     <CommonAssemblyInfoLanguage>CSharp</CommonAssemblyInfoLanguage>
-    <VSSDKAssemblySearchPath Condition="'$(VSSDKINSTALLDIR)'!=''">$(VSSDKINSTALLDIR)\VisualStudioIntegration\Common\Assemblies\v4.0\;$(VSSDKINSTALLDIR)\VisualStudioIntegration\Common\Assemblies\v2.0\;$(MSBuildProgramFiles32)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\;</VSSDKAssemblySearchPath>
+    <VSSDKAssemblySearchPath Condition="'$(VSSDKINSTALLDIR)'!=''">$(VSSDKINSTALLDIR)\VisualStudioIntegration\Common\Assemblies\v4.0\;$(VSSDKINSTALLDIR)\VisualStudioIntegration\Common\Assemblies\v2.0\;$(MSBuildProgramFiles32)\Common Files\Microsoft Shared\MSEnv\PublicAssemblies\;$(VSSDKAssemblySearchPath)</VSSDKAssemblySearchPath>
     <!-- NOTE: '{GAC}' is deliberately not listed in the search path directly. This ensures we have more control over the binaries used for generating reliable, repeatable builds -->
     <AssemblySearchPaths Condition=" '$(AssemblySearchPaths)' == '' ">
             {CandidateAssemblyFiles};

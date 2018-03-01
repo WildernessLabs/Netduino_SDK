@@ -1,7 +1,7 @@
 @echo off
 SETLOCAL
 
-call "%VS110COMNTOOLS%\vsvars32.bat"
+call "%VS150COMNTOOLS%\vsvars32.bat"
 call %~dp0\init.cmd
 
 perl -x "%~f0" %* & if ERRORLEVEL 1 exit /b 10

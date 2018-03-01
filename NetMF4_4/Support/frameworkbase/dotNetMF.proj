@@ -15,6 +15,7 @@
         " />
     <Project Condition="Exists('$(VSSDK12INSTALLDIR)')" Include="$(SPOCLIENT)\Framework\CorDebug\vs12\CorDebugvs12.csproj"/>
     <Project Condition="Exists('$(VSSDK14INSTALLDIR)')" Include="$(SPOCLIENT)\Framework\CorDebug\vs14\CorDebugvs14.csproj"/>
+    <Project Condition="Exists('$(VSSDK15INSTALLDIR)')" Include="$(SPOCLIENT)\Framework\CorDebug\vs15\CorDebugvs15.csproj"/>
 
   </ItemGroup>
 

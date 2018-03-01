@@ -305,6 +305,12 @@ namespace Microsoft.SPOT.Tasks.NativeBuild
                 return mToolPath;
             }
 
+            String VCToolsInstallDir = Environment.GetEnvironmentVariable("VCToolsInstallDir");
+            if (VCToolsInstallDir != null)
+            {
+                return Path.Combine(VCToolsInstallDir, "bin", "HostX86", MACHINE, ToolName);
+            }
+
             String VSINSTALLDIR = Environment.GetEnvironmentVariable("VSINSTALLDIR");
             if (VSINSTALLDIR != null)
             {

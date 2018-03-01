@@ -9,7 +9,7 @@
              InstallDefault="followParent">
 
       <ComponentRef Id="Component_MicroFramework_v4_4"/>
-      <ComponentRef Id="Component_Targets_v4_4"/>
+      <!--<ComponentRef Id="Component_Targets_v4_4"/>-->  <!-- Must be in VSIX since VS15 -->
     </Feature>
   </Fragment>
 </Wix>

@@ -162,11 +162,11 @@
                  TypicalDefault='install'
                  Display='hidden'
              >
-            <MergeRef Id='CRT140' />
+            <MergeRef Id='CRT150' />
 
             <!--        <MergeRef Id='ATL Policy' /> -->
             <?if $(var.BuildFlavor) = "Debug"?>
-            <MergeRef Id='Debug CRT140' />            
+            <MergeRef Id='Debug CRT150' />            
             <!--        <MergeRef Id='Debug CRT Policy' /> -->
             <?endif?>
         </Feature>

@@ -1,11 +1,11 @@
 <?xml version="1.0"?>
 <Include>
     <DirectoryRef Id="TARGETDIR">
-        <Merge Id="CRT140" Language="0" SourceFile="$(env.CommonProgramFiles(x86))\Merge Modules\Microsoft_VC140_CRT_x86.msm" DiskId="1" />
+        <Merge Id="CRT150" Language="0" SourceFile="$(env.VCToolsRedistDir)\MergeModules\Microsoft_VC141_CRT_x86.msm" DiskId="1" />
         
         <!-- Debug modules are not redistributable, but are useful during development and early testing -->
         <?if $(var.BuildFlavor) = "Debug"?>
-        <Merge Id="Debug CRT140" Language="0" SourceFile="$(env.CommonProgramFiles(x86))\Merge Modules\Microsoft_VC140_DebugCRT_x86.msm" DiskId="1" />
+        <Merge Id="Debug CRT150" Language="0" SourceFile="$(env.VCToolsRedistDir)\MergeModules\Microsoft_VC141_DebugCRT_x86.msm" DiskId="1" />
         <!-- Merge Id="Debug CRT Policy" Language="0" SourceFile="$(env.CommonProgramFiles(x86))\Merge Modules\policy_9_0_Microsoft_VC90_DebugCRT_x86.msm" DiskId="1" /-->
         <?endif?>
     </DirectoryRef>
