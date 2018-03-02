@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+
+  <Import Project="build.props.user" Condition="Exists('build.props.user')" />
+
+  <PropertyGroup Label="UserMacros">
+    <NETMFVS_SETENV>$(NETMFVS_SETENV)</NETMFVS_SETENV>
+    <NETMFVS_SETENV Condition="'$(NETMFVS_SETENV)'==''">setenv_gcc 7.2.1</NETMFVS_SETENV>
+
+    <NETMFVS_MSBUILD>$(NETMFVS_MSBUILD)</NETMFVS_MSBUILD>
+    <NETMFVS_MSBUILD Condition="'$(NETMFVS_MSBUILD)'==''">/clp:verbosity=minimal</NETMFVS_MSBUILD>
+  </PropertyGroup>
+  <PropertyGroup>
+  </PropertyGroup>
+  <ItemGroup>
+    <BuildMacro Include="NETMFVS_SETENV">
+      <Value>$(NETMFVS_SETENV)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+    <BuildMacro Include="NETMFVS_MSBUILD">
+      <Value>$(NETMFVS_MSBUILD)</Value>
+      <EnvironmentVariable>true</EnvironmentVariable>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
