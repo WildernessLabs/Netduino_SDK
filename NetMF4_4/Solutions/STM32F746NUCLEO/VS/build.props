@@ -6,7 +6,8 @@
 
   <PropertyGroup Label="UserMacros">
     <NETMFVS_SETENV>$(NETMFVS_SETENV)</NETMFVS_SETENV>
-    <NETMFVS_SETENV Condition="'$(NETMFVS_SETENV)'==''">setenv_gcc 7.2.1</NETMFVS_SETENV>
+    <NETMFVS_SETENV Condition="'$(NETMFVS_SETENV)'==''">VsDevCmd.bat</NETMFVS_SETENV>
+    <NETMFVS_SETENV Condition="'$(NETMFVS_SETENV)'==''">setenv_gcc 7.2.1 c:\gcc7.2.1</NETMFVS_SETENV>
 
     <NETMFVS_MSBUILD>$(NETMFVS_MSBUILD)</NETMFVS_MSBUILD>
     <NETMFVS_MSBUILD Condition="'$(NETMFVS_MSBUILD)'==''">/clp:verbosity=minimal</NETMFVS_MSBUILD>
