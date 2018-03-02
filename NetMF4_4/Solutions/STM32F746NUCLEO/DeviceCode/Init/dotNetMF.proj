@@ -1,0 +1,26 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectPath>$(SPOCLIENT)\Solutions\STM32F746NUCLEO\DeviceCode\Init\dotnetmf.proj</ProjectPath>
+    <AssemblyName>IO_Init_STM32F746NUCLEO</AssemblyName>
+    <ProjectGuid>{674F4D2D-0704-43FB-9D45-DDBDD311486D}</ProjectGuid>
+    <Description>IO port initialization for STM32F746NUCLEO solution</Description>
+    <Level>HAL</Level>
+    <LibraryFile>IO_Init_STM32F746NUCLEO.$(LIB_EXT)</LibraryFile>
+    <ManifestFile>IO_Init_STM32F746NUCLEO.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Solutions\STM32F746NUCLEO</Groups>
+    <PlatformIndependent>False</PlatformIndependent>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>Solutions\STM32F746NUCLEO\DeviceCode\Init</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <ItemGroup>
+    <HFiles Include="$(SPOCLIENT)\DeviceCode\Targets\Native\STM32F7\DeviceCode\stm32f7xx.h" />
+    <Compile Include="IO_Init.cpp" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

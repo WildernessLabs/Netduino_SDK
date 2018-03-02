@@ -33,8 +33,9 @@
     <!-- We need to convert the RVDS CPU type to its GCC equivalent if needed-->
     <ARCH_TYPE_FLAGS Condition="'$(DEVICE_TYPE)' == 'arm926EJ-S'">-mcpu=arm926ej-s -marm </ARCH_TYPE_FLAGS>
     <ARCH_TYPE_FLAGS Condition="'$(DEVICE_TYPE)' == 'ARM7TDMI'">-mcpu=arm7tdmi -marm </ARCH_TYPE_FLAGS>
-    <ARCH_TYPE_FLAGS Condition="'$(DEVICE_TYPE)' == 'cortex-m4'">-mcpu=cortex-m4 -mthumb</ARCH_TYPE_FLAGS>
     <ARCH_TYPE_FLAGS Condition="'$(DEVICE_TYPE)' == 'cortex-m3'">-mcpu=cortex-m3 -mthumb</ARCH_TYPE_FLAGS>
+    <ARCH_TYPE_FLAGS Condition="'$(DEVICE_TYPE)' == 'cortex-m4'">-mcpu=cortex-m4 -mthumb</ARCH_TYPE_FLAGS>
+    <ARCH_TYPE_FLAGS Condition="'$(DEVICE_TYPE)' == 'cortex-m7'">-mcpu=cortex-m7 -mthumb</ARCH_TYPE_FLAGS>
     <ARCH_TYPE_FLAGS Condition="'$(ARCH_TYPE_FLAGS)'==''">-mcpu=$(DEVICE_TYPE)</ARCH_TYPE_FLAGS>
 
     <!-- GCC_ARCH_DIR specifies the CPU architecture portion of the path to the appropriate libraries for a given device -->
@@ -43,6 +44,8 @@
     <GCC_ARCH_DIR Condition="'$(DEVICE_TYPE)' == 'cortex-m4' AND '$(PLATFORM_EMULATED_FLOATINGPOINT)'=='true'">armv7e-m\softfp</GCC_ARCH_DIR>
     <GCC_ARCH_DIR Condition="'$(DEVICE_TYPE)' == 'cortex-m4' AND '$(PLATFORM_EMULATED_FLOATINGPOINT)'!='true'">armv7e-m\fpu</GCC_ARCH_DIR>
     <GCC_ARCH_DIR Condition="'$(DEVICE_TYPE)' == 'cortex-m3'">armv7-m</GCC_ARCH_DIR>
+    <GCC_ARCH_DIR Condition="'$(DEVICE_TYPE)' == 'cortex-m7' AND '$(PLATFORM_EMULATED_FLOATINGPOINT)'=='true'">armv7e-m/softfp/fpv5-sp-d16</GCC_ARCH_DIR>
+    <GCC_ARCH_DIR Condition="'$(DEVICE_TYPE)' == 'cortex-m7' AND '$(PLATFORM_EMULATED_FLOATINGPOINT)'!='true'">armv7e-m/fpu/fpv5-sp-d16</GCC_ARCH_DIR>
 
     <POS_DEPENDENT></POS_DEPENDENT>
     <POS_INDEPENDENT>-fpic</POS_INDEPENDENT>

@@ -1,0 +1,25 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <AssemblyName>CortexM7_ItmPort</AssemblyName>
+        <ProjectGuid>{D0F91F86-6A78-4922-A6A7-BE1E439D361D}</ProjectGuid>
+        <Description>Cortex-M7 ITM port</Description>
+        <Level>HAL</Level>
+        <LibraryFile>CortexM7_ItmPort.$(LIB_EXT)</LibraryFile>
+        <ProjectPath>$(SPOCLIENT)\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_ItmPort\dotNetMF.proj</ProjectPath>
+        <ManifestFile>CortexM7_ItmPort.$(LIB_EXT).manifest</ManifestFile>
+        <PlatformIndependent>False</PlatformIndependent>
+        <Required>False</Required>
+        <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+        <IsStub>False</IsStub>
+        <Directory>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_ItmPort</Directory>
+        <OutputType>Library</OutputType>
+        <PlatformIndependentBuild>false</PlatformIndependentBuild>
+        <Version>4.0.0.0</Version>
+    </PropertyGroup>
+    <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+    <PropertyGroup />
+    <ItemGroup>
+        <Compile Include="ItmPort.cpp" />
+    </ItemGroup>
+    <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

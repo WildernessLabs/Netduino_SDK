@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "STM32F746NUCLEO", "STM32F746NUCLEO.vcxproj", "{0F62A3CE-4E63-4072-82AC-013DBD66244D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|ARM = Debug|ARM
+		Release|ARM = Release|ARM
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0F62A3CE-4E63-4072-82AC-013DBD66244D}.Debug|ARM.ActiveCfg = Debug|ARM
+		{0F62A3CE-4E63-4072-82AC-013DBD66244D}.Debug|ARM.Build.0 = Debug|ARM
+		{0F62A3CE-4E63-4072-82AC-013DBD66244D}.Release|ARM.ActiveCfg = Release|ARM
+		{0F62A3CE-4E63-4072-82AC-013DBD66244D}.Release|ARM.Build.0 = Release|ARM
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

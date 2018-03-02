@@ -1,0 +1,38 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>STM32F7_blconfig_STM32F746NUCLEO</AssemblyName>
+    <ProjectGuid>{1678D234-758D-4367-ABFB-430072E17ABC}</ProjectGuid>
+    <Description>Block storage configuration for STM32F746NUCLEO</Description>
+    <Level>HAL</Level>
+    <LibraryFile>STM32F7_blconfig_STM32F746NUCLEO.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\Solutions\STM32F746NUCLEO\DeviceCode\Blockstorage\STM32F7\dotNetMF.proj</ProjectPath>
+    <ManifestFile>STM32F7_blconfig_STM32F746NUCLEO.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Solutions\STM32F746NUCLEO</Groups>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="BlockStorageConfig_HAL" Guid="{497F59BB-55D3-404e-B958-A6284806D184}" ProjectPath="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Date>2009-08-12</Date>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomSpecific>STM32F746NUCLEO</CustomSpecific>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <Directory>Solutions\STM32F746NUCLEO\DeviceCode\BlockStorage\STM32F7</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <ItemGroup>
+    <Compile Include="STM32F7_blconfig.cpp" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>
