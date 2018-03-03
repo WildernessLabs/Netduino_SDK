@@ -973,50 +973,32 @@
     <None Include="..\..\..\DeviceCode\Targets\Native\dotNetMF.proj">
       <Filter>DeviceCode\Targets\Native</Filter>
     </None>
-    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\dotNetMF.proj">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode</Filter>
+    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\dotNetMF.proj">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode</Filter>
     </None>
-    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F746_Bootstrap\dotNetMF.proj">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F746_Bootstrap</Filter>
+    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Flash\dotNetMF.proj">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Flash</Filter>
     </None>
-    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F746_Bootstrap\GNU_S\DefaultHandlers.s">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F746_Bootstrap\GNU_S</Filter>
+    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_GPIO\dotNetMF.proj">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_GPIO</Filter>
     </None>
-    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F746_Bootstrap\GNU_S\VectorTable.s">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F746_Bootstrap\GNU_S</Filter>
+    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_IntC\dotNetMF.proj">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_IntC</Filter>
     </None>
-    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F746_Bootstrap\RVD_S\DefaultHandlers.s">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F746_Bootstrap\RVD_S</Filter>
+    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Power\dotNetMF.proj">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Power</Filter>
     </None>
-    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F746_Bootstrap\RVD_S\VectorTable.s">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F746_Bootstrap\RVD_S</Filter>
+    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Time\dotNetMF.proj">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Time</Filter>
     </None>
-    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Flash\dotNetMF.proj">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Flash</Filter>
+    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_USART\dotNetMF.proj">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_USART</Filter>
     </None>
-    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_GPIO\dotNetMF.proj">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_GPIO</Filter>
+    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_USB\dotNetMF.proj">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_USB</Filter>
     </None>
-    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_IntC\dotNetMF.proj">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_IntC</Filter>
-    </None>
-    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_ItmPort\dotNetMF.proj">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_ItmPort</Filter>
-    </None>
-    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Power\dotNetMF.proj">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Power</Filter>
-    </None>
-    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Time\dotNetMF.proj">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Time</Filter>
-    </None>
-    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_USART\dotNetMF.proj">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_USART</Filter>
-    </None>
-    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_USB\dotNetMF.proj">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_USB</Filter>
-    </None>
-    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F7\STM32F7.settings">
-      <Filter>DeviceCode\Targets\Native\STM32F7</Filter>
+    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F4\STM32F4.settings">
+      <Filter>DeviceCode\Targets\Native\STM32F4</Filter>
     </None>
     <None Include="..\..\..\DeviceCode\Targets\OS\CMSIS_RTOS\CMSIS_RTOS.settings">
       <Filter>DeviceCode\Targets\OS\CMSIS_RTOS</Filter>
@@ -1121,58 +1103,49 @@
       <Filter>Tools\Targets</Filter>
     </None>
     <None Include="..\DeviceCode\Blockstorage\addDevices\dotNetMF.proj">
-      <Filter>Solutions\STM32F746NUCLEO\DeviceCode\Blockstorage\AddDevices</Filter>
+      <Filter>Solutions\STM32F427\DeviceCode\Blockstorage\AddDevices</Filter>
     </None>
     <None Include="..\DeviceCode\Blockstorage\dotNetMF.proj">
-      <Filter>Solutions\STM32F746NUCLEO\DeviceCode\Blockstorage</Filter>
-    </None>
-    <None Include="..\DeviceCode\Blockstorage\STM32F7\dotNetMF.proj">
-      <Filter>Solutions\STM32F746NUCLEO\DeviceCode\Blockstorage\STM32F7</Filter>
+      <Filter>Solutions\STM32F427\DeviceCode\Blockstorage</Filter>
     </None>
     <None Include="..\DeviceCode\Initialization\dotNetMF.proj">
-      <Filter>Solutions\STM32F746NUCLEO\DeviceCode\Initialization</Filter>
+      <Filter>Solutions\STM32F427\DeviceCode\Initialization</Filter>
     </None>
     <None Include="..\DeviceCode\Initialization\dotNetMF_loader.proj">
-      <Filter>Solutions\STM32F746NUCLEO\DeviceCode\Initialization</Filter>
+      <Filter>Solutions\STM32F427\DeviceCode\Initialization</Filter>
     </None>
     <None Include="..\DeviceCode\Init\dotNetMF.proj">
-      <Filter>Solutions\STM32F746NUCLEO\DeviceCode\Init</Filter>
+      <Filter>Solutions\STM32F427\DeviceCode\Init</Filter>
     </None>
     <None Include="..\DeviceCode\USB\dotNetMF.proj">
-      <Filter>Solutions\STM32F746NUCLEO\DeviceCode\USB</Filter>
+      <Filter>Solutions\STM32F427\DeviceCode\USB</Filter>
     </None>
     <None Include="..\dotnetmf.proj">
-      <Filter>Solutions\STM32F746NUCLEO</Filter>
+      <Filter>Solutions\STM32F427</Filter>
     </None>
     <None Include="..\ManagedCode\dotnetmf.proj">
-      <Filter>Solutions\STM32F746NUCLEO\ManagedCode</Filter>
+      <Filter>Solutions\STM32F427\ManagedCode</Filter>
     </None>
     <None Include="..\ManagedCode\Hardware\CPU.cs">
-      <Filter>Solutions\STM32F746NUCLEO\ManagedCode\Hardware</Filter>
+      <Filter>Solutions\STM32F427\ManagedCode\Hardware</Filter>
     </None>
-    <None Include="..\ManagedCode\Hardware\STM32F746NUCLEO_hardware.csproj">
-      <Filter>Solutions\STM32F746NUCLEO\ManagedCode\Hardware</Filter>
+    <None Include="..\ManagedCode\Hardware\STM32F427Netduino3_hardware.csproj">
+      <Filter>Solutions\STM32F427\ManagedCode\Hardware</Filter>
     </None>
     <None Include="..\ReadMe.md">
-      <Filter>Solutions\STM32F746NUCLEO</Filter>
-    </None>
-    <None Include="..\STM32F746NUCLEO.ioc">
-      <Filter>Solutions\STM32F746NUCLEO</Filter>
-    </None>
-    <None Include="..\STM32F746NUCLEO.settings">
-      <Filter>Solutions\STM32F746NUCLEO</Filter>
+      <Filter>Solutions\STM32F427</Filter>
     </None>
     <None Include="Assets\LinuxDebugger.xaml">
-      <Filter>Solutions\STM32F746NUCLEO\VS\Assets</Filter>
+      <Filter>Solutions\STM32F427\VS\Assets</Filter>
     </None>
     <None Include="Assets\linux_nmake.xaml">
-      <Filter>Solutions\STM32F746NUCLEO\VS\Assets</Filter>
+      <Filter>Solutions\STM32F427\VS\Assets</Filter>
     </None>
     <None Include="Assets\LocalDebugger.xaml">
-      <Filter>Solutions\STM32F746NUCLEO\VS\Assets</Filter>
+      <Filter>Solutions\STM32F427\VS\Assets</Filter>
     </None>
     <None Include="Assets\OCDDebugger.xaml">
-      <Filter>Solutions\STM32F746NUCLEO\VS\Assets</Filter>
+      <Filter>Solutions\STM32F427\VS\Assets</Filter>
     </None>
     <None Include="..\..\..\crypto\stubs\crypto_stub.vcproj">
       <Filter>Crypto\stubs</Filter>
@@ -1211,22 +1184,39 @@
     <None Include="..\..\..\std_vcxproj.props" />
     <None Include="..\..\..\Update-DeviceSdkAssembly.ps1" />
     <None Include="build.cmd">
-      <Filter>Solutions\STM32F746NUCLEO\VS</Filter>
+      <Filter>Solutions\STM32F427\VS</Filter>
     </None>
     <None Include="build.props">
-      <Filter>Solutions\STM32F746NUCLEO\VS</Filter>
+      <Filter>Solutions\STM32F427\VS</Filter>
     </None>
     <None Include="build.props.user">
-      <Filter>Solutions\STM32F746NUCLEO\VS</Filter>
+      <Filter>Solutions\STM32F427\VS</Filter>
     </None>
     <None Include="build.props.user-example">
-      <Filter>Solutions\STM32F746NUCLEO\VS</Filter>
+      <Filter>Solutions\STM32F427\VS</Filter>
     </None>
     <None Include="ReadMe.md">
-      <Filter>Solutions\STM32F746NUCLEO\VS</Filter>
+      <Filter>Solutions\STM32F427\VS</Filter>
     </None>
-    <None Include="netmf_stm32f746nucleo.cfg">
-      <Filter>Solutions\STM32F746NUCLEO\VS</Filter>
+    <None Include="..\Netduino3.settings" />
+    <None Include="netmf_stm32f446nucleo.cfg" />
+    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Bootstrap\GNU_S\DefaultHandlers.s">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F427_Bootstrap\GNU_S</Filter>
+    </None>
+    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Bootstrap\GNU_S\VectorTable.s">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F427_Bootstrap\GNU_S</Filter>
+    </None>
+    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Bootstrap\RVD_S\DefaultHandlers.s">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F427_Bootstrap\RVD_S</Filter>
+    </None>
+    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Bootstrap\RVD_S\VectorTable.s">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F427_Bootstrap\RVD_S</Filter>
+    </None>
+    <None Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Bootstrap\dotNetMF.proj">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F427_Bootstrap</Filter>
+    </None>
+    <None Include="..\DeviceCode\Blockstorage\STM32F4\dotNetMF.proj">
+      <Filter>Solutions\STM32F427\DeviceCode\Blockstorage\STM32F4</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -2115,43 +2105,37 @@
     <Filter Include="DeviceCode\Targets\Native">
       <UniqueIdentifier>{7fa48eca-b7c4-4176-ae9b-4d67784a6a00}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DeviceCode\Targets\Native\STM32F7">
+    <Filter Include="DeviceCode\Targets\Native\STM32F4">
       <UniqueIdentifier>{3581bce3-f22d-4f1c-b586-e8f96635b01f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DeviceCode\Targets\Native\STM32F7\DeviceCode">
+    <Filter Include="DeviceCode\Targets\Native\STM32F4\DeviceCode">
       <UniqueIdentifier>{ef38cff0-febd-4b43-81ae-bc0fdf603420}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F746_Bootstrap">
+    <Filter Include="DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F427_Bootstrap">
       <UniqueIdentifier>{74eea670-0603-4d82-b7ce-4311f78c2bfa}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F746_Bootstrap\GNU_S">
+    <Filter Include="DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F427_Bootstrap\GNU_S">
       <UniqueIdentifier>{12dfa433-75e3-438e-a67e-cd4be040251f}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F746_Bootstrap\RVD_S">
-      <UniqueIdentifier>{92105228-b84c-4d89-8a86-a74e3db65e72}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Flash">
+    <Filter Include="DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Flash">
       <UniqueIdentifier>{89d3772e-fc87-4fd0-8330-09ff754eb005}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_GPIO">
+    <Filter Include="DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_GPIO">
       <UniqueIdentifier>{e4e134d6-92bd-41de-950b-895dcbbccd5c}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_IntC">
+    <Filter Include="DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_IntC">
       <UniqueIdentifier>{a7dbd539-e4db-4d6b-98be-0ebb45b5e751}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_ItmPort">
-      <UniqueIdentifier>{98166326-dd6f-4d39-aa0e-7e31488bdb2f}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Power">
+    <Filter Include="DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Power">
       <UniqueIdentifier>{4110c028-59e5-4090-86c2-ae0fe91ee7b6}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Time">
+    <Filter Include="DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Time">
       <UniqueIdentifier>{7a5d40eb-0338-4bff-88b8-201514e1de14}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_USART">
+    <Filter Include="DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_USART">
       <UniqueIdentifier>{2618bc53-a3b4-4483-b402-1b2e91af9f85}</UniqueIdentifier>
     </Filter>
-    <Filter Include="DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_USB">
+    <Filter Include="DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_USB">
       <UniqueIdentifier>{0cb28cb0-048b-4468-a09d-881ff323fe8a}</UniqueIdentifier>
     </Filter>
     <Filter Include="DeviceCode\Targets\OS">
@@ -2196,42 +2180,6 @@
     <Filter Include="Solutions">
       <UniqueIdentifier>{86c5864a-7c8a-4c49-877c-c6dd7ac3022b}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Solutions\STM32F746NUCLEO">
-      <UniqueIdentifier>{18322aff-3e06-4c74-b7c7-849f125cb019}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Solutions\STM32F746NUCLEO\DeviceCode">
-      <UniqueIdentifier>{faf462e9-0e0c-47cc-b869-3eefaa47e3d6}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Solutions\STM32F746NUCLEO\DeviceCode\Blockstorage">
-      <UniqueIdentifier>{e7712ccb-b732-4e01-9ce6-2f7794c2d8d7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Solutions\STM32F746NUCLEO\DeviceCode\Blockstorage\AddDevices">
-      <UniqueIdentifier>{391fb54a-c439-495a-81af-866f6aca9c63}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Solutions\STM32F746NUCLEO\DeviceCode\Blockstorage\STM32F7">
-      <UniqueIdentifier>{d2444ae4-90dc-4c8d-89cf-d663798d6ae8}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Solutions\STM32F746NUCLEO\DeviceCode\Init">
-      <UniqueIdentifier>{8974b656-7cea-4c5e-9456-25fe259f3cc5}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Solutions\STM32F746NUCLEO\DeviceCode\Initialization">
-      <UniqueIdentifier>{8a7e9a8e-67b0-4822-8a54-adf07192c0ed}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Solutions\STM32F746NUCLEO\DeviceCode\USB">
-      <UniqueIdentifier>{78b24bf9-e0e0-47cd-9281-5ca6978127f9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Solutions\STM32F746NUCLEO\ManagedCode">
-      <UniqueIdentifier>{aa28dc87-1f32-4d30-a32d-bd9d3c80e6a9}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Solutions\STM32F746NUCLEO\ManagedCode\Hardware">
-      <UniqueIdentifier>{efa53b2e-7f52-4ba1-a551-5861d64583a7}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Solutions\STM32F746NUCLEO\TinyBooter">
-      <UniqueIdentifier>{93319ca5-98be-4ce5-b93e-ce8e5293456c}</UniqueIdentifier>
-    </Filter>
-    <Filter Include="Solutions\STM32F746NUCLEO\TinyCLR">
-      <UniqueIdentifier>{46036410-9760-4b88-b8a6-55d5d8c35b83}</UniqueIdentifier>
-    </Filter>
     <Filter Include="Support">
       <UniqueIdentifier>{ba5b9ebc-e31f-42c2-ba52-2b25c031c9d2}</UniqueIdentifier>
     </Filter>
@@ -2262,11 +2210,50 @@
     <Filter Include="Crypto\stubs">
       <UniqueIdentifier>{2e136485-1e8e-46ee-becc-ae3b5fdbb8b8}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Solutions\STM32F746NUCLEO\VS">
+    <Filter Include="Solutions\STM32F427">
+      <UniqueIdentifier>{18322aff-3e06-4c74-b7c7-849f125cb019}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\STM32F427\DeviceCode">
+      <UniqueIdentifier>{faf462e9-0e0c-47cc-b869-3eefaa47e3d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\STM32F427\DeviceCode\Blockstorage">
+      <UniqueIdentifier>{e7712ccb-b732-4e01-9ce6-2f7794c2d8d7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\STM32F427\DeviceCode\Blockstorage\AddDevices">
+      <UniqueIdentifier>{391fb54a-c439-495a-81af-866f6aca9c63}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\STM32F427\DeviceCode\Blockstorage\STM32F4">
+      <UniqueIdentifier>{d2444ae4-90dc-4c8d-89cf-d663798d6ae8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\STM32F427\DeviceCode\Init">
+      <UniqueIdentifier>{8974b656-7cea-4c5e-9456-25fe259f3cc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\STM32F427\DeviceCode\Initialization">
+      <UniqueIdentifier>{8a7e9a8e-67b0-4822-8a54-adf07192c0ed}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\STM32F427\DeviceCode\USB">
+      <UniqueIdentifier>{78b24bf9-e0e0-47cd-9281-5ca6978127f9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\STM32F427\ManagedCode">
+      <UniqueIdentifier>{aa28dc87-1f32-4d30-a32d-bd9d3c80e6a9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\STM32F427\ManagedCode\Hardware">
+      <UniqueIdentifier>{efa53b2e-7f52-4ba1-a551-5861d64583a7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\STM32F427\TinyBooter">
+      <UniqueIdentifier>{93319ca5-98be-4ce5-b93e-ce8e5293456c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\STM32F427\TinyCLR">
+      <UniqueIdentifier>{46036410-9760-4b88-b8a6-55d5d8c35b83}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Solutions\STM32F427\VS">
       <UniqueIdentifier>{9735223c-7def-492e-8651-4be082a39272}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Solutions\STM32F746NUCLEO\VS\Assets">
+    <Filter Include="Solutions\STM32F427\VS\Assets">
       <UniqueIdentifier>{08a26e93-524c-4982-a01c-c8d4f223d6be}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F427_Bootstrap\RVD_S">
+      <UniqueIdentifier>{2abcbd36-e01f-434c-b1b2-be761f7e54b0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -4373,32 +4360,26 @@
     <ClCompile Include="..\..\..\DeviceCode\pal\watchdog\Watchdog_functions.cpp">
       <Filter>DeviceCode\pal\watchdog</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F746_Bootstrap\STM32F7_bootstrap.cpp">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F746_Bootstrap</Filter>
+    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Flash\STM32F4_Flash_driver.cpp">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Flash</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Flash\STM32F7_Flash_driver.cpp">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Flash</Filter>
+    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_GPIO\STM32F4_GPIO_functions.cpp">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_GPIO</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_GPIO\STM32F7_GPIO_functions.cpp">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_GPIO</Filter>
+    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_IntC\STM32F4_intc_functions.cpp">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_IntC</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_IntC\STM32F7_intc_functions.cpp">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_IntC</Filter>
+    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Power\STM32F4_Power_functions.cpp">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Power</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_ItmPort\ItmPort.cpp">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_ItmPort</Filter>
+    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Time\STM32F4_time_functions.cpp">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Time</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Power\STM32F7_Power_functions.cpp">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Power</Filter>
+    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_USART\STM32F4_usart_functions.cpp">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_USART</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Time\STM32F7_time_functions.cpp">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Time</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_USART\STM32F7_usart_functions.cpp">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_USART</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_USB\STM32F7_usb_functions.cpp">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_USB</Filter>
+    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_USB\STM32F4_usb_functions.cpp">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_USB</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\DeviceCode\Targets\OS\CMSIS_RTOS\DeviceCode\lwip_1_4_1_os\arch\sys_arch.cpp">
       <Filter>DeviceCode\Targets\OS\CMSIS_RTOS\DeviceCode\lwip_1_4_1_os\arch</Filter>
@@ -4446,40 +4427,43 @@
       <Filter>Support\WireProtocol</Filter>
     </ClCompile>
     <ClCompile Include="..\DeviceCode\Blockstorage\addDevices\Bl_addDevices.cpp">
-      <Filter>Solutions\STM32F746NUCLEO\DeviceCode\Blockstorage\AddDevices</Filter>
+      <Filter>Solutions\STM32F427\DeviceCode\Blockstorage\AddDevices</Filter>
     </ClCompile>
-    <ClCompile Include="..\DeviceCode\Blockstorage\STM32F7\STM32F7_BlConfig.cpp">
-      <Filter>Solutions\STM32F746NUCLEO\DeviceCode\Blockstorage\STM32F7</Filter>
+    <ClCompile Include="..\DeviceCode\Blockstorage\STM32F4\STM32F4_BlConfig.cpp">
+      <Filter>Solutions\STM32F427\DeviceCode\Blockstorage\STM32F4</Filter>
     </ClCompile>
     <ClCompile Include="..\DeviceCode\Initialization\OEM_Model_SKU_NetworkID.cpp">
-      <Filter>Solutions\STM32F746NUCLEO\DeviceCode\Initialization</Filter>
+      <Filter>Solutions\STM32F427\DeviceCode\Initialization</Filter>
     </ClCompile>
     <ClCompile Include="..\DeviceCode\Initialization\SystemState.cpp">
-      <Filter>Solutions\STM32F746NUCLEO\DeviceCode\Initialization</Filter>
+      <Filter>Solutions\STM32F427\DeviceCode\Initialization</Filter>
     </ClCompile>
     <ClCompile Include="..\DeviceCode\Initialization\tinyhal.cpp">
-      <Filter>Solutions\STM32F746NUCLEO\DeviceCode\Initialization</Filter>
+      <Filter>Solutions\STM32F427\DeviceCode\Initialization</Filter>
     </ClCompile>
     <ClCompile Include="..\DeviceCode\Init\IO_Init.cpp">
-      <Filter>Solutions\STM32F746NUCLEO\DeviceCode\Init</Filter>
+      <Filter>Solutions\STM32F427\DeviceCode\Init</Filter>
     </ClCompile>
     <ClCompile Include="..\DeviceCode\USB\usb_config.cpp">
-      <Filter>Solutions\STM32F746NUCLEO\DeviceCode\USB</Filter>
+      <Filter>Solutions\STM32F427\DeviceCode\USB</Filter>
     </ClCompile>
     <ClCompile Include="..\TinyBooter\allocator.cpp">
-      <Filter>Solutions\STM32F746NUCLEO\TinyBooter</Filter>
+      <Filter>Solutions\STM32F427\TinyBooter</Filter>
     </ClCompile>
     <ClCompile Include="..\TinyBooter\TinyBooterEntry.cpp">
-      <Filter>Solutions\STM32F746NUCLEO\TinyBooter</Filter>
+      <Filter>Solutions\STM32F427\TinyBooter</Filter>
     </ClCompile>
     <ClCompile Include="..\TinyCLR\allocator.cpp">
-      <Filter>Solutions\STM32F746NUCLEO\TinyCLR</Filter>
+      <Filter>Solutions\STM32F427\TinyCLR</Filter>
     </ClCompile>
     <ClCompile Include="..\TinyCLR\tinyclr.cpp">
-      <Filter>Solutions\STM32F746NUCLEO\TinyCLR</Filter>
+      <Filter>Solutions\STM32F427\TinyCLR</Filter>
     </ClCompile>
     <ClCompile Include="..\..\..\crypto\stubs\stubs.cpp">
       <Filter>Crypto\stubs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Bootstrap\STM32F4_bootstrap.cpp">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F427_Bootstrap</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -5332,26 +5316,23 @@
     <ClInclude Include="..\..\..\DeviceCode\pal\watchdog\Watchdog_driver.h">
       <Filter>DeviceCode\pal\watchdog</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\stm32f746xx.h">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode</Filter>
+    <ClInclude Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4xx.h">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\stm32f7xx.h">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode</Filter>
+    <ClInclude Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Flash\STM32F4_Flash.h">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Flash</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Flash\STM32F7_Flash.h">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Flash</Filter>
+    <ClInclude Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Power\STM32F4_Power_functions.h">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_Power</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Power\STM32F7_Power_functions.h">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_Power</Filter>
+    <ClInclude Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_USB\usb_def.h">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode\STM32F4_USB</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_USB\usb_def.h">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode\STM32F7_USB</Filter>
+    <ClInclude Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\system_STM32F4xx.h">
+      <Filter>DeviceCode\Targets\Native\STM32F4\DeviceCode</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\..\DeviceCode\Targets\Native\STM32F7\DeviceCode\system_stm32f7xx.h">
-      <Filter>DeviceCode\Targets\Native\STM32F7\DeviceCode</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\..\DeviceCode\Targets\Native\STM32F7\processor_selector.h">
-      <Filter>DeviceCode\Targets\Native\STM32F7</Filter>
+    <ClInclude Include="..\..\..\DeviceCode\Targets\Native\STM32F4\processor_selector.h">
+      <Filter>DeviceCode\Targets\Native\STM32F4</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\DeviceCode\Targets\OS\CMSIS_RTOS\cmsis_os_cpp.h">
       <Filter>DeviceCode\Targets\OS\CMSIS_RTOS</Filter>
@@ -5462,30 +5443,31 @@
       <Filter>Support\WireProtocol</Filter>
     </ClInclude>
     <ClInclude Include="..\DeviceCode\Initialization\MasterConfig.h">
-      <Filter>Solutions\STM32F746NUCLEO\DeviceCode\Initialization</Filter>
+      <Filter>Solutions\STM32F427\DeviceCode\Initialization</Filter>
     </ClInclude>
     <ClInclude Include="..\platform_selector.h">
-      <Filter>Solutions\STM32F746NUCLEO</Filter>
+      <Filter>Solutions\STM32F427</Filter>
     </ClInclude>
     <ClInclude Include="..\..\..\crypto\inc\crypto.h">
       <Filter>Crypto\inc</Filter>
     </ClInclude>
+    <ClInclude Include="..\..\..\DeviceCode\Targets\Native\STM32F4\DeviceCode\stm32f4xx.h" />
   </ItemGroup>
   <ItemGroup>
     <Xml Include="..\scatterfile_gcc_missing_symbols.xml">
-      <Filter>Solutions\STM32F746NUCLEO</Filter>
+      <Filter>Solutions\STM32F427</Filter>
     </Xml>
     <Xml Include="..\TinyBooter\scatterfile_bootloader_gcc.xml">
-      <Filter>Solutions\STM32F746NUCLEO\TinyBooter</Filter>
+      <Filter>Solutions\STM32F427\TinyBooter</Filter>
     </Xml>
     <Xml Include="..\TinyBooter\scatterfile_bootloader_mdk.xml">
-      <Filter>Solutions\STM32F746NUCLEO\TinyBooter</Filter>
+      <Filter>Solutions\STM32F427\TinyBooter</Filter>
     </Xml>
     <Xml Include="..\TinyCLR\scatterfile_tinyclr_gcc.xml">
-      <Filter>Solutions\STM32F746NUCLEO\TinyCLR</Filter>
+      <Filter>Solutions\STM32F427\TinyCLR</Filter>
     </Xml>
     <Xml Include="..\TinyCLR\scatterfile_tinyclr_mdk.xml">
-      <Filter>Solutions\STM32F746NUCLEO\TinyCLR</Filter>
+      <Filter>Solutions\STM32F427\TinyCLR</Filter>
     </Xml>
   </ItemGroup>
   <ItemGroup>
