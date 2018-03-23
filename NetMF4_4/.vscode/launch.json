@@ -1,0 +1,61 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "STM32F4DISCOVERY TinyCLR",
+            "type": "cppdbg",
+            "request": "launch",
+            "miDebuggerPath": "c:/gcc7.2.1/bin/arm-none-eabi-gdb.exe",
+            "targetArchitecture": "ARM",
+            "program": "c:/Netduino_SDK/NetMF4_4/BuildOutput/THUMB2FP/GCC7.2/le/FLASH/debug/STM32F4DISCOVERY/bin/tinyclr.axf",
+
+            "setupCommands": [
+                {"text": "target extended-remote localhost:3333"},
+				{"text": "monitor reset halt"},
+				{"text": "monitor flash write_image erase \"c:/Netduino_SDK/NetMF4_4/BuildOutput/THUMB2FP/GCC7.2/le/FLASH/debug/STM32F4DISCOVERY/bin/tinyclr.hex/ER_FLASH.hex\" "},
+				{"text": "file c:/Netduino_SDK/NetMF4_4/BuildOutput/THUMB2FP/GCC7.2/le/FLASH/debug/STM32F4DISCOVERY/bin/tinyclr.axf"},
+				{"text": "monitor reset halt"}
+            ],
+
+            "customLaunchSetupCommands": [
+			    {"text": "monitor reset halt"}
+            ],
+
+            "launchCompleteCommand": "exec-continue",
+			"debugServerPath": "c:/openocd-0.10.0/bin-x64/openocd.exe",
+			"debugServerArgs": "-s \"c:/openocd-0.10.0/bin/scripts/\" -f interface/stlink-v2-1.cfg -f board/stm32f4discovery.cfg",
+			"serverStarted": "Info\\ :\\ [\\w\\d\\.]*:\\ hardware",
+            "filterStderr": true,
+            "externalConsole": true,
+            "cwd": "${cwd}"
+        },
+        {
+            "name": "STM32F4DISCOVERY TinyBooter",
+            "type": "cppdbg",
+            "request": "launch",
+            "miDebuggerPath": "c:/gcc7.2.1/bin/arm-none-eabi-gdb.exe",
+            "targetArchitecture": "ARM",
+            "program": "c:/Netduino_SDK/NetMF4_4/BuildOutput/THUMB2FP/GCC7.2/le/FLASH/debug/STM32F4DISCOVERY/bin/tinybooter.axf",
+
+            "setupCommands": [
+                {"text": "target extended-remote localhost:3333"},
+				{"text": "monitor reset halt"},
+				{"text": "monitor flash write_image erase \"c:/Netduino_SDK/NetMF4_4/BuildOutput/THUMB2FP/GCC7.2/le/FLASH/debug/STM32F4DISCOVERY/bin/tinybooter.hex\" "},
+				{"text": "file c:/Netduino_SDK/NetMF4_4/BuildOutput/THUMB2FP/GCC7.2/le/FLASH/debug/STM32F4DISCOVERY/bin/tinybooter.axf"},
+				{"text": "monitor reset halt"}
+            ],
+
+            "customLaunchSetupCommands": [
+			    {"text": "monitor reset halt"}
+            ],
+
+            "launchCompleteCommand": "exec-continue",
+			"debugServerPath": "c:/openocd-0.10.0/bin-x64/openocd.exe",
+			"debugServerArgs": "-s \"c:/openocd-0.10.0/bin/scripts/\" -f interface/stlink-v2-1.cfg -f board/stm32f4discovery.cfg",
+			"serverStarted": "Info\\ :\\ [\\w\\d\\.]*:\\ hardware",
+            "filterStderr": true,
+            "externalConsole": true,
+            "cwd": "${cwd}"
+        }
+    ]
+}

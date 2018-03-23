@@ -1,0 +1,17 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "cmd",
+    "args": ["/C"],
+    "isShellCommand": true,
+    "showOutput": "always",
+    "tasks": [
+        {
+            "taskName": "Build STM32F4DISCOVERY",
+            "suppressTaskName": true,
+            "isBuildCommand": true,
+            "args": ["${workspaceRoot}\\DebugBuildVSCode.cmd"]
+        }        
+    ]
+}
