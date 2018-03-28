@@ -1,0 +1,46 @@
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <AssemblyName>GlobalLock_hal_Cortex</AssemblyName>
+    <Size>
+    </Size>
+    <ProjectGuid>{003200E5-0038-0085-8BC6-331FE6ACAFBC}</ProjectGuid>
+    <Description>Cortex-M3 Global lock</Description>
+    <Level>HAL</Level>
+    <LibraryFile>GlobalLock_hal_Cortex.$(LIB_EXT)</LibraryFile>
+    <ProjectPath>$(SPOCLIENT)\DeviceCode\Targets\Native\Netduino_STM32\DeviceCode\CortexM3\GlobalLock\dotNetMF.proj</ProjectPath>
+    <ManifestFile>GlobalLock_hal_Cortex.$(LIB_EXT).manifest</ManifestFile>
+    <Groups>Processor\STM32</Groups>
+    <Documentation>
+    </Documentation>
+    <PlatformIndependent>False</PlatformIndependent>
+    <CustomFilter>
+    </CustomFilter>
+    <Required>False</Required>
+    <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
+    <IsStub>False</IsStub>
+    <LibraryCategory>
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="GlobalLock_HAL_Cortex" Guid="{00A100CD-0070-00B8-8DDF-12083AFF03B9}" ProjectPath="" Conditional="" xmlns="">
+        <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
+          <Major>4</Major>
+          <Minor>0</Minor>
+          <Revision>0</Revision>
+          <Build>0</Build>
+          <Extra />
+          <Date>2009-08-04</Date>
+          <Author>Ominc</Author>
+        </VersionDependency>
+        <ComponentType xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">LibraryCategory</ComponentType>
+      </MFComponent>
+    </LibraryCategory>
+    <Directory>DeviceCode\Targets\Native\Netduino_STM32\DeviceCode\CortexM3\GlobalLock</Directory>
+    <OutputType>Library</OutputType>
+    <PlatformIndependentBuild>false</PlatformIndependentBuild>
+    <Version>4.0.0.0</Version>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup />
+  <ItemGroup>
+    <Compile Include="SmartPtr_cortex.cpp" />
+  </ItemGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>
