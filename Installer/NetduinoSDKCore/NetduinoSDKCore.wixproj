@@ -23,8 +23,6 @@
     <DefineConstants>SourceDir=..\SourceFiles\</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Assemblies_V41.wxs" />
-    <Compile Include="Assemblies_V42.wxs" />
     <Compile Include="Assemblies_V43.wxs" />
     <Compile Include="Product.wxs" />
     <Compile Include="Templates_CSharp.wxs" />

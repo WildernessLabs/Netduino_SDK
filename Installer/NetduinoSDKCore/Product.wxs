@@ -11,8 +11,6 @@
     <WixVariable Id="WixUILicenseRtf" Value="$(var.SourceDir)License Agreement.rtf" />
     
     <Feature Id="Assemblies" Title="Netduino SDK Core" Level="1">
-      <ComponentGroupRef Id="Assemblies_V41" />
-      <ComponentGroupRef Id="Assemblies_V42" />
       <ComponentGroupRef Id="Assemblies_V43" />
     </Feature>
 
