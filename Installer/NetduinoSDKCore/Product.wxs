@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="Netduino SDK Core" Language="1033" Version="4.3.0000" Manufacturer="Secret Labs LLC" UpgradeCode="807D55F0-E37A-4A04-A0DD-1F52AACE903E">
-		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Manufacturer="Secret Labs LLC" Description="Netduino SDK Core" Keywords="Installer,MSI" Comments="Copyright (c) 2013 Secret Labs LLC, All Rights Reserved." />
+	<Product Id="*" Name="Netduino SDK Core" Language="1033" Version="4.3.2000" Manufacturer="Wilderness Labs LLC" UpgradeCode="807D55F0-E37A-4A04-A0DD-1F52AACE903E">
+		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Manufacturer="Wilderness Labs LLC" Description="Netduino SDK Core" Keywords="Installer,MSI" Comments="Copyright (c) 2018 Wilderness Labs LLC, All Rights Reserved." />
 
     <UIRef Id="WixUI_Minimal" />
     
@@ -74,7 +74,7 @@
 		<Directory Id="TARGETDIR" Name="SourceDir">
 			<Directory Id="ProgramFilesFolder">
         
-        <Directory Id="MyCompanyFolder" Name="Secret Labs">
+        <Directory Id="MyCompanyFolder" Name="Wilderness Labs">
           <Directory Id="INSTALLFOLDER" Name="Netduino SDK">
             <Directory Id="dir_Assemblies" Name="Assemblies">
               <Directory Id="dir_Assemblies_v4.1" Name="v4.1">

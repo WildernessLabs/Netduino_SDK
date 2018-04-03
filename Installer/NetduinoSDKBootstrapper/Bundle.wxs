@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" xmlns:bal="http://schemas.microsoft.com/wix/BalExtension">
-	<Bundle Name="Netduino SDK v4.3.0 (February 2013)" Version="4.3.0.0" Manufacturer="Secret Labs LLC" AboutUrl="http://www.netduino.com" DisableModify="yes" UpgradeCode="cafaa3fc-bc4f-4d17-aa7f-21e7d1c4f9eb"
-          Copyright="Copyright (C) 2013 Secret Labs LLC, All Rights Reserved.">
+	<Bundle Name="Netduino SDK v4.3.2" Version="4.3.2.0" Manufacturer="Wilderness Labs LLC" AboutUrl="http://www.wildernesslabs.co" DisableModify="yes" UpgradeCode="cafaa3fc-bc4f-4d17-aa7f-21e7d1c4f9eb"
+          Copyright="Copyright (C) 2018 Wilderness Labs LLC, All Rights Reserved.">
     <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense">
       <bal:WixStandardBootstrapperApplication LicenseFile="$(var.SourceDir)License Agreement.rtf"/>
     </BootstrapperApplicationRef>

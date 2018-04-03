@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="9B9E5D02-9344-4370-A532-09D53D0A5294" Name="Netduino Drivers" Language="1033" Version="4.3.0000" Manufacturer="Secret Labs LLC" UpgradeCode="63170dbd-4127-43df-aadc-8990fe476302">
-    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Manufacturer="Secret Labs LLC" Description="Netduino Drivers" Keywords="Installer,MSI" Comments="Copyright (c) 2013 Secret Labs LLC, All Rights Reserved." />
+	<Product Id="9B9E5D02-9344-4370-A532-09D53D0A5294" Name="Netduino Drivers" Language="1033" Version="4.3.2000" Manufacturer="Wilderness Labs LLC" UpgradeCode="63170dbd-4127-43df-aadc-8990fe476302">
+    <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Manufacturer="Wilderness Labs LLC" Description="Netduino Drivers" Keywords="Installer,MSI" Comments="Copyright (c) 2018 Wilderness Labs LLC, All Rights Reserved." />
 
     <UIRef Id="WixUI_Minimal" />
 
@@ -35,7 +35,7 @@
 	<Fragment>
     <Directory Id="TARGETDIR" Name="SourceDir">
       <Directory Id="PlatformProgramFilesFolder">
-        <Directory Id="MyCompanyFolder" Name="Secret Labs">
+        <Directory Id="MyCompanyFolder" Name="Wilderness Labs">
           <Directory Id="INSTALLFOLDER" Name="Netduino SDK">
             <Directory Id="dir_Drivers" Name="Drivers">
               <Directory Id="dir_Drivers_mfusb" Name="mfusb">
