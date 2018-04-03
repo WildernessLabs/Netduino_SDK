@@ -23,28 +23,6 @@
     </DirectoryRef>
   </Fragment>
   <Fragment>
-    <DirectoryRef Id="WDEXPRESS_PROJECT_TEMPLATE_CSHARP_NETMF">
-      <Component Id="cmp_WDExpress_ProjectTemplates_CSharp_Netduino2Application.zip" Guid="1AAA136E-7872-4425-AE97-16C961F9A8BC">
-        <File Id="fil_WDExpress_ProjectTemplates_CSharp_Netduino2Application.zip" KeyPath="yes" Source="$(var.SourceDir)ProjectTemplates\Visual C#\Micro Framework\Netduino2Application.zip" />
-      </Component>
-      <Component Id="cmp_WDExpress_ProjectTemplates_CSharp_NetduinoApplication.zip" Guid="455979F4-EFB0-499C-8EE9-457EC3C9528B">
-        <File Id="fil_WDExpress_ProjectTemplates_CSharp_NetduinoApplication.zip" KeyPath="yes" Source="$(var.SourceDir)ProjectTemplates\Visual C#\Micro Framework\NetduinoApplication.zip" />
-      </Component>
-      <Component Id="cmp_WDExpress_ProjectTemplates_CSharp_NetduinoGoApplication.zip" Guid="9FF16044-F58A-41D4-8E4E-B40FDCAA4FF0">
-        <File Id="fil_WDExpress_ProjectTemplates_CSharp_NetduinoGoApplication.zip" KeyPath="yes" Source="$(var.SourceDir)ProjectTemplates\Visual C#\Micro Framework\NetduinoGoApplication.zip" />
-      </Component>
-      <Component Id="cmp_WDExpress_ProjectTemplates_CSharp_NetduinoMiniApplication.zip" Guid="1307355D-D07C-448E-B34A-76DACEAB728F">
-        <File Id="fil_WDExpress_ProjectTemplates_CSharp_NetduinoMiniApplication.zip" KeyPath="yes" Source="$(var.SourceDir)ProjectTemplates\Visual C#\Micro Framework\NetduinoMiniApplication.zip" />
-      </Component>
-      <Component Id="cmp_WDExpress_ProjectTemplates_CSharp_NetduinoPlus2Application.zip" Guid="862B8CE5-3D33-42B4-BAD3-437D1EE22F32">
-        <File Id="fil_WDExpress_ProjectTemplates_CSharp_NetduinoPlus2Application.zip" KeyPath="yes" Source="$(var.SourceDir)ProjectTemplates\Visual C#\Micro Framework\NetduinoPlus2Application.zip" />
-      </Component>
-      <Component Id="cmp_WDExpress_ProjectTemplates_CSharp_NetduinoPlusApplication.zip" Guid="F9D03B2F-685A-445D-95D9-9D28C8F58AE7">
-        <File Id="fil_WDExpress_ProjectTemplates_CSharp_NetduinoPlusApplication.zip" KeyPath="yes" Source="$(var.SourceDir)ProjectTemplates\Visual C#\Micro Framework\NetduinoPlusApplication.zip" />
-      </Component>
-    </DirectoryRef>
-    </Fragment>
-  <Fragment>
     <ComponentGroup Id="VS_ProjectTemplates_CSharp">
       <ComponentRef Id="cmp_VS_ProjectTemplates_CSharp_Netduino2Application.zip" />
       <ComponentRef Id="cmp_VS_ProjectTemplates_CSharp_NetduinoApplication.zip" />
@@ -52,14 +30,6 @@
       <ComponentRef Id="cmp_VS_ProjectTemplates_CSharp_NetduinoMiniApplication.zip" />
       <ComponentRef Id="cmp_VS_ProjectTemplates_CSharp_NetduinoPlus2Application.zip" />
       <ComponentRef Id="cmp_VS_ProjectTemplates_CSharp_NetduinoPlusApplication.zip" />
-    </ComponentGroup>
-    <ComponentGroup Id="WDExpress_ProjectTemplates_CSharp">
-      <ComponentRef Id="cmp_WDExpress_ProjectTemplates_CSharp_Netduino2Application.zip" />
-      <ComponentRef Id="cmp_WDExpress_ProjectTemplates_CSharp_NetduinoApplication.zip" />
-      <ComponentRef Id="cmp_WDExpress_ProjectTemplates_CSharp_NetduinoGoApplication.zip" />
-      <ComponentRef Id="cmp_WDExpress_ProjectTemplates_CSharp_NetduinoMiniApplication.zip" />
-      <ComponentRef Id="cmp_WDExpress_ProjectTemplates_CSharp_NetduinoPlus2Application.zip" />
-      <ComponentRef Id="cmp_WDExpress_ProjectTemplates_CSharp_NetduinoPlusApplication.zip" />
     </ComponentGroup>
   </Fragment>
 </Wix>

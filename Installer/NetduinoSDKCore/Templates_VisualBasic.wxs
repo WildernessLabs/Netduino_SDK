@@ -23,43 +23,13 @@
     </DirectoryRef>
   </Fragment>
   <Fragment>
-    <DirectoryRef Id="WDEXPRESS_PROJECT_TEMPLATE_VISUALBASIC_NETMF">
-      <Component Id="cmp_WDExpress_ProjectTemplates_VisualBasic_Netduino2Application.zip" Guid="A675656F-85EA-4673-B721-448F73E3461B">
-        <File Id="fil_WDExpress_ProjectTemplates_VisualBasic_Netduino2Application.zip" KeyPath="yes" Source="$(var.SourceDir)ProjectTemplates\Visual Basic\Micro Framework\Netduino2Application.zip" />
-      </Component>
-      <Component Id="cmp_WDExpress_ProjectTemplates_VisualBasic_NetduinoApplication.zip" Guid="0A470403-466F-41F1-9812-95CF6A4A8E9A">
-        <File Id="fil_WDExpress_ProjectTemplates_VisualBasic_NetduinoApplication.zip" KeyPath="yes" Source="$(var.SourceDir)ProjectTemplates\Visual Basic\Micro Framework\NetduinoApplication.zip" />
-      </Component>
-      <Component Id="cmp_WDExpress_ProjectTemplates_VisualBasic_NetduinoGoApplication.zip" Guid="5075D52E-C9E2-4B66-AB5C-7240F5599F41">
-        <File Id="fil_WDExpress_ProjectTemplates_VisualBasic_NetduinoGoApplication.zip" KeyPath="yes" Source="$(var.SourceDir)ProjectTemplates\Visual Basic\Micro Framework\NetduinoGoApplication.zip" />
-      </Component>
-      <Component Id="cmp_WDExpress_ProjectTemplates_VisualBasic_NetduinoMiniApplication.zip" Guid="D49CF76C-B55D-469A-95BA-0E14AA34F258">
-        <File Id="fil_WDExpress_ProjectTemplates_VisualBasic_NetduinoMiniApplication.zip" KeyPath="yes" Source="$(var.SourceDir)ProjectTemplates\Visual Basic\Micro Framework\NetduinoMiniApplication.zip" />
-      </Component>
-      <Component Id="cmp_WDExpress_ProjectTemplates_VisualBasic_NetduinoPlus2Application.zip" Guid="0F3567B0-836F-4878-B129-ED94128BC070">
-        <File Id="fil_WDExpress_ProjectTemplates_VisualBasic_NetduinoPlus2Application.zip" KeyPath="yes" Source="$(var.SourceDir)ProjectTemplates\Visual Basic\Micro Framework\NetduinoPlus2Application.zip" />
-      </Component>
-      <Component Id="cmp_WDExpress_ProjectTemplates_VisualBasic_NetduinoPlusApplication.zip" Guid="289DE709-28C0-49EF-B7F8-5FCCDC0FCEED">
-        <File Id="fil_WDExpress_ProjectTemplates_VisualBasic_NetduinoPlusApplication.zip" KeyPath="yes" Source="$(var.SourceDir)ProjectTemplates\Visual Basic\Micro Framework\NetduinoPlusApplication.zip" />
-      </Component>
-    </DirectoryRef>
-    </Fragment>
-    <Fragment>
-      <ComponentGroup Id="VS_ProjectTemplates_VisualBasic">
-          <ComponentRef Id="cmp_VS_ProjectTemplates_VisualBasic_Netduino2Application.zip" />
-          <ComponentRef Id="cmp_VS_ProjectTemplates_VisualBasic_NetduinoApplication.zip" />
-          <ComponentRef Id="cmp_VS_ProjectTemplates_VisualBasic_NetduinoGoApplication.zip" />
-          <ComponentRef Id="cmp_VS_ProjectTemplates_VisualBasic_NetduinoMiniApplication.zip" />
-          <ComponentRef Id="cmp_VS_ProjectTemplates_VisualBasic_NetduinoPlus2Application.zip" />
-          <ComponentRef Id="cmp_VS_ProjectTemplates_VisualBasic_NetduinoPlusApplication.zip" />
-      </ComponentGroup>
-      <ComponentGroup Id="WDExpress_ProjectTemplates_VisualBasic">
-        <ComponentRef Id="cmp_WDExpress_ProjectTemplates_VisualBasic_Netduino2Application.zip" />
-        <ComponentRef Id="cmp_WDExpress_ProjectTemplates_VisualBasic_NetduinoApplication.zip" />
-        <ComponentRef Id="cmp_WDExpress_ProjectTemplates_VisualBasic_NetduinoGoApplication.zip" />
-        <ComponentRef Id="cmp_WDExpress_ProjectTemplates_VisualBasic_NetduinoMiniApplication.zip" />
-        <ComponentRef Id="cmp_WDExpress_ProjectTemplates_VisualBasic_NetduinoPlus2Application.zip" />
-        <ComponentRef Id="cmp_WDExpress_ProjectTemplates_VisualBasic_NetduinoPlusApplication.zip" />
-      </ComponentGroup>
-    </Fragment>
+    <ComponentGroup Id="VS_ProjectTemplates_VisualBasic">
+        <ComponentRef Id="cmp_VS_ProjectTemplates_VisualBasic_Netduino2Application.zip" />
+        <ComponentRef Id="cmp_VS_ProjectTemplates_VisualBasic_NetduinoApplication.zip" />
+        <ComponentRef Id="cmp_VS_ProjectTemplates_VisualBasic_NetduinoGoApplication.zip" />
+        <ComponentRef Id="cmp_VS_ProjectTemplates_VisualBasic_NetduinoMiniApplication.zip" />
+        <ComponentRef Id="cmp_VS_ProjectTemplates_VisualBasic_NetduinoPlus2Application.zip" />
+        <ComponentRef Id="cmp_VS_ProjectTemplates_VisualBasic_NetduinoPlusApplication.zip" />
+    </ComponentGroup>
+  </Fragment>
 </Wix>
