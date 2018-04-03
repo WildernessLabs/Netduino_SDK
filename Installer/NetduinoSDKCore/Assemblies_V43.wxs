@@ -327,6 +327,107 @@
       </Component>
     </DirectoryRef>
     <DirectoryRef Id="dir_Assemblies_v4.3_le">
+
+      <Component Id="cmp_Assemblies_v4.3_le_GoBus.dll" Guid="CA250BB3-AAC6-4B88-B054-8BE62EF76380">
+        <File Id="fil_Assemblies_v4.3_le_GoBus.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\GoBus.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_GoBus.pdb" Guid="8DA976A7-4418-4FF4-AB0D-D03F35250E9C">
+        <File Id="fil_Assemblies_v4.3_le_GoBus.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\GoBus.pdb" />
+      </Component>
+      <!--
+      <Component Id="cmp_Assemblies_v4.3_le_GoBusSerialTransport.dll" Guid="D0CBCA81-FA25-4473-B010-4705F79D6E3A">
+        <File Id="fil_Assemblies_v4.3_le_GoBusSerialTransport.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\GoBusSerialTransport.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_GoBusSerialTransport.pdb" Guid="F96D6618-10A0-4B82-86EE-0C29E00A5651">
+        <File Id="fil_Assemblies_v4.3_le_GoBusSerialTransport.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\GoBusSerialTransport.pdb" />
+      </Component>
+      -->
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoExtensions.dll" Guid="F82F906A-57D1-42EE-96D9-4F7DDB932F72">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoExtensions.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoExtensions.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoExtensions.pdb" Guid="6FB8B8D7-9A33-4B52-9BD3-A4890CEA87CF">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoExtensions.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoExtensions.pdb" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.Button.dll" Guid="77F1D7C3-CE7D-4BBC-AB23-B8D79866440B">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.Button.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.Button.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.Button.pdb" Guid="544303F3-AE53-4693-ACD6-F3051A946237">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.Button.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.Button.pdb" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.PiezoBuzzer.dll" Guid="5A5421D2-0391-424E-81BD-5D0E031697E6">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.PiezoBuzzer.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.PiezoBuzzer.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.PiezoBuzzer.pdb" Guid="0FEAFE2E-66DC-4E80-A4F0-1945FFB4AE72">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.PiezoBuzzer.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.PiezoBuzzer.pdb" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.Potentiometer.dll" Guid="F2ED67BA-DABD-4E72-90E0-7D5E37211A3F">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.Potentiometer.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.Potentiometer.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.Potentiometer.pdb" Guid="D1975BCD-1061-4CAF-AE3C-6F69135C8A02">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.Potentiometer.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.Potentiometer.pdb" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.RgbLed.dll" Guid="A844CCE4-7BA4-47B6-9660-653496A4B215">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.RgbLed.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.RgbLed.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.RgbLed.pdb" Guid="43B8B551-C375-4550-A4A9-27539F79E085">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.RgbLed.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.RgbLed.pdb" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.ShieldBase.dll" Guid="44BF5B85-E890-4880-87A4-43EBF99BC2DC">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.ShieldBase.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.ShieldBase.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.ShieldBase.pdb" Guid="1F871BEF-5060-4A58-A4F1-264EFC821004">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.ShieldBase.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.ShieldBase.pdb" />
+      </Component>
+
+      <Component Id="cmp_Assemblies_v4.3_le_GoBus.pe" Guid="53C8D1BD-C4DC-488D-BC45-8D22FC8658EB">
+        <File Id="fil_Assemblies_v4.3_le_GoBus.pe" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\GoBus.pe" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_GoBus.pdbx" Guid="E858BD94-A416-44BC-9E30-4F81BC095A40">
+        <File Id="fil_Assemblies_v4.3_le_GoBus.pdbx" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\GoBus.pdbx" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_GoBusSerialTransport.pe" Guid="2B7B287A-2222-4E65-B8C3-009819CB40C6">
+        <File Id="fil_Assemblies_v4.3_le_GoBusSerialTransport.pe" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\GoBusSerialTransport.pe" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_GoBusSerialTransport.pdbx" Guid="E8484104-C1F4-457E-8D00-250C58243C1D">
+        <File Id="fil_Assemblies_v4.3_le_GoBusSerialTransport.pdbx" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\GoBusSerialTransport.pdbx" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoExtensions.pe" Guid="542B119A-C7D0-4E3B-9ED5-2B24802EEC81">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoExtensions.pe" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoExtensions.pe" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoExtensions.pdbx" Guid="DA20CB6B-AFE8-4D68-B917-248CC12EAC63">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoExtensions.pdbx" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoExtensions.pdbx" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.Button.pe" Guid="623382DC-E3F1-4AA1-A628-3A141D912992">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.Button.pe" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.Button.pe" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.Button.pdbx" Guid="154E44F5-5E35-4EF4-A990-D33C0F83AE39">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.Button.pdbx" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.Button.pdbx" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.PiezoBuzzer.pe" Guid="AAF20A9B-BE7F-42E3-9ED0-321C29CEAD0D">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.PiezoBuzzer.pe" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.PiezoBuzzer.pe" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.PiezoBuzzer.pdbx" Guid="936ABE29-A9F9-4683-915E-10CAB17FE2A6">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.PiezoBuzzer.pdbx" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.PiezoBuzzer.pdbx" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.Potentiometer.pe" Guid="5EE7651B-E367-4882-85F9-F4DBD0E001E1">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.Potentiometer.pe" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.Potentiometer.pe" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.Potentiometer.pdbx" Guid="F927C963-0211-40ED-9DBC-56B0A322EFA6">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.Potentiometer.pdbx" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.Potentiometer.pdbx" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.RgbLed.pe" Guid="B52C18E4-950B-4D71-9F5C-253FCB68D3B1">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.RgbLed.pe" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.RgbLed.pe" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.RgbLed.pdbx" Guid="2AE804E1-60CC-4062-A119-53C06F14F26C">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.RgbLed.pdbx" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.RgbLed.pdbx" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.ShieldBase.pe" Guid="F2EB7845-8D3E-438C-BA15-DC25A8AF3BCA">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.ShieldBase.pe" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.ShieldBase.pe" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_NetduinoGo.ShieldBase.pdbx" Guid="EE691BCF-E75E-4921-83D3-068BE5D06E95">
+        <File Id="fil_Assemblies_v4.3_le_NetduinoGo.ShieldBase.pdbx" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\NetduinoGo.ShieldBase.pdbx" />
+      </Component>
+      
       <Component Id="cmpF4DCE38828794B6CFE39D3AB884A9E9A" Guid="BA58767E-AE54-4CA9-9F4E-BF4E64E6C75C">
         <File Id="fil7FA3961257DFF242836850ADF5DB05BC" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Diagnostics.dll" />
       </Component>
@@ -365,6 +466,18 @@
       </Component>
       <Component Id="cmpD320A384CB7F737DEC2E13811C4F085B" Guid="5333F988-DEE2-44F9-AEC4-EF6260D5B8C7">
         <File Id="filA54EF3891BC3358325479D5F6AB71927" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.Netduino.pe" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_SecretLabs.NETMF.Hardware.NetduinoGo.dll" Guid="0A77550A-5E89-40A4-B320-FC12D9FF1C45">
+        <File Id="fil_Assemblies_v4.3_le_SecretLabs.NETMF.Hardware.NetduinoGo.dll" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.NetduinoGo.dll" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_SecretLabs.NETMF.Hardware.NetduinoGo.pdb" Guid="712E5B66-7EE7-4105-BC6D-34C383919267">
+        <File Id="fil_Assemblies_v4.3_le_SecretLabs.NETMF.Hardware.NetduinoGo.pdb" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.NetduinoGo.pdb" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_SecretLabs.NETMF.Hardware.NetduinoGo.pe" Guid="73F12D22-E641-4FD2-A68A-528A70BFCFF6">
+        <File Id="fil_Assemblies_v4.3_le_SecretLabs.NETMF.Hardware.NetduinoGo.pe" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.NetduinoGo.pe" />
+      </Component>
+      <Component Id="cmp_Assemblies_v4.3_le_SecretLabs.NETMF.Hardware.NetduinoGo.pdbx" Guid="62227A27-BE60-42AF-B9E3-6A69E7A71982">
+        <File Id="fil_Assemblies_v4.3_le_SecretLabs.NETMF.Hardware.NetduinoGo.pdbx" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.NetduinoGo.pdbx" />
       </Component>
       <Component Id="cmp1DCDE06DDA8988411F3CBBAA6037C0AF" Guid="AB643C19-2982-40C4-BAEE-7BDCD863C80B">
         <File Id="fil2A777A0018CD3C5D95E3561A7EF60CDB" KeyPath="yes" Source="$(var.SourceDir)Assemblies\v4.3\le\SecretLabs.NETMF.Hardware.NetduinoMini.dll" />
@@ -495,7 +608,6 @@
       <ComponentRef Id="cmp_Assemblies_v4.3_be_NetduinoGo.RgbLed.pe"/>
       <ComponentRef Id="cmp_Assemblies_v4.3_be_NetduinoGo.ShieldBase.pdbx"/>
       <ComponentRef Id="cmp_Assemblies_v4.3_be_NetduinoGo.ShieldBase.pe"/>
-      
       <ComponentRef Id="cmp2AE85E168904222B076A5A0D3C5F645C" />
       <ComponentRef Id="cmpE32E77325916667342A265DD6BF24CD2" />
       <ComponentRef Id="cmpE89D8EBBCC8D8FCD746D8092BC570B99" />
@@ -532,6 +644,39 @@
       <ComponentRef Id="cmpDC68B74F431F7E044ECA4D9D8F7BAA03" />
       <ComponentRef Id="cmpA6AD41CFC14BA64AC2E1C03A28E214B6" />
       <ComponentRef Id="cmpA6213FBE27973E8BD1153690835BDFAC" />
+      
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_GoBus.dll" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_GoBus.pdb" />
+      <!--<ComponentRef Id="cmp_Assemblies_v4.3_le_GoBusSerialTransport.dll" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_GoBusSerialTransport.pdb" /> -->
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoExtensions.dll" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoExtensions.pdb" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.Button.dll"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.Button.pdb"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.PiezoBuzzer.dll"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.PiezoBuzzer.pdb"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.Potentiometer.dll"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.Potentiometer.pdb"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.RgbLed.dll"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.RgbLed.pdb"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.ShieldBase.dll"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.ShieldBase.pdb"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_GoBus.pdbx" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_GoBus.pe" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_GoBusSerialTransport.pdbx" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_GoBusSerialTransport.pe" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoExtensions.pdbx" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoExtensions.pe" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.Button.pdbx"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.Button.pe"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.PiezoBuzzer.pdbx"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.PiezoBuzzer.pe"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.Potentiometer.pdbx"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.Potentiometer.pe"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.RgbLed.pdbx"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.RgbLed.pe"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.ShieldBase.pdbx"/>
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_NetduinoGo.ShieldBase.pe"/>
       <ComponentRef Id="cmpF4DCE38828794B6CFE39D3AB884A9E9A" />
       <ComponentRef Id="cmpCB19F5426BCBE06CEA3AAC7311981B42" />
       <ComponentRef Id="cmp364ED71EC4592A7A90D2E69DE0CBE84E" />
@@ -545,6 +690,10 @@
       <ComponentRef Id="cmp293A6675770B0BB566BB631C6D01221E" />
       <ComponentRef Id="cmp55CBCDBC30AC3BBAE2CF19D8BB82F295" />
       <ComponentRef Id="cmpD320A384CB7F737DEC2E13811C4F085B" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_SecretLabs.NETMF.Hardware.NetduinoGo.dll" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_SecretLabs.NETMF.Hardware.NetduinoGo.pdb" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_SecretLabs.NETMF.Hardware.NetduinoGo.pe" />
+      <ComponentRef Id="cmp_Assemblies_v4.3_le_SecretLabs.NETMF.Hardware.NetduinoGo.pdbx" />
       <ComponentRef Id="cmp1DCDE06DDA8988411F3CBBAA6037C0AF" />
       <ComponentRef Id="cmp5C6434C149641FE5FBE8DE8E58FF5A07" />
       <ComponentRef Id="cmp7BDB6064D440D99B1CAF45C2E281E520" />
