@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <ScatterFile xmlns="http://schemas.microsoft.com/netmf/ScatterfileSchema.xsd">
 
-    <!-- STM32F4 with 1M Flash, 128k SRAM, and 64k DATA CCM -->
+    <!-- STM32F4 with 2M Flash, 192k SRAM, and 64k DATA CCM -->
 
     <Set Name="Valid" Value="false"/>
 
@@ -13,7 +13,7 @@
     -->
     <!-- Internal FLASH -->
     <Set Name="IFLASH_BaseAddress"      Value="0x08000000"/>
-    <Set Name="IFLASH_Size"             Value="0x00200000"/><!-- 1MB -->
+    <Set Name="IFLASH_Size"             Value="0x00200000"/><!-- 2MB -->
 
     <!-- Internal Core Coupled Memory (CCM) [D-Bus] -->
     <Set Name="CCM_BaseAddress"         Value="0x10000000"/>
@@ -21,7 +21,7 @@
 
     <!-- Internal SRAM -->
     <Set Name="IRAM_BaseAddress"        Value="0x20000000"/>
-    <Set Name="IRAM_Size"               Value="0x00020000"/><!-- 128KB -->
+    <Set Name="IRAM_Size"               Value="0x00030000"/><!-- 192KB -->
 
     <!-- Solution/Project specific usage settings -->
 
@@ -32,15 +32,15 @@
     -->
     <!-- TinyBooter sits at power on Reset vector-->
     <Set Name="BooterCode_BaseAddress"  Value="%IFLASH_BaseAddress%"/>
-    <Set Name="BooterCode_Size"         Value="0x00010000"/><!-- 48KB -->
+    <Set Name="BooterCode_Size"         Value="0x0000C000"/><!-- 48KB -->
 
     <!-- Configuration section -->
     <Set Name="Config_BaseAddress"      Value="%BooterCode_BaseAddress% + %BooterCode_Size%"/>
-    <Set Name="Config_Size"             Value="0x00010000"/><!-- 16KB -->
+    <Set Name="Config_Size"             Value="0x00004000"/><!-- 16KB -->
 
     <!-- Native Code section -->
     <Set Name="Code_BaseAddress"        Value="%Config_BaseAddress% + %Config_Size%"/>
-    <Set Name="Code_Size"               Value="0x00080000"/><!-- 512KB -->
+    <Set Name="Code_Size"               Value="0x00070000"/><!-- 512KB -->
 
     <!-- Deployment fills the rest of flash... --><!-- 384KB -->
 
@@ -51,10 +51,10 @@
 
     <!-- Internal SRAM -->
     <!-- FIXME: Dynamically after RAM_RW region, properly aligned. -->
-    <Set Name="Heap_BaseAddress"        Value="0xD0000000"/>
-    <Set Name="Heap_Size"               Value="0x007FFFF8"/><!-- 92K -->
+    <Set Name="Heap_BaseAddress"        Value="0x20007000"/>
+    <Set Name="Heap_Size"               Value="0x00028E00"/><!-- 143K -->
 
-    <Set Name="CustomHeap_Size"         Value="0x00001000"/><!--  4K -->
+    <Set Name="CustomHeap_Size"         Value="0x000001F8"/>
 
 
     <If Name="TARGETLOCATION" Value="FLASH">
