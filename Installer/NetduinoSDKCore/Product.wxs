@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="*" Name="Netduino SDK Core" Language="1033" Version="4.3.2000" Manufacturer="Wilderness Labs LLC" UpgradeCode="807D55F0-E37A-4A04-A0DD-1F52AACE903E">
+	<Product Id="*" Name="Netduino SDK Core" Language="1033" Version="5.0.0.1" Manufacturer="Wilderness Labs LLC" UpgradeCode="807D55F0-E37A-4A04-A0DD-1F52AACE903E">
 		<Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Manufacturer="Wilderness Labs LLC" Description="Netduino SDK Core" Keywords="Installer,MSI" Comments="Copyright (c) 2018 Wilderness Labs LLC, All Rights Reserved." />
 
     <UIRef Id="WixUI_Minimal" />
@@ -24,11 +24,11 @@
       <RegistrySearch Id="VS_DEVENV_Path" Root="HKLM" Key="SOFTWARE\WOW6432Node\Microsoft\VisualStudio\14.0\InstallDir" Name="InstallDir" Type="directory" />
     </Property>
     <Property Id="VS_DEVENV_64">
-      <RegistrySearch Win64="yes" Id="VS_DEVENV_Path_64" Root="HKLM" Key="SOFTWARE\Wow6432Node\Microsoft\VisualStudio\11.0" Name="InstallDir" Type="directory" />
+      <RegistrySearch Win64="yes" Id="VS_DEVENV_Path_64" Root="HKLM" Key="SOFTWARE\Wow6432Node\Microsoft\VisualStudio\14.0" Name="InstallDir" Type="directory" />
     </Property>
 
     <Property Id="VS_PROJECT_TEMPLATE">
-      <RegistrySearch Id="VS_ProjectTemplate" Root="HKLM" Key="Computer\HKEY_LOCAL_MACHINE\SOFTWARE\WOW6432Node\Microsoft\VisualStudio\14.0\VSTemplate\Project" Name="UserFolder" Type="directory" />
+      <RegistrySearch Id="VS_ProjectTemplate" Root="HKLM" Key="SOFTWARE\WOW6432Node\Microsoft\VisualStudio\14.0\VSTemplate\Project" Name="UserFolder" Type="directory" />
     </Property>
 
     

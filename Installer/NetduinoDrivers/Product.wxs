@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Wix xmlns="http://schemas.microsoft.com/wix/2006/wi">
-	<Product Id="9B9E5D02-9344-4370-A532-09D53D0A5294" Name="Netduino Drivers" Language="1033" Version="4.3.2000" Manufacturer="Wilderness Labs LLC" UpgradeCode="63170dbd-4127-43df-aadc-8990fe476302">
+	<Product Id="9B9E5D02-9344-4370-A532-09D53D0A5294" Name="Netduino Drivers" Language="1033" Version="5.0.0.1" Manufacturer="Wilderness Labs LLC" UpgradeCode="63170dbd-4127-43df-aadc-8990fe476302">
     <Package InstallerVersion="200" Compressed="yes" InstallScope="perMachine" Manufacturer="Wilderness Labs LLC" Description="Netduino Drivers" Keywords="Installer,MSI" Comments="Copyright (c) 2018 Wilderness Labs LLC, All Rights Reserved." />
 
     <UIRef Id="WixUI_Minimal" />
