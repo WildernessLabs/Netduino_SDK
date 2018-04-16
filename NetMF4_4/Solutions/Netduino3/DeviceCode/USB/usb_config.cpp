@@ -176,7 +176,7 @@ const struct USB_DYNAMIC_CONFIGURATION UsbDefaultConfiguration =
         USB_STRING_DESCRIPTOR_HEADER_LENGTH + (sizeof(USB_STRING_CHAR) * PRODUCT_NAME_SIZE),
         USB_STRING_DESCRIPTOR_TYPE
     },
-    { 'N', 'e', 'r', 'd', 'u', 'i', 'n', 'o','3' },
+    { 'N', 'e', 't', 'd', 'u', 'i', 'n', 'o','3' },
 
     // String 4 descriptor (display name)
     {
@@ -188,7 +188,7 @@ const struct USB_DYNAMIC_CONFIGURATION UsbDefaultConfiguration =
         USB_STRING_DESCRIPTOR_HEADER_LENGTH + (sizeof(USB_STRING_CHAR) * DISPLAY_NAME_SIZE),
         USB_STRING_DESCRIPTOR_TYPE
     },
-    { 'N', 'e', 'r', 'd', 'u', 'i', 'n', 'o','3' },
+    { 'N', 'e', 't', 'd', 'u', 'i', 'n', 'o','3' },
 
     // String 5 descriptor (friendly name)
     {

@@ -1,0 +1,18 @@
+<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Directory>DeviceCode\pal\COM\USBHost\Interworking</Directory>
+    <AssemblyName>UsbHost</AssemblyName>
+  </PropertyGroup>
+  <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
+  <PropertyGroup>
+    <OutputType>Library</OutputType>
+  </PropertyGroup>
+<ItemGroup>
+<HFile Include="UsbHost.h" />
+<Compile Include="UsbHost.cpp" />
+<Compile Include="UsbHost_Microsoft_SPOT_Hardware_UsbHost_UsbDevice.cpp" />
+<Compile Include="UsbHost_Microsoft_SPOT_Hardware_UsbHost_UsbPort.cpp" />
+<Compile Include="UsbHost_Microsoft_SPOT_Hardware_UsbHost_UsbStream.cpp" />
+</ItemGroup>
+<Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />
+</Project>

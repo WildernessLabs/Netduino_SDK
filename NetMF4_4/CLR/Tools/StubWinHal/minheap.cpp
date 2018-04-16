@@ -6,9 +6,7 @@
 #include "HAL_Windows.h"
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
-#if defined(PLATFORM_WINDOWS_EMULATOR)
 HAL_Configuration_Windows g_HAL_Configuration_Windows;
-#endif
 
 HAL_SYSTEM_CONFIG HalSystemConfig =
 {

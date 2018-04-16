@@ -7,16 +7,13 @@
 
 #include <CLR_Defines.h>
 
-#ifdef _WIN32
-#define NETMF_TARGET_LITTLE_ENDIAN
-#endif
-
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // PLATFORMS GENERAL DEFINITIONS
 #if defined(_WIN32_WCE)
 #define PLATFORM_WINCE
 #define TINYCLR_STOP() ::DebugBreak()
-#elif defined(_WIN32)
+#elif defined(_WIN32) || defined(WIN32)
+#define PLATFORM_WINDOWS
 #define TINYCLR_STOP() ::DebugBreak()
 #pragma warning( error : 4706 ) // error C4706: assignment within conditional expression
 #elif defined(arm) || defined(__arm) || defined(__GNUC__)
@@ -31,9 +28,9 @@
 #define PLATFORM_SH
 #endif
 
-#if !defined(PLATFORM_WINDOWS_EMULATOR) && !defined(PLATFORM_WINCE)
-#if !defined(NETMF_TARGET_LITTLE_ENDIAN) && !defined(NETMF_TARGET_BIG_ENDIAN)
-#error ENDIANNESS NOT DEFINED
+#if !defined(PLATFORM_WINDOWS) && !defined(PLATFORM_WINCE)
+#if !defined(LITTLE_ENDIAN) && !defined(BIG_ENDIAN)
+!ERROR ENDIANNESS NOT DEFINED
 #endif
 #endif
 
@@ -92,7 +89,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // WINDOWS
-#if defined(_WIN32)
+#if defined(PLATFORM_WINDOWS)
 #define TINYCLR_GC_VERBOSE
 #define TINYCLR_TRACE_MEMORY_STATS
 #define TINYCLR_PROFILE_NEW
@@ -147,7 +144,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // TRACE DEPENDENCIES
-#if defined(TINYCLR_JITTER) || defined(_WIN32)
+#if defined(TINYCLR_JITTER) || defined(PLATFORM_WINDOWS)
 #define TINYCLR_OPCODE_NAMES
 #define TINYCLR_OPCODE_PARSER
 #define TINYCLR_OPCODE_STACKCHANGES
@@ -169,7 +166,7 @@
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // LANGUAGE
-#if defined(_WIN32)
+#if defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)
 #define PROHIBIT_ALL_CONSTRUCTORS(cls)   \
     private:                             \
         cls();                           \
@@ -219,7 +216,7 @@
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 ////////////////////////////////////////////////////////////////////////////////////////////////////
 // INCLUDES
-#if defined(_WIN32)
+#if defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)
 
 #if !defined(PLATFORM_WINCE)
 #define _WIN32_WINNT 0x0501
@@ -283,7 +280,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 
-#if defined(_WIN32_WCE)
+#if defined(PLATFORM_WINCE)
 
 #if (_WIN32_WCE == 0x420)
 #define ENUMLOGFONTEXW ENUMLOGFONT

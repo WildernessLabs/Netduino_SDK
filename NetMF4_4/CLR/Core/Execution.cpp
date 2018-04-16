@@ -445,7 +445,7 @@ CLR_UINT32 CLR_RT_ExecutionEngine::PerformGarbageCollection()
 
     m_lastHcUsed = NULL;
 
-#if !defined(BUILD_RTM) || defined(_WIN32)
+#if !defined(BUILD_RTM) || defined(PLATFORM_WINDOWS)
     if(m_fPerformHeapCompaction) CLR_EE_SET( Compaction_Pending );
 #endif
 
@@ -583,8 +583,7 @@ HRESULT CLR_RT_ExecutionEngine::WaitForDebugger()
 
     while(CLR_EE_DBG_IS(Stopped) && !CLR_EE_DBG_IS(RebootPending) && !CLR_EE_DBG_IS(ExitPending))
     {
-        // TODO: Generalize this as a standard HAL API
-#if defined(WIN32)
+#if defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)
         if(HAL_Windows_IsShutdownPending())
         {
             TINYCLR_SET_AND_LEAVE(CLR_E_SHUTTING_DOWN);
@@ -594,14 +593,14 @@ HRESULT CLR_RT_ExecutionEngine::WaitForDebugger()
         DebuggerLoop();
     }
 
-#if defined(WIN32)
+#if defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)
     TINYCLR_NOCLEANUP();
 #else
     TINYCLR_NOCLEANUP_NOLABEL();
 #endif 
 }
 
-#if defined(WIN32)
+#if defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)
 HRESULT CLR_RT_ExecutionEngine::CreateEntryPointArgs( CLR_RT_HeapBlock& argsBlk, WCHAR* szCommandLineArgs )
 {
     NATIVE_PROFILE_CLR_CORE();
@@ -655,7 +654,7 @@ HRESULT CLR_RT_ExecutionEngine::Execute( LPWSTR entryPointArgs, int maxContextSw
         
     if(TINYCLR_INDEX_IS_INVALID(g_CLR_RT_TypeSystem.m_entryPoint))
     {
-#if !defined(BUILD_RTM) || defined(WIN32)
+#if !defined(BUILD_RTM) || defined(PLATFORM_WINDOWS)
         CLR_Debug::Printf( "Cannot find any entrypoint!\r\n" );
 #endif
         TINYCLR_SET_AND_LEAVE(CLR_E_ENTRYPOINT_NOT_FOUND);
@@ -683,7 +682,7 @@ HRESULT CLR_RT_ExecutionEngine::Execute( LPWSTR entryPointArgs, int maxContextSw
             //Main entrypoint takes an optional String[] parameter.
             //Set the arg to NULL, if that's the case.
 
-#if defined(WIN32)
+#if defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)            
             if(entryPointArgs != NULL)
             {
                 TINYCLR_CHECK_HRESULT(CreateEntryPointArgs( stack->m_arguments[ 0 ], entryPointArgs ));
@@ -735,7 +734,7 @@ HRESULT CLR_RT_ExecutionEngine::Execute( LPWSTR entryPointArgs, int maxContextSw
         }
         else if(hr2 == CLR_S_QUANTUM_EXPIRED)
         {
-#if !defined(BUILD_RTM) || defined(WIN32)
+#if !defined(BUILD_RTM) || defined(PLATFORM_WINDOWS)
             if(m_fPerformGarbageCollection)
             {
 #if defined(TINYCLR_GC_VERBOSE)
@@ -774,7 +773,7 @@ HRESULT CLR_RT_ExecutionEngine::Execute( LPWSTR entryPointArgs, int maxContextSw
 
     g_CLR_RT_Persistence_Manager.Flush();
 
-#if defined(WIN32)
+#if defined(PLATFORM_WINDOWS)
 #if defined(TINYCLR_PROFILE_NEW)
     if(CLR_EE_PRF_IS( Enabled ))
     {
@@ -1173,7 +1172,7 @@ HRESULT CLR_RT_ExecutionEngine::ScheduleThreads( int maxContextSwitch )
     while(maxContextSwitch-- > 0)
     {
         
-#if defined(WIN32)
+#if defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)
         if(HAL_Windows_IsShutdownPending())
         {
             TINYCLR_SET_AND_LEAVE(CLR_S_NO_THREADS);
@@ -3067,7 +3066,7 @@ void CLR_RT_ExecutionEngine::StopOnBreakpoint( CLR_DBG_Commands::Debugging_Execu
 
             if(m_breakpointsActiveNum == 1)
             {
-#if defined(NETMF_TARGET_BIG_ENDIAN)
+#if defined(BIG_ENDIAN)
                 static CLR_DBG_Commands::Debugging_Execution_BreakpointDef s_breakpoint;
                 CLR_UINT8* data;
 

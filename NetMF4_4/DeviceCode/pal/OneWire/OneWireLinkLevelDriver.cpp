@@ -56,9 +56,7 @@ static SMALLINT ULevel; // current 1-Wire Net level
 SMALLINT owTouchReset(int portnum)
 {
    uchar result;
-   if((portnum >= MAX_PORTNUM) || (portnum < 0) || (owPortPin[portnum] ==0)) return 0;
-   
-   UINT32 pin = (UINT32)owPortPin[portnum]; 
+   UINT32 pin = (UINT32)portnum; 
 	
    // Code from appnote 126.
    CPU_GPIO_EnableOutputPin( pin, false );  // impulse start OW_PORT = 0; // drive bus low.
@@ -96,10 +94,7 @@ SMALLINT owTouchReset(int portnum)
 SMALLINT owTouchBit(int portnum, SMALLINT sendbit)
 {
    unsigned char result=0;
-   
-   if((portnum >= MAX_PORTNUM) || (portnum < 0) || (owPortPin[portnum] ==0) ) return 0;
-   
-   UINT32 pin = (UINT32)owPortPin[portnum];  
+   UINT32 pin = (UINT32)portnum; 
 
    //timing critical, so I'll disable interrupts here
    GLOBAL_LOCK(irq); //EA = 0;
@@ -161,8 +156,6 @@ SMALLINT owTouchByte(int portnum, SMALLINT sendbyte)
    uchar i;
    uchar result = 0;
 
-   if((portnum >= MAX_PORTNUM) || (portnum < 0) || (owPortPin[portnum] ==0)) return 0;
-
    for (i = 0; i < 8; i++)
    {
        result |= (owTouchBit(portnum,sendbyte & 1) << i);
@@ -186,8 +179,6 @@ SMALLINT owTouchByte(int portnum, SMALLINT sendbyte)
 //
 SMALLINT owWriteByte(int portnum, SMALLINT sendbyte)
 {
-   if((portnum >= MAX_PORTNUM) || (portnum < 0) || (owPortPin[portnum] ==0)) return 0;
-   
    return (owTouchByte(portnum,sendbyte) == sendbyte) ? TRUE : FALSE;
 }
 
@@ -202,7 +193,6 @@ SMALLINT owWriteByte(int portnum, SMALLINT sendbyte)
 //
 SMALLINT owReadByte(int portnum)
 {
-   if((portnum >= MAX_PORTNUM) || (portnum < 0) || (owPortPin[portnum] ==0)) return 0;
    return owTouchByte(portnum,0xFF);
 }
 
@@ -219,7 +209,7 @@ SMALLINT owReadByte(int portnum)
 //
 SMALLINT owSpeed(int portnum, SMALLINT new_speed)
 {
-   if((portnum >= MAX_PORTNUM) || (portnum < 0) || (owPortPin[portnum] ==0)) return 0;
+   portnum = 0;
 
    USpeed = new_speed;
    // not supported yet
@@ -246,7 +236,7 @@ SMALLINT owSpeed(int portnum, SMALLINT new_speed)
 // Note: Strong and Program not supported on 520 target.
 SMALLINT owLevel(int portnum, SMALLINT new_level)
 {
-   if((portnum >= MAX_PORTNUM) || (portnum < 0) || (owPortPin[portnum] ==0)) return 0;
+   portnum = 0;
    
    UINT32 pin = (UINT32)portnum; 
    
@@ -278,7 +268,7 @@ SMALLINT owLevel(int portnum, SMALLINT new_level)
 //
 SMALLINT owProgramPulse(int portnum)
 {
-   //portnum = 0;
+   portnum = 0;
    // Not supported
    return 0;
 }

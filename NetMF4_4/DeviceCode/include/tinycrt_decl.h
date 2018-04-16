@@ -81,7 +81,7 @@ int hal_strncpy_s( char* strDst, size_t sizeInBytes, const char* strSrc, size_t 
 size_t hal_strlen_s (const char * str);
 int hal_strncmp_s( const char* str1, const char* str2, size_t num );
 
-#elif defined(_WIN32)
+#elif defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)
 
 #define hal_strcpy_s(strDst, sizeInBytes, strSrc ) strcpy_s(strDst, sizeInBytes, strSrc)
 #define hal_strncpy_s(strDst, sizeInBytes, strSrc, count ) strncpy_s(strDst, sizeInBytes, strSrc, count)
@@ -95,6 +95,8 @@ int hal_strncpy_s( char* strDst, size_t sizeInBytes, const char* strSrc, size_t 
 #define hal_strlen_s( str ) strlen(str)
 #define hal_strncmp_s( str1, str2, num ) strncmp(str1, str2, num)
 
+
+
 #else
 !ERROR
 #endif
@@ -103,8 +105,8 @@ int hal_strncpy_s( char* strDst, size_t sizeInBytes, const char* strSrc, size_t 
 // Compares 2 ASCII strings case insensitive. Always defined in our code ( tinycrt.cpp )
 int hal_stricmp( const char * dst, const char * src );
 
-// For Windows we default to c-runtime implementation. All other platforms come from use tinycrt.cpp
-#if defined(_WIN32)
+// For Windows we default to c-runtime impelementation. All other platforms come from use tinycrt.cpp
+#if defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)
 #define hal_stricmp _stricmp
 #endif
 

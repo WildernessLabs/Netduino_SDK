@@ -247,7 +247,7 @@ private:
 
 //--//
 
-#if defined(_WIN32)
+#if defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)
 
 #include <vector>
 #include <map>
@@ -443,7 +443,7 @@ struct CLR_GFX_Font
 
     //--//
 
-#if defined(_WIN32)
+#if defined(PLATFORM_WINDOWS)
 
     HRESULT SaveToBuffer( CLR_RT_Buffer& buffer );
         
@@ -456,7 +456,7 @@ struct CLR_GFX_Font
 
 //--//
 
-#if defined(_WIN32)
+#if defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)
 
 struct CLR_GFX_Resources
 {

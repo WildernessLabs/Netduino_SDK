@@ -1,8 +1,8 @@
 @ECHO ON
-SET Base=C:\SVN\IngenuityMicro\NETMF\Firmware\NETMF4_4\netmf-interpreter
+SET Base=C:\GitHub\Netduino_SDK\NetMF4_4
 SET Proj=Netduino3
 cd %Base%
-RMDIR %Base%\BuildOutput\THUMB2FP /S /Q
+RMDIR %Base%\BuildOutput /S /Q
 setenv_mdk 5.05
 cd %Base%\Solutions\%Proj%
 msbuild /flp:ErrorsOnly;LogFile=errors.log /v:m

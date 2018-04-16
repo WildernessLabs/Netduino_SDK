@@ -241,20 +241,16 @@ HRESULT Library_corlib_native_System_BitConverter::ToBoolean___STATIC__BOOLEAN__
 	TINYCLR_HEADER();
 
 	BYTE *p = NULL;
-	BYTE b=0;
 	int index = 0;
-	bool res = false;
-	
+
 	CLR_RT_HeapBlock_Array* pArray = stack.Arg0().DereferenceArray();
 	FAULT_ON_NULL_ARG(pArray);
 
 	index = stack.Arg1().NumericByRefConst().s4;
 	if (index < 0 || (unsigned int)index >= pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_OUT_OF_RANGE);
 
-	p = pArray->GetFirstElement(); 
-	b = *(p + index);
-	res = (b != 0); // assume any value not zero is true. Zero is false. 
-	stack.SetResult_Boolean(res);
+	p = pArray->GetFirstElement();
+	stack.SetResult_Boolean(*reinterpret_cast<bool*>(p + index));
 
 	TINYCLR_NOCLEANUP();
 }
@@ -265,9 +261,7 @@ HRESULT Library_corlib_native_System_BitConverter::ToChar___STATIC__CHAR__SZARRA
 	TINYCLR_HEADER();
 
 	BYTE *p = NULL;
-	int index = 0;         
-	wchar_t value=0;
-	BYTE *pValue = (BYTE*)(&value);
+	int index = 0;
 
 	CLR_RT_HeapBlock_Array* pArray = stack.Arg0().DereferenceArray();
 	FAULT_ON_NULL_ARG(pArray);
@@ -276,13 +270,9 @@ HRESULT Library_corlib_native_System_BitConverter::ToChar___STATIC__CHAR__SZARRA
 	if (index < 0 || (unsigned int)index >= pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_OUT_OF_RANGE);
 	if ((unsigned int)index + 2 > pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_INVALID_PARAMETER);
 
-	p = pArray->GetFirstElement();              
-	for (int i=0; i<2; ++i)
-	{
-		pValue[i] = p[index+i];
-	}
+	p = pArray->GetFirstElement();
+	stack.SetResult(*reinterpret_cast<wchar_t*>(p + index), DATATYPE_CHAR);
 
-	stack.SetResult(value, DATATYPE_CHAR);
 	TINYCLR_NOCLEANUP();
 }
 
@@ -292,10 +282,7 @@ HRESULT Library_corlib_native_System_BitConverter::ToDouble___STATIC__R8__SZARRA
 	TINYCLR_HEADER();
 
 	BYTE *p = NULL;
-	int index = 0;                       
-	
-	double value=0;
-	BYTE *pValue = (BYTE*)(&value);
+	int index = 0;
 
 	CLR_RT_HeapBlock_Array* pArray = stack.Arg0().DereferenceArray();
 	FAULT_ON_NULL_ARG(pArray);
@@ -303,15 +290,14 @@ HRESULT Library_corlib_native_System_BitConverter::ToDouble___STATIC__R8__SZARRA
 	index = stack.Arg1().NumericByRefConst().s4;
 	if (index < 0 || (unsigned int)index >= pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_OUT_OF_RANGE);
 	if ((unsigned int)index + 8 > pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_INVALID_PARAMETER);
-					
-	// fetch byte aligned values, and store in object that is correctly aligned for this system. 									 
+
 	p = pArray->GetFirstElement();
-	for (int i=0; i<8; ++i)
-	{
-		pValue[i] = p[index+i];
-	}
-	stack.SetResult_R8(value);	 
-		 
+#if !defined(TINYCLR_EMULATED_FLOATINGPOINT)
+	stack.SetResult_R8(*reinterpret_cast<double*>(p + index));
+#else
+	stack.SetResult_R8(*reinterpret_cast<CLR_INT64*>(p + index));
+#endif
+
 	TINYCLR_NOCLEANUP();
 }
 
@@ -321,9 +307,7 @@ HRESULT Library_corlib_native_System_BitConverter::ToSingle___STATIC__R4__SZARRA
 	TINYCLR_HEADER();
 
 	BYTE *p = NULL;
-	int index = 0;      
-	float value=0;
-	BYTE *pValue = (BYTE*)(&value);
+	int index = 0;
 
 	CLR_RT_HeapBlock_Array* pArray = stack.Arg0().DereferenceArray();
 	FAULT_ON_NULL_ARG(pArray);
@@ -331,15 +315,13 @@ HRESULT Library_corlib_native_System_BitConverter::ToSingle___STATIC__R4__SZARRA
 	index = stack.Arg1().NumericByRefConst().s4;
 	if (index < 0 || (unsigned int)index >= pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_OUT_OF_RANGE);
 	if ((unsigned int)index + 4 > pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_INVALID_PARAMETER);
-	 
-	// fetch byte aligned values, and store in object that is correctly aligned for this system. 
-	p = pArray->GetFirstElement();   
-	
-	for (int i=0; i<4; ++i)
-	{
-		pValue[i] = p[index+i];
-	}   
-	stack.SetResult_R4(value);
+
+	p = pArray->GetFirstElement();
+#if !defined(TINYCLR_EMULATED_FLOATINGPOINT)
+	stack.SetResult_R4(*reinterpret_cast<float*>(p + index));
+#else
+	stack.SetResult_R4(*reinterpret_cast<CLR_INT32*>(p + index));
+#endif
 
 	TINYCLR_NOCLEANUP();
 }
@@ -350,9 +332,7 @@ HRESULT Library_corlib_native_System_BitConverter::ToInt16___STATIC__I2__SZARRAY
 	TINYCLR_HEADER();
 
 	BYTE *p = NULL;
-	int index = 0;       
-	INT16 value=0;
-	BYTE *pValue = (BYTE*)(&value);
+	int index = 0;
 
 	CLR_RT_HeapBlock_Array* pArray = stack.Arg0().DereferenceArray();
 	FAULT_ON_NULL_ARG(pArray);
@@ -361,14 +341,9 @@ HRESULT Library_corlib_native_System_BitConverter::ToInt16___STATIC__I2__SZARRAY
 	if (index < 0 || (unsigned int)index >= pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_OUT_OF_RANGE);
 	if ((unsigned int)index + 2 > pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_INVALID_PARAMETER);
 
-	p = pArray->GetFirstElement();     
-	// big vs little endian?
-	for (int i=0; i<2; ++i)
-	{
-		pValue[i] = p[index+i];
-	}   
-	stack.SetResult_I4(value);
-	
+	p = pArray->GetFirstElement();
+	stack.SetResult(*reinterpret_cast<short*>(p + index), DATATYPE_I2);
+
 	TINYCLR_NOCLEANUP();
 }
 
@@ -378,10 +353,7 @@ HRESULT Library_corlib_native_System_BitConverter::ToInt32___STATIC__I4__SZARRAY
 	TINYCLR_HEADER();
 
 	BYTE *p = NULL;
-	int index = 0;  
-	
-    INT32 value=0;
-	BYTE *pValue = (BYTE*)(&value);
+	int index = 0;
 
 	CLR_RT_HeapBlock_Array* pArray = stack.Arg0().DereferenceArray();
 	FAULT_ON_NULL_ARG(pArray);
@@ -390,13 +362,8 @@ HRESULT Library_corlib_native_System_BitConverter::ToInt32___STATIC__I4__SZARRAY
 	if (index < 0 || (unsigned int)index >= pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_OUT_OF_RANGE);
 	if ((unsigned int)index + 4 > pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_INVALID_PARAMETER);
 
-	p = pArray->GetFirstElement();    
-		// big vs little endian?
-	for (int i=0; i<4; ++i)
-	{
-		pValue[i] = p[index+i];
-	}   
-	stack.SetResult_I4(value);
+	p = pArray->GetFirstElement();
+	stack.SetResult_I4(*reinterpret_cast<int*>(p + index));
 
 	TINYCLR_NOCLEANUP();
 }
@@ -408,10 +375,7 @@ HRESULT Library_corlib_native_System_BitConverter::ToInt64___STATIC__I8__SZARRAY
 
 	BYTE *p = NULL;
 	int index = 0;
-					 
-	CLR_INT64 value=0;
-	BYTE *pValue = (BYTE*)(&value);
-	
+
 	CLR_RT_HeapBlock_Array* pArray = stack.Arg0().DereferenceArray();
 	FAULT_ON_NULL_ARG(pArray);
 
@@ -419,14 +383,8 @@ HRESULT Library_corlib_native_System_BitConverter::ToInt64___STATIC__I8__SZARRAY
 	if (index < 0 || (unsigned int)index >= pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_OUT_OF_RANGE);
 	if ((unsigned int)index + 8 > pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_INVALID_PARAMETER);
 
-	p = pArray->GetFirstElement();    
-	
-	for (int i=0; i<8; ++i)
-	{
-		pValue[i] = p[index+i];
-	}   
-	stack.SetResult_I8(value) ;
-	
+	p = pArray->GetFirstElement();
+	stack.SetResult_I8(*reinterpret_cast<__int64*>(p + index));
 
 	TINYCLR_NOCLEANUP();
 }
@@ -438,8 +396,6 @@ HRESULT Library_corlib_native_System_BitConverter::ToUInt16___STATIC__U2__SZARRA
 
 	BYTE *p = NULL;
 	int index = 0;
-	CLR_UINT16 value=0;
-	BYTE *pValue = (BYTE*)(&value);
 
 	CLR_RT_HeapBlock_Array* pArray = stack.Arg0().DereferenceArray();
 	FAULT_ON_NULL_ARG(pArray);
@@ -449,11 +405,7 @@ HRESULT Library_corlib_native_System_BitConverter::ToUInt16___STATIC__U2__SZARRA
 	if ((unsigned int)index + 2 > pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_INVALID_PARAMETER);
 
 	p = pArray->GetFirstElement();
-	for (int i=0; i<2; ++i)
-	{
-		pValue[i] = p[index+i];
-	}   
-	stack.SetResult_I4(value);
+	stack.SetResult(*reinterpret_cast<unsigned short*>(p + index), DATATYPE_U2);
 
 	TINYCLR_NOCLEANUP();
 }
@@ -464,9 +416,7 @@ HRESULT Library_corlib_native_System_BitConverter::ToUInt32___STATIC__U4__SZARRA
 	TINYCLR_HEADER();
 
 	BYTE *p = NULL;
-	int index = 0;  
-	CLR_UINT32 value=0;
-	BYTE *pValue = (BYTE*)(&value);
+	int index = 0;
 
 	CLR_RT_HeapBlock_Array* pArray = stack.Arg0().DereferenceArray();
 	FAULT_ON_NULL_ARG(pArray);
@@ -475,12 +425,8 @@ HRESULT Library_corlib_native_System_BitConverter::ToUInt32___STATIC__U4__SZARRA
 	if (index < 0 || (unsigned int)index >= pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_OUT_OF_RANGE);
 	if ((unsigned int)index + 4 > pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_INVALID_PARAMETER);
 
-	p = pArray->GetFirstElement();     
-	for (int i=0; i<4; ++i)
-	{
-		pValue[i] = p[index+i];
-	}   
-	stack.SetResult_U4(value) ;
+	p = pArray->GetFirstElement();
+	stack.SetResult_U4(*reinterpret_cast<unsigned int*>(p + index));
 
 	TINYCLR_NOCLEANUP();
 }
@@ -491,9 +437,7 @@ HRESULT Library_corlib_native_System_BitConverter::ToUInt64___STATIC__U8__SZARRA
 	TINYCLR_HEADER();
 
 	BYTE *p = NULL;
-	int index = 0;       
-	CLR_UINT64 value=0;
-	BYTE *pValue = (BYTE*)(&value);
+	int index = 0;
 
 	CLR_RT_HeapBlock_Array* pArray = stack.Arg0().DereferenceArray();
 	FAULT_ON_NULL_ARG(pArray);
@@ -502,14 +446,8 @@ HRESULT Library_corlib_native_System_BitConverter::ToUInt64___STATIC__U8__SZARRA
 	if (index < 0 || (unsigned int)index >= pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_OUT_OF_RANGE);
 	if ((unsigned int)index + 8 > pArray->m_numOfElements) TINYCLR_SET_AND_LEAVE(CLR_E_INVALID_PARAMETER);
 
-	p = pArray->GetFirstElement();    
-	  
-	for (int i=0; i<8; ++i)
-	{
-		pValue[i] = p[index+i];
-	}   
-	stack.SetResult_U8(value)  ;
-	
+	p = pArray->GetFirstElement();
+	stack.SetResult_U8(*reinterpret_cast<unsigned __int64*>(p + index));
 
 	TINYCLR_NOCLEANUP();
 }

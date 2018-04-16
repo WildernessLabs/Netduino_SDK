@@ -65,7 +65,7 @@ void CLR_Messaging::Cleanup()
     NATIVE_PROFILE_CLR_MESSAGING();
 }
 
-#if defined(NETMF_TARGET_BIG_ENDIAN)
+#if defined(BIG_ENDIAN)
 
 UINT32 CLR_Messaging::SwapEndianPattern( UINT8* &buffer, UINT32 size, UINT32 count )
 {

@@ -42,7 +42,7 @@ struct SOCK_NetworkConfiguration
     UINT32 dnsServer2;
     UINT32 networkInterfaceType;
     UINT32 macAddressLen;
-    UINT8  macAddressBuffer[64];
+    char   macAddressBuffer[64];
 };
 
 struct NETWORK_CONFIG

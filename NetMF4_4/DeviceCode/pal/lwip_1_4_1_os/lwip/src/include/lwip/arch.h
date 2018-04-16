@@ -32,12 +32,12 @@
 #ifndef __LWIP_ARCH_H__
 #define __LWIP_ARCH_H__
 
-#ifndef NETMF_TARGET_LITTLE_ENDIAN
-#define NETMF_TARGET_LITTLE_ENDIAN 1234
+#ifndef LITTLE_ENDIAN
+#define LITTLE_ENDIAN 1234
 #endif
 
-#ifndef NETMF_TARGET_BIG_ENDIAN
-#define NETMF_TARGET_BIG_ENDIAN 4321
+#ifndef BIG_ENDIAN
+#define BIG_ENDIAN 4321
 #endif
 
 #include "arch/cc.h"

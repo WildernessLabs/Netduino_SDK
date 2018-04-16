@@ -1,0 +1,44 @@
+# Build results
+/BuildOutput
+*.log
+*_assemblyinfo.txt
+*.feedback
+/alias.txt
+
+# CMSIS and CMSIS_RTX
+/CMSIS/CMSIS/
+/CMSIS/Device/*
+/CMSIS/ARM.CMSIS.pdsc
+!/CMSIS/CMSIS/RTOS/RTX/dotNetMF.proj
+
+# Visual Studio
+*.aps
+*.[Cc]ache
+*.ilk
+*.ncb
+*.[Oo]bj
+*.opensdf
+*.pch
+*.sbr
+*.sdf
+*.sln.docstates
+*.suo
+*.vspscc
+*.vssscc
+*.user
+[Bb]in/
+[Oo]bj/
+ipch/
+
+!/tools/bin/
+
+#uVision
+*.uvguix*
+Listings/
+{*/
+
+# WinPCAP
+/DeviceCode/Targets/OS/Win32/DeviceCode/WinPcap_Eth/Dependencies/WpdPack/
+
+*.axfdump
+/crypto/lib

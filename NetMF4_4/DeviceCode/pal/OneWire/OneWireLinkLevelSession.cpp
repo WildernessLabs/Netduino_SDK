@@ -38,8 +38,8 @@
 //extern void usDelay(int);
 
 // local function prototypes
-//SMALLINT owAcquire(int,int);
-//void     owRelease(int);
+SMALLINT owAcquire(int,char *);
+void     owRelease(int);
 
 //---------------------------------------------------------------------------
 // Attempt to acquire a 1-Wire net
@@ -50,12 +50,12 @@
 //
 // Returns: TRUE - success, port opened
 //
-SMALLINT owAcquire(int portnum, int pin)
+SMALLINT owAcquire(int portnum, char *port_zstr)
 {
-  if((portnum >= MAX_PORTNUM) || (portnum < 0) || (owPortPin[portnum] != 0)) return FALSE; // already in use
+  port_zstr = 0;
 
   //portnum = 0;
-  //UINT32 pin = (UINT32)atoi(port_zstr); 
+  UINT32 pin = (UINT32)portnum; 
    
   // drive bus high.
   CPU_GPIO_EnableOutputPin( pin, true );     
@@ -65,17 +65,9 @@ SMALLINT owAcquire(int portnum, int pin)
 
    // checks to make sure the line is idling high.
   CPU_GPIO_EnableInputPin( pin, false, NULL, GPIO_INT_EDGE_HIGH, RESISTOR_PULLUP );
-  
-  if (CPU_GPIO_GetPinState(pin)==1)
-  {
-	owPortPin[portnum] = pin;
-	return TRUE;
-  }
-  else
-  {
-	return FALSE;
-  }
+  return (CPU_GPIO_GetPinState(pin) ==1 ? TRUE : FALSE);
 }
+
 //---------------------------------------------------------------------------
 // Release the previously acquired a 1-Wire net.
 //
@@ -84,14 +76,7 @@ SMALLINT owAcquire(int portnum, int pin)
 //
 void owRelease(int portnum)
 {
-   if((portnum < MAX_PORTNUM) && (portnum >= 0) ) 
-   {
-		UINT32 pin = (UINT32)owPortPin[portnum]; 
-				
-		CPU_GPIO_EnableInputPin( pin, false, NULL, GPIO_INT_NONE, RESISTOR_PULLUP );
-		
-		owPortPin[portnum] = 0;
-   }
+   portnum = 0;
 }
 
 

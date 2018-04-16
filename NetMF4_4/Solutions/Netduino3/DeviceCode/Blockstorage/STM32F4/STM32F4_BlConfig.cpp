@@ -77,22 +77,24 @@
 
 const BlockRange g_STM32F4_BlockRange1[] =
 {
-    { BlockRange::BLOCKTYPE_BOOTSTRAP ,   0, 3 },  // 08000000 bootloader   64k
+    { BlockRange::BLOCKTYPE_BOOTSTRAP ,   0, 2 },  // 08000000 bootloader   48k
+    { BlockRange::BLOCKTYPE_CONFIG    ,   3, 3 },  // 0800C000 config       16k
 };
 
 const BlockRange g_STM32F4_BlockRange2[] =
 {
-    { BlockRange::BLOCKTYPE_CONFIG      ,   0, 0 },  // 08010000 config          64k
+    { BlockRange::BLOCKTYPE_CODE      ,   0, 0 },  // 08010000 CLR          64k
 };
 
 const BlockRange g_STM32F4_BlockRange3[] =
 {
-    { BlockRange::BLOCKTYPE_CODE      ,   0, 6 },  // 08020000 CLR         896k
+    { BlockRange::BLOCKTYPE_CODE      ,   0, 2 },  // 08020000 CLR         384k
+    { BlockRange::BLOCKTYPE_DEPLOYMENT,   3, 6 },  // 08080000 deployment  512k
 };
 
 const BlockRange g_STM32F4_BlockRange4[] =
 {
-    { BlockRange::BLOCKTYPE_DEPLOYMENT,   0, 3 },  // 08100000 deployment   64k
+    { BlockRange::BLOCKTYPE_UPDATE,   0, 3 },  // 08100000 deployment   64k
 };
 
 const BlockRange g_STM32F4_BlockRange5[] =

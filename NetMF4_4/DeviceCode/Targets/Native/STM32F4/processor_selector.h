@@ -85,10 +85,15 @@ ERROR - WE SHOULD NOT INCLUDE THIS HEADER IF NOT BUILDING AN STM32F2/F4 PLATFORM
 #define USB_IRQ_INDEX          6   // dummy index (EXTI0, always on)
 
 
+#ifndef PLATFORM_DEPENDENT_TX_USART_BUFFER_SIZE
 #define PLATFORM_DEPENDENT_TX_USART_BUFFER_SIZE    256  // there is one TX for each usart port
+#endif
+#ifndef PLATFORM_DEPENDENT_RX_USART_BUFFER_SIZE
 #define PLATFORM_DEPENDENT_RX_USART_BUFFER_SIZE    256  // there is one RX for each usart port
-#define PLATFORM_DEPENDENT_USB_QUEUE_PACKET_COUNT  8    // there is one queue for each pipe of each endpoint and the size of a single packet is sizeof(USB_PACKET64) == 68 bytes
-
+#endif
+#ifndef PLATFORM_DEPENDENT_USB_QUEUE_PACKET_COUNT
+#define PLATFORM_DEPENDENT_USB_QUEUE_PACKET_COUNT    8  // there is one queue for each pipe of each endpoint and the size of a single packet is sizeof(USB_PACKET64) == 68 bytes
+#endif
 //
 // communicaiton facilities
 /////////////////////////////////////////////////////////

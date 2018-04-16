@@ -6,6 +6,10 @@
 #include <TinyCLR_Messaging.h>
 #include <TinyCLR_Endian.h>
 
+#if defined(PLATFORM_WINDOWS)
+#pragma comment(lib,"crypto")
+#endif
+
 #include <crypto.h>
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -416,7 +420,7 @@ bool CLR_Messaging::ProcessPayload( WP_Message* msg )
     }
 
     //--//
-#if defined(NETMF_TARGET_BIG_ENDIAN)
+#if defined(BIG_ENDIAN)
     SwapEndian( msg, msg->m_payload, msg->m_header.m_size, false );
 #endif
     const CLR_Messaging_CommandHandlerLookups* tables;
@@ -531,7 +535,7 @@ bool CLR_Messaging::TransmitMessage( const WP_Message* msg, bool fQueue )
     UINT32 payloadSize;
     UINT32 flags;
 
-#if !defined(NETMF_TARGET_BIG_ENDIAN)
+#if !defined(BIG_ENDIAN)
     payloadSize = msg->m_header.m_size;
     flags       = msg->m_header.m_flags;
 #else
@@ -652,7 +656,7 @@ void CLR_Messaging::ReplyToCommand( WP_Message* msg, bool fSuccess, bool fCritic
 
 
     msgReply.Initialize( &m_controller );
-#if defined(NETMF_TARGET_BIG_ENDIAN)
+#if defined(BIG_ENDIAN)
     SwapEndian( msg, ptr, size, true );
 #endif
 
@@ -668,7 +672,7 @@ void CLR_Messaging::ReplyToCommand( WP_Message* msg, bool fSuccess, bool fCritic
 }
 
 //--//
-#if defined(NETMF_TARGET_BIG_ENDIAN)
+#if defined(BIG_ENDIAN)
 UINT32 CLR_Messaging::SwapEndianPattern( UINT8* &buffer, UINT32 size, UINT32 count )
 {
     UINT32 consumed=0;

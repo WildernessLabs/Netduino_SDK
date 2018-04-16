@@ -13,7 +13,7 @@
     -->
     <!-- Internal FLASH -->
     <Set Name="IFLASH_BaseAddress"      Value="0x08000000"/>
-    <Set Name="IFLASH_Size"             Value="0x00100000"/><!-- 1MB -->
+    <Set Name="IFLASH_Size"             Value="0x00200000"/><!-- 1MB -->
 
     <!-- Internal Core Coupled Memory (CCM) [D-Bus] -->
     <Set Name="CCM_BaseAddress"         Value="0x10000000"/>
@@ -21,7 +21,7 @@
 
     <!-- Internal SRAM -->
     <Set Name="IRAM_BaseAddress"        Value="0x20000000"/>
-    <Set Name="IRAM_Size"               Value="0x00020000"/><!-- 128KB -->
+    <Set Name="IRAM_Size"               Value="0x00030000"/><!-- 196KB -->
 
     <!-- Solution specific usage settings -->
 
@@ -43,10 +43,10 @@
 
     <!-- Internal SRAM -->
     <!-- FIXME: Dynamically after RAM_RW region, properly aligned. -->
-    <Set Name="Heap_BaseAddress"        Value="0x20008000"/>
-    <Set Name="Heap_Size"               Value="0x00020000"/><!-- 92K -->
+    <Set Name="Heap_BaseAddress"        Value="0x20007000"/>
+    <Set Name="Heap_Size"               Value="0x00028E00"/><!-- 143K -->
 
-    <Set Name="CustomHeap_Size"         Value="0x00001000"/><!--  4K -->
+    <Set Name="CustomHeap_Size"         Value="0x000001F8"/><!--  0.5K -->
 
 
     <If Name="TARGETLOCATION" Value="FLASH">

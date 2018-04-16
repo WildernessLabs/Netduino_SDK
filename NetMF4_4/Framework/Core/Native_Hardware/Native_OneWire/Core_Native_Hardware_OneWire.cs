@@ -42,9 +42,10 @@ namespace Microsoft.SPOT.Hardware
         public ArrayList FindAllDevices()
         {
             int rslt;
+            int portnum = 0;
  
             // attempt to acquire the 1-Wire Net
-            if ((rslt = AcquireEx()) < 0)
+            if ((portnum = AcquireEx()) < 0)
             {
                 //OWERROR_DUMP(stdout);
 
@@ -74,16 +75,13 @@ namespace Microsoft.SPOT.Hardware
             Release();
 
             return serialNumbers;
-        }
+        }        
 
-        uint _pin; 						// The native code only needs pin number
-        uint _logicalPort; 				// Handle used for subsequent calls. 
-		const uint MAX_PORTNUM  = 16;	// Must be the same as defined in "DeviceCode\pal\OneWire\DallasSemi\ownet.h"
+        uint _pin; // The native code only needs pin number
 
-        public OneWire(uint logicalPort, OutputPort port)
+        public OneWire(OutputPort port)
         {
-            _pin = (uint)port.Id; 		// the pin number is enough to identify the port on the native side
-			_logicalPort = logicalPort; // 0 .. MAX_PORTNUM    (default .NetMF is 16 logical ports)
+            _pin = (uint)port.Id; // the pin number is enough to identify the port on the native side
         }
     }
 }

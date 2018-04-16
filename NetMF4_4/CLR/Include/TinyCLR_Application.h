@@ -5,6 +5,10 @@
 #ifndef _TINYCLR_APPLICATION_H_
 #define _TINYCLR_APPLICATION_H_
 
+#if defined(_WIN32) || defined(WIN32)
+#define PLATFORM_WINDOWS
+#endif
+
 extern void InitCRuntime();
 
 struct CLR_SETTINGS
@@ -13,7 +17,7 @@ struct CLR_SETTINGS
     bool            WaitForDebugger;
     bool            EnterDebuggerLoopAfterExit;
 
-#if defined(_WIN32)
+#if defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)
     bool            PerformGarbageCollection;
     bool            PerformHeapCompaction;
     WCHAR           EmulatorArgs[1024];
@@ -23,7 +27,7 @@ struct CLR_SETTINGS
 
 struct CLR_RT_EmulatorHooks
 {
-#if defined(PLATFORM_WINDOWS_EMULATOR)
+#if defined(PLATFORM_WINDOWS)
     static void Notify_ExecutionStateChanged();
 #else
     static void Notify_ExecutionStateChanged() {}
@@ -32,17 +36,16 @@ struct CLR_RT_EmulatorHooks
 
 extern void ClrStartup( CLR_SETTINGS params );
 
-#if defined(_WIN32)
+#if defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)
 extern HRESULT ClrLoadPE( LPCWSTR szPeFilePath );
 extern HRESULT ClrLoadDAT( LPCWSTR szDatFilePath );
+void ClrSetLcdDimensions( INT32 width, INT32 height, INT32 bitsPerPixel );
+bool ClrIsDebuggerStopped();
 #endif
 
 extern void ClrExit();
 
-#if defined(PLATFORM_WINDOWS_EMULATOR)
-
-void ClrSetLcdDimensions( INT32 width, INT32 height, INT32 bitsPerPixel );
-bool ClrIsDebuggerStopped();
+#if defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)
 
 struct HAL_Configuration_Windows
 {    
@@ -76,6 +79,6 @@ struct HAL_Configuration_Windows
 
 extern HAL_Configuration_Windows g_HAL_Configuration_Windows;
 
-#endif
+#endif //defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)
 
-#endif
+#endif //_TINYCLR_APPLICATION_H_

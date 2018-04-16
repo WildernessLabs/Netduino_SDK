@@ -38,7 +38,7 @@ BEGIN
     BEGIN
         BLOCK "040904b0" //US English - Unicode
         BEGIN
-            VALUE "Comments",         "Debug" //optional
+            VALUE "Comments",         "Release" //optional
             VALUE "CompanyName",      "Microsoft Corporation"
             VALUE "FileDescription",  ""
             VALUE "FileVersion",      "4.4.0.0"

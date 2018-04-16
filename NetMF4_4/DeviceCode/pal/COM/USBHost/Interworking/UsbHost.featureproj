@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FeatureName>UsbHost</FeatureName>
+    <Guid>{672afaad-0fd2-4856-bb7b-dc5c7092e802}</Guid>
+    <Groups />
+  </PropertyGroup>
+  <ItemGroup>
+    <DriverLibs Include="UsbHost.$(LIB_EXT)" />
+    <InteropFeature Include="UsbHost" />
+<!--
+    <MMP_DAT_CreateDatabase Include="$(BUILD_TREE_CLIENT)\pe\$(ENDIANNESS)\UsbHost.pe" />
+-->
+  </ItemGroup>
+</Project>

@@ -9,16 +9,14 @@ if "%1" == "-?" goto :ShowUsage
 if /i "%1" == "/h" goto :ShowUsage
 if /i "%1" == "-h" goto :ShowUsage
 
-if "%FLAVOR_SDK%" == "" set FLAVOR_SDK=RTM
-
-if /i "%VSSDK150Install%"=="" goto :MissingVSSDK
-if NOT EXIST "%VSSDK150Install%" goto :MissingVSSDK
+if /i "%VSSDK140Install%"=="" goto :MissingVSSDK
+if NOT EXIST "%VSSDK140Install%" goto :MissingVSSDK
 
 SET BUILD_VERSION=%1
 if "%BUILD_VERSION%"=="" set BUILD_VERSION=0
-SET BUILD_SHARE=%~2
+SET BUILD_SHARE=%2
 if "%BUILD_SHARE%"=="" set BUILD_SHARE=%SPOCLIENT%
-SET BUILD_BRANCH=%~3
+SET BUILD_BRANCH=%3
 SET RELEASENAME=%4
 if "%RELEASENAME%"=="" set RELEASENAME="(%USERNAME%)"
 SET WixMsiBuildNumberOverride=%5
@@ -30,21 +28,18 @@ IF "%WixMsiBuildNumberOverride%"=="" set WixMsiBuildNumberOverride=%BUILD_VERSIO
 set COMMON_BUILD_ROOT=%BUILD_SHARE%
 if NOT "%BUILD_BRANCH%"=="" set COMMON_BUILD_ROOT=%COMMON_BUILD_ROOT%\%BUILD_BRANCH%
 
-call setenv_vs.cmd 15
+call setenv_vs.cmd 14
 
 SET PORT_BUILD=
 
 ECHO Building PreSDK ...
-call Msbuild sdk.dirproj /nr:false /t:Build /p:BuildNumber=%BUILD_VERSION% /p:FLAVOR=%FLAVOR_SDK%  /clp:verbosity=minimal /flp:verbosity=detailed;LogFile=sdkpre.log
-if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
+call Msbuild sdk.dirproj /nr:false /t:Build /p:BuildNumber=%BUILD_VERSION% /p:FLAVOR=RTM  /clp:verbosity=minimal /flp:verbosity=detailed;LogFile=sdkpre.log
 
 ECHO Building SDK ...
-call Msbuild setup\ProductSDK\Product.wixproj /m /t:Build /p:BuildNumber=%BUILD_VERSION% /p:FLAVOR=%FLAVOR_SDK% /clp:verbosity=minimal /flp:verbosity=detailed;LogFile=sdk.log
-if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
+call Msbuild setup\ProductSDK\Product.wixproj /m /t:Build /p:BuildNumber=%BUILD_VERSION% /p:FLAVOR=RTM /clp:verbosity=minimal /flp:verbosity=detailed;LogFile=sdk.log
 
 ECHO Building VSIX packages ...
-call Msbuild setup\ProductSDK\VsixPackages.dirproj /t:Build /p:BuildNumber=%BUILD_VERSION% /p:FLAVOR=%FLAVOR_SDK% /clp:verbosity=minimal /flp:verbosity=detailed;LogFile=vsixpkg.log
-if %ERRORLEVEL% NEQ 0 exit /B %ERRORLEVEL%
+call Msbuild setup\ProductSDK\VsixPackages.dirproj /t:Build /p:BuildNumber=%BUILD_VERSION% /p:FLAVOR=RTM /clp:verbosity=minimal /flp:verbosity=detailed;LogFile=vsixpkg.log
 
 SET PORT_BUILD=
 
@@ -65,5 +60,5 @@ GOTO :EOF
 goto :EOF
 
 :MissingVSSDK
-@ECHO ERROR: Visual Studio 2017 SDK (VSSDK) was not detected, this SDK is required to build the .NET Micro Framework SDK source code
+@ECHO ERROR: Visual Studio 2015 SDK (VSSDK) was not detected, this SDK is required to build the .NET Micro Framework SDK source code
 goto :EOF

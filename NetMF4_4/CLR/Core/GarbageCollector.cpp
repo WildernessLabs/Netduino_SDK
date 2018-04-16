@@ -116,7 +116,7 @@ void CLR_RT_AssertEarlyCollection::CheckAll( CLR_RT_HeapBlock* ptr )
         {
             CLR_Debug::Printf( "INTERNAL ERROR: %08x retired early!!!\r\n", ptr );
 
-#if defined(_WIN32)
+#if defined(PLATFORM_WINDOWS) || defined(PLATFORM_WINCE)
             ::Sleep( 1000 );
             ::DebugBreak();
 #endif

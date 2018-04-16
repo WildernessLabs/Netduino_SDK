@@ -1,4 +1,7 @@
+using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Text;
 using System.IO;
 using XsdInventoryFormatObject;
 
@@ -109,7 +112,7 @@ namespace ComponentObjectModel
                 tw.WriteLine();
                 tw.WriteLine(
 @":USAGE
-      @ECHO.");
+      @ECHO."   );
                 tw.WriteLine(
 "      @ECHO.Usage: msbuild_dotNetMF.cmd ^<TARGET^> ^<FLAVOR^> ^[^<options^>...^] ^[Projects \"<list>\"^]"
                 );
@@ -129,7 +132,7 @@ namespace ComponentObjectModel
       @ECHO.^<options^>:");
                 foreach (BuildParameter bp in m_invHelper.BuildParameters)
                 {
-                    tw.WriteLine(string.Format("      @ECHO   {0,-14}- {1}", bp.Parameter, bp.Description));
+                    tw.WriteLine(string.Format("      @ECHO   {0,-14}- {1}", bp.Parameter, bp.Description ));
                 }
                 tw.WriteLine(
 @"      @ECHO.
@@ -148,4 +151,3 @@ goto :EOF
 
     }
 }
-
