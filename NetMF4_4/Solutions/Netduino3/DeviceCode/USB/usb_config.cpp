@@ -29,11 +29,11 @@
 #define     PRODUCT_NAME_INDEX      2
 #define     SERIAL_NUMBER_INDEX     0
 // device descriptor
-#define     VENDOR_ID          0x0483  // STM32F4 Test VID
-#define     PRODUCT_ID         0xA08F  // STM32F4 Test PID
+#define     VENDOR_ID          0x1000  
+#define     PRODUCT_ID         0x22B1  
 #define     MAX_EP0_SIZE            8
 //configuration descriptor
-#define     USB_MAX_CURRENT     (100/USB_CURRENT_UNIT)
+#define     USB_MAX_CURRENT     (280/USB_CURRENT_UNIT)
 
 #define     USB_ATTRIBUTES      (USB_ATTRIBUTE_BASE | USB_ATTRIBUTE_SELF_POWER)
 
