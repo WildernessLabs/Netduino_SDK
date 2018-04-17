@@ -7,6 +7,6 @@
     <Groups />
   </PropertyGroup>
   <ItemGroup>
-    <MMP_DAT_CreateDatabase Include="$(SPOCLIENT)\Solutions\Netduino3Ethernet\ManagedCode\Netduino_IP_LinkLayers_AX88796C\bin\Release\le\Netduino.IP.LinkLayers.AX88796C.pe" />
+    <MMP_DAT_CreateDatabase Include="$(SPOCLIENT)\Solutions\Netduino3EthernetEthernet\ManagedCode\Netduino_IP_LinkLayers_AX88796C\bin\Release\le\Netduino.IP.LinkLayers.AX88796C.pe" />
   </ItemGroup>
 </Project>

@@ -4,8 +4,11 @@
 //  you may not use this file except in compliance with the License.
 //  You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 //
-// Copyright (c) Microsoft Corporation.  All rights reserved.
-// Portions Copyright (c) Secret Labs LLC. All rights reserved.
+//  Copyright (c) Microsoft Corporation. All rights reserved.
+//  Implementation for the MCBSTM32F400 board (STM32F4): Copyright (c) Oberon microsystems, Inc.
+//
+//  *** Netduino3Ethernet USB Configuration ***
+//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <tinyhal.h>
@@ -13,24 +16,24 @@
 //--//
 
 //string descriptor
-#define     MANUFACTURER_NAME_SIZE 18   /* "Wilderness Labs LLC*/
+#define     MANUFACTURER_NAME_SIZE 19   /* "Wilderness Labs LLC" */
 // NOTE: Having more than (probably) 32 characters causes the MFUSB KERNEL driver
 // to *CRASH* which, of course, causes Windows to crash
-#define     PRODUCT_NAME_SIZE      19   /* "Netduino 3 Ethernet" */
+#define     PRODUCT_NAME_SIZE      12   /* "Netduino3Eth" */
 // NOTE: If these two strings are not present, the MFUSB KERNEL driver will *CRASH*
 // which, of course, causes Windows to crash
-#define     DISPLAY_NAME_SIZE       9   /* "Netduino3" */
-#define     FRIENDLY_NAME_SIZE      8   /* "Netduino" */
+#define     DISPLAY_NAME_SIZE      12   /* "Netduino3Eth" */
+#define     FRIENDLY_NAME_SIZE      5   /* "4.4.1" */
 // index for the strings
 #define     MANUFACTURER_NAME_INDEX 1
 #define     PRODUCT_NAME_INDEX      2
 #define     SERIAL_NUMBER_INDEX     0
 // device descriptor
-#define     PRODUCT_ID         0x1000
-#define     VENDOR_ID          0x22B1
+#define     VENDOR_ID          0x1000  
+#define     PRODUCT_ID         0x22B1  
 #define     MAX_EP0_SIZE            8
 //configuration descriptor
-#define     USB_MAX_CURRENT     280/USB_CURRENT_UNIT
+#define     USB_MAX_CURRENT     (280/USB_CURRENT_UNIT)
 
 #define     USB_ATTRIBUTES      (USB_ATTRIBUTE_BASE | USB_ATTRIBUTE_SELF_POWER)
 
@@ -39,8 +42,9 @@
 
 /////////////////////////////////////////////////////////////
 // The following structure defines the USB descriptor
-// for a basic device with a USB debug interface plus the
-// Sideshow OS descriptors.
+// for a basic device with a USB debug interface via the
+// WinUSB extended Compat ID.
+//
 // This USB configuration is always used to define the USB
 // configuration for TinyBooter.  It is also the default for
 // the runtime if there is no USB configuration in the Flash
@@ -50,19 +54,20 @@ ADS_PACKED struct GNU_PACKED USB_DYNAMIC_CONFIGURATION
 {
     USB_DEVICE_DESCRIPTOR        device;
     USB_CONFIGURATION_DESCRIPTOR config;
-    USB_INTERFACE_DESCRIPTOR     itfc0;
-    USB_ENDPOINT_DESCRIPTOR      ep1;
-    USB_ENDPOINT_DESCRIPTOR      ep2;
+      USB_INTERFACE_DESCRIPTOR   itfc0;
+        USB_ENDPOINT_DESCRIPTOR  ep1;
+        USB_ENDPOINT_DESCRIPTOR  ep2;
     USB_STRING_DESCRIPTOR_HEADER manHeader;
-    USB_STRING_CHAR              manString[MANUFACTURER_NAME_SIZE];
+      USB_STRING_CHAR            manString[MANUFACTURER_NAME_SIZE];
     USB_STRING_DESCRIPTOR_HEADER prodHeader;
-    USB_STRING_CHAR              prodString[PRODUCT_NAME_SIZE];
+      USB_STRING_CHAR            prodString[PRODUCT_NAME_SIZE];
     USB_STRING_DESCRIPTOR_HEADER string4;
-    USB_STRING_CHAR              displayString[DISPLAY_NAME_SIZE];
+      USB_STRING_CHAR            displayString[DISPLAY_NAME_SIZE];
     USB_STRING_DESCRIPTOR_HEADER string5;
-    USB_STRING_CHAR              friendlyString[FRIENDLY_NAME_SIZE];
+      USB_STRING_CHAR            friendlyString[FRIENDLY_NAME_SIZE];
     USB_OS_STRING_DESCRIPTOR     OS_String;
     USB_XCOMPATIBLE_OS_ID        OS_XCompatible_ID;
+    USB_XPROPERTIES_OS_WINUSB    OS_XProperty;
     USB_DESCRIPTOR_HEADER        endList;
 };
 
@@ -79,7 +84,7 @@ const struct USB_DYNAMIC_CONFIGURATION UsbDefaultConfiguration =
         },
         USB_DEVICE_DESCRIPTOR_LENGTH,       // Length of device descriptor
         USB_DEVICE_DESCRIPTOR_TYPE,         // USB device descriptor type
-        0x0110,                             // USB Version 1.10 (BCD)
+        0x0200,                             // USB Version 2.00 (BCD) (2.0 required for Extended ID recognition)
         0,                                  // Device class (none)
         0,                                  // Device subclass (none)
         0,                                  // Device protocol (none)
@@ -136,7 +141,7 @@ const struct USB_DYNAMIC_CONFIGURATION UsbDefaultConfiguration =
         USB_ENDPOINT_DIRECTION_IN + 1,
         USB_ENDPOINT_ATTRIBUTE_BULK,
         64,                                         // Endpoint 1 packet size
-        0                                           // Endpoint 1 interval        
+        0                                           // Endpoint 1 interval
     },
 
     // Endpoint 2 descriptor
@@ -159,7 +164,7 @@ const struct USB_DYNAMIC_CONFIGURATION UsbDefaultConfiguration =
         USB_STRING_DESCRIPTOR_HEADER_LENGTH + (sizeof(USB_STRING_CHAR) * MANUFACTURER_NAME_SIZE),
         USB_STRING_DESCRIPTOR_TYPE
     },
-    { 'S', 'e', 'c', 'r', 'e', 't', ' ', 'L', 'a', 'b', 's', ' ', 'L', 'L', 'C' },
+    { 'W', 'i', 'l', 'd', 'e', 'r', 'n', 'e', 's', 's', ' ', 'L', 'a', 'b','s',' ','L','L','C' },
 
     // Product name string descriptor
     {
@@ -171,7 +176,7 @@ const struct USB_DYNAMIC_CONFIGURATION UsbDefaultConfiguration =
         USB_STRING_DESCRIPTOR_HEADER_LENGTH + (sizeof(USB_STRING_CHAR) * PRODUCT_NAME_SIZE),
         USB_STRING_DESCRIPTOR_TYPE
     },
-    { 'N', 'e', 't', 'd', 'u', 'i', 'n', 'o', ' ', '3', ' ', 'E', 't', 'h', 'e', 'r', 'n', 'e', 't' },
+    { 'N', 'e', 't', 'd', 'u', 'i', 'n', 'o','3','E','t','h' },
 
     // String 4 descriptor (display name)
     {
@@ -183,7 +188,7 @@ const struct USB_DYNAMIC_CONFIGURATION UsbDefaultConfiguration =
         USB_STRING_DESCRIPTOR_HEADER_LENGTH + (sizeof(USB_STRING_CHAR) * DISPLAY_NAME_SIZE),
         USB_STRING_DESCRIPTOR_TYPE
     },
-    { 'N', 'e', 't', 'd', 'u', 'i', 'n', 'o', '3' },
+    { 'N', 'e', 't', 'd', 'u', 'i', 'n', 'o','3','E','t','h' },
 
     // String 5 descriptor (friendly name)
     {
@@ -195,9 +200,9 @@ const struct USB_DYNAMIC_CONFIGURATION UsbDefaultConfiguration =
         USB_STRING_DESCRIPTOR_HEADER_LENGTH + (sizeof(USB_STRING_CHAR) * FRIENDLY_NAME_SIZE),
         USB_STRING_DESCRIPTOR_TYPE
     },
-    { 'N', 'e', 't', 'd', 'u', 'i', 'n', 'o' },
+    { '4', '.', '4', '.', '1' },
 
-    // OS Descriptor string for Sideshow
+    // OS Descriptor string for Extended OS Compat ID
     {
         {
             USB_STRING_DESCRIPTOR_MARKER,
@@ -211,7 +216,7 @@ const struct USB_DYNAMIC_CONFIGURATION UsbDefaultConfiguration =
         0x00
     },
 
-    // OS Extended Compatible ID for Sideshow
+    // OS Extended Compatible ID for WinUSB
     {
         // Generic Descriptor header
         {
@@ -233,9 +238,38 @@ const struct USB_DYNAMIC_CONFIGURATION UsbDefaultConfiguration =
         // Extended Compatible OS ID function record
         0,                                                  // Interface 0
         1,                                                  // (reserved)
-        { 'S', 'I', 'D', 'E', 'S', 'H', 'W', 0 },           // Compatible ID
-        { 'E', 'N', 'H', 'V', '1',  0,   0,  0 },           // Sub-compatible ID
+        { 'W', 'I', 'N', 'U', 'S', 'B',  0,  0 },           // Compatible ID
+        {  0,   0,   0,   0,   0,   0,   0,  0 },           // Sub-compatible ID
         { 0, 0, 0, 0, 0, 0 }                                // Padding
+    },
+
+    // OS Extended Property 
+    {
+        // Generic Descriptor header
+        {
+            {
+                USB_GENERIC_DESCRIPTOR_MARKER,
+                0,
+                sizeof(USB_GENERIC_DESCRIPTOR_HEADER) + USB_XPROPERTY_OS_SIZE_WINUSB
+            },
+            USB_REQUEST_TYPE_IN | USB_REQUEST_TYPE_VENDOR | USB_REQUEST_TYPE_INTERFACE,
+            OS_DESCRIPTOR_STRING_VENDOR_CODE,
+            0,                                              // Intfc # << 8 + Page #
+            USB_XPROPERTY_OS_REQUEST                        // Extended Property OS ID request
+        },
+        USB_XPROPERTY_OS_SIZE_WINUSB,                       // Size of this descriptor (78 bytes for guid + 40 bytes for the property name + 24 bytes for other fields = 142 bytes)
+        OS_DESCRIPTOR_EX_VERSION,                           // Version 1.00 (BCD)
+        USB_XPROPERTY_OS_REQUEST,                           // Extended Compatible OS ID response
+        1,                                                  // Only 1 ex property record
+        // Extended Property OS ID function record
+        0x00000084,                                         // size in bytes 
+        EX_PROPERTY_DATA_TYPE__REG_SZ,                      // data type (unicode string)
+        40,                                                 // name length
+        // property name (null -terminated unicode string: 'DeviceInterfaceGuid\0')
+        { 'D','\0', 'e','\0', 'v','\0', 'i','\0', 'c','\0', 'e','\0', 'I','\0', 'n','\0', 't','\0', 'e','\0', 'r','\0', 'f','\0', 'a','\0', 'c','\0', 'e','\0', 'G','\0', 'u','\0', 'i','\0', 'd','\0', '\0','\0' },
+        78,                                                 // data length
+        // data ({D32D1D64-963D-463E-874A-8EC8C8082CBF})
+        { '{','\0', 'D','\0', '3','\0', '2','\0', 'D','\0', '1','\0', 'D','\0', '6','\0', '4','\0', '-','\0', '9','\0', '6','\0', '3','\0', 'D','\0', '-','\0', '4','\0', '6','\0', '3','\0', 'E','\0', '-','\0', '8','\0', '7','\0', '4','\0', 'A','\0', '-','\0', '8','\0', 'E','\0', 'C','\0', '8','\0', 'C','\0', '8','\0', '0','\0', '8','\0', '2','\0', 'C','\0', 'B','\0', 'F','\0', '}','\0', '\0','\0' }
     },
 
     // End of configuration marker

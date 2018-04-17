@@ -5,18 +5,25 @@
 //  You may obtain a copy of the License at http://www.apache.org/licenses/LICENSE-2.0
 //
 //  Copyright (c) Microsoft Corporation. All rights reserved.
+//  Implementation for the MCBSTM32F400 board (STM32F4): Copyright (c) Oberon microsystems, Inc.
+//
+//  *** Netduino3Ethernet Block Storage AddDevice Configuration ***
+//
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 #include <tinyhal.h>
 
 
-extern struct BlockStorageDevice  g_STM32_BS;
-extern struct IBlockStorageDevice g_STM32_Flash_DeviceTable;
-extern struct BLOCK_CONFIG        g_STM32_BS_Config;
+extern struct BlockStorageDevice  g_STM32F4_BS;
+extern struct IBlockStorageDevice g_STM32F4_Flash_DeviceTable;
+extern struct BLOCK_CONFIG        g_STM32F4_BS_Config;
 
 
-void BlockStorage_AddDevices()
-{
-    BlockStorageList::AddDevice( &g_STM32_BS, &g_STM32_Flash_DeviceTable, &g_STM32_BS_Config, FALSE );
+
+void BlockStorage_AddDevices() {
+    BlockStorageList::AddDevice( &g_STM32F4_BS,
+                                 &g_STM32F4_Flash_DeviceTable,
+                                 &g_STM32F4_BS_Config, FALSE );
+   
 }
 

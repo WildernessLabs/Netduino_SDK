@@ -7,7 +7,7 @@
 //--//
 
 #if defined(ADS_LINKER_BUG__NOT_ALL_UNUSED_VARIABLES_ARE_REMOVED)
-#pragma arm section zidata = "g_NetworkConfig_Netduino3Ethernet"
+#pragma arm section zidata = "g_NetworkConfig_Netduino3EthernetEthernet"
 #endif
 
 

@@ -5,6 +5,7 @@
     <MFSettingsFile>$(SPOCLIENT)\Solutions\Netduino3Ethernet\Netduino3Ethernet.settings</MFSettingsFile>
   </PropertyGroup>
   <ItemGroup>
+    <!--RequiredProjects Include="MicroBooter\MicroBooter.proj" /-->
     <RequiredProjects Include="TinyBooter\TinyBooter.proj" />
     <RequiredProjects Include="TinyCLR\TinyCLR.proj" />
   </ItemGroup>

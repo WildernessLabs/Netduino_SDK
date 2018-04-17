@@ -1,6 +1,6 @@
 <Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <Directory>Solutions\Netduino3Ethernet\DeviceCode\DeploymentTransport</Directory>
+    <Directory>Solutions\Netduino3EthernetEthernet\DeviceCode\DeploymentTransport</Directory>
     <AssemblyName>DeploymentTransport</AssemblyName>
   </PropertyGroup>
   <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />

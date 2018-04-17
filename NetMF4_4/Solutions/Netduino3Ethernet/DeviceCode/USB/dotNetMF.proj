@@ -3,15 +3,14 @@
     <AssemblyName>usb_pal_config_Netduino3Ethernet</AssemblyName>
     <Size>
     </Size>
-    <ProjectGuid>{5aea65e8-bd9f-401d-bb53-467ea4f2f1c1}</ProjectGuid>
+    <ProjectGuid>{1E492742-72F7-4F15-B682-3508D973F136}</ProjectGuid>
     <Description>USB PAL configuration for Netduino3Ethernet solution</Description>
     <Level>PAL</Level>
     <LibraryFile>usb_pal_config_Netduino3Ethernet.$(LIB_EXT)</LibraryFile>
-    <ProjectPath>$(SPOCLIENT)\Solutions\Netduino3Ethernet\DeviceCode\USB\dotnetmf.proj</ProjectPath>
     <ManifestFile>usb_pal_config_Netduino3Ethernet.$(LIB_EXT).manifest</ManifestFile>
     <Groups>Solutions\Netduino3Ethernet</Groups>
     <LibraryCategory>
-      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="USB_Config_PAL" Guid="{A03C06C1-23D7-493a-99C1-7E060BA5E7C4}" ProjectPath="" Conditional="" xmlns="">
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="USB_Config_PAL" Guid="{A03C06C1-23D7-493a-99C1-7E060BA5E7C4}" Conditional="" xmlns="">
         <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
           <Major>4</Major>
           <Minor>0</Minor>

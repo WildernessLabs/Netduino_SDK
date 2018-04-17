@@ -8,8 +8,7 @@
 
   <ItemGroup>
     <SubDirectories Include="AddDevices"/>
-    <SubDirectories Include="STM32"/>
-
+    <SubDirectories Include="STM32F4"/>
   </ItemGroup>
 
   <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Targets" />

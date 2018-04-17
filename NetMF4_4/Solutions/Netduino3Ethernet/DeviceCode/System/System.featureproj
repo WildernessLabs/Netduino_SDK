@@ -7,6 +7,6 @@
     <Groups />
   </PropertyGroup>
   <ItemGroup>
-    <MMP_DAT_CreateDatabase Include="$(SPOCLIENT)\Solutions\Netduino3Ethernet\ManagedCode\System\bin\Release\le\System.pe" />
+    <MMP_DAT_CreateDatabase Include="$(SPOCLIENT)\Solutions\Netduino3EthernetEthernet\ManagedCode\System\bin\Release\le\System.pe" />
   </ItemGroup>
 </Project>

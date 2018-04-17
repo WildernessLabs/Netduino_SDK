@@ -1,10 +1,9 @@
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <ProjectPath>$(SPOCLIENT)\Solutions\Netduino3Ethernet\DeviceCode\Init\dotnetmf.proj</ProjectPath>
     <AssemblyName>IO_Init_Netduino3Ethernet</AssemblyName>
     <Size>
     </Size>
-    <ProjectGuid>{3d60a87e-33c2-4881-871e-18682cd720ae}</ProjectGuid>
+    <ProjectGuid>{EC3ADEC7-57CC-4F26-B540-30EBA51C32DA}</ProjectGuid>
     <Description>IO port initialization for Netduino3Ethernet solution</Description>
     <Level>HAL</Level>
     <LibraryFile>IO_Init_Netduino3Ethernet.$(LIB_EXT)</LibraryFile>
@@ -15,8 +14,6 @@
     <Documentation>
     </Documentation>
     <PlatformIndependent>False</PlatformIndependent>
-    <CustomSpecific>
-    </CustomSpecific>
     <Required>False</Required>
     <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
     <IsStub>False</IsStub>
@@ -28,6 +25,7 @@
   <Import Project="$(SPOCLIENT)\tools\targets\Microsoft.SPOT.System.Settings" />
   <PropertyGroup />
   <ItemGroup>
+    <HFiles Include="$(SPOCLIENT)\DeviceCode\Targets\Native\STM32F4\DeviceCode\stm32f4xx.h" />
     <Compile Include="IO_Init.cpp" />
   </ItemGroup>
   <ItemGroup />

@@ -10,7 +10,7 @@
   <ItemGroup>
     <DriverLibs Include="Netduino_IP_Interop.$(LIB_EXT)" />
     <InteropFeature Include="Netduino_IP_Interop" />
-    <MMP_DAT_CreateDatabase Include="$(SPOCLIENT)\Solutions\Netduino3Ethernet\ManagedCode\Netduino_IP_Interop\bin\Release\le\Netduino.IP.Interop.pe" />
-    <RequiredProjects Include="$(SPOCLIENT)\Solutions\Netduino3Ethernet\DeviceCode\Netduino_IP_Interop\dotnetmf.proj" />
+    <MMP_DAT_CreateDatabase Include="$(SPOCLIENT)\Solutions\Netduino3EthernetEthernet\ManagedCode\Netduino_IP_Interop\bin\Release\le\Netduino.IP.Interop.pe" />
+    <RequiredProjects Include="$(SPOCLIENT)\Solutions\Netduino3EthernetEthernet\DeviceCode\Netduino_IP_Interop\dotnetmf.proj" />
   </ItemGroup>
 </Project>

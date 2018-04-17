@@ -28,7 +28,7 @@ void Transport::TransportInterface_Set( UINT8 param0, HRESULT &hr )
         case TRANSPORT_COM2: // COM2
             DeploymentTransport_Set(COM2);
             break;
-#if defined(PLATFORM_ARM_Netduino2) || defined(PLATFORM_ARM_NetduinoPlus2) || defined(PLATFORM_ARM_NetduinoGo) || defined(PLATFORM_ARM_Netduino3) || defined(PLATFORM_ARM_Netduino3Ethernet) || defined(PLATFORM_ARM_Netduino3Wifi)
+#if defined(PLATFORM_ARM_Netduino2) || defined(PLATFORM_ARM_NetduinoPlus2) || defined(PLATFORM_ARM_NetduinoGo) || defined(PLATFORM_ARM_Netduino3Ethernet) || defined(PLATFORM_ARM_Netduino3EthernetEthernet) || defined(PLATFORM_ARM_Netduino3EthernetWifi)
         case TRANSPORT_COM3: // COM3
             DeploymentTransport_Set(COM3);
             break;
@@ -36,12 +36,12 @@ void Transport::TransportInterface_Set( UINT8 param0, HRESULT &hr )
             DeploymentTransport_Set(COM4);
             break;
 #endif
-#if defined(PLATFORM_ARM_Netduino2) || defined(PLATFORM_ARM_NetduinoPlus2) || defined(PLATFORM_ARM_NetduinoGo) || defined(PLATFORM_ARM_Netduino3) || defined(PLATFORM_ARM_Netduino3Ethernet) || defined(PLATFORM_ARM_Netduino3Wifi)
+#if defined(PLATFORM_ARM_Netduino2) || defined(PLATFORM_ARM_NetduinoPlus2) || defined(PLATFORM_ARM_NetduinoGo) || defined(PLATFORM_ARM_Netduino3Ethernet) || defined(PLATFORM_ARM_Netduino3EthernetEthernet) || defined(PLATFORM_ARM_Netduino3EthernetWifi)
         case TRANSPORT_USB1: // USB1
             DeploymentTransport_Set(USB1);
             break;
 #endif
-#if defined(PLATFORM_ARM_Netduino2) || defined(PLATFORM_ARM_NetduinoPlus2) || defined(PLATFORM_ARM_NetduinoGo) || defined(PLATFORM_ARM_Netduino3) || defined(PLATFORM_ARM_Netduino3Ethernet) || defined(PLATFORM_ARM_Netduino3Wifi)
+#if defined(PLATFORM_ARM_Netduino2) || defined(PLATFORM_ARM_NetduinoPlus2) || defined(PLATFORM_ARM_NetduinoGo) || defined(PLATFORM_ARM_Netduino3Ethernet) || defined(PLATFORM_ARM_Netduino3EthernetEthernet) || defined(PLATFORM_ARM_Netduino3EthernetWifi)
         case TRANSPORT_ETH1: // COM_SOCKET_DBG
             DeploymentTransport_Set(COM_SOCKET_DBG);
             break;

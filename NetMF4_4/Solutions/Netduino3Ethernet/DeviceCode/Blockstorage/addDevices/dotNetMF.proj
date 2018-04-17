@@ -3,15 +3,14 @@
     <AssemblyName>BlockStorage_AddDevices_Netduino3Ethernet</AssemblyName>
     <Size>
     </Size>
-    <ProjectGuid>{12fd94f0-306e-4e9b-9909-69e7d57254e9}</ProjectGuid>
+    <ProjectGuid>{7BFA14C9-D40B-4EE7-BFFD-B1F749B922C8}</ProjectGuid>
     <Description>Block storage add device driver for Netduino3Ethernet</Description>
     <Level>HAL</Level>
     <LibraryFile>BlockStorage_AddDevices_Netduino3Ethernet.$(LIB_EXT)</LibraryFile>
-    <ProjectPath>$(SPOCLIENT)\Solutions\Netduino3Ethernet\DeviceCode\Blockstorage\addDevices\dotNetMF.proj</ProjectPath>
     <ManifestFile>BlockStorage_AddDevices_Netduino3Ethernet.$(LIB_EXT).manifest</ManifestFile>
     <Groups>Solutions\Netduino3Ethernet</Groups>
     <LibraryCategory>
-      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="BlockStorageAddDevices_HAL" Guid="{D1C1D946-18A1-4f12-807A-A182C4059D86}" ProjectPath="" xmlns="">
+      <MFComponent xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Name="BlockStorageAddDevices_HAL" Guid="{D1C1D946-18A1-4f12-807A-A182C4059D86}" xmlns="">
         <VersionDependency xmlns="http://schemas.microsoft.com/netmf/InventoryFormat.xsd">
           <Major>4</Major>
           <Minor>0</Minor>
@@ -26,7 +25,6 @@
     <Documentation>
     </Documentation>
     <PlatformIndependent>False</PlatformIndependent>
-    <CustomSpecific>Netduino3Ethernet</CustomSpecific>
     <Required>False</Required>
     <IgnoreDefaultLibPath>False</IgnoreDefaultLibPath>
     <IsStub>False</IsStub>
