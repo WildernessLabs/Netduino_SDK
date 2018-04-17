@@ -6,7 +6,7 @@ Windows PC with Visual Studio 2015. Tested using Visual Studio 2015 Professional
 
 ## Visual Studio Installation
 
-Make sure Visual Studio 2015 is installed and up to date: [CLick here to download](https://www.visualstudio.com/vs/older-downloads/)
+Make sure Visual Studio 2015 is installed and up to date: [Click here to download](https://www.visualstudio.com/vs/older-downloads/)
 
 Verify or Install the C++ 2015 Build tools: 
 - Run the VS 2015 installer
@@ -14,9 +14,8 @@ Verify or Install the C++ 2015 Build tools:
 - Under **Common Tools**, check *Visual Studio Extensibility Update 3*
 
 ## Setup (one-time steps)
-- Clone the [Netduino SDK repo](https://github.com/WildernessLabs/Netduino_SDK)
-- Install the [.NET Micro Framework Cryptographic Libraries]
-(https://github.com/NETMF/netmf-interpreter/releases)
+- Clone the [Netduino SDK](https://github.com/WildernessLabs/Netduino_SDK) repo
+- Install the [.NET Micro Framework Cryptographic Libraries](https://github.com/NETMF/netmf-interpreter/releases)
 - Open the crypto libraries instal location 
 - Copy the **lib** folder into the existing **crypto** folder of the cloned repo
 - Open PowerShell as an Admin
