@@ -108,9 +108,9 @@
 #define STM32F4_AD_CHANNELS {0,1,2,3,4,8,9,10,11,12,13,14,15} // PA0-PA7, PB0,PB1 PC1-PC5
 
 // PWM Configuration
-#define STM32F4_PWM_TIMER    {  10,  11,   9,   2,   9,  12,   1,   1,   1,   1} /* timer numbers use one-based index */
-#define STM32F4_PWM_CHNL  {   0,   0,   0,   2,   0,   1,   2,   0,   1,   3} /* channel values use zero-based index */
-#define STM32F4_PWM_PINS      {0x18,0x19,0x45,0x1A,0x02,0x1F,0x0A,0x49,0x4B,0x4E}
+#define STM32F4_PWM_TIMER    {   4,   4,   4,   4,   3,   3,   3,   3} /* timer numbers use one-based-index */
+#define STM32F4_PWM_CHNL  {   0,   1,   2,   3,   0,   1,   2,   3} /* channel values use zero-based-index */
+#define STM32F4_PWM_PINS      {0x16,0x17,0x18,0x19,0x26,0x27,0x28,0x29}
 
 #define STM32F4_SPI_SCLK_PINS {0x05,0x1D,0x2A} // PA5,PB13,PC10
 #define STM32F4_SPI_MISO_PINS {0x06,0x1E,0x14} // PA6,PB14, PB4
@@ -120,10 +120,10 @@
 #define STM32F4_I2C_SCL_PIN  22  // PB6
 #define STM32F4_I2C_SDA_PIN  23  // PB7
 
-#define STM32F4_UART_RXD_PINS {10,3,GPIO_PIN_NONE,43,50,39} // A10,A3,GPIO_PIN_NONE,C11,D2 ,C7
-#define STM32F4_UART_TXD_PINS { 9,2,GPIO_PIN_NONE,42,44,38} // A9, A2,GPIO_PIN_NONE,C10,C12, C6
-//#define STM32F4_UART_CTS_PINS {GPIO_PIN_NONE,0, 29} // A0, B13
-//#define STM32F4_UART_RTS_PINS {GPIO_PIN_NONE,1, 30} // A1, B14
+#define STM32F4_UART_TXD_PINS  {  0x02,  0x00}
+#define STM32F4_UART_RXD_PINS  {  0x03,  0x01}
+#define STM32F4_UART_RTS_PINS {  0xFF,  0x01} /* 0xFF = unused */
+#define STM32F4_UART_CTS_PINS {  0xFF,  0x00} /* 0xFF = unused */
 
 // GPIO Configuration
 #define STM32_GPIO_USER_LED	    0x0A
