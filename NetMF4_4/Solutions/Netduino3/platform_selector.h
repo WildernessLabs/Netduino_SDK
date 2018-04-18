@@ -100,17 +100,17 @@
 #define USB_MAX_QUEUES                  4  // 4 endpoints (EP0 + 3)
 
 // System Timer Configuration
-#define STM32F4_32B_TIMER 2
-#define STM32F4_16B_TIMER 3
+#define STM32F4_32B_TIMER 5 // |   2   |   5    |
+#define STM32F4_16B_TIMER 3 // |3,4,8,9|1,3,8,12|
 
-// Pin Configuration
+// Analog Configuration
 #define STM32F4_ADC 1
 #define STM32F4_AD_CHANNELS {0,1,2,3,4,8,9,10,11,12,13,14,15} // PA0-PA7, PB0,PB1 PC1-PC5
 
-//                        C6,C7,A8,B0,B1,B4,B3,B11,B10,A10,A9,A15, B8, B9,D12,D13, PF8, PF9
-#define STM32F4_PWM_TIMER { 8, 8, 1, 3, 3,  3, 2,  2,  2,  1, 1,  2,  4,  4,4,4,13,14,10,11}
-#define STM32F4_PWM_CHNL  { 0,  1, 0, 2, 3,  0, 1,  3,  2,  2, 1,  0,  2,  3,0,1,0,0,0,0}
-#define STM32F4_PWM_PINS  { 38, 39, 8,16,17, 20,19, 27, 26, 10, 9, 15, 24, 25,60,61,88,89,86,87}
+// PWM Configuration
+#define STM32F4_PWM_TIMER    {  10,  11,   9,   2,   9,  12,   1,   1,   1,   1} /* timer numbers use one-based index */
+#define STM32F4_PWM_CHNL  {   0,   0,   0,   2,   0,   1,   2,   0,   1,   3} /* channel values use zero-based index */
+#define STM32F4_PWM_PINS      {0x18,0x19,0x45,0x1A,0x02,0x1F,0x0A,0x49,0x4B,0x4E}
 
 #define STM32F4_SPI_SCLK_PINS {5,26,42,66} // PA5,PB10,PC10,PE2,
 #define STM32F4_SPI_MISO_PINS {6,34,43,69} // PA6,PC2, PC11,PE5,
