@@ -112,9 +112,9 @@
 #define STM32F4_PWM_CHNL  {   0,   0,   0,   2,   0,   1,   2,   0,   1,   3} /* channel values use zero-based index */
 #define STM32F4_PWM_PINS      {0x18,0x19,0x45,0x1A,0x02,0x1F,0x0A,0x49,0x4B,0x4E}
 
-#define STM32F4_SPI_SCLK_PINS {5,26,42,66} // PA5,PB10,PC10,PE2,
-#define STM32F4_SPI_MISO_PINS {6,34,43,69} // PA6,PC2, PC11,PE5,
-#define STM32F4_SPI_MOSI_PINS {7,35,44,70} // PA7,PC3, PC12,PE6,
+#define STM32F4_SPI_SCLK_PINS {0x05,0x1D,0x2A,0x42} // PA5,PB13,PC10,PE2
+#define STM32F4_SPI_MISO_PINS {0x06,0x1E,0x2B,0x4D} // PA6,PB14, PC11,PE13
+#define STM32F4_SPI_MOSI_PINS {0x07,0x1F,0x2C,0x46} // PA7,PB15, PC12,PE6
 
 #define STM32F4_I2C_PORT     1
 #define STM32F4_I2C_SCL_PIN  22  // PB6
