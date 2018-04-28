@@ -67,7 +67,7 @@ ERROR - WE SHOULD NOT INCLUDE THIS HEADER IF NOT BUILDING A STM32 PLATFORM
 #endif
 #if defined(PLATFORM_ARM_Netduino3Wifi)
 #define COM8                   ConvertCOM_ComHandle(7)
-#endif`
+#endif
 
 #define TOTAL_USB_CONTROLLER   1
 #define USB1                   ConvertCOM_UsbHandle(0)
