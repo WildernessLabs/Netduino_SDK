@@ -72,7 +72,8 @@ ERROR - WE SHOULD NOT INCLUDE THIS HEADER IF NOT BUILDING A STM32 PLATFORM
 #define TOTAL_USB_CONTROLLER   1
 #define USB1                   ConvertCOM_UsbHandle(0)
 
-#define USB_MAX_QUEUES         7  // 7 endpoints (EP0 + 6)
+#define USB_MAX_QUEUES         4  // 4 endpoints (EP0 + 3)
+//#define USB_MAX_QUEUES         7  // 7 endpoints (EP0 + 6)
 
 #define TOTAL_SOCK_PORT        0
 
