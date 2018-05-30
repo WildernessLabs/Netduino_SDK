@@ -12,7 +12,7 @@
       </DirectoryRef>
       <DirectoryRef Id="dir_Drivers_winusb_amd64">
         <Component Id="cmpD67E1B42CAD172B9067ADBBCABDBA367" Guid="E91653E9-EC93-4B37-A041-4E316EF6D04F">
-          <File Id="fil6202A0244D71CA9C38DF99D035EE3238" KeyPath="yes" Source="$(var.SourceDir)Drivers\winusb\amd64\WdfCoInstaller01009.dll" />
+          <File Id="fil6202A0244D71CA9C38DF99D035EE3238" KeyPath="yes" Source="$(var.SourceDir)Drivers\winusb\amd64\WdfCoInstaller01011.dll" />
         </Component>
         <Component Id="cmpDECF83A9F3CCB900783D71813DF60903" Guid="C868A9EC-481E-4CEE-A06B-908DC8B0D408">
           <File Id="fil8AC7F45619D4AED538069FB92CF04DF9" KeyPath="yes" Source="$(var.SourceDir)Drivers\winusb\amd64\winusbcoinstaller2.dll" />
@@ -20,7 +20,7 @@
       </DirectoryRef>
       <DirectoryRef Id="dir_Drivers_winusb_x86">
         <Component Id="cmp33B32CE6F607845143D27920ED2CFF7E" Guid="A75631D2-BEBB-42A4-9F29-B4EF0EB010A0">
-          <File Id="fil8D2148D8077A686987A35ABAC7169068" KeyPath="yes" Source="$(var.SourceDir)Drivers\winusb\x86\WdfCoInstaller01009.dll" />
+          <File Id="fil8D2148D8077A686987A35ABAC7169068" KeyPath="yes" Source="$(var.SourceDir)Drivers\winusb\x86\WdfCoInstaller01011.dll" />
         </Component>
         <Component Id="cmpB5BF5DF80E837CD36EA13B1559319557" Guid="E3B60247-A18D-47EB-82D5-D3596B1AB5BB">
           <File Id="filEA480F37DCE1FC97D519B99826F90A32" KeyPath="yes" Source="$(var.SourceDir)Drivers\winusb\x86\winusbcoinstaller2.dll" />

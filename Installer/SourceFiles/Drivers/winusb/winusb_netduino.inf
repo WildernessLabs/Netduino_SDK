@@ -1,15 +1,15 @@
 [Version]
 Signature = "$Windows NT$"
 ; Windows 8 uses the values below
-;Class = USB Device
-;ClassGUID = {88BAE032-5A81-49f0-BC3D-A4FF138216D6}
+Class = USBDevice
+ClassGUID = {88BAE032-5A81-49f0-BC3D-A4FF138216D6}
 ; Windows 7 uses the values below
-Class = USB
-ClassGUID = {36fc9e60-c465-11cf-8056-444553540000}
+;Class = USB
+;ClassGUID = {36fc9e60-c465-11cf-8056-444553540000}
 Provider = %ManufacturerName%
 CatalogFile=winusb_netduino.cat
 ;DriverVer=01/24/2012,6.2.8181.0
-DriverVer=08/13/2012,6.1.7601.17514
+DriverVer=05/29/2018,6.1.7601.17514
 
 ; ========== Manufacturer/Models sections ===========
 
@@ -56,11 +56,11 @@ AddReg=CoInstallers_AddReg
 CopyFiles=CoInstallers_CopyFiles
 
 [CoInstallers_AddReg]
-HKR,,CoInstallers32,0x00010000,"WdfCoInstaller01009.dll,WdfCoInstaller","WinUsbCoInstaller2.dll"
+HKR,,CoInstallers32,0x00010000,"WdfCoInstaller01011.dll,WdfCoInstaller","WinUsbCoInstaller2.dll"
 
 [CoInstallers_CopyFiles]
 WinUsbCoInstaller2.dll
-WdfCoInstaller01009.dll
+WdfCoInstaller01011.dll
 
 [DestinationDirs]
 CoInstallers_CopyFiles=11
@@ -73,16 +73,16 @@ CoInstallers_CopyFiles=11
 
 [SourceDisksFiles.x86]
 WinUsbCoInstaller2.dll=1
-WdfCoInstaller01009.dll=1
+WdfCoInstaller01011.dll=1
 
 [SourceDisksFiles.amd64]
 WinUsbCoInstaller2.dll=2
-WdfCoInstaller01009.dll=2
+WdfCoInstaller01011.dll=2
 
 ; =================== Strings ===================
 
 [Strings]
-ManufacturerName="Secret Labs LLC"
+ManufacturerName="Wilderness Labs LLC"
 ClassName="Netduino"
 DiskName="USB Installation Disk"
 WinUsb_SvcDesc="WinUSB Driver"
