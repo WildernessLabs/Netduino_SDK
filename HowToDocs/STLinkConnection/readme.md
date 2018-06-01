@@ -43,3 +43,5 @@ Once complete the socket will look similar to the following:
 ![IDC Socket Soldered onto Netduino 3 WiFi](IDCSocketOnNetduino3WiFi.png)
 
 The shroud can now be pushed down towards the Netduino and the ST-Link (or equivalent) connected to the board:
+
+![STLink Connected to Netduino 3 WiFi](STLinkConnectedToNetduino3WiFi.png)
