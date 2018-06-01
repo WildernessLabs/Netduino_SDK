@@ -77,3 +77,13 @@ SignTool sign /v /s PrivateCertStore Wildernesslabs.co(Test) winusb_netduino.cat
 SignTool sign /v /s PrivateCertStore /a winusb_netduino.cat
 SignTool sign /v /s PrivateCertStore /a /t http://timestamp.comodoca.com/authenticode winusb_netduino.cat
 
+
+
+
+
+
+How to write your first USB client driver (KMFD)
+https://docs.microsoft.com/en-us/windows-hardware/drivers/usbcon/tutorial--write-your-first-usb-client-driver--kmdf-
+
+Driver signing:
+https://social.msdn.microsoft.com/Forums/vstudio/en-US/788930c7-758e-4d1a-8b5d-f9aff0f45ed5/sign-a-wdf-kmdf-device-driver?forum=wdk 
