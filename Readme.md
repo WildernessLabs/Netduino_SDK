@@ -22,54 +22,12 @@ Because this is an overlay of the published .NETMF SDK, we have kept the directo
 
 The firmware for Netduino includes both the TinyCLR OS that runs on Netduino and the compiled .NETMF framework and runtime code. The actual building process of the firmware is a complex and byzantine set of steps, due to the special requirements of porting .NETMF, but we've done our hardest to turn it into a single step compilation.
 
-### Firmware Build Requirements
+The build and debugging process can be found in the following files:
 
- * Windows
- * ARM MDK 5.10+
- * .NETMF SDK v4.3 
-
-The Netduino Firmware can be built with GCC, however, the GCC compiler is not optimized for small, microcontroller footprints, so the output may not fit onto the flash space on a Netduino. For this reason, the ARM MDK compiler (v5.10 or better) is recommended and/or required to build firmware that will fit. 
-
-The current build configuration is known working with ARM MDK v5.10, though newer versions may also work. GCC may be able to be used to prototype and or playground fixes and changes. 
-
-The ARM MDK compiler only runs on Windows. The included build configuration is known to be good on Windows 10.
-
-Finally, the [.NET Micro Framework v4.3 SDK](http://downloads.wildernesslabs.co/NETMF_SDK/netmf-v4.3.2-SDK-QFE2-RTM.zip) must be installed on the build machine.
-
-### Set-up Firmware Build for Windows
-
-* Install Visual Studio 2013 or 2015. 
-* Add MSBuild to your build path.
-Go to Control Panel - System - Advanced - Environment Variables. 
-		Add the location of MSBuild to the Path variable.
-        Example: C:\Program Files (x86)\MSBuild\14.0\bin
-* Install the Windows SDK (Visual Studio 2015) 
-	Go to Control Panel - Programs - Programs and Features and select Visual Studio 2015 - Change.
-    Select "Universal Windows App Development Tools" and check all of the items in the folder.
-    Update the installation. 
-* Install the Windows SDK (Visual Studio 2013)
-Download and Install  [Windows SDK 2013](https://marketplace.visualstudio.com/items?itemName=VisualStudioProductTeam.MicrosoftVisualStudio2013SDK)
-
-
-### Building the Netduino Firmware 
-
-To build the Netduino firmware:
-
-1. Pick which flavor you want to build:
-	- Netduino3Wifi is in Netduino_3_NETMF
-	- All other variants (N3, N3E, N2, N2+) are in Netduino_2_and_3_NETMF
-2. Open cmd.exe and enter the directory above the flavor directory i.e. Netduino_2_and_3_NETMF or  Netduino_3_NETMF
-3. Run the batch file setenv-mdk-510.bat. This tells MSBuild where to find the Keil compiler and the Visual Studio installation.
-4. Go down one level to the FlavorDirectory.
-3. Each board directory is in `$(FlavorDirectory)\Solutions\`
-4. Change to the board directory and run:
-```
-msbuild dotnetmf.proj /t:rebuild /p:flavor=release
-```
-5. When it has completed, the build output will be in:
-```
-$(FlavorDirectory)\BuildOutput
-```
+* [Pre-requisites](HowToDocs/Prerequisites)
+* [Firmware build process](HowToDocs/FirmwareBuildGuide)
+* [Connecting ST-Link to Netduino Boards](HowToDocs/STLinkConnection)
+* [Debugging Native Code](HowToDocs/NativeDebugging)
 
 ## IDE Plugins
 
