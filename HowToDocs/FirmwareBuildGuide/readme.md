@@ -108,3 +108,18 @@ The build process places the resulting firmware and intermediate artifacts in a 
 c:\Netduino_SDK\Netduino_3_NETMF\BuildOutput
 ```
 
+For the debug firmware for the Netduino 3 WiFi the directory containing the binary files is something like:
+
+```
+C:\Netduino_SDK\Netduino_3_NETMF\BuildOutput\THUMB2\MDK5.10\le\FLASH\debug\Netduino3Wifi\bin
+```
+
+The directory holds a number of files that should be flashed to the board:
+
+![Build Output](FirmwareDirectoryContents.png)
+
+The first file is the `TinyBooter.hex` file.  Start _STM32CubeProgrammer_ and select _Erase and Program_.  Browse to the file `TinyBooter.hex` and start programming.
+
+![](STM32CubeProgrammerTinyBooter.png)
+
+The second file contains the `TinyCLR` itself.  Browse to the `TinyCLR.hex` directory.  Rename the file `ER_FLASH` file to `TinyCLR.hex`.  Now repeat programming the board.  This time check the `Run after programming` option.
