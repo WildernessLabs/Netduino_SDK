@@ -28,6 +28,7 @@ The build and debugging process can be found in the following files:
 * [Firmware build process](HowToDocs/FirmwareBuildGuide)
 * [Connecting ST-Link to Netduino Boards](HowToDocs/STLinkConnection)
 * [Debugging Native Code](HowToDocs/NativeDebugging)
+* [Building Firmware for Managed Network Debugging](HowToDocs/BuildForNetworkDebugging)
 
 ## IDE Plugins
 
