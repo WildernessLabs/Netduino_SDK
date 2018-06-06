@@ -36,7 +36,7 @@ It is possible with a little pressure to push the 10 pins out through the shroud
 
 Next place the flat edge of the pins a flat surface and apply a light pressure to ensure that all of the pins are level.  This helps to ensure that the pins are at the same level when soldering.
 
-The socket is now read for soldering onto the Netduino.
+The socket is now ready for soldering onto the Netduino.
 
 Once complete the socket will look similar to the following:
 
