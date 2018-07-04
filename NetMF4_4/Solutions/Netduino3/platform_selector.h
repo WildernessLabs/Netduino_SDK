@@ -91,10 +91,20 @@
 #define TOTAL_GENERIC_PORTS             1 // 1 generic port extensions (ITM channel 0 )
 #define ITM_GENERIC_PORTNUM             0 // ITM0 is index 0 in generic port interface table
 
-#define DEBUG_TEXT_PORT                 ITM0
-#define STDIO                           ITM0
-#define DEBUGGER_PORT                   USB1
-#define MESSAGING_PORT                  USB1
+#if 1
+    #define DEFAULT_DEPLOYMENT_PORT    USB1
+#else
+    #define DEFAULT_DEPLOYMENT_PORT    COM1
+#endif
+#define DEBUG_TEXT_PORT    DEFAULT_DEPLOYMENT_PORT
+#define STDIO              DEFAULT_DEPLOYMENT_PORT
+#define DEBUGGER_PORT      DEFAULT_DEPLOYMENT_PORT
+#define MESSAGING_PORT     DEFAULT_DEPLOYMENT_PORT
+
+// #define DEBUG_TEXT_PORT                 ITM0
+// #define STDIO                           ITM0
+// #define DEBUGGER_PORT                   USB1
+// #define MESSAGING_PORT                  USB1
 
 #define TOTAL_USB_CONTROLLER            1  // Silicon has 2, but only one supported in this port at this time...
 #define USB_MAX_QUEUES                  4  // 4 endpoints (EP0 + 3)
