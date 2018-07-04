@@ -6,8 +6,8 @@
     <Documentation />
     <PlatformGuid>{e1022e23-0b78-419c-97af-dcf434a3ae57}</PlatformGuid>
     <INSTRUCTION_SET>THUMB2</INSTRUCTION_SET>
-    <TARGETPLATFORM>Netduino3EthernetEthernet</TARGETPLATFORM>
-    <PLATFORM>Netduino3EthernetEthernet</PLATFORM>
+    <TARGETPLATFORM>Netduino3Ethernet</TARGETPLATFORM>
+    <PLATFORM>Netduino3Ethernet</PLATFORM>
     <IsSolutionWizardVisible>True</IsSolutionWizardVisible>
     <ENDIANNESS>le</ENDIANNESS>
     <OEMSystemInfoString>Netduino 3 Ethernet (v4.4.0.0 a1) by Wilderness Labs LLC</OEMSystemInfoString>
@@ -15,7 +15,7 @@
     <TCP_IP_STACK>NETDUINOIP</TCP_IP_STACK>
   </PropertyGroup>
   <ItemGroup>
-    <IncludePaths Include="Solutions\Netduino3EthernetEthernet" />
+    <IncludePaths Include="Solutions\Netduino3Ethernet" />
     <TinyCLR_Defines Include="PLATFORM_DEPENDENT_HEAP_SIZE_THRESHOLD=10240" />
     <TinyCLR_Defines Include="PLATFORM_DEPENDENT_HEAP_SIZE_THRESHOLD_UPPER=196608" />
     <TinyCLR_Defines Include="PLATFORM_NO_CLR_TRACE=1" />
