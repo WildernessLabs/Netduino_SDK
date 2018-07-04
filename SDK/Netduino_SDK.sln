@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2035
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretLabs.NETMF.IO", "SecretLabs.NETMF.IO\SecretLabs.NETMF.IO.csproj", "{032000FA-5BA3-4FC9-994F-45B59089C5F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretLabs.NETMF.Hardware", "SecretLabs.NETMF.Hardware\SecretLabs.NETMF.Hardware.csproj", "{08B9FAAC-6DD2-42DD-AEF7-0B023D627713}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretLabs.NETMF.Hardware.AnalogInput", "SecretLabs.NETMF.Hardware.AnalogInput\SecretLabs.NETMF.Hardware.AnalogInput.csproj", "{B2922084-F510-4862-9058-2198E7AF7044}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretLabs.NETMF.Hardware.Netduino", "SecretLabs.NETMF.Hardware.Netduino\SecretLabs.NETMF.Hardware.Netduino.csproj", "{F48ACBDC-F8F1-41D1-A66F-0CB52740F94F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretLabs.NETMF.Hardware.NetduinoPlus", "SecretLabs.NETMF.Hardware.NetduinoPlus\SecretLabs.NETMF.Hardware.NetduinoPlus.csproj", "{0324312B-6719-496B-A48A-748030124293}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SecretLabs.NETMF.Hardware.PWM", "SecretLabs.NETMF.Hardware.PWM\SecretLabs.NETMF.Hardware.PWM.csproj", "{F52F3FB7-E92D-472A-B32D-E2019922B13B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{032000FA-5BA3-4FC9-994F-45B59089C5F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{032000FA-5BA3-4FC9-994F-45B59089C5F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{032000FA-5BA3-4FC9-994F-45B59089C5F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{032000FA-5BA3-4FC9-994F-45B59089C5F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{08B9FAAC-6DD2-42DD-AEF7-0B023D627713}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{08B9FAAC-6DD2-42DD-AEF7-0B023D627713}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{08B9FAAC-6DD2-42DD-AEF7-0B023D627713}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{08B9FAAC-6DD2-42DD-AEF7-0B023D627713}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2922084-F510-4862-9058-2198E7AF7044}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2922084-F510-4862-9058-2198E7AF7044}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2922084-F510-4862-9058-2198E7AF7044}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2922084-F510-4862-9058-2198E7AF7044}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F48ACBDC-F8F1-41D1-A66F-0CB52740F94F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F48ACBDC-F8F1-41D1-A66F-0CB52740F94F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F48ACBDC-F8F1-41D1-A66F-0CB52740F94F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F48ACBDC-F8F1-41D1-A66F-0CB52740F94F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0324312B-6719-496B-A48A-748030124293}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0324312B-6719-496B-A48A-748030124293}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0324312B-6719-496B-A48A-748030124293}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0324312B-6719-496B-A48A-748030124293}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F52F3FB7-E92D-472A-B32D-E2019922B13B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F52F3FB7-E92D-472A-B32D-E2019922B13B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F52F3FB7-E92D-472A-B32D-E2019922B13B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F52F3FB7-E92D-472A-B32D-E2019922B13B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E59382C8-8123-48AB-BA1F-0557B03EBC53}
+	EndGlobalSection
+EndGlobal
