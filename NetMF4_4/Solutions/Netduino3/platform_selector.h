@@ -96,15 +96,15 @@
 #else
     #define DEFAULT_DEPLOYMENT_PORT    COM1
 #endif
-#define DEBUG_TEXT_PORT    DEFAULT_DEPLOYMENT_PORT
-#define STDIO              DEFAULT_DEPLOYMENT_PORT
-#define DEBUGGER_PORT      DEFAULT_DEPLOYMENT_PORT
-#define MESSAGING_PORT     DEFAULT_DEPLOYMENT_PORT
+//#define DEBUG_TEXT_PORT    DEFAULT_DEPLOYMENT_PORT
+//#define STDIO              DEFAULT_DEPLOYMENT_PORT
+//#define DEBUGGER_PORT      DEFAULT_DEPLOYMENT_PORT
+//#define MESSAGING_PORT     DEFAULT_DEPLOYMENT_PORT
 
-// #define DEBUG_TEXT_PORT                 ITM0
-// #define STDIO                           ITM0
-// #define DEBUGGER_PORT                   USB1
-// #define MESSAGING_PORT                  USB1
+#define DEBUG_TEXT_PORT                 ITM0
+#define STDIO                           ITM0
+#define DEBUGGER_PORT                   USB1
+#define MESSAGING_PORT                  USB1
 
 #define TOTAL_USB_CONTROLLER            1  // Silicon has 2, but only one supported in this port at this time...
 #define USB_MAX_QUEUES                  4  // 4 endpoints (EP0 + 3)
