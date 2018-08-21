@@ -300,15 +300,35 @@ namespace Microsoft.SPOT.Tasks.NativeBuild
         /// <returns></returns>
         protected override string GenerateFullPathToTool()
         {
-            if (mToolPath != null)
-            {
-                return mToolPath;
-            }
-
-            String VSINSTALLDIR = Environment.GetEnvironmentVariable("VSINSTALLDIR");
+            string VSINSTALLDIR = Environment.GetEnvironmentVariable("VSINSTALLDIR");
             if (VSINSTALLDIR != null)
             {
-                return Path.Combine(Path.Combine(Path.Combine(VSINSTALLDIR, "VC"), "bin"), ToolName);
+                if (VSINSTALLDIR.Contains(@"Visual Studio\2017"))
+                {
+                    string path = Environment.GetEnvironmentVariable("PATH");
+                    if (path != null)
+                    {
+                        string[] directories = path.Split(';');
+                        if (directories.Length > 0)
+                        {
+                            foreach (string directory in directories)
+                            {
+                                if (directory.Contains(@"Visual Studio\2017"))
+                                {
+                                    string executable = Path.Combine(directory, ToolName);
+                                    if (File.Exists(executable))
+                                    {
+                                        return (executable);
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                else
+                {
+                    return Path.Combine(Path.Combine(Path.Combine(VSINSTALLDIR, "VC"), "bin"), ToolName);
+                }
             }
             throw new Exception("LINK task does not know where to find linker tool");
         }
