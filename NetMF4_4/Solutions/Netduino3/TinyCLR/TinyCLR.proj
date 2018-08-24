@@ -68,10 +68,10 @@
   <Import Condition="'$(GRAPHICS_FEATUREPROJ)'==''" Project="$(SPOCLIENT)\Framework\Features\Graphics.featureproj" />
   <Import Condition="'$(ONEWIRE_FEATUREPROJ)'==''" Project="$(SPOCLIENT)\Framework\Features\OneWire.featureproj" />  
   <Import Project="$(SPOCLIENT)\Framework\Features\Windows_Devices.featureproj" Condition="'$(WINDOWS_DEVICES_FEATUREPROJ)'==''" />
-  <!--
+<!--
     Netduino specific projects.
-  -->
-   <Import Project="$(SPOCLIENT)\Solutions\Netduino3\DeviceCode\SecretLabs_NETMF_Diagnostics\SecretLabs.NETMF.Diagnostics.featureproj" />
+
+  <Import Project="$(SPOCLIENT)\Solutions\Netduino3\DeviceCode\SecretLabs_NETMF_Diagnostics\SecretLabs.NETMF.Diagnostics.featureproj" />
   <Import Project="$(SPOCLIENT)\Solutions\Netduino3\DeviceCode\GoBus\GoBus.featureproj" />
   <Import Project="$(SPOCLIENT)\Solutions\Netduino3\DeviceCode\SecretLabs_NETMF_Hardware_Netduino\SecretLabs.NETMF.Hardware.Netduino.featureproj" />
   <Import Project="$(SPOCLIENT)\Solutions\Netduino3\DeviceCode\SecretLabs_NETMF_IO\SecretLabs.NETMF.IO.featureproj" />
@@ -95,7 +95,7 @@
     <DriverLibs Include="SD_BL.$(LIB_EXT)" />
     <RequiredProjects Include="$(SPOCLIENT)\DeviceCode\Drivers\BlockStorage\SD\dotnetmf.proj" />
   </ItemGroup>
-<!--
+
     End of Netduino specific projects.
 -->
 
